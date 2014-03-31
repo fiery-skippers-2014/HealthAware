@@ -4,7 +4,7 @@
 
 ##Summary 
 
- # Rails Rspec Challange
+### Rails Rspec Challange
 
 In this challenge you will begin by git cloning an existing Rails application. Make sure you can start the Rails application by running ```bundle exec rails server```
 
