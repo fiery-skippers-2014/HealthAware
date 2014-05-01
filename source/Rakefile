@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-DbcRspecRails::Application.load_tasks
+HealthAware::Application.load_tasks
