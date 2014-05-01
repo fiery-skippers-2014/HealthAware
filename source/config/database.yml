@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  host: localhost
+  username:
+  password:
+  database: health_aware_dev
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  host: localhost
+  username:
+  password:
+  database: health_aware_test
+  pool: 5
+  timeout: 5000
+
+production:
+  adapter: postgresql
+  host: localhost
+  username:
+  password:
+  database: health_aware
+  pool: 5
+  timeout: 5000

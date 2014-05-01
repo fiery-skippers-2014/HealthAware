@@ -1,9 +1,4 @@
-DbcRspecRails::Application.routes.draw do
-  namespace :admin do
-    resources :posts
-  end
-
-  resources :posts
+HealthAware::Application.routes.draw do
 
   root :to => "home#index"
 end
