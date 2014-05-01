@@ -1,5 +1,4 @@
-DbcRspecRails::Application.routes.draw do
-
+HealthAware::Application.routes.draw do
 
   root :to => "home#index"
 end
