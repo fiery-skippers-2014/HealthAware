@@ -54,6 +54,8 @@ GEM
     mime-types (1.23)
     multi_json (1.7.2)
     nokogiri (1.5.6)
+    nutritionix (1.1.0)
+      rest-client
     pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.5)
@@ -81,6 +83,8 @@ GEM
     rake (10.0.4)
     rdoc (3.12.2)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec-core (2.13.1)
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -119,6 +123,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   database_cleaner
+  nutritionix
   pg
   rails (= 3.2.12)
   rspec-rails (~> 2.0)
