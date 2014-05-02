@@ -20,7 +20,7 @@ FoodController.prototype = {
     $(document).on("foodList", this.createFoodList.bind(this))
     $(document).on('click', '.food_div', this.findFoodInSearchResults.bind(this))
     $(document).on('click', '.food_div', this.printOutBasket.bind(this))
-    $(document).on('click', '.food_div', this.saveBasketToDataBase.bind(this))
+    // $(document).on('click', '.food_div', this.saveBasketToDataBase.bind(this))
   },
   searchFoods: function (event){
     event.preventDefault();
