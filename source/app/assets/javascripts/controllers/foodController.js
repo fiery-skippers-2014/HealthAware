@@ -32,9 +32,9 @@ FoodController.prototype = {
     this.allFoodResults = json
   },
 
-  prepareFoodListForView: function(fieldsWeWant, json){
-    var goodFields = fieldsWeWant;  // change this back to f
-    var fullObject = json;
+  prepareFoodListForView: function(e, json){
+    var goodFields = ["nf_calories", "nf_total_fat", "nf_protein"];
+    // var fullObject = json;
     var ourMasterObject = {};
     var masterObjArray = [];
     var fieldValueArray = [];
