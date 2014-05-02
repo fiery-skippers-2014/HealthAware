@@ -35,6 +35,18 @@ FoodController.prototype = {
   createFoodList: function(e, json){
     this.allFoodResults = json
   },
+  prepareFoodListForView: function(fieldsWeWant, json){
+    var goodFields = fieldsWeWant;
+    var fullObject = json;
+
+    Handlebars.registerHelper('fieldsToShow', function(json){
+      return stuffwewant;
+    })
+
+
+
+  }
+
   addFoodtoBasket: function(e){
       //Visual
     $(e.currentTarget).addClass('basket')

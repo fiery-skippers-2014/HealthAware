@@ -13,8 +13,7 @@ $(document).ready(function(){
   var FoodView = new FoodListView(FoodElements)
   var foodController = new FoodController(food, FoodView, basket)
 
-  console.log("food!")
-  console.log(food)
+
   //Application
   var controllers = {
     foodController: foodController
