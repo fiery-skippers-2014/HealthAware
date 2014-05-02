@@ -11,7 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140501215139) do
+ActiveRecord::Schema.define(:version => 20140502214646) do
+
+  create_table "basket_foods", :force => true do |t|
+    t.integer "basket_id"
+    t.integer "food_id"
+    t.integer "quantity",  :default => 1
+  end
+
+  create_table "baskets", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "foods", :force => true do |t|
+    t.string   "API"
+    t.string   "item_name"
+    t.string   "nf_protein"
+    t.string   "nf_serving_size_qty"
+    t.string   "nf_serving_size_unit"
+    t.string   "nf_total_carbohydrate"
+    t.string   "nf_total_fat"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+  end
 
   create_table "goals", :force => true do |t|
     t.integer  "user_id"
