@@ -43,7 +43,10 @@ FoodController.prototype = {
       for (h=0;h<json.hits.length;h++){    //gives us each returned object
         for (i=0;i<goodFields.length;i++){
           currentGoodField = goodFields[i];
-          newObjLit = { currentGoodField : json.hits[h].fields[goodFields[i]] }
+          newObjLit = {
+            fieldName : currentGoodField,
+            fieldValue : json.hits[h].fields[goodFields[i]]
+          }
           fieldValueArray.push(newObjLit)
 
           // ourObject[goodFields[i]] = json.hits[h].fields[goodFields[i]]
