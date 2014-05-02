@@ -1,8 +1,6 @@
-function ApplicationController(cons) {
+function ApplicationController(allControllers) {
   // Defining controllers that are using methods through ApplicationController
-  this.foodController = cons["foodController"]
-  console.log("Cons!")
-  console.log(cons)
+  this.foodController = allControllers["foodController"]
 }
 
 ApplicationController.prototype = {
