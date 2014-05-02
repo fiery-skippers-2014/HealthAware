@@ -1,0 +1,4 @@
+class NutrientsController < ApplicationController
+
+
+end
