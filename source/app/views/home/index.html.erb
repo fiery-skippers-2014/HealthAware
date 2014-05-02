@@ -26,7 +26,14 @@
   </ol>
 </script>
 
-
 <script id="basket-template" type="text/x-handlebars-template">
-
+  {{#basket}}
+  <div class="food_div">
+      <li class="food" food-id={{_id}}><b>{{fields.brand_name}}</b>: {{fields.item_name}}</li>
+      <ul>
+        <li>Calories: {{fields.nf_calories}}</li>
+        <li>Total Fat: {{fields.nf_total_fat}}</li>
+      </ul>
+    </div>
+  {{/basket}}
 </script>
