@@ -1,17 +1,55 @@
-<H1>Welcome to HealthAware</h1>
 
-<div class="search">
-  <form id="search-form">
-    Please select a food: <input type="text" name="food-choice">
-    <input type="submit" value="Click!">
-  </form>
-</div>
 
-<div class="profile">
-  <div class="basket"></div>
-</div>
+<div id="container" class="row large-12 medium-12 small-12 large-centered medium-centered small-centered">
 
-<div class="container"></div>
+
+
+    <!-- SEARCH COLUMN -->
+    <div class="search large-8 medium-8 small-12 columns">
+
+        <form id="search-form">
+          <label for="right-label" class="left inline">
+            Please select a food: </label>
+          <input type="text" id="right-label" name="food-choice" placeholder="Apple Pie">
+          <input type="submit" value="Click!" class="button">
+        </form>
+<hr>
+      <div class="searched" class="testing">searched</div>
+
+    </div>
+
+
+
+    <!-- SIDEBAR COLUMN -->
+    <div class="profile large-4 medium-4 small-10 columns">
+
+      <div class="heading">Basket</div>
+      <div id="box">
+        <div class="basket">basket stuff</div>
+      </div>
+
+
+      <div class="heading">Health Stats</div>
+      <div id="box">
+        <div class="health-stats">
+          <p>for each desired stat:</p>
+          <div class="progress-bar green_bar shine">
+            <span style="width: 80%">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- end of main row --><!-- end of container -->
+
+
+
+
+
+
+
+<!-- TEMPLATES -->
+
 <script id="food-template" type="text/x-handlebars-template">
   <ol>
   {{#hits}}
