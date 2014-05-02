@@ -10,12 +10,19 @@ FoodController.prototype = {
     var food = this.model
     var foodView = this.view
     // on foodsList event created within foodList model, create template with model's elements AKA foodView (because you are binding the function to foodView)
-    $(document).on("foodList", foodView.drawFoods.bind(foodView))
+    $(document).on("foodList", foodView.drawFoods.bind(foodView));
+    $('#search-form').on('submit', this.searchFoods.bind(food))
   },
 
-  // run at the end of initialize.js
-  summonFood: function() {
-   // on successful ajax request on the url within model, event is created and triggered resulting with json for FoodController to work with within initialize.js
-    this.model.fetchFood()
+  searchFoods: function (event){
+    event.preventDefault();
+    newQuery = new queryMaker(event.target["food-choice"].value)
+    queryData = newQuery.makeJson()
+    this.fetchFood(queryData)
   }
+  // run at the end of initialize.js
+  // summonFood: function() {
+  //  // on successful ajax request on the url within model, event is created and triggered resulting with json for FoodController to work with within initialize.js
+  //   this.model.fetchFood()
+  // }
 }
