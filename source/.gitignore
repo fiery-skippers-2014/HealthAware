@@ -26,6 +26,7 @@
 *.sql
 *.sqlite
 /tmp
+/log
 
 # OS generated files #
 ######################
