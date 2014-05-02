@@ -15,6 +15,7 @@ FoodController.prototype = {
     var basket = this.basket
     var basketView = this.basketView
     // on foodsList event created within foodList model, create template with model's elements AKA foodView (because you are binding the function to foodView)
+    // $(document).on("load", basket.retrieveFoodsFromDataBase())
     $('#search-form').on('submit', this.searchFoods.bind(food))
     $(document).on("foodList", this.prepareFoodListForView);
     $(document).on("foodList", this.createFoodList.bind(this))
