@@ -2,8 +2,8 @@
 function FoodController(model, view, basket){
   this.model = model // hard-coded url request (so far)
   this.view = view // hash of elements important for food-template
-  this.allFoodResults
   this.basket = basket
+  this.allFoodResults = {}
 }
 
 FoodController.prototype = {
@@ -14,7 +14,7 @@ FoodController.prototype = {
     var basket = this.basket
     // on foodsList event created within foodList model, create template with model's elements AKA foodView (because you are binding the function to foodView)
     $(document).on("foodList", foodView.drawFoods.bind(foodView))
-    $(document).on("foodList", this.createFoodList)
+    $(document).on("foodList", this.createFoodList.bind(this))
     $(document).on('click', '.food_div', this.addFoodtoBasket.bind(this))
     // $(document).on('click', '.food_div', basket.addFoodtoBasket.bind(basket))
   },
@@ -24,18 +24,19 @@ FoodController.prototype = {
    // on successful ajax request on the url within model, event is created and triggered resulting with json for FoodController to work with within initialize.js
     this.model.fetchFood()
   },
-  createFoodList: function (e, json){
+  createFoodList: function(e, json){
     this.allFoodResults = json
-    console.log(this)
-    console.log(this.allFoodResults, "this is json in controller")
   },
   addFoodtoBasket: function(e){
       //Visual
-    console.log(e)
-    console.log(this)
     $(e.currentTarget).addClass('basket')
-    //Save to Database
-    console.log(e.currentTarget.getElementsByTagName('li')[0].getAttribute('food-id'))
-    console.log(this.allFoodResults)
+    //Save to Database, make this nicer.....maybe a Basket Model
+    food_id = e.currentTarget.getElementsByTagName('li')[0].getAttribute('food-id')
+    for(x = 0; x < this.allFoodResults.hits.length; x++){
+        if (this.allFoodResults.hits[x]._id === food_id){
+          this.basket.addFoodtoBasket(this.allFoodResults.hits[x])
+          console.log(this.basket)
+        }
+      }
   }
 }
