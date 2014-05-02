@@ -6,15 +6,19 @@ $(document).ready(function(){
     foodTemplate: "#food-template"
   }
 
+  var BasketElements = {
+    basket: ".basket",
+    basketTemplate: "#basket-template"
+  }
+
 
   var food = new FoodList('https://api.nutritionix.com/v1_1/search/')
 
-  var basket = new BasketList()
+  var basket = new Basket()
+  var basketView = new BasketView(BasketElements)
   var FoodView = new FoodListView(FoodElements)
-  var foodController = new FoodController(food, FoodView, basket)
+  var foodController = new FoodController(food, FoodView, basket, basketView)
 
-  console.log("food!")
-  console.log(food)
   //Application
   var controllers = {
     foodController: foodController
@@ -25,3 +29,5 @@ $(document).ready(function(){
   applicationController.bindListeners()
 
 })
+
+
