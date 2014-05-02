@@ -1,0 +1,5 @@
+/log
+/tmp
+
+# Our API keys
+config/environment_variables.yml
