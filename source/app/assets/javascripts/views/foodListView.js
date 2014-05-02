@@ -5,6 +5,7 @@ function FoodListView(foodElements){
 
 FoodListView.prototype = {
   drawFoods: function(e,json){
+  	this.allFoodResults = json
     var source = $(this.foodTemplate).html()
     var template = Handlebars.compile(source)
     $(this.container).html(template(json))
