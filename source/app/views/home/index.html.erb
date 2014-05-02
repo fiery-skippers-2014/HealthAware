@@ -7,26 +7,21 @@
   </form>
 </div>
 
-
 <div class="profile">
   <div class="basket"></div>
 </div>
 
 <div class="container"></div>
-
-
-
-
-
-
 <script id="food-template" type="text/x-handlebars-template">
   <ol>
   {{#hits}}
-    <li class="food" food-id={{food_id}}><b>{{fields.brand_name}}</b>: {{fields.item_name}}</li>
-    <ul>
-      <li>Calories: {{fields.nf_calories}}</li>
-      <li>Total Fat: {{fields.nf_total_fat}}</li>
-    </ul>
+  	<div class="food_div">
+	    <li class="food" food-id={{_id}}><b>{{fields.brand_name}}</b>: {{fields.item_name}}</li>
+	    <ul>
+	      <li>Calories: {{fields.nf_calories}}</li>
+	      <li>Total Fat: {{fields.nf_total_fat}}</li>
+	    </ul>
+		</div>
   {{/hits}}
   </ol>
 </script>
