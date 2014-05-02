@@ -5,7 +5,7 @@ function FoodController(model, Foodview, basket, basketView){
   this.basket = basket
   this.basketView = basketView
   this.allFoodResults = {}
-}
+};
 
 FoodController.prototype = {
   // run in controllers/applicationController.js
@@ -33,16 +33,30 @@ FoodController.prototype = {
   },
 
   prepareFoodListForView: function(fieldsWeWant, json){
-    var goodFields = fieldsWeWant;
+    var goodFields = fieldsWeWant;  // change this back to f
     var fullObject = json;
+    var ourMasterObject = {};
+    var masterObjArray = [];
+    var fieldValueArray = [];
 
     Handlebars.registerHelper('fieldsToShow', function(json){
-      return stuffwewant;
+      for (h=0;h<json.hits.length;h++){    //gives us each returned object
+        for (i=0;i<goodFields.length;i++){
+          currentGoodField = goodFields[i];
+          newObjLit = { currentGoodField : json.hits[h].fields[goodFields[i]] }
+          fieldValueArray.push(newObjLit)
+
+          // ourObject[goodFields[i]] = json.hits[h].fields[goodFields[i]]
+        }
+        var ourEachObject = {};
+        ourEachObject.objName = json.hits[h].fields.item_name;
+        ourEachObject.objBrandName = json.hits[h].fields.brand_name;
+        ourEachObject.objFields = fieldValueArray;
+        masterObjArray.push(ourEachObject);
+      }
+    return { objects : masterObjArray };
     })
-
-
-
-  }
+  },
 
 
   findFoodInSearchResults: function(e){

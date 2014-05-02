@@ -16,7 +16,7 @@ Basket.prototype = {
       })
     }
   }
-}
+
 
 
 // 1)FoodController has all search Results
