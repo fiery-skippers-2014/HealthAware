@@ -22613,3 +22613,2469 @@ Served asset /views/foodListView.js - 200 OK (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:10:36 -0700
 Served asset /application.js - 200 OK (48ms)
+
+
+Started GET "/?food-choice=egg" for 127.0.0.1 at 2014-05-02 12:18:18 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"egg"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/a5264c9c03386e7ad60ae4f11a66744ac2046b2a/framework_and_overrides.css.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/bb47634921f09c5784f2b41b5fc4bc702a22d2e5/foundation.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_grid.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_global.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/134a0cdeb38a57f14e610c28e7216f522306644f/_functions.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+DEPRECATION WARNING on line 182 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_global.scss:
+Assigning to global variable "$default-float" by default is deprecated.
+In future versions of Sass, this will create a new local variable.
+If you want to assign to the global variable, use "$default-float: left !global" instead.
+Note that this will be incompatible with Sass 3.2.
+
+DEPRECATION WARNING on line 183 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_global.scss:
+Assigning to global variable "$opposite-direction" by default is deprecated.
+In future versions of Sass, this will create a new local variable.
+If you want to assign to the global variable, use "$opposite-direction: right !global" instead.
+Note that this will be incompatible with Sass 3.2.
+
+DEPRECATION WARNING: The return value of index() will change from "false" to
+"null" in future versions of Sass. For compatibility, avoid using "== false" on
+the return value. For example, instead of "@if index(...) == false", just write
+"@if not index(...)".
+        on line 12 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/_functions.scss, in `exports'
+        from line 254 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_global.scss
+        from line 5 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_grid.scss
+        from line 10 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation.scss
+        from line 2 of /Users/apprentice/Desktop/healthaware/HealthAware/source/app/assets/stylesheets/framework_and_overrides.css.scss
+DEPRECATION WARNING on line 13 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/_functions.scss:
+Assigning to global variable "$modules" by default is deprecated.
+In future versions of Sass, this will create a new local variable.
+If you want to assign to the global variable, use "$modules: append($modules, $name) !global" instead.
+Note that this will be incompatible with Sass 3.2.
+
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_accordion.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_alert-boxes.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_block-grid.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_button-groups.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_buttons.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_clearing.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_dropdown.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_dropdown-buttons.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_flex-video.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_forms.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_inline-lists.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_joyride.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_keystrokes.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_labels.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_magellan.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_orbit.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_pagination.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_panels.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_pricing-tables.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_progress-bars.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_range-slider.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_reveal.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_side-nav.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_split-buttons.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_sub-nav.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_switch.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_tables.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_tabs.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_thumbs.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_tooltips.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_top-bar.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_type.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_offcanvas.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_visibility.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Compiled framework_and_overrides.css  (3747ms)  (pid 8407)
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/a5264c9c03386e7ad60ae4f11a66744ac2046b2a/application.css.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Compiled application.css  (2ms)  (pid 8407)
+Compiled models/basketList.js  (0ms)  (pid 8407)
+Compiled application.js  (6ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 3918ms (Views: 3917.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /framework_and_overrides.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /vendor/modernizr.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /application.css - 200 OK (12ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.abide.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.accordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.clearing.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.interchange.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.joyride.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.magellan.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.offcanvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.orbit.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.reveal.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.slider.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.topbar.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation/foundation.equalizer.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /controllers/applicationController.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /controllers/foodsController.js - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /handlebars-v1.3.0.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /models/basketList.js - 200 OK (2ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /initialize.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /models/foodList.js - 200 OK (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /queryer.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /views/basketView.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /views/foodListView.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:22 -0700
+Served asset /application.js - 200 OK (46ms)
+
+
+Started GET "/?food-choice=egg" for 127.0.0.1 at 2014-05-02 12:18:34 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"egg"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /framework_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /vendor/modernizr.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.accordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.clearing.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.abide.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.interchange.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.joyride.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.magellan.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.offcanvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.orbit.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.slider.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.reveal.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.topbar.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation/foundation.equalizer.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /handlebars-v1.3.0.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /controllers/foodsController.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /models/basketList.js - 200 OK (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /queryer.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /models/foodList.js - 200 OK (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /initialize.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /controllers/applicationController.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /views/basketView.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /views/foodListView.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:18:35 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:18:38 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:18:38 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /framework_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /vendor/modernizr.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.abide.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.accordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.clearing.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.interchange.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.joyride.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.magellan.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.reveal.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.orbit.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.slider.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.offcanvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.topbar.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation/foundation.equalizer.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /handlebars-v1.3.0.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /controllers/applicationController.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /controllers/foodsController.js - 200 OK (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /initialize.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /models/basketList.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /models/foodList.js - 200 OK (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /queryer.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /views/foodListView.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /views/basketView.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:16 -0700
+Served asset /application.js - 200 OK (2ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled models/basketList.js  (0ms)  (pid 8407)
+Compiled application.js  (52ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 104ms (Views: 103.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /framework_and_overrides.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /vendor/modernizr.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.abide.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.accordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.clearing.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.interchange.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.joyride.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.magellan.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.offcanvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.orbit.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.slider.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.topbar.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.reveal.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation/foundation.equalizer.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /handlebars-v1.3.0.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /controllers/applicationController.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /controllers/foodsController.js - 200 OK (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /initialize.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:37 -0700
+Served asset /models/basketList.js - 200 OK (2ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:38 -0700
+Served asset /models/foodList.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:38 -0700
+Served asset /views/basketView.js - 200 OK (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:38 -0700
+Served asset /queryer.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:38 -0700
+Served asset /views/foodListView.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:19:38 -0700
+Served asset /application.js - 200 OK (40ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:21:26 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.3ms)
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/a5264c9c03386e7ad60ae4f11a66744ac2046b2a/framework_and_overrides.css.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/bb47634921f09c5784f2b41b5fc4bc702a22d2e5/foundation.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_grid.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_global.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/134a0cdeb38a57f14e610c28e7216f522306644f/_functions.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+DEPRECATION WARNING on line 182 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_global.scss:
+Assigning to global variable "$default-float" by default is deprecated.
+In future versions of Sass, this will create a new local variable.
+If you want to assign to the global variable, use "$default-float: left !global" instead.
+Note that this will be incompatible with Sass 3.2.
+
+DEPRECATION WARNING on line 183 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_global.scss:
+Assigning to global variable "$opposite-direction" by default is deprecated.
+In future versions of Sass, this will create a new local variable.
+If you want to assign to the global variable, use "$opposite-direction: right !global" instead.
+Note that this will be incompatible with Sass 3.2.
+
+DEPRECATION WARNING: The return value of index() will change from "false" to
+"null" in future versions of Sass. For compatibility, avoid using "== false" on
+the return value. For example, instead of "@if index(...) == false", just write
+"@if not index(...)".
+        on line 12 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/_functions.scss, in `exports'
+        from line 254 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_global.scss
+        from line 5 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_grid.scss
+        from line 10 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation.scss
+        from line 2 of /Users/apprentice/Desktop/healthaware/HealthAware/source/app/assets/stylesheets/framework_and_overrides.css.scss
+DEPRECATION WARNING on line 13 of /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/_functions.scss:
+Assigning to global variable "$modules" by default is deprecated.
+In future versions of Sass, this will create a new local variable.
+If you want to assign to the global variable, use "$modules: append($modules, $name) !global" instead.
+Note that this will be incompatible with Sass 3.2.
+
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_accordion.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_alert-boxes.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_block-grid.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_button-groups.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_buttons.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_clearing.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_dropdown.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_dropdown-buttons.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_flex-video.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_forms.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_inline-lists.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_joyride.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_keystrokes.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_labels.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_magellan.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_orbit.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_pagination.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_panels.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_pricing-tables.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_progress-bars.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_range-slider.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_reveal.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_side-nav.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_split-buttons.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_sub-nav.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_switch.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_tables.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_tabs.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_thumbs.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_tooltips.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_top-bar.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_type.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_offcanvas.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/645092c6570cf420dab8029a8278b90995f6aca3/_visibility.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Compiled framework_and_overrides.css  (3490ms)  (pid 8407)
+Warning. Error encountered while saving cache /Users/apprentice/Desktop/healthaware/HealthAware/source/tmp/cache/sass/a5264c9c03386e7ad60ae4f11a66744ac2046b2a/application.css.scssc: can't dump anonymous class #<Class:0x007f90936085f8>
+Compiled application.css  (3ms)  (pid 8407)
+Compiled controllers/foodsController.js  (0ms)  (pid 8407)
+Compiled application.js  (6ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 3667ms (Views: 3666.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /framework_and_overrides.css - 200 OK (44ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /application.css - 200 OK (17ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /vendor/modernizr.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.abide.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.accordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.clearing.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.interchange.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.joyride.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.magellan.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.offcanvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.orbit.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.reveal.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.slider.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.topbar.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation/foundation.equalizer.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /handlebars-v1.3.0.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /controllers/applicationController.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /controllers/foodsController.js - 200 OK (2ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /initialize.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /models/basketList.js - 200 OK (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /queryer.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /models/foodList.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /views/basketView.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /views/foodListView.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:30 -0700
+Served asset /application.js - 200 OK (49ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Compiled models/basketList.js  (0ms)  (pid 8407)
+Compiled application.js  (6ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 102ms (Views: 101.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /framework_and_overrides.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /vendor/modernizr.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.abide.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.accordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.clearing.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.interchange.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.joyride.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.magellan.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.offcanvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.orbit.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.slider.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.topbar.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.reveal.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation/foundation.equalizer.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /handlebars-v1.3.0.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /controllers/applicationController.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /controllers/foodsController.js - 200 OK (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /initialize.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /models/basketList.js - 200 OK (2ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /models/foodList.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /views/basketView.js - 200 OK (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /queryer.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /views/foodListView.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:21:57 -0700
+Served asset /application.js - 200 OK (46ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled models/basketList.js  (0ms)  (pid 8407)
+Compiled application.js  (6ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 100ms (Views: 99.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /models/basketList.js - 200 OK (2ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:22:17 -0700
+Served asset /application.js - 304 Not Modified (38ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:24:10 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled controllers/foodsController.js  (0ms)  (pid 8407)
+Compiled application.js  (5ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 97ms (Views: 96.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:24:10 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:24:10 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:10 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:10 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:10 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:10 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:10 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:10 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:10 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /controllers/foodsController.js - 200 OK (3ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /models/basketList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:24:11 -0700
+Served asset /application.js - 304 Not Modified (37ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled models/basketList.js  (0ms)  (pid 8407)
+Compiled application.js  (6ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 100ms (Views: 100.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /models/basketList.js - 200 OK (1ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:25:39 -0700
+Served asset /application.js - 304 Not Modified (39ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled models/basketList.js  (0ms)  (pid 8407)
+Compiled application.js  (6ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 97ms (Views: 96.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /initialize.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /models/basketList.js - 200 OK (2ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:17 -0700
+Served asset /application.js - 304 Not Modified (41ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:26:51 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled controllers/foodsController.js  (0ms)  (pid 8407)
+Compiled application.js  (6ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 99ms (Views: 98.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:26:51 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:26:51 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:51 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:51 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:51 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /controllers/foodsController.js - 200 OK (3ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /models/basketList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:26:52 -0700
+Served asset /application.js - 304 Not Modified (42ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled controllers/foodsController.js  (0ms)  (pid 8407)
+Compiled models/basketList.js  (0ms)  (pid 8407)
+Compiled application.js  (8ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 105ms (Views: 104.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /framework_and_overrides.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /vendor/modernizr.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.abide.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.accordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.clearing.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.interchange.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.joyride.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.magellan.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.offcanvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.orbit.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.reveal.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.slider.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.topbar.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /handlebars-v1.3.0.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /controllers/applicationController.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /foundation/foundation.equalizer.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /controllers/foodsController.js - 200 OK (1ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /initialize.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /models/basketList.js - 200 OK (1ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /models/foodList.js - 200 OK (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /queryer.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /views/basketView.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /views/foodListView.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:27:38 -0700
+Served asset /application.js - 200 OK (34ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:28:28 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled controllers/foodsController.js  (0ms)  (pid 8407)
+Compiled application.js  (5ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 104ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /framework_and_overrides.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /vendor/modernizr.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.accordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.abide.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.joyride.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.magellan.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.interchange.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.clearing.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.offcanvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.orbit.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.reveal.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.slider.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.topbar.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation/foundation.equalizer.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /handlebars-v1.3.0.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /controllers/applicationController.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /controllers/foodsController.js - 200 OK (5ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /initialize.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /models/basketList.js - 200 OK (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /queryer.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /models/foodList.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /views/basketView.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /views/foodListView.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:28:29 -0700
+Served asset /application.js - 200 OK (35ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:29:07 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled controllers/foodsController.js  (0ms)  (pid 8407)
+Compiled application.js  (6ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 98ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /controllers/foodsController.js - 200 OK (3ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /models/basketList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /models/foodList.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:29:08 -0700
+Served asset /application.js - 304 Not Modified (36ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+Compiled controllers/foodsController.js  (0ms)  (pid 8407)
+Compiled models/basketList.js  (0ms)  (pid 8407)
+Compiled application.js  (7ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 100ms (Views: 99.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:12 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /controllers/foodsController.js - 200 OK (2ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /models/basketList.js - 200 OK (1ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /application.js - 304 Not Modified (38ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:30:13 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:31:23 -0700
+Processing by HomeController#index as HTML
+  Parameters: {"food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+Compiled models/basketList.js  (0ms)  (pid 8407)
+Compiled application.js  (7ms)  (pid 8407)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 106ms (Views: 106.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basketList.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /models/basketList.js - 200 OK (2ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 12:31:24 -0700
+Served asset /application.js - 304 Not Modified (32ms)
+
+
+Started POST "/?food-choice=apple" for 127.0.0.1 at 2014-05-02 12:31:31 -0700
+Processing by HomeController#index as */*
+  Parameters: {"undefined"=>"", "food-choice"=>"apple"}
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.0ms)

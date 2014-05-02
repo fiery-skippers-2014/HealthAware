@@ -6,15 +6,16 @@ Basket.prototype = {
 	addFoodtoBasket: function(object){
     this.basket.push(object)
   },
-  saveBasketToDataBase: function(){
+  savetheBasketToDataBase: function(){
+    console.log(this)
     $.ajax({
-      url: '/home/create',
+      url: '',
       data: this.basket,
-      type: 'POST'})
+      type: 'POST'
+    })
       .done(function(json){
         console.log('database save successful')
       })
-    }
   }
 }
 

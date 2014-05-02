@@ -33,7 +33,6 @@ FoodController.prototype = {
   },
   findFoodInSearchResults: function(e){
       //Visual
-    // $(e.currentTarget).addClass('basket')
     //Save to Database, make this nicer.....maybe a Basket Model
     food_id = e.currentTarget.getElementsByTagName('li')[0].getAttribute('food-id')
     for(x = 0; x < this.allFoodResults.hits.length; x++){
@@ -46,7 +45,7 @@ FoodController.prototype = {
   printOutBasket: function(e){
     this.basketView.drawBasket(this.basket)
   },
-  saveBasketToDataBase: function(){
-    this.basket.saveBasketToDataBase
+  saveBasketToDataBase: function(e){
+    this.basket.savetheBasketToDataBase()
   }
 }
