@@ -6,8 +6,10 @@ $(document).ready(function(){
     foodTemplate: "#food-template"
   }
 
+
+  var food = new FoodList('https://api.nutritionix.com/v1_1/search/')
+
   var basket = new BasketList()
-  var food = new FoodList('https://api.nutritionix.com/v1_1/search/kale?fields=item_name%2Citem_id%2Cbrand_name%2Cnf_calories%2Cnf_total_fat&appId=c6626cb4&appKey=efd276c977110710dbcc73b6ffbfc9dc')
   var FoodView = new FoodListView(FoodElements)
   var foodController = new FoodController(food, FoodView, basket)
 
@@ -21,6 +23,5 @@ $(document).ready(function(){
 
   //Driver Code
   applicationController.bindListeners()
-  console.log(foodController)
-  foodController.summonFood()
+
 })

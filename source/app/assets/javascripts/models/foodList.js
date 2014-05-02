@@ -6,10 +6,12 @@ function FoodList(url){
 
 FoodList.prototype = {
   // run in FoodsController.js
-  fetchFood: function() {
+  fetchFood: function(queryData) {
+    console.log('made it here')
     $.ajax({
-      url: this.url,
-      type: 'GET'})
+      url: 'https://api.nutritionix.com/v1_1/search/',
+      data: queryData,
+      type: 'POST'})
       .done(function(json){
         new CustomEvent('foodList')
         $.event.trigger('foodList', json)
