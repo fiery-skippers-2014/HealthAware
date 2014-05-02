@@ -16,7 +16,7 @@ FoodController.prototype = {
     var basketView = this.basketView
     // on foodsList event created within foodList model, create template with model's elements AKA foodView (because you are binding the function to foodView)
     $('#search-form').on('submit', this.searchFoods.bind(food))
-    $(document).on("foodList", foodView.drawFoods.bind(foodView));
+    $(document).on("foodList", this.prepareFoodListForView);
     $(document).on("foodList", this.createFoodList.bind(this))
     $(document).on('click', '.food_div', this.findFoodInSearchResults.bind(this))
     $(document).on('click', '.food_div', this.printOutBasket.bind(this))
@@ -39,26 +39,24 @@ FoodController.prototype = {
     var masterObjArray = [];
     var fieldValueArray = [];
 
-    Handlebars.registerHelper('fieldsToShow', function(json){
-      for (h=0;h<json.hits.length;h++){    //gives us each returned object
-        for (i=0;i<goodFields.length;i++){
-          currentGoodField = goodFields[i];
-          newObjLit = {
-            fieldName : currentGoodField,
-            fieldValue : json.hits[h].fields[goodFields[i]]
-          }
-          fieldValueArray.push(newObjLit)
-
-          // ourObject[goodFields[i]] = json.hits[h].fields[goodFields[i]]
+    for (h=0;h<json.hits.length;h++){    //gives us each returned object
+      for (i=0;i<goodFields.length;i++){
+        currentGoodField = goodFields[i];
+        newObjLit = {
+          fieldName : currentGoodField,
+          fieldValue : json.hits[h].fields[goodFields[i]]
         }
-        var ourEachObject = {};
-        ourEachObject.objName = json.hits[h].fields.item_name;
-        ourEachObject.objBrandName = json.hits[h].fields.brand_name;
-        ourEachObject.objFields = fieldValueArray;
-        masterObjArray.push(ourEachObject);
+        fieldValueArray.push(newObjLit)
+
+        // ourObject[goodFields[i]] = json.hits[h].fields[goodFields[i]]
       }
-    return { objects : masterObjArray };
-    })
+      var ourEachObject = {};
+      ourEachObject.objName = json.hits[h].fields.item_name;
+      ourEachObject.objBrandName = json.hits[h].fields.brand_name;
+      ourEachObject.objFields = fieldValueArray;
+      masterObjArray.push(ourEachObject);
+    }
+    FoodListView.drawFoods({ objects : masterObjArray });
   },
 
 
