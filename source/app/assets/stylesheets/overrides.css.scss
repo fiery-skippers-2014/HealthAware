@@ -7,9 +7,9 @@ $main-background-color: #f5f5f5;
 $box-color: #ffffff;
 $box-shadow: 1px 1px 1px #888888;
 $black-color: #000;
-$green-link: #93af53;
-$green-link-hover: #758a3d;
-$blue-link: #66a3c2;
+$blue-link: #006fd0;
+$blue-link-hover: #295882;
+$light-blue-link: #66a3c2;
 $grey-shadow: 0.5px 0.5px #ececec;
 $dark-grey-shadow: 0.5px 0.5px #d9d9d9;
 $main-text-family: Helvetica, Verdana, Arial, sans-serif;
@@ -23,7 +23,7 @@ body {
   font-size: 14px;
   // width: ;
   a {
-    color: $green-link;
+    color: $blue-link;
     text-decoration: none;
     line-height: inherit;
     }
@@ -59,7 +59,7 @@ body {
     line-height: 45px;
     a {
       font-weight: normal;
-      color: $green-link;
+      color: $blue-link;
       padding: 0 15px;
       }
     }
@@ -68,18 +68,18 @@ body {
 .top-bar-section li:not(.has-form) {
   a:not(.button) {
     background-color: $main-background-color;
-    color: $green-link;
+    color: $blue-link;
     text-shadow: $grey-shadow;
     font-size: 0.9em;
     }
   a:not(.button):hover {
     background-color: $main-background-color;
-    color: $green-link-hover;
+    color: $blue-link-hover;
     }
   }
 
 .top-bar .toggle-topbar.menu-icon a {
-  color: $green-link;
+  color: $blue-link;
   // text-shadow: $grey-shadow;
   // font-size: 0.9em;
   }
@@ -121,7 +121,7 @@ body {
   .heading {
     font-size:1.2em;
     padding: 10px;
-    border-bottom:1.5px solid $green-link;
+    border-bottom:1.5px solid $blue-link;
     text-align:left;
     }
   }
@@ -149,7 +149,7 @@ body {
 /// BUTTONS
 .button {
   width: auto;
-  background: $green-link;
+  background: $blue-link;
   // border: 1px solid #888888;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
@@ -175,7 +175,7 @@ body {
 
 .button:hover {
   color: white;
-  background-color: $green-link-hover;
+  background-color: $blue-link-hover;
 }
 
 .button:active {
@@ -190,7 +190,7 @@ body {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background-color: $green-link;
+  background-color: $blue-link;
   font-size: 1.1em;
   padding: 5px;
   color: white;
@@ -250,7 +250,7 @@ body {
   span {
     display: inline-block;
     height: 100%;
-    background-color: $green-link;
+    background-color: $light-blue-link;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -264,12 +264,12 @@ body {
     transition: width .4s ease-in-out;
   }
 }
-.green_bar span {
-	background-color: $green-link;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($green-link), to(#008911));
-	background-image: -webkit-linear-gradient(top, $green-link, #008911);
-	background-image: -moz-linear-gradient(top, $green-link, #008911);
-	background-image: -ms-linear-gradient(top, $green-link, #008911);
-	background-image: -o-linear-gradient(top, $green-link, #008911);
-	background-image: linear-gradient(top, $green-link, #008911);
+.blue_bar span {
+	background-color: $light-blue-link;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($light-blue-link), to($blue-link));
+	background-image: -webkit-linear-gradient(top, $light-blue-link, $blue-link);
+	background-image: -moz-linear-gradient(top, $light-blue-link, $blue-link);
+	background-image: -ms-linear-gradient(top, $light-blue-link, $blue-link);
+	background-image: -o-linear-gradient(top, $light-blue-link, $blue-link);
+	background-image: linear-gradient(top, $light-blue-link, $blue-link);
 }
