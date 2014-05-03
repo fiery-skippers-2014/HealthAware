@@ -1,9 +1,10 @@
 // run in initialize.js
-function FoodController(model, Foodview, basket, basketView){
+function FoodController(model, Foodview, basket, basketView, Healthview){
   this.model = model // hard-coded url request (so far)
   this.view = Foodview // hash of elements important for food-template
   this.basket = basket
   this.basketView = basketView
+  this.healthView = Healthview
   this.allFoodResults = {}
 }
 
@@ -14,10 +15,12 @@ FoodController.prototype = {
     var foodView = this.view
     var basket = this.basket
     var basketView = this.basketView
+    var healthView = this.healthView
     // on foodsList event created within foodList model, create template with model's elements AKA foodView (because you are binding the function to foodView)
     $(document).ready(basket.retrieveFoodsFromDataBase.bind(basket))
     $(document).on("oldList", this.printSavedBasket.bind(this))
     $(document).on("oldList", basket.calculateTotals.bind(basket))
+    $(document).on("oldList", this.updateTotalsOnView.bind(this))
     $('#search-form').on('submit', this.searchFoods.bind(food))
     $(document).on("foodList", foodView.drawFoods.bind(foodView));
     $(document).on("foodList", this.createFoodList.bind(this))
@@ -46,5 +49,9 @@ FoodController.prototype = {
   },
   saveBasketToDataBase: function(e){
     this.basket.savetheBasketToDataBase()
+  },
+  updateTotalsOnView: function(e){
+    console.log(this.healthView)
+    this.healthView.updateHealthStatsOnView(this.basket.progress)
   }
 }
