@@ -1,6 +1,7 @@
 function Basket(){
   this.oldfoodarray = []
-  this.preferences
+  this.goals
+  this.progress = {}
 }
 
 Basket.prototype = {
@@ -27,19 +28,32 @@ Basket.prototype = {
       type: 'GET'
     })
     .done(function(data){
-      console.log(data)
       if(data.basket !== null){
         self.oldfoodarray = data.basket
       }
-      console.log(self)
-      self.preferences = data.goal
+      self.goals = data.goal
       new CustomEvent('oldList')
       $.event.trigger('oldList')
     })
   },
   calculateTotals: function(){
-    this.oldfoodarray
-    this.preferences
-    // (parseFloat(this.oldfoodarray[0].nf_protein))/this.preferences.protein * 100
+    //Loop through your goals
+    for (j=0; j < this.goals.length; j++){
+      keys = Object.keys(this.goals[j])
+      target = keys[0]
+      fda = keys[2]
+      this.progress[target] = 0
+      this.progress[fda] = 0
+      //Inner Loop through each food ...
+      for (i=0; i < this.oldfoodarray.length; i++){
+        console.log(this.oldfoodarray[i][target])
+        if(this.oldfoodarray[i][target] !== ""){
+          this.progress[target] += (parseFloat(this.oldfoodarray[i][target]))
+        }
+      }
+      // ... and calculate totals
+      this.progress[target] = this.progress[target]/this.goals[j][target] * 100
+      this.progress[fda] = this.progress[target]/this.goals[j][fda] * 100
+    }
   }
 }
