@@ -1,38 +1,38 @@
 function Basket(){
-	this.basket = []
+	// this.newfoodarray = []
+  this.oldfoodarray = []
 }
 
 Basket.prototype = {
 	addFoodtoBasket: function(object){
-    this.basket.push(object)
     this.saveFoodItemToDataBase(object)
   },
   saveFoodItemToDataBase: function(object){
+    var self = this
     $.ajax({
-
       url: '/foods',
       data: object,
       type: 'POST'
     })
     .done(function(json){
+      console.log(json)
+      self.oldfoodarray.push(json)
+      new CustomEvent('oldList')
+      $.event.trigger('oldList')
+    })
+  },
+  retrieveFoodsFromDataBase: function(){
+    console.log(this)
+    var self = this
+    $.ajax({
+      url: '/baskets/0',
+      type: 'GET'
+    })
+    .done(function(data){
+      console.log(data)
+      self.oldfoodarray = data
+      new CustomEvent('oldList')
+      $.event.trigger('oldList')
     })
   }
-  // retrieveFoodsFromDataBase: function(){
-  //   $.ajax({
-  //     url: '/basket',
-  //     type: 'GET'
-  //   })
-  //   .done(function(json){
-  //     console.log(json)
-  //   })
-  // }
 }
-
-
-// 1)FoodController has all search Results
-// 2)Clicked food becomes SelectedFood
-//   i) Selected food saves to server in
-//   ii) Basket contents comes back from server
-//   iii) Print out basket server contents
-
-
