@@ -9,9 +9,30 @@
   <%= f.password_field :password_confirmation %>
     <%= fields_for @goal do |u| %>
     <%= u.label "What are you trying to track?" %>
-    <%= u.select :nutrient_id, options_for_select([["Protein",1]]) %>
-    <%= u.label "What amount do You need per day" %>
-    <%= u.text_field :target %>
+      <% @x = [] %>
+      <% @y = [] %>
+      <% @z = [] %>
+      <% @nutrients.each_with_index do |nutrient| %>
+      <% @x << nutrient.name %>
+      <% @y << nutrient.FDA_recommendation %>
+      <% @z << nutrient.FDA_limit %>
+      <% end %>
+      <%= u.select :nutrient_id, options_for_select(@x) %>
+      <div class="large-12 columns">
+      <span class:"large-3 columns" >I want to </span>
+
+      <span class="large-1 columns">
+      <%= select :limit,:limit_id, options_for_select([["max"],["min"]],{:class => "large-1 columns"}) %>
+      </span>
+      </div>
+
+      <%#= select("nutrient", "nutrient_id", @nutrients.collect {|p| [ p.name] }, { include_blank: true }) %>
+
+
+      <div class="large-12 columns">
+        <%= u.label :FDA_Recommendation_or_Pick_Your_Own %>
+        <%= u.text_field :nutrient_id, :placeholder => "figure this out" %>
+      </div>
     <% end %>
   <%= f.submit 'Submit' %>
 <% end %>
