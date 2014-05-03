@@ -80507,3 +80507,2314 @@ Processing by BasketsController#show as */*
   [1m[35mCACHE (0.0ms)[0m  SELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 2
   [1m[36mFood Load (0.4ms)[0m  [1mSELECT "foods".* FROM "foods" INNER JOIN "basket_foods" ON "foods"."id" = "basket_foods"."food_id" WHERE "basket_foods"."basket_id" = 2[0m
 Completed 200 OK in 137ms (Views: 2.0ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 10:07:16 -0700
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (12.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 498ms (Views: 498.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:17 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:17 -0700
+Served asset /overrides.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:17 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:17 -0700
+Served asset /application.css - 304 Not Modified (19ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:17 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:17 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /initialize.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /views/basketView.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /models/basket.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /models/foodList.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /queryer.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /views/foodListView.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Served asset /application.js - 304 Not Modified (26ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:07:18 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+Completed 500 Internal Server Error in 4ms
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/models/goal.rb:9:in `usergoals'
+  app/controllers/baskets_controller.rb:11:in `show'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-05-03 10:07:22 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (67.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+Completed 200 OK in 84ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /models/basket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:07:23 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+Completed 500 Internal Server Error in 0ms
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/models/goal.rb:9:in `usergoals'
+  app/controllers/baskets_controller.rb:11:in `show'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-05-03 10:07:25 -0700
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 522ms (Views: 33.1ms | ActiveRecord: 417.5ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /models/basket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:07:26 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+Completed 500 Internal Server Error in 0ms
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/models/goal.rb:9:in `usergoals'
+  app/controllers/baskets_controller.rb:11:in `show'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-05-03 10:07:34 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qaL5m5vYQ2PTNIfD8Up1V+iRJpwiX1o8Z7xxVN0+ajQ=", "user"=>{"username"=>"d", "email"=>"drewcparker@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "goal"=>{"nutrient_id"=>"1", "target"=>"200"}, "commit"=>"Submit"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (124.5ms)[0m  INSERT INTO "users" ("created_at", "email", "password_digest", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Sat, 03 May 2014 17:07:34 UTC +00:00], ["email", "drewcparker@gmail.com"], ["password_digest", "$2a$10$y0XzgRbWEitf38/UxSnNKu8MXteNfAf97UVdaGegoKdomQdVG9np2"], ["updated_at", Sat, 03 May 2014 17:07:34 UTC +00:00], ["username", "d"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (14.9ms)[0m  [1mINSERT INTO "goals" ("created_at", "nutrient_id", "target", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Sat, 03 May 2014 17:07:35 UTC +00:00], ["nutrient_id", 1], ["target", 200], ["updated_at", Sat, 03 May 2014 17:07:35 UTC +00:00], ["user_id", 3]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 238ms (ActiveRecord: 141.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (19.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 35.4ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /models/basket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:07:35 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mGoal Load (0.6ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE (user_id = 3)[0m
+  [1m[35mNutrient Load (25.7ms)[0m  SELECT "nutrients".* FROM "nutrients" WHERE "nutrients"."id" = 1 LIMIT 1
+  [1m[36mBasket Load (34.2ms)[0m  [1mSELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3
+Completed 500 Internal Server Error in 189ms
+
+NoMethodError (undefined method `foods' for nil:NilClass):
+  app/controllers/baskets_controller.rb:15:in `show'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (2.2ms)
+  Rendered layouts/_navigation.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /models/basket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:07:37 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE (user_id = 3)[0m
+  [1m[35mNutrient Load (0.3ms)[0m  SELECT "nutrients".* FROM "nutrients" WHERE "nutrients"."id" = 1 LIMIT 1
+  [1m[36mBasket Load (0.3ms)[0m  [1mSELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `foods' for nil:NilClass):
+  app/controllers/baskets_controller.rb:15:in `show'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.4ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2014-05-03 10:07:45 -0700
+Processing by FoodsController#create as */*
+  Parameters: {"_index"=>"9fa412b9-1dbc-4e35-be7a-0c0c9c8c8e16", "_type"=>"item", "_id"=>"51c54ba897c3e6efadd61015", "_score"=>"0.72021645", "fields"=>{"item_name"=>"Milk, Vitamin D Chocolate", "nf_serving_size_qty"=>"240", "nf_serving_size_unit"=>"mL", "nf_total_fat"=>"8", "nf_protein"=>"8", "nf_total_carbohydrate"=>"29"}}
+  [1m[36mFood Load (37.1ms)[0m  [1mSELECT "foods".* FROM "foods" WHERE "foods"."API" = '51c54ba897c3e6efadd61015' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFood Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "foods" WHERE "foods"."API" = '51c54ba897c3e6efadd61015' LIMIT 1[0m
+  [1m[35mSQL (33.7ms)[0m  INSERT INTO "foods" ("API", "created_at", "item_name", "nf_protein", "nf_serving_size_qty", "nf_serving_size_unit", "nf_total_carbohydrate", "nf_total_fat", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["API", "51c54ba897c3e6efadd61015"], ["created_at", Sat, 03 May 2014 17:07:45 UTC +00:00], ["item_name", "Milk, Vitamin D Chocolate"], ["nf_protein", "8"], ["nf_serving_size_qty", "240"], ["nf_serving_size_unit", "mL"], ["nf_total_carbohydrate", "29"], ["nf_total_fat", "8"], ["updated_at", Sat, 03 May 2014 17:07:45 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mBasket Load (0.6ms)[0m  SELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "baskets" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", Sat, 03 May 2014 17:07:45 UTC +00:00], ["updated_at", Sat, 03 May 2014 17:07:45 UTC +00:00], ["user_id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (30.0ms)[0m  [1mINSERT INTO "basket_foods" ("basket_id", "food_id", "quantity") VALUES ($1, $2, $3) RETURNING "id"[0m  [["basket_id", 3], ["food_id", 13], ["quantity", 1]]
+  [1m[35m (0.7ms)[0m  COMMIT
+Completed 200 OK in 184ms (Views: 0.8ms | ActiveRecord: 111.8ms)
+
+
+Started POST "/foods" for 127.0.0.1 at 2014-05-03 10:07:46 -0700
+Processing by FoodsController#create as */*
+  Parameters: {"_index"=>"9fa412b9-1dbc-4e35-be7a-0c0c9c8c8e16", "_type"=>"item", "_id"=>"529e7f07ea63d49335007d40", "_score"=>"0.72021645", "fields"=>{"item_name"=>"Shrimp Saute - D - Halibut", "nf_serving_size_qty"=>"1", "nf_serving_size_unit"=>"serving", "nf_total_fat"=>"4.5", "nf_protein"=>"", "nf_total_carbohydrate"=>"4"}}
+  [1m[36mFood Load (0.4ms)[0m  [1mSELECT "foods".* FROM "foods" WHERE "foods"."API" = '529e7f07ea63d49335007d40' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFood Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "foods" WHERE "foods"."API" = '529e7f07ea63d49335007d40' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "foods" ("API", "created_at", "item_name", "nf_protein", "nf_serving_size_qty", "nf_serving_size_unit", "nf_total_carbohydrate", "nf_total_fat", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["API", "529e7f07ea63d49335007d40"], ["created_at", Sat, 03 May 2014 17:07:46 UTC +00:00], ["item_name", "Shrimp Saute - D - Halibut"], ["nf_protein", ""], ["nf_serving_size_qty", "1"], ["nf_serving_size_unit", "serving"], ["nf_total_carbohydrate", "4"], ["nf_total_fat", "4.5"], ["updated_at", Sat, 03 May 2014 17:07:46 UTC +00:00]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mBasket Load (0.7ms)[0m  SELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3 LIMIT 1[0m
+  [1m[35mBasketFood Load (0.4ms)[0m  SELECT "basket_foods".* FROM "basket_foods" WHERE "basket_foods"."food_id" = 14 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "basket_foods" ("basket_id", "food_id", "quantity") VALUES ($1, $2, $3) RETURNING "id"  [["basket_id", 3], ["food_id", 14], ["quantity", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (1.9ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:51 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /models/basket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:07:52 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mGoal Load (0.4ms)[0m  SELECT "goals".* FROM "goals" WHERE (user_id = 3)
+  [1m[36mNutrient Load (0.4ms)[0m  [1mSELECT "nutrients".* FROM "nutrients" WHERE "nutrients"."id" = 1 LIMIT 1[0m
+  [1m[35mBasket Load (0.5ms)[0m  SELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3[0m
+  [1m[35mFood Load (0.6ms)[0m  SELECT "foods".* FROM "foods" INNER JOIN "basket_foods" ON "foods"."id" = "basket_foods"."food_id" WHERE "basket_foods"."basket_id" = 3
+Completed 200 OK in 64ms (Views: 9.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (19.6ms)
+  Rendered layouts/_navigation.html.erb (20.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /models/basket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:08:22 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE (user_id = 3)[0m
+  [1m[35mNutrient Load (0.4ms)[0m  SELECT "nutrients".* FROM "nutrients" WHERE "nutrients"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 74ms
+
+NoMethodError (undefined method `nurtient' for #<Goal:0x007f8ef5357a10>):
+  app/models/goal.rb:14:in `block in usergoals'
+  app/models/goal.rb:10:in `usergoals'
+  app/controllers/baskets_controller.rb:11:in `show'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (19.9ms)
+  Rendered layouts/_navigation.html.erb (20.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /models/basket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /models/foodList.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:09:18 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE (user_id = 3)[0m
+  [1m[35mNutrient Load (0.5ms)[0m  SELECT "nutrients".* FROM "nutrients" WHERE "nutrients"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 43ms
+
+NoMethodError (undefined method `nurtients' for #<Goal:0x007f8ef429a7b8>):
+  app/models/goal.rb:15:in `block in usergoals'
+  app/models/goal.rb:10:in `usergoals'
+  app/controllers/baskets_controller.rb:11:in `show'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (20.1ms)
+  Rendered layouts/_navigation.html.erb (21.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:30 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /models/basket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:10:31 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mGoal Load (0.4ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE (user_id = 3)[0m
+  [1m[35mNutrient Load (0.5ms)[0m  SELECT "nutrients".* FROM "nutrients" WHERE "nutrients"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 94ms
+
+NoMethodError (undefined method `nurtient' for #<Goal:0x007f8ef4066d70>):
+  app/models/goal.rb:15:in `block in usergoals'
+  app/models/goal.rb:10:in `usergoals'
+  app/controllers/baskets_controller.rb:11:in `show'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 10:10:56 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (20.2ms)
+  Rendered layouts/_navigation.html.erb (21.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 30.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:10:56 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:10:56 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:10:56 -0700
+Served asset /overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:56 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:56 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:56 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:56 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /models/basket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /models/foodList.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:10:57 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mGoal Load (0.6ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE (user_id = 3)[0m
+  [1m[35mNutrient Load (0.4ms)[0m  SELECT "nutrients".* FROM "nutrients" WHERE "nutrients"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 40ms
+
+NoMethodError (undefined method `nurtient' for #<Goal:0x007f8ef3418118>):
+  app/models/goal.rb:14:in `block in usergoals'
+  app/models/goal.rb:10:in `usergoals'
+  app/controllers/baskets_controller.rb:11:in `show'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (20.0ms)
+  Rendered layouts/_navigation.html.erb (21.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /models/basket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:11:23 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mGoal Load (0.2ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE (user_id = 3)[0m
+  [1m[35mNutrient Load (0.3ms)[0m  SELECT "nutrients".* FROM "nutrients" WHERE "nutrients"."id" = 1 LIMIT 1
+  [1m[36mBasket Load (0.4ms)[0m  [1mSELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3
+  [1m[36mFood Load (0.6ms)[0m  [1mSELECT "foods".* FROM "foods" INNER JOIN "basket_foods" ON "foods"."id" = "basket_foods"."food_id" WHERE "basket_foods"."basket_id" = 3[0m
+Completed 200 OK in 109ms (Views: 18.1ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (53.2ms)
+  Rendered layouts/_navigation.html.erb (54.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 66.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /framework_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /vendor/modernizr.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /models/basket.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /queryer.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:12:36 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:12:37 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mGoal Load (0.4ms)[0m  SELECT "goals".* FROM "goals" WHERE (user_id = 3)
+  [1m[36mNutrient Load (0.3ms)[0m  [1mSELECT "nutrients".* FROM "nutrients" WHERE "nutrients"."id" = 1 LIMIT 1[0m
+  [1m[35mBasket Load (0.3ms)[0m  SELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3[0m
+  [1m[35mFood Load (0.4ms)[0m  SELECT "foods".* FROM "foods" INNER JOIN "basket_foods" ON "foods"."id" = "basket_foods"."food_id" WHERE "basket_foods"."basket_id" = 3
+Completed 200 OK in 107ms (Views: 17.7ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 10:14:16 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (21.4ms)
+  Rendered layouts/_navigation.html.erb (22.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:14:16 -0700
+Served asset /overrides.css - 200 OK (1ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:14:16 -0700
+Served asset /framework_and_overrides.css - 200 OK (1ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /vendor/modernizr.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.accordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.abide.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.clearing.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.interchange.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.joyride.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.magellan.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.orbit.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.offcanvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.reveal.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.slider.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.topbar.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation/foundation.equalizer.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /handlebars-v1.3.0.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /controllers/applicationController.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /controllers/foodsController.js - 200 OK (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /initialize.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /models/basket.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /models/foodList.js - 200 OK (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /queryer.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /views/basketView.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /views/foodListView.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:14:17 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mGoal Load (0.3ms)[0m  [1mSELECT "goals".* FROM "goals" WHERE (user_id = 3)[0m
+  [1m[35mNutrient Load (0.4ms)[0m  SELECT "nutrients".* FROM "nutrients" WHERE "nutrients"."id" = 1 LIMIT 1
+  [1m[36mBasket Load (0.4ms)[0m  [1mSELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3
+  [1m[36mFood Load (0.3ms)[0m  [1mSELECT "foods".* FROM "foods" INNER JOIN "basket_foods" ON "foods"."id" = "basket_foods"."food_id" WHERE "basket_foods"."basket_id" = 3[0m
+Completed 200 OK in 104ms (Views: 17.2ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-03 10:14:54 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered layouts/_navigation_links.html.erb (19.0ms)
+  Rendered layouts/_navigation.html.erb (19.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/framework_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:14:54 -0700
+Served asset /framework_and_overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/overrides.css?body=1" for 127.0.0.1 at 2014-05-03 10:14:54 -0700
+Served asset /overrides.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-03 10:14:54 -0700
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/vendor/modernizr.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /vendor/modernizr.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.abide.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.abide.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.accordion.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.accordion.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.alert.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.alert.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.clearing.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.interchange.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.interchange.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.joyride.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.dropdown.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.offcanvas.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.offcanvas.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.magellan.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.orbit.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.reveal.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.slider.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.slider.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tab.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.tab.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltip.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.tooltip.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.topbar.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation/foundation.equalizer.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation/foundation.equalizer.js - 200 OK (0ms)
+
+
+Started GET "/assets/foundation.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /foundation.js - 200 OK (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /handlebars-v1.3.0.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/applicationController.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /controllers/applicationController.js - 200 OK (0ms)
+
+
+Started GET "/assets/controllers/foodsController.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /controllers/foodsController.js - 200 OK (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /initialize.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/basket.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /models/basket.js - 200 OK (0ms)
+
+
+Started GET "/assets/models/foodList.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /models/foodList.js - 200 OK (0ms)
+
+
+Started GET "/assets/queryer.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /queryer.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/basketView.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /views/basketView.js - 200 OK (0ms)
+
+
+Started GET "/assets/views/foodListView.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /views/foodListView.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/baskets/0" for 127.0.0.1 at 2014-05-03 10:14:55 -0700
+Processing by BasketsController#show as */*
+  Parameters: {"id"=>"0"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mGoal Load (0.4ms)[0m  SELECT "goals".* FROM "goals" WHERE (user_id = 3)
+  [1m[36mNutrient Load (0.3ms)[0m  [1mSELECT "nutrients".* FROM "nutrients" WHERE "nutrients"."id" = 1 LIMIT 1[0m
+  [1m[35mBasket Load (0.5ms)[0m  SELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 3[0m
+  [1m[35mFood Load (0.4ms)[0m  SELECT "foods".* FROM "foods" INNER JOIN "basket_foods" ON "foods"."id" = "basket_foods"."food_id" WHERE "basket_foods"."basket_id" = 3
+Completed 200 OK in 107ms (Views: 18.0ms | ActiveRecord: 13.9ms)

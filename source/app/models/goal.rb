@@ -10,6 +10,7 @@ class Goal < ActiveRecord::Base
     @goals.each do |goal|
       goals[goal.nutrient.nf_name] = goal.target
       goals[goal.nutrient.name] = goal.target
+      goals["#{goal.nutrient.name}_FDA_recommendation"] = goal.nutrient.FDA_recommendation
     end
     goals
   end
