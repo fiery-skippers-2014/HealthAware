@@ -25,12 +25,11 @@
 *.log
 *.sql
 *.sqlite
+
+log/
+tmp/
 /tmp/
 /log/
-tmp
-log
-/tmp
-/log
 
 # OS generated files #
 ######################
