@@ -5,20 +5,30 @@
 //INPUTS
 $main-background-color: #f5f5f5;
 $box-color: #ffffff;
-$box-shadow: 1px 1px 1px #888888;
 $black-color: #000;
 $blue-link: #006fd0;
 $blue-link-hover: #295882;
 $light-blue-link: #66a3c2;
+
+$light-red: #e93030;
+$dark-red: #b31010;
+$light-yellow: #ffc61d;
+$dark-yellow: #ffa406;
+$light-green: #9ffe20;
+$dark-green: #7db522;
+
+$box-shadow: 1px 1px 1px #888888;
 $grey-shadow: 0.5px 0.5px #ececec;
 $dark-grey-shadow: 0.5px 0.5px #d9d9d9;
 $main-text-family: Helvetica, Verdana, Arial, sans-serif;
 $light-black: #2D2D2D;
+$track-title-size: 1em;
 
 
 @mixin box_sizing {
-  margin-bottom: 5px;
-  font-size: 0.8em;
+  margin: 5px;
+  padding: 5px;
+  background-color:white;
 }
 
 @mixin four-transit {
@@ -35,6 +45,12 @@ $light-black: #2D2D2D;
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
 }
+
+@mixin bar-setup {
+    height: 15px;
+    float: left;
+}
+
 ////////////////////////////////////////
 
 body {
@@ -68,7 +84,6 @@ body {
 }
 
 //TOP BAR
-
 .top-bar {
   padding-top: 15px;
   height: 90px;
@@ -85,12 +100,9 @@ body {
       }
     }
   .toggle-topbar.menu-icon {
-    // background-color: ;
     color: $blue-link;
     a {
       color: $blue-link;
-      // text-shadow: $grey-shadow;
-      // font-size: 0.9em;
       }
     }
   }
@@ -125,7 +137,6 @@ body {
     }
     input[type="text"] {
       width: 50%;
-      float: left;
       margin-left: 15px;
       float: left;
       display:inline;
@@ -148,7 +159,6 @@ body {
 
 
 //SIDEBAR
-
 .profile {
   box-shadow: $box-shadow;
   padding: 5px;
@@ -160,21 +170,36 @@ body {
     }
   .basket {
     @include box_sizing;
-    padding: 15px;
+    min-height: 200px;
+    position: relative;
     }
   .health-stats {
     @include box_sizing;
-    padding: 15px;
-    .custom-progress-container {
-      @include progress-container;
-      @include radius(6px);
-      & > span {
-        @include progress-meter(pink);
-        @include radius(5px);
-        }
+    // padding: 5px;
+    display: block;
+    h4 {
+      font-size: 1.1em;
+      letter-spacing: 0.5px;
+      font-weight:bold;
+      padding-left: 5px;
+      text-transform: uppercase;
+      padding: 5px 5px 1px 5px;
+      }
+    li {
+      font-size: 1em;
+      padding-left: 15px;
+      }
+    .bar {
+      display: block;
+      height: 15px;
+      // display: inline;
+      // position: inherit;
       }
     }
   }
+
+
+
 
 /// BUTTONS
 .button {
@@ -223,10 +248,20 @@ body {
   }
 
 
-////PROGRESS BAR
+////PROGRESS BARS
+#bar {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin:5px;
+  background-color: $light-black;
+  border-radius:2px;
+  position: inherit;
+  clear: both;
+}
 
 .progress-bar {
-  background-color: #2D2D2D;
+  // background-color: #2D2D2D;
+  background-color: white;
   height: 25px;
   padding: 5px;
   margin-bottom: 18px;
@@ -239,22 +274,134 @@ body {
   span {
     display: inline-block;
     height: 100%;
-    background-color: $light-blue-link;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
-    @include four-transit
+    @include four-transit;
   }
 }
-.blue_bar span {
-	background-color: $light-blue-link;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($light-blue-link), to($blue-link));
-	background-image: -webkit-linear-gradient(top, $light-blue-link, $blue-link);
-	background-image: -moz-linear-gradient(top, $light-blue-link, $blue-link);
-	background-image: -ms-linear-gradient(top, $light-blue-link, $blue-link);
-	background-image: -o-linear-gradient(top, $light-blue-link, $blue-link);
-	background-image: linear-gradient(top, $light-blue-link, $blue-link);
+.green_bar {
+  @include bar-setup;
+	background-color: $light-green;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($light-green), to($dark-green));
+	background-image: -webkit-linear-gradient(top, $light-green, $dark-green);
+	background-image: -moz-linear-gradient(top, $light-green, $dark-green);
+	background-image: -ms-linear-gradient(top, $light-green, $dark-green);
+	background-image: -o-linear-gradient(top, $light-green, $dark-green);
+	background-image: linear-gradient(top, $light-green, $dark-green);
 }
+
+.red_bar {
+  @include bar-setup;
+  background-color: $light-red;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($light-red), to($dark-red));
+  background-image: -webkit-linear-gradient(top, $light-red, $dark-red);
+  background-image: -moz-linear-gradient(top, $light-red, $dark-red);
+  background-image: -ms-linear-gradient(top, $light-red, $dark-red);
+  background-image: -o-linear-gradient(top, $light-red, $dark-red);
+  background-image: linear-gradient(top, $light-red, $dark-red);
+}
+
+.yellow_bar {
+  @include bar-setup;
+  background-color: $light-yellow;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($light-yellow), to($dark-yellow));
+  background-image: -webkit-linear-gradient(top, $light-yellow, $dark-yellow);
+  background-image: -moz-linear-gradient(top, $light-yellow, $dark-yellow);
+  background-image: -ms-linear-gradient(top, $light-yellow, $dark-yellow);
+  background-image: -o-linear-gradient(top, $light-yellow, $dark-yellow);
+  background-image: linear-gradient(top, $light-yellow, $dark-yellow);
+}
+
+.barandgrowth  {
+  display: inline-block;
+  height: inherit;
+  width: 0%;
+	background-color: #777;
+  -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+  // -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+	// -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+	// box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+  -webkit-animation: growth 2s 1 forwards;
+  -moz-animation: growth 2s 1 forwards;
+  -ms-animation: growth 2s 1 forwards;
+  animation: growth 2s 1 forwards;
+}
+
+
+// Progress Bar buffering
+.buffering {
+    height: 15px;
+    width: 100%;
+    overflow: hidden;
+    background: url('http://www.cssdeck.com/uploads/media/items/7/7uo1osj.gif') repeat-x;
+    -moz-opacity: 0.25;
+    -khtml-opacity: 0.25;
+    opacity: 0.25;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=25);
+    filter: alpha(opacity=25);
+}
+
+//////// Progress Bar Animation
+// http://cssdeck.com/labs/animated-progress-bar
+@-webkit-keyframes growth {
+    from { }
+    to { width: 100% }
+}
+
+@-moz-keyframes growth {
+    from { }
+    to { width: 100% }
+}
+
+@-ms-keyframes growth {
+    from { }
+    to { width: 100% }
+}
+
+@keyframes growth {
+    from { }
+    to { width: 100% }
+}
+
+
+//SHINE ANIMATION
+//
+// .pulse span {
+//   position: relative;
+// }
+//
+// .pulse span::after {
+//   content: '';
+//   // opacity: 0;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   background-color: rgba(255, 255, 255, 1);
+//   -moz-border-radius: 3px;
+//   -webkit-border-radius: 3px;
+//   border-radius: 3px;
+//
+//   -webkit-animation: pulsing 2s ease-out infinite;
+//   -moz-animation: pulsing 2s ease-out infinite;
+// }
+//
+// @-webkit-keyframes pulsing {
+//   0% {opacity: 1; width: 0;}
+//   50% {opacity: .5;}
+//   100% {opacity: 0; width: 100%;}
+// }
+//
+// @-moz-keyframes pulsing {
+//   0% {opacity: 1; width: 0;}
+//   50% {opacity: .5;}
+//   100% {opacity: 0; width: 100%;}
+// }

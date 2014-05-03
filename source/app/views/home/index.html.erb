@@ -5,9 +5,9 @@
     <!-- SEARCH COLUMN -->
     <div class="search large-8 medium-8 small-4 columns">
 
-        <form id="search-form" class="search large-12 medium-12 small-12 columns">
+        <form id="search-form" class="search">
 
-          <label for="right-label" class="left inline">
+          <label for="right-label">
             Please select a food: </label>
           <input type="text" id="right-label" name="food-choice" placeholder="Apple Pie">
           <input type="submit" value="Click!" class="button">
@@ -23,18 +23,41 @@
     <div class="profile large-4 medium-4 small-4 columns">
 
       <div class="heading">Basket</div>
-        <div class="basket">basket stuff</div>
-
+      <div class="basket">basket stuff</div>
 
       <div class="heading">Health Stats</div>
         <div class="health-stats">
-          <p>for each desired stat:</p>
-          <div class="progress-bar blue_bar">
-            <span style="width: 80%">
+
+<!--      {{#stats}} -->
+          <h4>Track Title:</h4>
+          <li>track info</li>
+
+<!--      {{#if percentages (this < 40% of desired) }} -->
+          <div class="bar">
+            <div class="barandgrowth red_bar" style="max-width: 30%">
+              <div class="buffering"></div>
+            </div>
           </div>
+
+<!--      {{#elsif percentage > 70% of desired}} -->
+          <div class="bar">
+            <div class="barandgrowth green_bar" style="max-width: 100%">
+              <div class="buffering"></div>
+            </div>
+          </div>
+
+<!--      {{else}} -->
+          <div class="bar">
+            <div class="barandgrowth yellow_bar" style="max-width: 50%">
+              <div class="buffering"></div>
+            </div>
+          </div>
+
+<!--      {{/percentage}} -->
+<!--      {{/stats}} -->
+
         </div>
       </div>
-
     </div>
   </div><!-- end of main row --><!-- end of container -->
 
