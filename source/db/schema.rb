@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20140502214646) do
 
   create_table "nutrients", :force => true do |t|
     t.string   "name"
+    t.string   "nf_name"
     t.integer  "FDA_recommendation"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false

@@ -22,7 +22,6 @@ class FoodsController < ApplicationController
       @basket = Basket.create(user_id: session[:user_id])
       BasketFood.create(basket_id: @basket.id, food_id: @food.id)
     end
-    p @food
     render json: @food
   end
 end
