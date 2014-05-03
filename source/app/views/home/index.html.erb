@@ -1,6 +1,6 @@
 <div id="container" class="row large-12 medium-11 small-12 large-centered medium-centered small-centered">
 
-
+<H1>Welcome to HealthAware</h1> 
 
 
     <!-- SEARCH COLUMN -->
@@ -73,3 +73,20 @@
     </div>
   {{/oldfoodarray}}
 </script>
+
+
+<script id="health-template" type="text/x-handlebars-template">
+  <div class="food_div">
+      <li class="food">
+      <ul>
+        <b>Total Protein</b>
+        <li>Percentage of your target: {{nf_protein}}</li>
+        <li>Percentage of FDA: {{nf_protein_FDA_recommendation}}</li>
+
+        <b>Total Fat</b>
+        <li>Percentage of your target: {{nf_total_fat}}</li>
+        <li>Percentage of FDA: {{nf_total_fat_FDA_recommendation}}</li>
+      </ul>
+    </div>
+</script>
+

@@ -6,6 +6,7 @@ $(document).ready(function(){
     foodTemplate: "#food-template"
   }
 
+  //BasketItem
   var BasketElements = {
     basket: ".basket",
     basketTemplate: "#basket-template"
