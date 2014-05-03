@@ -51,6 +51,7 @@ FoodController.prototype = {
         // ourObject[goodFields[i]] = json.hits[h].fields[goodFields[i]]
       }
       var ourEachObject = {};
+      ourEachObject.foodId = json.hits[h]._id;
       ourEachObject.objName = json.hits[h].fields.item_name;
       ourEachObject.objBrandName = json.hits[h].fields.brand_name;
       ourEachObject.objFields = fieldValueArray;

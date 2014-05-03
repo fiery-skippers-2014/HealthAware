@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   //FoodItem
   var FoodElements = {
-    container: ".container",
+    container: ".searched",
     foodTemplate: "#food-template"
   }
 
@@ -30,5 +30,3 @@ $(document).ready(function(){
   applicationController.bindListeners()
 
 })
-
-

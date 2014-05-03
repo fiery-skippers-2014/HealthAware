@@ -1,21 +1,56 @@
-<H1>Welcome to HealthAware</h1>
+<div id="container" class="row large-12 medium-11 small-12 large-centered medium-centered small-centered">
 
-<div class="search">
-  <form id="search-form">
-    Please select a food: <input type="text" name="food-choice">
-    <input type="submit" value="Click!">
-  </form>
-</div>
 
-<div class="profile"></div>
-<div class="basket"></div>
-<div class="container"></div>
 
+
+    <!-- SEARCH COLUMN -->
+    <div class="search large-8 medium-8 small-4 columns">
+
+        <form id="search-form" class="search large-12 medium-12 small-12 columns">
+
+          <label for="right-label" class="left inline">
+            Please select a food: </label>
+          <input type="text" id="right-label" name="food-choice" placeholder="Apple Pie">
+          <input type="submit" value="Click!" class="button">
+        </form>
+<hr>
+      <div class="searched" class="testing">searched</div>
+
+    </div>
+
+
+
+    <!-- SIDEBAR COLUMN -->
+    <div class="profile large-4 medium-4 small-4 columns">
+
+      <div class="heading">Basket</div>
+        <div class="basket">basket stuff</div>
+
+
+      <div class="heading">Health Stats</div>
+        <div class="health-stats">
+          <p>for each desired stat:</p>
+          <div class="progress-bar blue_bar">
+            <span style="width: 80%">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- end of main row --><!-- end of container -->
+
+
+
+
+
+
+
+<!-- TEMPLATES -->
 <script id="food-template" type="text/x-handlebars-template">
   <ol>
     {{#objects}}
       <div class="food-div">
-        <li class="food" food-id={{_id}}><b>{{objBrandName}}</b>: {{objName}}</li>
+        <li class="food" food-id={{foodId}}><b>{{objBrandName}}</b>: {{objName}}</li>
         <ul>
           {{#objFields}}
             <li>{{fieldName}}: {{fieldValue}}</li>
