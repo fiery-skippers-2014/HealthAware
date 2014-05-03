@@ -4,9 +4,10 @@ function FoodListView(foodElements){
 }
 
 FoodListView.prototype = {
-  drawFoods: function(json){
-    var source = $(this.foodTemplate).html()
+  drawFoods: function(json, foodTemplate){
+    console.log(this)
+    var source = foodTemplate.html()
     var template = Handlebars.compile(source)
-    $(this.container).html(template(json))
+    $('.container').html(template(json))
   }
 }

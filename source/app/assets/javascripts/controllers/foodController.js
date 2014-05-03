@@ -17,7 +17,7 @@ FoodController.prototype = {
     // on foodsList event created within foodList model, create template with model's elements AKA foodView (because you are binding the function to foodView)
     // $(document).on("load", basket.retrieveFoodsFromDataBase())
     $('#search-form').on('submit', this.searchFoods.bind(food))
-    $(document).on("foodList", this.prepareFoodListForView);
+    $(document).on("foodList", this.prepareFoodListForView.bind(foodView));
     $(document).on("foodList", this.createFoodList.bind(this))
     $(document).on('click', '.food_div', this.findFoodInSearchResults.bind(this))
     $(document).on('click', '.food_div', this.printOutBasket.bind(this))
@@ -34,13 +34,13 @@ FoodController.prototype = {
   },
 
   prepareFoodListForView: function(e, json){
-    var goodFields = ["nf_calories", "nf_total_fat", "nf_protein"];
+    var goodFields = ["nf_sugars", "nf_total_fat", "nf_protein"];
     // var fullObject = json;
     var ourMasterObject = {};
     var masterObjArray = [];
-    var fieldValueArray = [];
 
     for (h=0;h<json.hits.length;h++){    //gives us each returned object
+      var fieldValueArray = [];
       for (i=0;i<goodFields.length;i++){
         currentGoodField = goodFields[i];
         newObjLit = {
@@ -48,7 +48,6 @@ FoodController.prototype = {
           fieldValue : json.hits[h].fields[goodFields[i]]
         }
         fieldValueArray.push(newObjLit)
-
         // ourObject[goodFields[i]] = json.hits[h].fields[goodFields[i]]
       }
       var ourEachObject = {};
@@ -57,7 +56,8 @@ FoodController.prototype = {
       ourEachObject.objFields = fieldValueArray;
       masterObjArray.push(ourEachObject);
     }
-    FoodListView.drawFoods({ objects : masterObjArray });
+    console.log({objects:masterObjArray});
+    FoodListView.prototype.drawFoods({ objects : masterObjArray }, $('#food-template'));
   },
 
 
