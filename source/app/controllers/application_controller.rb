@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  include ApplicationHelper
   helper_method :login_user
   helper_method :current_user
   helper_method :logout_user
@@ -12,7 +13,11 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    @user ||= User.find session[:user_id] if session[:user_id]
+    p "the user"
+    @user ||= User.find(session[:user_id]) if session[:user_id]
+    p "the user"
+    p @user
+    @user
   end
 
 end

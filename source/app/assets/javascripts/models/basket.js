@@ -1,6 +1,6 @@
 function Basket(){
-	// this.newfoodarray = []
   this.oldfoodarray = []
+  this.preferences
 }
 
 Basket.prototype = {
@@ -15,24 +15,30 @@ Basket.prototype = {
       type: 'POST'
     })
     .done(function(json){
-      console.log(json)
       self.oldfoodarray.push(json)
       new CustomEvent('oldList')
       $.event.trigger('oldList')
     })
   },
   retrieveFoodsFromDataBase: function(){
-    console.log(this)
     var self = this
     $.ajax({
       url: '/baskets/0',
       type: 'GET'
     })
     .done(function(data){
-      console.log(data)
-      self.oldfoodarray = data
+      if(data.basket !== null){
+        self.oldfoodarray = data.basket
+      }
+      self.preferences = data.goal
       new CustomEvent('oldList')
       $.event.trigger('oldList')
     })
+  },
+  calculateTotals: function(){
+    console.log("this")
+    console.log(this)
+    console.log("basket")
+    console.log(this.oldfoodarray)
   }
 }
