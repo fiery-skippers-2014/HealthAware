@@ -17,7 +17,6 @@ $(document).ready(function(){
     healthTemplate: "#health-template"
   }
 
-debugger
 
   var food = new FoodList('https://api.nutritionix.com/v1_1/search/')
 
