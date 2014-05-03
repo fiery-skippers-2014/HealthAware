@@ -1,1 +1,1 @@
-Nutrient.create(name:"protein", FDA_recommendation: 50)
+Nutrient.create(name:"protein", nf_name:"nf_protein", FDA_recommendation: 50)

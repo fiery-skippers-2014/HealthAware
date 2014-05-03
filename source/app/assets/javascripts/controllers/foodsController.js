@@ -17,7 +17,7 @@ FoodController.prototype = {
     // on foodsList event created within foodList model, create template with model's elements AKA foodView (because you are binding the function to foodView)
     $(document).ready(basket.retrieveFoodsFromDataBase.bind(basket))
     $(document).on("oldList", this.printSavedBasket.bind(this))
-    $(document).on("oldList",basket.calculateTotals.bind(basket))
+    $(document).on("oldList", basket.calculateTotals.bind(basket))
     $('#search-form').on('submit', this.searchFoods.bind(food))
     $(document).on("foodList", foodView.drawFoods.bind(foodView));
     $(document).on("foodList", this.createFoodList.bind(this))
@@ -33,7 +33,6 @@ FoodController.prototype = {
     this.allFoodResults = json
   },
   findFoodInSearchResults: function(e){
-      //Visual
     //Save to Database, make this nicer.....maybe a Basket Model
     food_id = e.currentTarget.getElementsByTagName('li')[0].getAttribute('food-id')
     for(x = 0; x < this.allFoodResults.hits.length; x++){
