@@ -14,7 +14,7 @@ class FoodsController < ApplicationController
         basketfood = BasketFood.find_by_food_id(@food.id)
         basketfood.quantity = basketfood.quantity + 1
         basketfood.update_attributes(quantity:  basketfood.quantity)
-        basketfood.save
+        basketfood.save!
       else
         BasketFood.create(basket_id: basket.id, food_id: @food.id)
       end
@@ -22,6 +22,7 @@ class FoodsController < ApplicationController
       @basket = Basket.create(user_id: session[:user_id])
       BasketFood.create(basket_id: @basket.id, food_id: @food.id)
     end
+    p @food
     render json: @food
   end
 end

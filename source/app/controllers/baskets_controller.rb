@@ -8,11 +8,14 @@ class BasketsController < ApplicationController
   end
 
   def show
-    p "grabbing basket" * 100
-    @baskets = Basket.find_all_by_user_id(session[:user_id])
+    @goal = Goal.usergoals(current_user)
+    unless Basket.find_all_by_user_id(session[:user_id])
+      @baskets = Basket.find_all_by_user_id(session[:user_id])
     # (@baskets.last.updated_at - Time.now), ADD THIS LATER
-    p @baskets.last.foods
-    @basket = @baskets.last.foods
-    render json: @basket
+      p @baskets.last.foods
+    else
+      @basket
+    end
+      render json: {basket:@basket, goal:@goal}
   end
 end
