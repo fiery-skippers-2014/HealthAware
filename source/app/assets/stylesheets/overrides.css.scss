@@ -13,7 +13,28 @@ $light-blue-link: #66a3c2;
 $grey-shadow: 0.5px 0.5px #ececec;
 $dark-grey-shadow: 0.5px 0.5px #d9d9d9;
 $main-text-family: Helvetica, Verdana, Arial, sans-serif;
+$light-black: #2D2D2D;
 
+
+@mixin box_sizing {
+  margin-bottom: 5px;
+  font-size: 0.8em;
+}
+
+@mixin four-transit {
+  -webkit-transition: width .4s ease-in-out;
+  -moz-transition: width .4s ease-in-out;
+  -ms-transition: width .4s ease-in-out;
+  -o-transition: width .4s ease-in-out;
+  transition: width .4s ease-in-out;
+}
+
+@mixin fast-color-transit {
+  -webkit-transition: background-color 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+}
 ////////////////////////////////////////
 
 body {
@@ -63,6 +84,15 @@ body {
       padding: 0 15px;
       }
     }
+  .toggle-topbar.menu-icon {
+    // background-color: ;
+    color: $blue-link;
+    a {
+      color: $blue-link;
+      // text-shadow: $grey-shadow;
+      // font-size: 0.9em;
+      }
+    }
   }
 
 .top-bar-section li:not(.has-form) {
@@ -78,30 +108,35 @@ body {
     }
   }
 
-.top-bar .toggle-topbar.menu-icon a {
-  color: $blue-link;
-  // text-shadow: $grey-shadow;
-  // font-size: 0.9em;
-  }
-
+#container {
+  max-width:1200px;
+  min-width:400px;
+}
 
 ///SEARCH COLUMN
-
 .search {
-  // box-shadow: $box-shadow;
-  // background-color: white;
-  // border: 1px grey solid;
   padding: 5px;
-  input[type="text"] {
-    width: 350px;
-    display: inline;
-    margin-left: 15px;
+  #search-form {
+    label {
+      width: 25%;
+      min-width: 135px;
+      float: left;
+      display:inline;
     }
-  input[type="submit"] {
-    width: 100px;
-    display: inline;
-    margin-left: 15px;
-    // padding: 3px 10px 4px;
+    input[type="text"] {
+      width: 50%;
+      float: left;
+      margin-left: 15px;
+      float: left;
+      display:inline;
+      }
+    input[type="submit"] {
+      width: 15%;
+      min-width: 75px;
+      margin-left: 15px;
+      float: left;
+      display:inline;
+      }
     }
   }
 
@@ -116,7 +151,6 @@ body {
 
 .profile {
   box-shadow: $box-shadow;
-  // background-color: $box-color;
   padding: 5px;
   .heading {
     font-size:1.2em;
@@ -124,15 +158,12 @@ body {
     border-bottom:1.5px solid $blue-link;
     text-align:left;
     }
-  }
-
-#box {
-  margin-bottom: 5px;
-  font-size: 0.8em;
   .basket {
+    @include box_sizing;
     padding: 15px;
     }
   .health-stats {
+    @include box_sizing;
     padding: 15px;
     .custom-progress-container {
       @include progress-container;
@@ -144,7 +175,6 @@ body {
       }
     }
   }
-
 
 /// BUTTONS
 .button {
@@ -167,24 +197,19 @@ body {
   position: relative;
   text-align: center;
   text-decoration: none;
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-  transition: background-color 0.15s ease-in-out;
+  @include fast-color-transit;
+  &:hover {
+    color: white;
+    background-color: $blue-link-hover;
+  }
+  &:active {
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+  }
 }
 
-.button:hover {
-  color: white;
-  background-color: $blue-link-hover;
-}
-
-.button:active {
-  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
-}
-
-.pretty-green {
+.pretty-blue {
   box-shadow: $box-shadow;
   border: 0px;
   -moz-border-radius: 3px;
@@ -196,42 +221,6 @@ body {
   color: white;
   text-shadow: $dark-grey-shadow;
   }
-
-.small-button {
-  padding: 1px 3px;
-  font-size: 0.9em;
-  letter-spacing: 0.8px;
-}
-
-.small-green {
-  font-size: 0.8em;
-  color: #fabf8d;
-}
-
-.disguised {
-  text-align:right;
-  padding: 5px;
-  font-size: 0.8em;
-  color: grey;
-  background-color: transparent;
-}
-
-.disguised:hover {
-  text-decoration: none;
-  color: black;
-  background-color: transparent;
-}
-
-.transparent {
-  background-color: transparent;
-}
-
-.text-li {
-  margin-top: 15px;
-  color: white;
-  line-height: 20px;
-}
-
 
 
 ////PROGRESS BAR
@@ -257,11 +246,7 @@ body {
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
-    -webkit-transition: width .4s ease-in-out;
-    -moz-transition: width .4s ease-in-out;
-    -ms-transition: width .4s ease-in-out;
-    -o-transition: width .4s ease-in-out;
-    transition: width .4s ease-in-out;
+    @include four-transit
   }
 }
 .blue_bar span {
