@@ -7,7 +7,6 @@ function FoodList(url){
 FoodList.prototype = {
   // run in FoodsController.js
   fetchFood: function(queryData) {
-    console.log('made it here')
     $.ajax({
       url: 'https://api.nutritionix.com/v1_1/search/',
       data: queryData,

@@ -1,15 +1,15 @@
-<div id="container" class="row large-12 medium-11 small-12 large-centered medium-centered small-centered">
+<div id="container" class="row large-10 medium-11 small-12 large-centered medium-centered small-centered">
 
 
 
     <!-- SEARCH COLUMN -->
-    <div class="search large-8 medium-8 small-4 columns">
+    <div class="search large-8 medium-8 small-8 columns">
 
         <form id="search-form" class="search">
 
-          <label for="right-label">
+          <label for="food-search">
             Please select a food: </label>
-          <input type="text" id="right-label" name="food-choice" placeholder="Apple Pie">
+          <input type="text" id="food-search" name="food-choice" placeholder="Apple Pie">
           <input type="submit" value="Click!" class="button">
         </form>
 <hr>
@@ -83,13 +83,13 @@
 </script>
 
 <script id="basket-template" type="text/x-handlebars-template">
-  {{#basket}}
+  {{#oldfoodarray}}
   <div class="food_div">
-      <li class="food" food-id={{_id}}><b>{{fields.brand_name}}</b>: {{fields.item_name}}</li>
+      <li class="food" food-id={{API}}><b>{{fields.brand_name}}</b>: {{item_name}}</li>
       <ul>
-        <li>Calories: {{fields.nf_calories}}</li>
-        <li>Total Fat: {{fields.nf_total_fat}}</li>
+        <li>Calories: {{nf_calories}}</li>
+        <li>Total Fat: {{nf_total_fat}}</li>
       </ul>
     </div>
-  {{/basket}}
+  {{/oldfoodarray}}
 </script>
