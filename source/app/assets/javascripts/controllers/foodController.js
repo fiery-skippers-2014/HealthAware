@@ -35,7 +35,9 @@ FoodController.prototype = {
 
   prepareFoodListForView: function(e, json){
     var goodFields = ["nf_sugars", "nf_total_fat", "nf_protein"];
-    // var fullObject = json;
+    sessionStorage["prefs"] = ["nf_sugars", "nf_protein"];
+    var seshString = sessionStorage["prefs"];
+    var goodFields = seshString.split(",");
     var ourMasterObject = {};
     var masterObjArray = [];
 
