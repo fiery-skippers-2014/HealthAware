@@ -6,9 +6,15 @@ $(document).ready(function(){
     foodTemplate: "#food-template"
   }
 
+  //BasketItem
   var BasketElements = {
     basket: ".basket",
     basketTemplate: "#basket-template"
+  }
+
+  var HealthElements = {
+    health: ".health-stats",
+    healthTemplate: "#health-template"
   }
 
 
@@ -17,7 +23,8 @@ $(document).ready(function(){
   var basket = new Basket()
   var basketView = new BasketView(BasketElements)
   var FoodView = new FoodListView(FoodElements)
-  var foodController = new FoodController(food, FoodView, basket, basketView)
+  var healthView = new HealthView(HealthElements)
+  var foodController = new FoodController(food, FoodView, basket, basketView, healthView)
 
   //Application
   var controllers = {
