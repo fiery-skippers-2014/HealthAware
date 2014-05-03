@@ -1,17 +1,25 @@
-<%= form_for @user do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-    <%= fields_for @goal do |u| %>
-    <%= u.label "What are you trying to track?" %>
-    <%= u.select :nutrient_id, options_for_select([["Protein",1]]) %>
-    <%= u.label "What amount do You need per day" %>
-    <%= u.text_field :target %>
+<div id="container" class="row large-10 medium-11 small-12 large-centered medium-centered small-centered">
+
+  <div id="create_user" class"row large-4 medium-5 small-12 large-centered medium-centered small-centered">
+
+    <%= form_for @user do |f| %>
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+        <%= fields_for @goal do |u| %>
+        <%= u.label "What are you trying to track?" %>
+        <%= u.select :nutrient_id, options_for_select([["Protein",1]]) %>
+        <%= u.label "What amount do You need per day" %>
+        <%= u.text_field :target %>
+        <% end %>
+      <%= f.submit 'Submit', :class => 'button' %>
     <% end %>
-  <%= f.submit 'Submit' %>
-<% end %>
+
+  </div>
+
+</div>
