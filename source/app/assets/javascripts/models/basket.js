@@ -27,18 +27,19 @@ Basket.prototype = {
       type: 'GET'
     })
     .done(function(data){
+      console.log(data)
       if(data.basket !== null){
         self.oldfoodarray = data.basket
       }
+      console.log(self)
       self.preferences = data.goal
       new CustomEvent('oldList')
       $.event.trigger('oldList')
     })
   },
   calculateTotals: function(){
-    console.log("this")
-    console.log(this)
-    console.log("basket")
-    console.log(this.oldfoodarray)
+    this.oldfoodarray
+    this.preferences
+    // (parseFloat(this.oldfoodarray[0].nf_protein))/this.preferences.protein * 100
   }
 }
