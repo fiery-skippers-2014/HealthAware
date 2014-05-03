@@ -80507,3 +80507,382 @@ Processing by BasketsController#show as */*
   [1m[35mCACHE (0.0ms)[0m  SELECT "baskets".* FROM "baskets" WHERE "baskets"."user_id" = 2
   [1m[36mFood Load (0.4ms)[0m  [1mSELECT "foods".* FROM "foods" INNER JOIN "basket_foods" ON "foods"."id" = "basket_foods"."food_id" WHERE "basket_foods"."basket_id" = 2[0m
 Completed 200 OK in 137ms (Views: 2.0ms | ActiveRecord: 13.2ms)
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/55b71675f69c781ef472e0cba8a1bab3920a1360/framework_and_overrides.css.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/701fe84e722f4e4b1eb3092c1f98b8eb70a15b5b/foundation.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_grid.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_global.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/b7255ea6b355ddd2028ce201a4a7b25ae3a36ba3/_functions.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+DEPRECATION WARNING on line 182 of /Users/kelley/.rvm/gems/ruby-2.1.0/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_global.scss:
+Assigning to global variable "$default-float" by default is deprecated.
+In future versions of Sass, this will create a new local variable.
+If you want to assign to the global variable, use "$default-float: left !global" instead.
+Note that this will be incompatible with Sass 3.2.
+
+
+DEPRECATION WARNING on line 183 of /Users/kelley/.rvm/gems/ruby-2.1.0/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_global.scss:
+Assigning to global variable "$opposite-direction" by default is deprecated.
+In future versions of Sass, this will create a new local variable.
+If you want to assign to the global variable, use "$opposite-direction: right !global" instead.
+Note that this will be incompatible with Sass 3.2.
+
+
+DEPRECATION WARNING: The return value of index() will change from "false" to
+"null" in future versions of Sass. For compatibility, avoid using "== false" on
+the return value. For example, instead of "@if index(...) == false", just write
+"@if not index(...)".
+        on line 12 of /Users/kelley/.rvm/gems/ruby-2.1.0/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/_functions.scss, in `exports'
+        from line 254 of /Users/kelley/.rvm/gems/ruby-2.1.0/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_global.scss
+        from line 5 of /Users/kelley/.rvm/gems/ruby-2.1.0/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/components/_grid.scss
+        from line 10 of /Users/kelley/.rvm/gems/ruby-2.1.0/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation.scss
+        from line 2 of /Users/kelley/HealthAware/source/app/assets/stylesheets/framework_and_overrides.css.scss
+
+DEPRECATION WARNING on line 13 of /Users/kelley/.rvm/gems/ruby-2.1.0/gems/foundation-rails-5.2.2.0/vendor/assets/stylesheets/foundation/_functions.scss:
+Assigning to global variable "$modules" by default is deprecated.
+In future versions of Sass, this will create a new local variable.
+If you want to assign to the global variable, use "$modules: append($modules, $name) !global" instead.
+Note that this will be incompatible with Sass 3.2.
+
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_accordion.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_alert-boxes.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_block-grid.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_breadcrumbs.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_button-groups.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_buttons.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_clearing.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_dropdown.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_dropdown-buttons.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_flex-video.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_forms.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_inline-lists.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_joyride.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_keystrokes.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_labels.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_magellan.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_orbit.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_pagination.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_panels.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_pricing-tables.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_progress-bars.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_range-slider.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_reveal.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_side-nav.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_split-buttons.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_sub-nav.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_switch.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_tables.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_tabs.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_thumbs.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_tooltips.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_top-bar.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_type.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_offcanvas.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/53198b9f70728ea20415dfdcd41c73bc1252189d/_visibility.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Compiled framework_and_overrides.css  (2170ms)  (pid 25619)
+Warning. Error encountered while saving cache /Users/kelley/HealthAware/source/tmp/cache/sass/55b71675f69c781ef472e0cba8a1bab3920a1360/application.css.scssc: can't dump anonymous class #<Class:0x00000101360e78>
+
+Compiled application.css  (5ms)  (pid 25619)
+Compiled controllers/applicationController.js  (0ms)  (pid 25619)
+Compiled controllers/foodsController.js  (0ms)  (pid 25619)
+Compiled initialize.js  (0ms)  (pid 25619)
+Compiled models/foodList.js  (0ms)  (pid 25619)
+Compiled queryer.js  (0ms)  (pid 25619)
+Compiled views/foodListView.js  (0ms)  (pid 25619)
+Compiled jasmine_examples/Player.js  (0ms)  (pid 25619)
+Compiled jasmine_examples/Song.js  (0ms)  (pid 25619)
+Compiled application.js  (19ms)  (pid 25619)
+Served asset /framework_and_overrides.css - 200 OK (13ms)
+Served asset /application.css - 200 OK (14ms)
+Served asset /jquery_ujs.js - 200 OK (1ms)
+Served asset /foundation/foundation.js - 200 OK (1ms)
+Served asset /foundation/foundation.accordion.js - 200 OK (1ms)
+Served asset /jquery.js - 200 OK (32ms)
+Served asset /foundation/foundation.clearing.js - 200 OK (8ms)
+Served asset /foundation/foundation.dropdown.js - 200 OK (2ms)
+Served asset /foundation/foundation.interchange.js - 200 OK (2ms)
+Served asset /foundation/foundation.alert.js - 200 OK (35ms)
+Served asset /foundation/foundation.magellan.js - 200 OK (7ms)
+Served asset /foundation/foundation.offcanvas.js - 200 OK (2ms)
+Served asset /foundation/foundation.orbit.js - 200 OK (9ms)
+Served asset /foundation/foundation.abide.js - 200 OK (27ms)
+Served asset /foundation/foundation.reveal.js - 200 OK (2ms)
+Served asset /foundation/foundation.joyride.js - 200 OK (13ms)
+Served asset /foundation/foundation.tab.js - 200 OK (8ms)
+Served asset /foundation/foundation.slider.js - 200 OK (3ms)
+Served asset /foundation/foundation.topbar.js - 200 OK (2ms)
+Served asset /foundation/foundation.equalizer.js - 200 OK (1ms)
+Served asset /foundation/foundation.tooltip.js - 200 OK (24ms)
+Served asset /controllers/foodsController.js - 200 OK (8ms)
+Served asset /overrides.css - 200 OK (139ms)
+Served asset /controllers/applicationController.js - 200 OK (4ms)
+Served asset /handlebars-v1.3.0.js - 200 OK (23ms)
+Served asset /initialize.js - 200 OK (2ms)
+Served asset /foundation.js - 200 OK (58ms)
+Served asset /jasmine_examples/Song.js - 200 OK (1ms)
+Served asset /jasmine_examples/Player.js - 200 OK (1ms)
+Served asset /models/basket.js - 200 OK (1ms)
+Served asset /models/foodList.js - 200 OK (1ms)
+Served asset /queryer.js - 200 OK (1ms)
+Served asset /views/foodListView.js - 200 OK (1ms)
+Served asset /views/basketView.js - 200 OK (6ms)
+Served asset /application.js - 200 OK (46ms)
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (16ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /overrides.css - 304 Not Modified (17ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+Served asset /foundation.js - 304 Not Modified (0ms)
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+Served asset /initialize.js - 304 Not Modified (0ms)
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Player.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Song.js - 304 Not Modified (0ms)
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+Served asset /models/basket.js - 304 Not Modified (4ms)
+Served asset /queryer.js - 304 Not Modified (0ms)
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (15ms)
+Served asset /views/basketView.js - 304 Not Modified (2ms)
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (11ms)
+Served asset /overrides.css - 304 Not Modified (13ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+Served asset /foundation.js - 304 Not Modified (0ms)
+Served asset /initialize.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Player.js - 304 Not Modified (0ms)
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+Served asset /models/basket.js - 304 Not Modified (4ms)
+Served asset /queryer.js - 304 Not Modified (0ms)
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Song.js - 304 Not Modified (0ms)
+Served asset /views/basketView.js - 304 Not Modified (4ms)
+Served asset /application.js - 304 Not Modified (5ms)
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+Served asset /application.css - 304 Not Modified (13ms)
+Served asset /overrides.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+Served asset /foundation.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+Served asset /initialize.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Song.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Player.js - 304 Not Modified (0ms)
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+Served asset /models/basket.js - 304 Not Modified (8ms)
+Served asset /views/basketView.js - 304 Not Modified (4ms)
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+Served asset /queryer.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (5ms)
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+Served asset /overrides.css - 304 Not Modified (17ms)
+Served asset /application.css - 304 Not Modified (10ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+Served asset /initialize.js - 304 Not Modified (0ms)
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+Served asset /foundation.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Player.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Song.js - 304 Not Modified (0ms)
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+Served asset /views/basketView.js - 304 Not Modified (8ms)
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+Served asset /queryer.js - 304 Not Modified (0ms)
+Served asset /models/basket.js - 304 Not Modified (13ms)
+Served asset /application.js - 304 Not Modified (8ms)
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+Served asset /overrides.css - 304 Not Modified (6ms)
+Served asset /application.css - 304 Not Modified (5ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+Served asset /foundation.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+Served asset /initialize.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Player.js - 304 Not Modified (0ms)
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+Served asset /models/basket.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Song.js - 304 Not Modified (0ms)
+Served asset /queryer.js - 304 Not Modified (0ms)
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+Served asset /views/basketView.js - 304 Not Modified (4ms)
+Served asset /application.js - 304 Not Modified (6ms)
+Served asset /initialize.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Player.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Song.js - 304 Not Modified (0ms)
+Served asset /models/basket.js - 304 Not Modified (0ms)
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+Served asset /queryer.js - 304 Not Modified (0ms)
+Served asset /framework_and_overrides.css - 304 Not Modified (0ms)
+Served asset /overrides.css - 304 Not Modified (6ms)
+Served asset /application.css - 304 Not Modified (0ms)
+Served asset /jquery.js - 304 Not Modified (0ms)
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.alert.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.accordion.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.abide.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.interchange.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.offcanvas.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.slider.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.tooltip.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.tab.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.equalizer.js - 304 Not Modified (0ms)
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+Served asset /controllers/applicationController.js - 304 Not Modified (0ms)
+Served asset /foundation.js - 304 Not Modified (0ms)
+Served asset /controllers/foodsController.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Player.js - 304 Not Modified (0ms)
+Served asset /initialize.js - 304 Not Modified (0ms)
+Served asset /jasmine_examples/Song.js - 304 Not Modified (0ms)
+Served asset /queryer.js - 304 Not Modified (0ms)
+Served asset /models/basket.js - 304 Not Modified (4ms)
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+Served asset /models/foodList.js - 304 Not Modified (0ms)
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (1ms)
+Served asset /queryer.js - 304 Not Modified (0ms)
+Served asset /views/basketView.js - 304 Not Modified (0ms)
+Served asset /views/foodListView.js - 304 Not Modified (0ms)
+Served asset /application.js - 304 Not Modified (0ms)
