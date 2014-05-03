@@ -27,13 +27,13 @@
 </script>
 
 <script id="basket-template" type="text/x-handlebars-template">
-  {{#basket}}
+  {{#oldfoodarray}}
   <div class="food_div">
-      <li class="food" food-id={{_id}}><b>{{fields.brand_name}}</b>: {{fields.item_name}}</li>
+      <li class="food" food-id={{API}}><b>{{fields.brand_name}}</b>: {{item_name}}</li>
       <ul>
-        <li>Calories: {{fields.nf_calories}}</li>
-        <li>Total Fat: {{fields.nf_total_fat}}</li>
+        <li>Calories: {{nf_calories}}</li>
+        <li>Total Fat: {{nf_total_fat}}</li>
       </ul>
     </div>
-  {{/basket}}
+  {{/oldfoodarray}}
 </script>

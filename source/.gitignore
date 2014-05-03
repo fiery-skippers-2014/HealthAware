@@ -25,6 +25,10 @@
 *.log
 *.sql
 *.sqlite
+/tmp/
+/log/
+tmp
+log
 /tmp
 /log
 
