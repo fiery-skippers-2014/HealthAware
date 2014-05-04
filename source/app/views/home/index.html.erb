@@ -69,26 +69,34 @@
   <div class="food_div">
     <li class="food">
       <ul>
-        <h4>Total Protein</h4>
         <% if current_user %>
           <% if current_user.goals.count > 0 %>
-            <h2> Hey <%=current_user.username%> ! </h2>
-            <p> You account was created: <%="#{time_ago_in_words(current_user.created_at)} ago" %> </p>
-
             <% current_user.goals.each do |goal| %>
-            <li><b><%=goal.nutrient.name %></b> -  <%=goal.target%> <%=goal.unit%> <i> (maximum: <%=goal.limit%>)</i>
-            <%= link_to 'Remove', goal, :method => :delete, :confirm => 'Are you sure you want to remove this goal?'%></li>
-            <%end%>
 
-            <p>You last add goals <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %></p>
+              <span><h4><%=goal.nutrient.name %></h4>
+              <h6 ><%= link_to 'X', goal, :method => :delete, :confirm => 'Are you sure you want to remove this goal?'%></h6>
+              </span>
+              <li>Target - <%=goal.target%> <%=goal.unit %> <i> (maximum: <%=goal.limit%>)</i></li>
+              <li>Nutrient ID: <%=goal.nutrient_id%></li>
+
+              <div class="bar">
+                <div class="barandgrowth red_bar" style="max-width: 20%;">
+                  <div class="buffering"></div>
+                </div>
+              </div>
+
+            <%end%>
           <%end%>
         <%end%>
-        <li>Percentage of your target: {{nf_protein}}</li>
-        <li>Percentage of FDA: {{nf_protein_FDA_recommendation}}</li>
 
-        <h4>Total Fat</h4>
+        <h4>template foor hardcoded fat</h4>
         <li>Percentage of your target: {{nf_total_fat}}</li>
         <li>Percentage of FDA: {{nf_total_fat_FDA_recommendation}}</li>
+
+
+        <h4>template foor hardcoded protein</h4>
+        <li>Percentage of your target: {{nf_protein}}</li>
+        <li>Percentage of FDA: {{nf_protein_FDA_recommendation}}</li>
 
         {{! foor all LIMIT stats }}
         {{! * need: max_amount }}
@@ -118,5 +126,9 @@
         {{! end LIMIT stats }}
       </ul>
     </li>
+    <hr>
+    </h5>Hey <%=current_user.username%>!</h5>
+    <h6>You account was created: <%="#{time_ago_in_words(current_user.created_at)} ago" %></h6>
+<h6>You last add goals <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %></h6>
   </div>
 </script>
