@@ -38,7 +38,6 @@ Basket.prototype = {
   },
   calculateTotals: function(){
     //Loop through your goals
-      debugger
     for (j=0; j < this.goals.length; j++){
       keys = Object.keys(this.goals[j])
       target = keys[0]
