@@ -1,7 +1,8 @@
 <%= form_for @goal do |u| %>
     <%= u.label "What are you trying to track?" %>
 
-    <%= u.select :nutrient_id, options_for_select([["Protein",1],["Carbs",2],["Fat",3]]) %>
+    <%= u.select :nutrient_id, options_for_select([["Protein",1],["Total Fat",2],["Total Carbohydrates",3],["Saturated Fats", 4],
+["Calories",5],["Monounsaturated Fats",6], ["Trans Fats",7],["Polyunsaturated Fats",8], ["Sugars",9],["Iron",10], ["Calcium",11],["Fiber",12], ["Sodium",13],["Cholesterol",14]]) %>
     <%= u.label "What amount do You need per day" %>
 
     <%= radio_button_tag(:amount, "FDA") %>
