@@ -1,12 +1,12 @@
 // run in initialize.js
 function FoodController(model, Foodview, basket, basketView, Healthview){
-  this.model = model // hard-coded url request (so far)
-  this.view = Foodview // hash of elements important for food-template
-  this.basket = basket
+  this.model = model // contains uri for api search call and fetchFood() which creates, via ajax, a foodList event with json objects
+  this.view = Foodview // knows searched elements and has ability to create a view based on a handlebar template
+  this.basket = basket // a Basket model which knows a currently empty search, user's goals, and an empty progress object
   this.basketView = basketView
   this.healthView = Healthview
   this.allFoodResults = {}
-}
+};
 
 FoodController.prototype = {
   // run in controllers/applicationController.js
@@ -17,12 +17,12 @@ FoodController.prototype = {
     var basketView = this.basketView
     var healthView = this.healthView
     // on foodsList event created within foodList model, create template with model's elements AKA foodView (because you are binding the function to foodView)
-    $(document).ready(basket.retrieveFoodsFromDataBase.bind(basket))
+    $(document).ready(basket.retrieveFoodsFromDataBase.bind(basket)) //
     $(document).on("oldList", this.printSavedBasket.bind(this))
     $(document).on("oldList", basket.calculateTotals.bind(basket))
     $(document).on("oldList", this.updateTotalsOnView.bind(this))
     $('#search-form').on('submit', this.searchFoods.bind(food))
-    $(document).on("foodList", this.prepareFoodListForView.bind(foodView));
+    $(document).on("foodList", this.prepareFoodListForView.bind(this));
     $(document).on("foodList", this.createFoodList.bind(this))
     $(document).on('click', '.food_div', this.findFoodInSearchResults.bind(this))
   },
@@ -36,12 +36,13 @@ FoodController.prototype = {
     this.allFoodResults = json
   },
 
-prepareFoodListForView: function(e, json){
-    debugger
-    var goodFields = ["nf_sugars", "nf_total_fat", "nf_protein"];
-    sessionStorage["prefs"] = ["nf_sugars", "nf_protein"];
-    var seshString = sessionStorage["prefs"];
-    var goodFields = seshString.split(",");
+
+  prepareFoodListForView: function(e, json){
+    goodFields = [];
+    goalObjArray = this.basket.goals;
+    for (i=0;i<goalObjArray.length;i++){
+      goodFields.push(Object.keys(goalObjArray[i])[0]);
+    }
     var ourMasterObject = {};
     var masterObjArray = [];
 
@@ -66,10 +67,6 @@ prepareFoodListForView: function(e, json){
     console.log({objects:masterObjArray});
     FoodListView.prototype.drawFoods({ objects : masterObjArray }, $('#food-template'));
   },
-
-
-
-
 
 
   findFoodInSearchResults: function(e){
