@@ -27,13 +27,11 @@ FormController.prototype = {
     console.log(object)
     $.ajax({
       url: '/goals',
-      data: object,
       type: 'POST'
     })
     .done(function(json){
       console.log("got here")
       $("#new_goal").html(json);
     })
-
   }
 }

@@ -1,14 +1,14 @@
-<div id="container" class="row large-10 medium-11 small-12 large-centered medium-centered small-centered">
+<div id="container" class="row large-4 medium-5 small-12 large-centered medium-centered small-centered">
 
-  <div id="user_forms" class"row large-4 medium-5 small-12 large-centered medium-centered small-centered">
+  <div id="user-forms">
 
     <%= form_for :session, url: sessions_path do |f| %>
       <%= f.label :username %>
       <%= f.text_field :username %>
       <%= f.label :password %>
       <%= f.password_field :password %>
-      <%= f.submit, :class => 'button' %>
+      <center><%= f.submit 'Login', :class => 'button' %></center>
     <% end %>
-  </div>
 
+  </div>
 </div>
