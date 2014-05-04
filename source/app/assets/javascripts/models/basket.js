@@ -1,6 +1,6 @@
 function Basket(){
   this.oldfoodarray = []
-  this.goals
+  this.goals = []
   this.progress = {}
 }
 
