@@ -7,7 +7,7 @@ FormController.prototype = {
     var formView = this.formView
     $(document).on('click', '.delete_goal', this.removeGoal)
     $(document).on('click','#amount_custom', formView.makeCustomAmount.bind(this))
-    // $(document).on('click',"#clicked_new_goal",this.createNewGoal)
+    $(document).on('click',"#clicked_new_goal",this.createNewGoal)
     // $('#addgoals').on('click',this.newgoal)
   },
   // newgoal: function(){
@@ -23,10 +23,11 @@ FormController.prototype = {
   //   })
   // },
   createNewGoal: function(e){
+    console.log("wtf")
+    e.preventDefault()
    object =  $('#new_goal').serialize()
    console.log("to start")
     console.log(object)
-    debugger
     $.ajax({
       url: '/goals',
       type: 'POST'

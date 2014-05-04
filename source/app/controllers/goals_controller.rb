@@ -24,7 +24,10 @@ class GoalsController < ApplicationController
           @goal.limit = false
         end
     end
-    @goal.save!
+    debugger
+    if @goal.save!
+      debugger
+    end
     @goal = Goal.new
     redirect_to new_goal_path
     # render partial: 'goal', :locals => {:goal => @goal}
