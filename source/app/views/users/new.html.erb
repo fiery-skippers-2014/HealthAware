@@ -1,3 +1,4 @@
+<div class="row large-12 large-centered columns">
 <%= form_for @user do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username %>
@@ -13,26 +14,37 @@
       <% @y = [] %>
       <% @z = [] %>
       <% @nutrients.each_with_index do |nutrient| %>
-      <% @x << nutrient.name %>
+      <% @x << "#{nutrient.name } (FDA Recommendation: #{nutrient.FDA_recommendation})" %>
       <% @y << nutrient.FDA_recommendation %>
       <% @z << nutrient.FDA_limit %>
       <% end %>
       <%= u.select :nutrient_id, options_for_select(@x) %>
-      <div class="large-12 columns">
-      <span class:"large-3 columns" >I want to </span>
+        <%= radio_button_tag(:amount, "FDA") %>
+        <%= label_tag(:amount_FDA, "Use FDA recommendation") %>
+        <%= radio_button_tag(:amount,"custom") %>
+        <%= label_tag(:amount_custom,"Use a custom amount") %>
 
-      <span class="large-1 columns">
-      <%= select :limit,:limit_id, options_for_select([["max"],["min"]],{:class => "large-1 columns"}) %>
-      </span>
+
+      <div class="row" id="custom_limit">
+        <div class="large-12 columns">
+          <div class="large-2 columns left">
+            <label for="left-label" class="left inline">I want to have a:</label>
+          </div>
+          <div class="large-2 columns left">
+            <%= select :limit,:limit_id, options_for_select([["maximum"],["minimum"]],{:class => "large-1 columns"}) %>
+          </div>
+          <div class="large-2 columns left">
+            <label for="left-label" class="center inline">Amount of: </label>
+          </div>
+          <div class="large-2 columns left">
+            <%= u.text_field :nutrient_id, :placeholder => "figure this out" %>
+          </div>
+        </div>
       </div>
-
-      <%#= select("nutrient", "nutrient_id", @nutrients.collect {|p| [ p.name] }, { include_blank: true }) %>
-
-
-      <div class="large-12 columns">
-        <%= u.label :FDA_Recommendation_or_Pick_Your_Own %>
-        <%= u.text_field :nutrient_id, :placeholder => "figure this out" %>
+      <% end %>
+      <div class="row">
+        <%= f.submit 'Submit' %>
       </div>
-    <% end %>
-  <%= f.submit 'Submit' %>
 <% end %>
+</div>
+
