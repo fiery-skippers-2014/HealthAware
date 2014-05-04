@@ -5,8 +5,6 @@ class GoalsController < ApplicationController
   end
 
   def create
-    p "$" * 50
-    p params
     @goal = Goal.new
     @goal.nutrient_id = params[:goal][:nutrient_id]
     @goal.user_id = current_user.id
@@ -24,9 +22,8 @@ class GoalsController < ApplicationController
           @goal.limit = false
         end
     end
-    debugger
     if @goal.save!
-      debugger
+      p "goal saves!"
     end
     @goal = Goal.new
     redirect_to new_goal_path

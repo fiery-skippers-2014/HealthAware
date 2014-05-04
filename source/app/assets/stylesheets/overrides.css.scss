@@ -60,25 +60,35 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  a {
-    color: $blue-link;
-    text-decoration: none;
-    line-height: inherit;
-    }
-  a:visited {
-    color: $blue-link;
+  // a {
+  //   color: $blue-link;
+  //   text-decoration: none;
+  //   line-height: inherit;
+  //   }
+  // a:visited {
+  //   color: $blue-link;
+  //   }
+  h6 {
+    font-size: 0.7em;
+    color: $dark-grey;
+    padding-left: 5px;
     }
   p {
-    padding: 5px 35px;
-    font-size: 1em;
-    }
-  .testing {
-    background-color: purple;
+    padding: 5px 15px;
+    font-size: 0.8em;
     }
   }
 
 ul {
   margin-left: 0px;
+}
+
+.small {
+  a {
+  font-size: 0.7em;
+  color: $dark-grey;
+  padding-left: 5px;
+  }
 }
 
 .row {
@@ -89,43 +99,50 @@ ul {
 }
 
 //TOP BAR
+
 .top-bar {
-  padding-top: 15px;
-  height: 90px;
-  background-color: $main-background-color;
-  color: $black-color;
-  text-shadow: $grey-shadow;
-  .name {
+  min-height: 70px;
+  background-color: $dark-blue;
+  ul.title-area {
+    padding-bottom: 20px;
+    li.name {
+    // line-height: 140px;
     font-size: 2em;
     line-height: 45px;
     a {
       font-weight: normal;
-      color: $blue-link;
-      padding: 0 15px;
+      color: white;
+      padding: 10px 15px 10px 15px;
+      text-shadow: #000;
+      &:visited {}
       }
     }
-  .toggle-topbar.menu-icon {
-    color: $blue-link;
-    a {
-      color: $blue-link;
-      }
+  .expanded .title-area {
+    padding-bottom: 20px;
+    // padding-top: 0px;
+    background-color: inherit;
+    background-color:$dark-blue;
     }
   }
-
-.top-bar-section li:not(.has-form) {
-  a:not(.button) {
-    background-color: $main-background-color;
-    color: $blue-link;
-    text-shadow: $grey-shadow;
-    font-size: 0.9em;
-    }
-  a:not(.button):hover {
-    background-color: $main-background-color;
-    color: $blue-link-hover;
+  .top-bar-section {
+    padding-bottom: 20px;
+    ul ul.right li a {
+      background-color: $dark-blue;
+      }
+    li:not(.has-form) a:not(.button) {
+      font-size: 0.9em;
+      letter-spacing: 0.5px;
+      background-color: $dark-blue;
+      border-bottom: 1px solid $light-black; // $dark-grey
+      &:hover {
+        background-color: $light-black;
+        }
+      }
     }
   }
 
 #container {
+  padding-top: 10px;
   max-width:1200px;
   min-width:400px;
 }
@@ -194,45 +211,45 @@ ul {
 
 // single pixel listing
 // http://css-tricks.com/style-a-list-with-one-pixel/
-#item-list {
-  padding: 5px;
-  li {
-    list-style-type: none;
-    margin: 15px 0 20px;
-    font-size: 1em;
-    background-color:white;
-    border: 1px solid $light-grey;
-    border-radius: 3px;
-    margin: 14px 0px 4px 0px;
-    padding: 10px;
-    &:hover {
-      background-color: $light-grey;
-      border: 1px solid $dark-grey;
-      }
-    a {
-      font-size: 1.1em;
-      padding: 3px;
-      }
-    }
-  }
-
-  .nutrition-list {
-    font-size: 0.9em;
-    padding:1px;
-    border: 0px;
-    background-color:transparent;
-    border: 0px solid #000;
-    border-radius: 0;
-    // padding: 5px;
-    margin-left: 2px;
-    // margin-bottom: 10px;
-    li {
-      // margin: 4px 0px 4px 0px;
-      font-size: 0.9em;
-      // margin-left: 16px;
-      padding-left: 10px;
-      }
-    }
+// #item-list {
+//   padding: 5px;
+//   li {
+//     list-style-type: none;
+//     margin: 15px 0 20px;
+//     font-size: 1em;
+//     background-color:white;
+//     border: 1px solid $light-grey;
+//     border-radius: 3px;
+//     margin: 14px 0px 4px 0px;
+//     padding: 10px;
+//     &:hover {
+//       background-color: $light-grey;
+//       border: 1px solid $dark-grey;
+//       }
+//     a {
+//       font-size: 1.1em;
+//       padding: 3px;
+//       }
+//     }
+//   }
+//
+//   .nutrition-list {
+//     font-size: 0.9em;
+//     padding:1px;
+//     border: 0px;
+//     background-color:transparent;
+//     border: 0px solid #000;
+//     border-radius: 0;
+//     // padding: 5px;
+//     margin-left: 2px;
+//     // margin-bottom: 10px;
+//     li {
+//       // margin: 4px 0px 4px 0px;
+//       font-size: 0.9em;
+//       // margin-left: 16px;
+//       padding-left: 10px;
+//       }
+//     }
 
 
 //SIDEBAR
@@ -381,6 +398,125 @@ ul {
   text-shadow: $dark-grey-shadow;
   }
 
+
+.gradient-blue {
+	-moz-box-shadow:inset 0px 1px 0px 0px #aac6e0;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #aac6e0;
+	box-shadow:inset 0px 1px 0px 0px #aac6e0;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #15568f), color-stop(1, #19334c) );
+	background:-moz-linear-gradient( center top, #15568f 5%, #19334c 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#15568f', endColorstr='#19334c');
+	background-color:#15568f;
+	-webkit-border-top-left-radius:8px;
+	-moz-border-radius-topleft:8px;
+	border-top-left-radius:8px;
+	-webkit-border-top-right-radius:8px;
+	-moz-border-radius-topright:8px;
+	border-top-right-radius:8px;
+	-webkit-border-bottom-right-radius:8px;
+	-moz-border-radius-bottomright:8px;
+	border-bottom-right-radius:8px;
+	-webkit-border-bottom-left-radius:8px;
+	-moz-border-radius-bottomleft:8px;
+	border-bottom-left-radius:8px;
+	text-indent:0;
+	border:1px solid #264c70;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	// height:33px;
+  min-height:33px;
+  height: 100%;
+  max-height: 150px;
+	// line-height:33px;
+	min-width:74px;
+  width: 100%;
+  max-width: 130px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 0px 0px #11518c;
+  &:active {
+    position:relative;
+    top:1px;
+    }
+  &:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #19334c), color-stop(1, #15568f) );
+    background:-moz-linear-gradient( center top, #19334c 5%, #15568f 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#19334c', endColorstr='#15568f');
+    background-color:#19334c;
+    }
+  }
+
+.bigger-gradient-blue {
+  min-width:200px;
+  width: 100%;
+  padding: 7px 7px;
+}
+
+#item-list {
+  margin: 5px;
+  padding: 5px;
+  li {
+    margin: 5px;
+    padding: 5px 5px 5px 10px;
+    // list-style-type: none;
+    // margin: 15px 0 20px;
+  	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  	box-shadow:inset 0px 1px 0px 0px #ffffff;
+  	// background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+  	// background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+  	// filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+  	background-color:#ededed;
+  	-webkit-border-top-left-radius:6px;
+  	-moz-border-radius-topleft:6px;
+  	border-top-left-radius:6px;
+  	-webkit-border-top-right-radius:6px;
+  	-moz-border-radius-topright:6px;
+  	border-top-right-radius:6px;
+  	-webkit-border-bottom-right-radius:6px;
+  	-moz-border-radius-bottomright:6px;
+  	border-bottom-right-radius:6px;
+  	-webkit-border-bottom-left-radius:6px;
+  	-moz-border-radius-bottomleft:6px;
+  	border-bottom-left-radius:6px;
+  	text-indent:0;
+  	border:1px solid #dcdcdc;
+  	display:inline-block;
+  	color:#777777;
+  	font-family:arial;
+  	font-size:15px;
+    // padding-bottom: 5px;
+  	// font-weight:bold;
+  	font-style:normal;
+  	// height:401px;
+  	// line-height:31px;
+  	width:100%;
+  	// text-decoration:none;
+  	text-align:left;
+  	text-shadow:1px 1px 0px #ffffff;
+    &:hover {
+      background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+      background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+      background-color:#dfdfdf;
+      }
+    &:active {
+      position:relative;
+      top:1px;
+    }
+  }
+}
+
+#nutrition-list li {
+  // height: 100px;
+  list-style-type: square;
+  text-decoration:square;
+  }
+// #nutrition-list
 
 ////PROGRESS BARS
 .progress-bar {

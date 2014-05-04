@@ -5,9 +5,12 @@ function FormController(formView){
 FormController.prototype = {
   bindFormListerns: function(){
     var formView = this.formView
-    $(document).on('click', '.delete_goal', this.removeGoal)
-    $(document).on('click','#amount_custom', formView.makeCustomAmount.bind(this))
-    $(document).on('click',"#clicked_new_goal",this.createNewGoal)
+    $(document).on(
+      'click', '.delete_goal', this.removeGoal)
+    $(document).on(
+      'click','#amount_custom', formView.makeCustomAmount.bind(this))
+    // $(document).on(
+    //   'click',"#clicked_new_goal",this.createNewGoal)
     // $('#addgoals').on('click',this.newgoal)
   },
   // newgoal: function(){
@@ -40,14 +43,14 @@ FormController.prototype = {
   removeGoal: function(){
     console.log('hi')
     var self = this
-    debugger
      $.ajax({
       url: '/goals/'+self.id,
       type: 'DELETE'
     })
     .done(function(number){
       console.log(number)
-      $('li'+' #'+number.goal+' ').remove()
+      // debugger
+      $('ul'+'#'+number.goal+' ').remove()
     })
   }
 }
