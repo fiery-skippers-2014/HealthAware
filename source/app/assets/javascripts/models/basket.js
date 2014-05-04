@@ -52,8 +52,8 @@ Basket.prototype = {
         }
       }
       // ... and calculate totals
-      this.progress[target] = this.progress[target]/this.goals[j][target] * 100
-      this.progress[fda] = this.progress[target]/this.goals[j][fda] * 100
+      this.progress[target] = this.progress[target]/this.goals[j][target]
+      this.progress[fda] = this.progress[target]/this.goals[j][fda]
     }
   }
 }

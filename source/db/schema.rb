@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(:version => 20140502214646) do
     t.integer  "user_id"
     t.integer  "nutrient_id"
     t.integer  "target"
+    t.boolean  "limit"
+    t.string   "unit"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -49,6 +51,8 @@ ActiveRecord::Schema.define(:version => 20140502214646) do
     t.string   "name"
     t.string   "nf_name"
     t.integer  "FDA_recommendation"
+    t.boolean  "FDA_limit"
+    t.string   "unit"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end

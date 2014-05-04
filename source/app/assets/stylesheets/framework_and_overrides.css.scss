@@ -25,6 +25,9 @@ $main-background-color: #f5f5f5;
 .form-centered {
   @include six-columns-centered;
   }
+#custom_limit{
+  display:none;
+}
 .submit {
   @extend .button;
   @extend .radius;
