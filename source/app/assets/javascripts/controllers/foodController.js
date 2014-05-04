@@ -22,7 +22,7 @@ FoodController.prototype = {
     $(document).on("oldList", basket.calculateTotals.bind(basket))
     $(document).on("oldList", this.updateTotalsOnView.bind(this))
     $('#search-form').on('submit', this.searchFoods.bind(food))
-    $(document).on("foodList", this.prepareFoodListForView.bind(this));
+    $(document).on("foodList", this.handleSearchResults.bind(this));
     $(document).on("foodList", this.createFoodList.bind(this))
     $(document).on('click', '.food_div', this.findFoodInSearchResults.bind(this))
   },
@@ -35,38 +35,9 @@ FoodController.prototype = {
   createFoodList: function(e, json){
     this.allFoodResults = json
   },
-  prepareFoodListForView: function(e, json){
-    goodFields = [];
-    goalObjArray = this.basket.goals;
-    for (i=0;i<goalObjArray.length;i++){
-      goodFields.push(Object.keys(goalObjArray[i])[0]);
-    }
-    var ourMasterObject = {};
-    var masterObjArray = [];
-
-    for (h=0;h<json.hits.length;h++){    //gives us each returned object
-      var fieldValueArray = [];
-      for (i=0;i<goodFields.length;i++){
-        currentGoodField = goodFields[i];
-        newObjLit = {
-          fieldName : currentGoodField,
-          fieldValue : json.hits[h].fields[goodFields[i]]
-        }
-        fieldValueArray.push(newObjLit)
-        // ourObject[goodFields[i]] = json.hits[h].fields[goodFields[i]]
-      }
-      var ourEachObject = {};
-      ourEachObject.foodId = json.hits[h]._id;
-      ourEachObject.objName = json.hits[h].fields.item_name;
-      ourEachObject.objBrandName = json.hits[h].fields.brand_name;
-      ourEachObject.objFields = fieldValueArray;
-      masterObjArray.push(ourEachObject);
-    }
-    console.log({objects:masterObjArray});
-    FoodListView.prototype.drawFoods({ objects : masterObjArray }, $('#food-template'));
+  handleSearchResults: function(e, json){
+    FoodListView.prototype.prepareFoodListForView(e, json, this.basket.goals, this.view.foodTemplate);
   },
-
-
   findFoodInSearchResults: function(e){
     //Save to Database, make this nicer.....maybe a Basket Model
     food_id = e.currentTarget.getElementsByTagName('li')[0].getAttribute('food-id')
