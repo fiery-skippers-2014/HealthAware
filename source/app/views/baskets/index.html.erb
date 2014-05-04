@@ -1,0 +1,7 @@
+<h3 class="all_baskets">
+  <% current_user.goals %>
+  <% @all_baskets.each do |basket| %>
+    <%= basket.created_at%>
+    <%= basket.foods%>
+  <% end %>
+</h3>

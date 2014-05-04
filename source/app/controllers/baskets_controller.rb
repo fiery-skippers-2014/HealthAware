@@ -1,10 +1,10 @@
 class BasketsController < ApplicationController
   def index
     @baskets = Basket.find_all_by_user_id(session[:user_id])
-    current_basket = []
+    @all_baskets = []
     @baskets.each do |basket|
       if (Time.now-basket.created_at > 54000)
-        current_basket << basket.foods
+        @all_baskets << basket
       end
     end
   end
