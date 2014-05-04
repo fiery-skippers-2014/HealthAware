@@ -70,22 +70,21 @@
 
 
 <script id="health-template" type="text/x-handlebars-template">
-
-    <li class="food">
-      <ul>
-        <h4>Total Protein</h4>
-
+  <li class="food">
+    <ul>
+      <h4>Total Protein</h4>
+      <% if current_user %>
         <h2> Hey <%=current_user.username%> ! </h2>
         <p> You account was created: <%="#{time_ago_in_words(current_user.created_at)} ago" %> </p>
-        <% if current_user %>
         <% if current_user.goals.count > 0 %>
           <% current_user.goals.each do |goal| %>
-          <li id='<%=goal.id%>'>><b><%=goal.nutrient.name %></b> -  <%=goal.target%> <%=goal.unit%> <i> (maximum: <%=goal.limit%>)</i>
-          <button class='delete_goal' id='<%=goal.id%>'>Remove</button>
+            <li id='<%=goal.id%>'>><b><%=goal.nutrient.name %></b> -  <%=goal.target%> <%=goal.unit%> <i> (maximum: <%=goal.limit%>)</i>
+            <button class='delete_goal' id='<%=goal.id%>'>Remove</button>
           <%end%>
           <p>You last added goals <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %></p>
-        <%end%>
-        <%end%>
+        <% end %>
+      <% end%>
+
 
         <li>Percentage of your target: {{nf_protein}}</li>
         <li>Percentage of FDA: {{nf_protein_FDA_recommendation}}</li>
