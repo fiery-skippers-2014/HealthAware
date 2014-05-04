@@ -4,7 +4,7 @@
 <div id="user-forms" class"row large-4 medium-5 small-12 large-centered medium-centered small-centered">
 
 
-<%= form_for @user do |f| %>
+<%= form_for @user, remote: true do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username %>
   <%= f.label :email %>
@@ -13,5 +13,5 @@
   <%= f.password_field :password %>
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
-  <%= f.submit 'Submit' %>
+  <%= f.submit 'Submit' ,id: "addgoals" %>
 <% end %>
