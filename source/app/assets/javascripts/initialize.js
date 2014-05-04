@@ -17,6 +17,11 @@ $(document).ready(function(){
     healthTemplate: "#health-template"
   }
 
+  var FormElements = {
+    amountCustom: "#amount_custom",
+    customLimit: "#custom_limit"
+  }
+
 
   var food = new FoodList('https://api.nutritionix.com/v1_1/search/')
 
@@ -25,10 +30,13 @@ $(document).ready(function(){
   var FoodView = new FoodListView(FoodElements)
   var healthView = new HealthView(HealthElements)
   var foodController = new FoodController(food, FoodView, basket, basketView, healthView)
+  var formView = new FormView(FormElements)
+  var formController = new FormController(formView)
 
   //Application
   var controllers = {
-    foodController: foodController
+    foodController: foodController,
+    formController: formController
   }
   var applicationController = new ApplicationController(controllers)
 

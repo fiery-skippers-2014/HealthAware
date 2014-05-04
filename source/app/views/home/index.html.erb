@@ -1,88 +1,105 @@
-<div id="container" class="row large-12 medium-11 small-12 large-centered medium-centered small-centered">
+<div id="container" class="row large-10 medium-11 small-12 large-centered medium-centered small-centered">
 
+<H1>Welcome to HealthAware</h1>
 
 
     <!-- SEARCH COLUMN -->
-    <div class="search large-8 medium-8 small-4 columns">
+    <div class="search large-8 medium-8 small-12 columns">
 
-        <form id="search-form" class="search large-12 medium-12 small-12 columns">
+        <form id="search-form" class="search">
 
-          <label for="right-label" class="left inline">
+          <label for="food-search">
             Please select a food: </label>
-          <input type="text" id="right-label" name="food-choice" placeholder="Apple Pie">
+          <input type="text" id="food-search" name="food-choice" placeholder="Apple Pie">
           <input type="submit" value="Click!" class="button">
         </form>
 <hr>
-      <div class="searched" class="testing">searched</div>
+      <div class="searched" class="testing"></div>
 
     </div>
 
 
 
     <!-- SIDEBAR COLUMN -->
-    <div class="profile large-4 medium-4 small-4 columns">
+    <div class="profile large-4 medium-4 small-12 columns">
 
       <div class="heading">Basket</div>
-        <div class="basket">basket stuff</div>
-
+      <div class="basket"></div>
 
       <div class="heading">Health Stats</div>
-        <div class="health-stats">
-          <p>for each desired stat:</p>
-          <div class="progress-bar blue_bar">
-            <span style="width: 80%">
-          </div>
-        </div>
+        <div class="health-stats"></div>
       </div>
-
     </div>
   </div><!-- end of main row --><!-- end of container -->
 
 
-
-
-
-
-
 <!-- TEMPLATES -->
 <script id="food-template" type="text/x-handlebars-template">
-  <ol>
-  {{#hits}}
+
+  <ul id="item-list"><li><ul>
+  {{#objects}}
   	<div class="food_div">
-	    <li class="food" food-id={{_id}}><b>{{fields.brand_name}}</b>: {{fields.item_name}}</li>
-	    <ul>
-	      <li>Calories: {{fields.nf_calories}}</li>
-	      <li>Total Fat: {{fields.nf_total_fat}}</li>
-	    </ul>
+	    <li class="food" food-id={{foodId}}>
+        <a href="#">{{objName}}</a>
+  	    <ul class="nutrition-list">
+          {{#objFields}}
+            <li><a href="#">{{fieldName}}: {{fieldValue}}</a></li>
+          {{/objFields}}
+        </ul>
+      </li>
 		</div>
-  {{/hits}}
-  </ol>
+  {{/objects}}
+  </ul></li></ul>
 </script>
+
 
 <script id="basket-template" type="text/x-handlebars-template">
   {{#oldfoodarray}}
   <div class="food_div">
-      <li class="food" food-id={{API}}><b>{{fields.brand_name}}</b>: {{item_name}}</li>
+    <div id="basket-list">
       <ul>
-        <li>Calories: {{nf_calories}}</li>
-        <li>Total Fat: {{nf_total_fat}}</li>
+        <li class="food" food-id={{API}}>
+          <a href=""><b>{{item_name}}</b></a>
+        </li>
       </ul>
     </div>
+  </div>
   {{/oldfoodarray}}
 </script>
 
 
 <script id="health-template" type="text/x-handlebars-template">
+
   <div class="food_div">
-      <li class="food">
-      <ul>
-        <b>Total Protein</b>
+    <li class="food">
+    <ul>
+
+        <h4>Total Protein</h4>
         <li>Percentage of your target: {{nf_protein}}</li>
         <li>Percentage of FDA: {{nf_protein_FDA_recommendation}}</li>
 
-        <b>Total Fat</b>
+        <h4>Total Fat</h4>
         <li>Percentage of your target: {{nf_total_fat}}</li>
         <li>Percentage of FDA: {{nf_total_fat_FDA_recommendation}}</li>
-      </ul>
-    </div>
+
+      <div class="bar">
+        <div class="barandgrowth red_bar" style='max-width: 20%'>
+          <div class="buffering"></div>
+        </div>
+      </div>
+
+      <div class="bar">
+        <div class="barandgrowth green_bar" style="max-width: 100%">
+          <div class="buffering"></div>
+        </div>
+      </div>
+
+      <div class="bar">
+        <div class="barandgrowth yellow_bar" style="max-width: 50%">
+          <div class="buffering"></div>
+        </div>
+      </div>
+    </ul>
+    </li>
+  </div>
 </script>

@@ -1,24 +1,36 @@
 @import "foundation";
 
-// "../../../vendor/assets/stylesheets/foundation/foundation.scss";
-
-//INPUTS
+//META INPUTS
 $main-background-color: #f5f5f5;
 $box-color: #ffffff;
-$box-shadow: 1px 1px 1px #888888;
 $black-color: #000;
-$blue-link: #006fd0;
+$blue-reserve: #006fd0;
+$dark-blue: #28384f;
+$blue-link: #295882;
 $blue-link-hover: #295882;
 $light-blue-link: #66a3c2;
+
+$light-red: #e93030;
+$dark-red: #b31010;
+$light-yellow: #ffc61d;
+$dark-yellow: #ffa406;
+$light-green: #9ffe20;
+$dark-green: #7db522;
+
+$light-grey: #d9d9d9;
+$dark-grey: #888888;
+$box-shadow: 1px 1px 1px #888888;
 $grey-shadow: 0.5px 0.5px #ececec;
 $dark-grey-shadow: 0.5px 0.5px #d9d9d9;
 $main-text-family: Helvetica, Verdana, Arial, sans-serif;
 $light-black: #2D2D2D;
+$track-title-size: 1em;
 
 
 @mixin box_sizing {
-  margin-bottom: 5px;
-  font-size: 0.8em;
+  margin: 5px;
+  padding: 5px;
+  // background-color: white;
 }
 
 @mixin four-transit {
@@ -35,6 +47,12 @@ $light-black: #2D2D2D;
   -o-transition: background-color 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out;
 }
+
+@mixin bar-setup {
+  height: 15px;
+  float: left;
+}
+
 ////////////////////////////////////////
 
 body {
@@ -42,7 +60,6 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  // width: ;
   a {
     color: $blue-link;
     text-decoration: none;
@@ -60,15 +77,18 @@ body {
     }
   }
 
+ul {
+  margin-left: 0px;
+}
+
 .row {
-  width: 1000px;
+  // width: 1000px;
   max-width: 100%;
-  min-width: 768px;
+  // min-width: 768px;
   margin: 0 auto;
 }
 
 //TOP BAR
-
 .top-bar {
   padding-top: 15px;
   height: 90px;
@@ -85,12 +105,9 @@ body {
       }
     }
   .toggle-topbar.menu-icon {
-    // background-color: ;
     color: $blue-link;
     a {
       color: $blue-link;
-      // text-shadow: $grey-shadow;
-      // font-size: 0.9em;
       }
     }
   }
@@ -114,73 +131,150 @@ body {
 }
 
 ///SEARCH COLUMN
+
+@mixin fl-form {
+  margin-left: 10px;
+  float: left;
+  display:inline;
+}
+
 .search {
+  margin-bottom: 10px;
   padding: 5px;
   #search-form {
     label {
+      padding-top: 10px;
       width: 25%;
       min-width: 135px;
-      float: left;
-      display:inline;
+      @include fl-form;
     }
     input[type="text"] {
-      width: 50%;
-      float: left;
-      margin-left: 15px;
-      float: left;
-      display:inline;
+      width: 45%;
+      min-width: 120px;
+      @include fl-form;
       }
     input[type="submit"] {
       width: 15%;
       min-width: 75px;
-      margin-left: 15px;
-      float: left;
-      display:inline;
+      @include fl-form;
       }
     }
   }
 
+// SEARCHED
 .searched {
-  background-color: $box-color;
-  border: 1px grey solid;
+  // background-color: $box-color;
+  // border: 1px grey solid;
   padding: 5px;
   }
 
+// single pixel listing
+// http://css-tricks.com/style-a-list-with-one-pixel/
+#item-list {
+  li {
+    list-style-type: none;
+    margin: 15px 0 20px;
+    padding: 0px 0px 0px 10px;
+    a {
+      background: $main-background-color;
+      color: #1F6DD9;
+      display: block;
+      padding: 0px 3px 3px 3px;
+      &:hover {
+        color: #84B8FF;
+        }
+      }
+    ul {
+      li {
+        font-size: 1em;
+        background: transparent url("http://css-tricks.com/examples/ULStyle/images/graypixel.png") repeat-x 0 8px;
+        margin: 4px 0 4px 5px;
+        padding: 0px 0px 0px 10px;
+        a {
+          font-size: 0.9em;
+          padding: 0px 0px 0px 3px;
+          }
+        ul {
+          margin-left: 1px;
+          font-size: 0.9em;
+          background: transparent url("http://css-tricks.com/examples/ULStyle/images/graypixel.png") repeat-y 15px 0;
+          margin-bottom: 10px;
+          li {
+            font-size: 0.9em;
+            margin-left: 16px;
+            padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
 
 //SIDEBAR
-
 .profile {
+  margin-top: 10px;
   box-shadow: $box-shadow;
-  padding: 5px;
+  // padding: 5px;
+  // height: auto;
+  height: 100%;
+  position:relative;
+  // min-height: 400px;
   .heading {
-    font-size:1.2em;
+    font-size:1.4em;
     padding: 10px;
     border-bottom:1.5px solid $blue-link;
     text-align:left;
     }
   .basket {
     @include box_sizing;
-    padding: 15px;
+    background-color: transparent;
+    max-height: 30%;
+    position: relative;
+    display: block;
     }
   .health-stats {
     @include box_sizing;
-    padding: 15px;
-    .custom-progress-container {
-      @include progress-container;
-      @include radius(6px);
-      & > span {
-        @include progress-meter(pink);
-        @include radius(5px);
+    // padding: 5px;
+    display: block;
+    max-height: 40%;
+    padding: 0px;
+    ul {
+      li {
+        list-style-type: none;
+        font-size: 0.8em;
+        padding-left: 5px;
         }
+    }
+    h4 {
+      font-size: 0.9em;
+      letter-spacing: 0.5px;
+      font-weight: bold;
+      // padding-left: 2px;
+      text-transform: uppercase;
+      padding: 5px 5px 0px 0px;
+      margin-left: 0px;
+      margin-bottom: 2px;
+      }
+    li {
+      list-style-type: none;
+      font-size: 0.8em;
+      // padding-left: 5px;
+      }
+    .bar {
+      display: block;
+      height: 15px;
+      // padding:2px;
       }
     }
   }
+
+
+
 
 /// BUTTONS
 .button {
   width: auto;
   background: $blue-link;
-  // border: 1px solid #888888;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
@@ -223,10 +317,9 @@ body {
   }
 
 
-////PROGRESS BAR
-
+////PROGRESS BARS
 .progress-bar {
-  background-color: #2D2D2D;
+  background-color: white;
   height: 25px;
   padding: 5px;
   margin-bottom: 18px;
@@ -239,22 +332,189 @@ body {
   span {
     display: inline-block;
     height: 100%;
-    background-color: $light-blue-link;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
     -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
     box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
-    @include four-transit
+    @include four-transit;
   }
 }
-.blue_bar span {
-	background-color: $light-blue-link;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($light-blue-link), to($blue-link));
-	background-image: -webkit-linear-gradient(top, $light-blue-link, $blue-link);
-	background-image: -moz-linear-gradient(top, $light-blue-link, $blue-link);
-	background-image: -ms-linear-gradient(top, $light-blue-link, $blue-link);
-	background-image: -o-linear-gradient(top, $light-blue-link, $blue-link);
-	background-image: linear-gradient(top, $light-blue-link, $blue-link);
+.green_bar {
+  @include bar-setup;
+	background-color: $light-green;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($light-green), to($dark-green));
+	background-image: -webkit-linear-gradient(top, $light-green, $dark-green);
+	background-image: -moz-linear-gradient(top, $light-green, $dark-green);
+	background-image: -ms-linear-gradient(top, $light-green, $dark-green);
+	background-image: -o-linear-gradient(top, $light-green, $dark-green);
+	background-image: linear-gradient(top, $light-green, $dark-green);
 }
+
+.red_bar {
+  @include bar-setup;
+  background-color: $light-red;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($light-red), to($dark-red));
+  background-image: -webkit-linear-gradient(top, $light-red, $dark-red);
+  background-image: -moz-linear-gradient(top, $light-red, $dark-red);
+  background-image: -ms-linear-gradient(top, $light-red, $dark-red);
+  background-image: -o-linear-gradient(top, $light-red, $dark-red);
+  background-image: linear-gradient(top, $light-red, $dark-red);
+}
+
+.yellow_bar {
+  @include bar-setup;
+  background-color: $light-yellow;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($light-yellow), to($dark-yellow));
+  background-image: -webkit-linear-gradient(top, $light-yellow, $dark-yellow);
+  background-image: -moz-linear-gradient(top, $light-yellow, $dark-yellow);
+  background-image: -ms-linear-gradient(top, $light-yellow, $dark-yellow);
+  background-image: -o-linear-gradient(top, $light-yellow, $dark-yellow);
+  background-image: linear-gradient(top, $light-yellow, $dark-yellow);
+}
+
+.barandgrowth  {
+  display: inline-block;
+  height: inherit;
+  width: 0%;
+	background-color: #777;
+  -moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+  -webkit-animation: growth 2s 1 forwards;
+  -moz-animation: growth 2s 1 forwards;
+  -ms-animation: growth 2s 1 forwards;
+  animation: growth 2s 1 forwards;
+}
+
+// Progress Bar buffering
+.buffering {
+    height: 15px;
+    width: 100%;
+    overflow: hidden;
+    background: url('http://www.cssdeck.com/uploads/media/items/7/7uo1osj.gif') repeat-x;
+    -moz-opacity: 0.25;
+    -khtml-opacity: 0.25;
+    opacity: 0.25;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=25);
+    filter: alpha(opacity=25);
+}
+
+//////// Progress Bar Animation
+// http://cssdeck.com/labs/animated-progress-bar
+@-webkit-keyframes growth {
+    from { }
+    to { width: 100% }
+}
+
+@-moz-keyframes growth {
+    from { }
+    to { width: 100% }
+}
+
+@-ms-keyframes growth {
+    from { }
+    to { width: 100% }
+}
+
+@keyframes growth {
+    from { }
+    to { width: 100% }
+}
+
+
+
+
+
+//// TEMPLATE LISTING
+#basket-list {
+  min-width:100px;
+  width: inherit;
+  // background-color: #c9e2fe;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -14px;
+    li {
+      background-color: transparent;
+      text-transform:uppercase;
+      font-size: 0.9em;
+      // border: 1px blue solid;
+      border-bottom: 4px solid #295882;
+      &:last-child {
+        border: none;
+        border-bottom: none;
+        }
+      a {
+        padding: 5px;
+        text-decoration: none;
+        color: #000000;
+        display: block;
+        // width: 200px;
+        // -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+        // -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+        // -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+        // -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+        // transition: font-size 0.3s ease, background-color 0.3s ease;
+        &:hover {
+          font-weight: normal;
+          font-size: 1em;
+          letter-spacing: 0.5;
+          background: $blue-link-hover;
+          color: white;
+          }
+        }
+      }
+    }
+  }
+
+
+//REGISTRATION FORM
+
+#user_forms {
+  padding:10px;
+  font-size: 1em;
+}
+
+// RESOURCES (might use?)
+
+//SHINE ANIMATION
+//
+// .pulse span {
+//   position: relative;
+// }
+//
+// .pulse span::after {
+//   content: '';
+//   // opacity: 0;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   background-color: rgba(255, 255, 255, 1);
+//   -moz-border-radius: 3px;
+//   -webkit-border-radius: 3px;
+//   border-radius: 3px;
+//
+//   -webkit-animation: pulsing 2s ease-out infinite;
+//   -moz-animation: pulsing 2s ease-out infinite;
+// }
+//
+// @-webkit-keyframes pulsing {
+//   0% {opacity: 1; width: 0;}
+//   50% {opacity: .5;}
+//   100% {opacity: 0; width: 100%;}
+// }
+//
+// @-moz-keyframes pulsing {
+//   0% {opacity: 1; width: 0;}
+//   50% {opacity: .5;}
+//   100% {opacity: 0; width: 100%;}
+// }
