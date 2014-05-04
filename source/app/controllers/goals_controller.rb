@@ -26,12 +26,11 @@ class GoalsController < ApplicationController
     redirect_to new_goal_path
   end
 
-
   def destroy
     @goal = Goal.find(params[:id])
     @goal.destroy
-    redirect_to root_path
+    @goal.id
+    render json: {goal:@goal.id}
   end
-
 
 end
