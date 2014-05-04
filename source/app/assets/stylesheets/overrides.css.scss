@@ -130,13 +130,37 @@ ul {
   min-width:400px;
 }
 
-///SEARCH COLUMN
-
 @mixin fl-form {
   margin-left: 10px;
   float: left;
   display:inline;
-}
+  }
+
+///REGISTRATION FORM
+#user_forms .field {
+  padding:10px;
+  font-size: 1em;
+  label {
+    padding-top: 10px;
+    width: 25%;
+    // min-width: 135px;
+    @include fl-form;
+  }
+  input[type="text"] {
+    width: 45%;
+    // min-width: 120px;
+    @include fl-form;
+    }
+  input[type="submit"] {
+    width: 15%;
+    // min-width: 75px;
+    @include fl-form;
+    float: center;
+    text-align: center;
+    }
+  }
+
+///SEARCH COLUMN
 
 .search {
   margin-bottom: 10px;
@@ -171,51 +195,51 @@ ul {
 // single pixel listing
 // http://css-tricks.com/style-a-list-with-one-pixel/
 #item-list {
+  padding: 5px;
   li {
     list-style-type: none;
     margin: 15px 0 20px;
-    padding: 0px 0px 0px 10px;
-    a {
-      background: $main-background-color;
-      color: #1F6DD9;
-      display: block;
-      padding: 0px 3px 3px 3px;
-      &:hover {
-        color: #84B8FF;
-        }
+    font-size: 1em;
+    background-color:white;
+    border: 1px solid $light-grey;
+    border-radius: 3px;
+    margin: 14px 0px 4px 0px;
+    padding: 10px;
+    &:hover {
+      background-color: $light-grey;
+      border: 1px solid $dark-grey;
       }
-    ul {
-      li {
-        font-size: 1em;
-        background: transparent url("http://css-tricks.com/examples/ULStyle/images/graypixel.png") repeat-x 0 8px;
-        margin: 4px 0 4px 5px;
-        padding: 0px 0px 0px 10px;
-        a {
-          font-size: 0.9em;
-          padding: 0px 0px 0px 3px;
-          }
-        ul {
-          margin-left: 1px;
-          font-size: 0.9em;
-          background: transparent url("http://css-tricks.com/examples/ULStyle/images/graypixel.png") repeat-y 15px 0;
-          margin-bottom: 10px;
-          li {
-            font-size: 0.9em;
-            margin-left: 16px;
-            padding-left: 10px;
-            }
-          }
-        }
+    a {
+      font-size: 1.1em;
+      padding: 3px;
       }
     }
   }
+
+  .nutrition-list {
+    font-size: 0.9em;
+    padding:1px;
+    border: 0px;
+    background-color:transparent;
+    border: 0px solid #000;
+    border-radius: 0;
+    // padding: 5px;
+    margin-left: 2px;
+    // margin-bottom: 10px;
+    li {
+      // margin: 4px 0px 4px 0px;
+      font-size: 0.9em;
+      // margin-left: 16px;
+      padding-left: 10px;
+      }
+    }
+
 
 //SIDEBAR
 .profile {
   margin-top: 10px;
   box-shadow: $box-shadow;
   // padding: 5px;
-  // height: auto;
   height: 100%;
   position:relative;
   // min-height: 400px;
@@ -244,7 +268,7 @@ ul {
         font-size: 0.8em;
         padding-left: 5px;
         }
-    }
+      }
     h4 {
       font-size: 0.9em;
       letter-spacing: 0.5px;
@@ -268,8 +292,42 @@ ul {
     }
   }
 
+#basket-list {
+  min-width:100px;
+  width: inherit;
+  // background-color: #c9e2fe;
+  ul {
+    li {
+      background-color: transparent;
+      text-transform:uppercase;
+      font-size: 0.9em;
+      // border: 1px blue solid;
+      border-bottom: 4px solid #295882;
+      &:last-child {
+        border: none;
+        border-bottom: none;
+        }
+      a {
+        background: $main-background-color;
+        color: #1F6DD9;
+        display: block;
+        padding: 0px 3px 3px 3px;
 
-
+        padding: 5px;
+        text-decoration: none;
+        color: #000000;
+        display: block;
+        &:hover {
+          font-weight: normal;
+          font-size: 1em;
+          letter-spacing: 0.5;
+          background: $blue-link-hover;
+          color: white;
+          }
+        }
+      }
+    }
+  }
 
 /// BUTTONS
 .button {
@@ -290,6 +348,7 @@ ul {
   padding: 10px 20px 11px;
   position: relative;
   text-align: center;
+  align: center;
   text-decoration: none;
   @include fast-color-transit;
   &:hover {
@@ -301,6 +360,12 @@ ul {
     -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
   }
+}
+
+.centered-button {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .pretty-blue {
@@ -428,9 +493,6 @@ ul {
 }
 
 
-
-
-
 //// TEMPLATE LISTING
 #basket-list {
   min-width:100px;
@@ -475,12 +537,6 @@ ul {
   }
 
 
-//REGISTRATION FORM
-
-#user_forms {
-  padding:10px;
-  font-size: 1em;
-}
 
 // RESOURCES (might use?)
 
@@ -518,3 +574,46 @@ ul {
 //   50% {opacity: .5;}
 //   100% {opacity: 0; width: 100%;}
 // }
+
+
+// single pixel listing
+// http://css-tricks.com/style-a-list-with-one-pixel/
+// #item-list {
+//   li {
+//     list-style-type: none;
+//     margin: 15px 0 20px;
+//     padding: 0px 0px 0px 10px;
+//     a {
+//       background: $main-background-color;
+//       color: #1F6DD9;
+//       display: block;
+//       padding: 0px 3px 3px 3px;
+//       &:hover {
+//         color: #84B8FF;
+//         }
+//       }
+//     ul {
+//       li {
+//         font-size: 1em;
+//         background: transparent url("http://css-tricks.com/examples/ULStyle/images/graypixel.png") repeat-x 0 8px;
+//         margin: 4px 0 4px 5px;
+//         padding: 0px 0px 0px 10px;
+//         a {
+//           font-size: 0.9em;
+//           padding: 0px 0px 0px 3px;
+//           }
+//         ul {
+//           margin-left: 1px;
+//           font-size: 0.9em;
+//           background: transparent url("http://css-tricks.com/examples/ULStyle/images/graypixel.png") repeat-y 15px 0;
+//           margin-bottom: 10px;
+//           li {
+//             font-size: 0.9em;
+//             margin-left: 16px;
+//             padding-left: 10px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
