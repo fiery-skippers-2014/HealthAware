@@ -8,9 +8,9 @@ class FoodsController < ApplicationController
     end
     @food.save!
 
-    if Basket.find_all_by_user_id(session[:user_id])
+    if Basket.find_all_by_user_id(session[:user_id]).count > 0
       basket = Basket.find_all_by_user_id(session[:user_id]).last
-      if (Time.now-basket.created_at < 54000)
+      if Time.now-basket.created_at < 54000
         if BasketFood.find_by_food_id(@food.id)
           basketfood = BasketFood.find_by_food_id(@food.id)
           basketfood.quantity = basketfood.quantity + 1
