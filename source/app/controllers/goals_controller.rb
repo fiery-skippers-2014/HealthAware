@@ -15,6 +15,7 @@ class GoalsController < ApplicationController
       @goal.unit = @goal.nutrient.unit
     else
       @goal.target = params[:goal][:target]
+      @goal.unit = @goal.nutrient.unit
         if params[:limit][:limit_id] == "minimum"
           @goal.limit = true
         else
@@ -24,5 +25,13 @@ class GoalsController < ApplicationController
     @goal.save!
     redirect_to new_goal_path
   end
+
+
+  def destroy
+    @goal = Goal.find(params[:id])
+    @goal.destroy
+    redirect_to root_path
+  end
+
 
 end
