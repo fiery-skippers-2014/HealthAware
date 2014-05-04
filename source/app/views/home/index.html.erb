@@ -1,5 +1,6 @@
 <div id="container" class="row large-10 medium-11 small-12 large-centered medium-centered small-centered">
 
+<H1>Welcome to HealthAware</h1>
 
 
     <!-- SEARCH COLUMN -->
@@ -34,22 +35,28 @@
 
 <!-- TEMPLATES -->
 <script id="food-template" type="text/x-handlebars-template">
+
   <ul id="item-list"><li><ul>
-  {{#hits}}
+  {{#objects}}
   	<div class="food_div">
-	    <li class="food" food-id={{_id}}>
+	    <li class="food" food-id={{foodId}}>
         <a href="#">
-          {{fields.brand_name}} {{fields.item_name}}
+          {{objBrandName}} {{fields.item_name}} OR {{objName}}
         </a>
   	    <ul class="nutrition-list">
           <li><a href="#">Calories: {{fields.nf_calories}}</a></li>
           <li><a href="#">Total Fat: {{fields.nf_total_fat}}</a></li>
+          <li>OR</li>
+          {{#objFields}}
+            <li>{{fieldName}}: {{fieldValue}}</li>
+          {{/objFields}}
         </ul>
       </li>
 		</div>
-  {{/hits}}
+  {{/objects}}
   </ul></li></ul>
 </script>
+
 
 <script id="basket-template" type="text/x-handlebars-template">
   {{#oldfoodarray}}

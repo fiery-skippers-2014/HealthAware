@@ -1,7 +1,7 @@
 class Goal < ActiveRecord::Base
   belongs_to :user
   belongs_to :nutrient
-  attr_accessible :target, :nutrient_id
+  attr_accessible :target, :nutrient_id,:limit,:unit
 
 
   def self.usergoals(current_user)

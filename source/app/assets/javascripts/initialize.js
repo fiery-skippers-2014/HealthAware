@@ -17,21 +17,26 @@ $(document).ready(function(){
     healthTemplate: "#health-template"
   }
 
+  var FormElements = {
+    amountCustom: "#amount_custom",
+    customLimit: "#custom_limit"
+  }
+
 
   var food = new FoodList('https://api.nutritionix.com/v1_1/search/')
 
-  var basket = new Basket() // a model which knows a currently empty oldfoodarray, goals, and an empty progress object. this model:
-    // can save an object to basket/database
-      // putting that json object into the oldfoodarray (creating an 'oldList' event)
-    // grabbing
-  var basketView = new BasketView(BasketElements) // knows basket elements and has ability to create a view based on a handlebar template
+  var basket = new Basket()
+  var basketView = new BasketView(BasketElements)
   var FoodView = new FoodListView(FoodElements)
   var healthView = new HealthView(HealthElements)
-  var foodController = new FoodController(food, FoodView, basket, basketView, healthView) //
+  var foodController = new FoodController(food, FoodView, basket, basketView, healthView)
+  var formView = new FormView(FormElements)
+  var formController = new FormController(formView)
 
   //Application
   var controllers = {
-    foodController: foodController
+    foodController: foodController,
+    formController: formController
   }
   var applicationController = new ApplicationController(controllers)
 

@@ -3,10 +3,16 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @goal = Goal.new
+    p "nutrients" * 50
+    @nutrients = Nutrient.all
+    p @nutrients
   end
 
   def create
     @user = User.new params[:user]
+    @nutrients = Nutrient.all
+
+    p @nutrients
     if @user.save!
       login_user
     end
