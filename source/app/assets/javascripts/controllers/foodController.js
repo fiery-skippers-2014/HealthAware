@@ -6,7 +6,7 @@ function FoodController(model, Foodview, basket, basketView, Healthview){
   this.basketView = basketView
   this.healthView = Healthview
   this.allFoodResults = {}
-}
+};
 
 FoodController.prototype = {
   // run in controllers/applicationController.js
@@ -22,7 +22,7 @@ FoodController.prototype = {
     $(document).on("oldList", basket.calculateTotals.bind(basket))
     $(document).on("oldList", this.updateTotalsOnView.bind(this))
     $('#search-form').on('submit', this.searchFoods.bind(food))
-    $(document).on("foodList", this.prepareFoodListForView.bind(foodView));
+    $(document).on("foodList", this.prepareFoodListForView.bind(this));
     $(document).on("foodList", this.createFoodList.bind(this))
     $(document).on('click', '.food_div', this.findFoodInSearchResults.bind(this))
   },
@@ -36,12 +36,13 @@ FoodController.prototype = {
     this.allFoodResults = json
   },
 
-prepareFoodListForView: function(e, json){
-    debugger
-    var goodFields = ["nf_sugars", "nf_total_fat", "nf_protein"];
-    sessionStorage["prefs"] = ["nf_sugars", "nf_protein"];
-    var seshString = sessionStorage["prefs"];
-    var goodFields = seshString.split(",");
+
+  prepareFoodListForView: function(e, json){
+    goodFields = [];
+    goalObjArray = this.basket.goals;
+    for (i=0;i<goalObjArray.length;i++){
+      goodFields.push(Object.keys(goalObjArray[i])[0]);
+    }
     var ourMasterObject = {};
     var masterObjArray = [];
 
@@ -66,10 +67,6 @@ prepareFoodListForView: function(e, json){
     console.log({objects:masterObjArray});
     FoodListView.prototype.drawFoods({ objects : masterObjArray }, $('#food-template'));
   },
-
-
-
-
 
 
   findFoodInSearchResults: function(e){
