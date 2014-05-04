@@ -52,6 +52,7 @@ Basket.prototype = {
         }
       }
       // ... and calculate totals
+      debugger
       this.progress[target] = this.progress[target]/this.goals[j][target]
       // this.progress[fda] = this.progress[target]/this.goals[j][fda]
       debugger

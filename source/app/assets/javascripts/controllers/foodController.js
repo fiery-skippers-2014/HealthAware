@@ -35,12 +35,9 @@ FoodController.prototype = {
   createFoodList: function(e, json){
     this.allFoodResults = json
   },
-
-
   prepareFoodListForView: function(e, json){
     goodFields = [];
     goalObjArray = this.basket.goals;
-    debugger
     for (i=0;i<goalObjArray.length;i++){
       goodFields.push(Object.keys(goalObjArray[i])[0]);
     }

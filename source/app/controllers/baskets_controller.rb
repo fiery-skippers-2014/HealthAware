@@ -13,6 +13,7 @@ class BasketsController < ApplicationController
       @baskets = Basket.find_all_by_user_id(session[:user_id])
       @basket = @baskets.last.foods
     # (@baskets.last.updated_at - Time.now), ADD THIS LATER
+    #Time.now - Basket.last.created_at
     else
       @basket
     end
