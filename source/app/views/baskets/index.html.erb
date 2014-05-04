@@ -1,0 +1,20 @@
+<div class="all_baskets">
+  <% current_user.goals.each do |goal| %>
+    <%=current_user.name%>
+    <%=goal.nutrient.name %>
+    <%=goal.target%>
+  <%end%>
+
+  <p><% @all_baskets.each do |basket| %>
+  <ul>
+    <%="#{time_ago_in_words(basket.created_at)} ago" %>
+    <% basket.foods.each do |food|%>
+      <li><%= food.item_name %></li>
+        <% current_user.goals.each do |goal| %>
+         <li> <%= "#{goal.nutrient.nf_name}: #{food[goal.nurtient.nf_name]}" %></li>
+        <%end%>
+      <%end%>
+  </ul>
+  <%end%>
+</p>
+</div>

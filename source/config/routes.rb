@@ -4,7 +4,7 @@ HealthAware::Application.routes.draw do
   resources :users, :only => [:new,:create,:show, :edit, :update]
   resources :sessions, :only => [:create,:new]
   resources :foods, :only => [:create]
-  resources :baskets, :only => [:show]
+  resources :baskets, :only => [:show,:index]
   delete '/logout' => 'sessions#destroy', :as => 'logout'
 end
 
