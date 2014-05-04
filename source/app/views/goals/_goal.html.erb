@@ -1,4 +1,4 @@
-<%= form_for @goal, remote: true do |u| %>
+<%= form_for @goal, url: goals_path, remote: true do |u| %>
     <%= u.label "What are you trying to track?" %>
 
     <%= u.select :nutrient_id, options_for_select([["Protein",1],["Carbs",2],["Fat",3]]) %>
@@ -26,8 +26,5 @@
       </div>
   <%= u.submit 'Track this', {:id => "clicked_new_goal"} %>
 <% end %>
-
-<button ><%= link_to "Take me to Homepage", root_path%></button>
-
 
 

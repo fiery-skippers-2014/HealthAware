@@ -11,3 +11,4 @@ HealthView.prototype = {
     $(this.health).html(template(progress))
   }
 }
+
