@@ -130,13 +130,37 @@ ul {
   min-width:400px;
 }
 
-///SEARCH COLUMN
-
 @mixin fl-form {
   margin-left: 10px;
   float: left;
   display:inline;
-}
+  }
+
+///REGISTRATION FORM
+#user_forms .field {
+  padding:10px;
+  font-size: 1em;
+  label {
+    padding-top: 10px;
+    width: 25%;
+    // min-width: 135px;
+    @include fl-form;
+  }
+  input[type="text"] {
+    width: 45%;
+    // min-width: 120px;
+    @include fl-form;
+    }
+  input[type="submit"] {
+    width: 15%;
+    // min-width: 75px;
+    @include fl-form;
+    float: center;
+    text-align: center;
+    }
+  }
+
+///SEARCH COLUMN
 
 .search {
   margin-bottom: 10px;
@@ -215,7 +239,6 @@ ul {
   margin-top: 10px;
   box-shadow: $box-shadow;
   // padding: 5px;
-  // height: auto;
   height: 100%;
   position:relative;
   // min-height: 400px;
@@ -244,7 +267,7 @@ ul {
         font-size: 0.8em;
         padding-left: 5px;
         }
-    }
+      }
     h4 {
       font-size: 0.9em;
       letter-spacing: 0.5px;
@@ -269,8 +292,6 @@ ul {
   }
 
 
-
-
 /// BUTTONS
 .button {
   width: auto;
@@ -290,6 +311,7 @@ ul {
   padding: 10px 20px 11px;
   position: relative;
   text-align: center;
+  align: center;
   text-decoration: none;
   @include fast-color-transit;
   &:hover {
@@ -301,6 +323,12 @@ ul {
     -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
   }
+}
+
+.centered-button {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .pretty-blue {
@@ -475,12 +503,6 @@ ul {
   }
 
 
-//REGISTRATION FORM
-
-#user_forms {
-  padding:10px;
-  font-size: 1em;
-}
 
 // RESOURCES (might use?)
 
