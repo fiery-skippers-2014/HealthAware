@@ -26,8 +26,8 @@ class GoalsController < ApplicationController
       p "goal saves!"
     end
     @goal = Goal.new
-    redirect_to new_goal_path
-    # render partial: 'goal', :locals => {:goal => @goal}
+    # redirect_to new_goal_path
+    render partial: 'goal', :locals => {:goal => @goal}
   end
 
   def destroy
