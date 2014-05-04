@@ -63,6 +63,7 @@ FoodController.prototype = {
       masterObjArray.push(ourEachObject);
     }
     console.log({objects:masterObjArray});
+    debugger
     FoodListView.prototype.drawFoods({ objects : masterObjArray }, $('#food-template'));
   },
 

@@ -1,9 +1,5 @@
 <div id="container" class="row large-10 medium-11 small-12 large-centered medium-centered small-centered">
 
-<H1>Welcome to HealthAware</h1>
-<%= link_to "Add more goals", new_goal_path, {:class => 'button', :style => 'color:#FFFFFF;'} %>
-<%= link_to "My History", baskets_path, {:class => 'button', :style => 'color:#FFFFFF;'} %>
-
     <!-- SEARCH COLUMN -->
     <div class="search large-8 medium-8 small-12 columns">
 
@@ -12,7 +8,7 @@
           <label for="food-search">
             Please select a food: </label>
           <input type="text" id="food-search" name="food-choice" placeholder="Apple Pie">
-          <input type="submit" value="Click!" class="button">
+          <input type="submit" value="Click!" class="gradient-blue">
         </form>
 <hr>
       <div class="searched" class="testing"></div>
@@ -40,11 +36,10 @@
   <ul id="item-list">
   {{#objects}}
   	<div class="food_div">
-	    <li class="food" food-id={{foodId}}>
-        <a href="#">{{objName}}</a>
-  	    <ul class="nutrition-list">
+	    <li class="food" food-id={{foodId}}>{{objName}}
+  	    <ul id="nutrition-list">
           {{#objFields}}
-            <li><a href="#">{{fieldName}}: {{fieldValue}}</a></li>
+            <li>{{fieldName}}: {{fieldValue}}</li>
           {{/objFields}}
         </ul>
       </li>
@@ -73,26 +68,33 @@
 
     <li class="food">
       <ul>
-        <h4>Total Protein</h4>
-
-        <h2> Hey <%=current_user.username%> ! </h2>
-        <p> You account was created: <%="#{time_ago_in_words(current_user.created_at)} ago" %> </p>
         <% if current_user %>
-        <% if current_user.goals.count > 0 %>
-          <% current_user.goals.each do |goal| %>
-          <li id='<%=goal.id%>'>><b><%=goal.nutrient.name %></b> -  <%=goal.target%> <%=goal.unit%> <i> (maximum: <%=goal.limit%>)</i>
-          <button class='delete_goal' id='<%=goal.id%>'>Remove</button>
+          <% if current_user.goals.count > 0 %>
+            <% current_user.goals.each do |goal| %>
+
+              <span><h4><%=goal.nutrient.name %></h4>
+              <h6 ><%= link_to 'X', goal, :method => :delete, :confirm => 'Are you sure you want to remove this goal?'%></h6>
+              </span>
+              <li>Target - <%=goal.target%> <%=goal.unit %> <i> (maximum: <%=goal.limit%>)</i></li>
+              <li>Nutrient ID: <%=goal.nutrient_id%></li>
+
+              <div class="bar">
+                <div class="barandgrowth red_bar" style="max-width: 20%;">
+                  <div class="buffering"></div>
+                </div>
+              </div>
+
+            <%end%>
           <%end%>
-          <p>You last added goals <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %></p>
-        <%end%>
         <%end%>
 
-        <li>Percentage of your target: {{nf_protein}}</li>
-        <li>Percentage of FDA: {{nf_protein_FDA_recommendation}}</li>
-
-        <h4>Total Fat</h4>
+        <h4>template foor hardcoded fat</h4>
         <li>Percentage of your target: {{nf_total_fat}}</li>
         <li>Percentage of FDA: {{nf_total_fat_FDA_recommendation}}</li>
+
+        <h4>template foor hardcoded protein</h4>
+        <li>Percentage of your target: {{nf_protein}}</li>
+        <li>Percentage of FDA: {{nf_protein_FDA_recommendation}}</li>
 
         {{! foor all LIMIT stats }}
         {{! * need: max_amount }}
@@ -122,6 +124,12 @@
         {{! end LIMIT stats }}
       </ul>
     </li>
+<<<<<<< HEAD
+=======
+    <hr>
+    </h5>Hey <%=current_user.username%>!</h5>
+    <h6>You account was created: <%="#{time_ago_in_words(current_user.created_at)} ago" %></h6>
+<h6>You last add goals <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %></h6>
+  </div>
+>>>>>>> Dynamic_Bars
 </script>
-
-
