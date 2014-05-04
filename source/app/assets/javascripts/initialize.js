@@ -33,8 +33,6 @@ $(document).ready(function(){
   var formView = new FormView(FormElements)
   var formController = new FormController(formView)
 
-
-
   //Application
   var controllers = {
     foodController: foodController,
