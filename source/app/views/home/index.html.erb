@@ -26,37 +26,7 @@
       <div class="basket"></div>
 
       <div class="heading">Health Stats</div>
-        <div class="health-stats">
-
-<!--      {{#tracks}} -->
-          <h4>Track Title:</h4>
-          <p>track info <-- not in template</p>
-
-<!--      {{#if percentages (this < 40% of desired) }} -->
-          <div class="bar">
-            <div class="barandgrowth red_bar" style="max-width: 30%">
-              <div class="buffering"></div>
-            </div>
-          </div>
-
-<!--      {{#elsif percentage > 70% of desired}} -->
-          <div class="bar">
-            <div class="barandgrowth green_bar" style="max-width: 100%">
-              <div class="buffering"></div>
-            </div>
-          </div>
-
-<!--      {{else}} -->
-          <div class="bar">
-            <div class="barandgrowth yellow_bar" style="max-width: 50%">
-              <div class="buffering"></div>
-            </div>
-          </div>
-
-<!--      {{/percentage}} -->
-<!--      {{/tracks}} -->
-
-        </div>
+        <div class="health-stats"></div>
       </div>
     </div>
   </div><!-- end of main row --><!-- end of container -->
@@ -97,16 +67,41 @@
 
 
 <script id="health-template" type="text/x-handlebars-template">
+
   <div class="food_div">
-      <li class="food">
-      <ul>
-        <b>Total Protein</b>
+    <li class="food">
+    <ul>
+
+      {{#with nf_protein}}
+        <h4>Total Protein</h4>
         <li>Percentage of your target: {{nf_protein}}</li>
         <li>Percentage of FDA: {{nf_protein_FDA_recommendation}}</li>
+      {{/with}}
 
-        <b>Total Fat</b>
+      {{#with nf_total_fat}}
+        <h4>Total Fat</h4>
         <li>Percentage of your target: {{nf_total_fat}}</li>
         <li>Percentage of FDA: {{nf_total_fat_FDA_recommendation}}</li>
-      </ul>
-    </div>
+      {{/with}}
+
+      <div class="bar">
+        <div class="barandgrowth red_bar" style='max-width: 20%'>
+          <div class="buffering"></div>
+        </div>
+      </div>
+
+      <div class="bar">
+        <div class="barandgrowth green_bar" style="max-width: 100%">
+          <div class="buffering"></div>
+        </div>
+      </div>
+
+      <div class="bar">
+        <div class="barandgrowth yellow_bar" style="max-width: 50%">
+          <div class="buffering"></div>
+        </div>
+      </div>
+    </ul>
+    </li>
+  </div>
 </script>
