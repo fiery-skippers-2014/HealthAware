@@ -1,6 +1,6 @@
 <div class="all_baskets">
   <% current_user.goals.each do |goal| %>
-    <%=current_user.name%>
+    Hi <%=current_user.username%> !
     <%=goal.nutrient.name %>
     <%=goal.target%>
   <%end%>
