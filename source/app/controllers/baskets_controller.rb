@@ -3,17 +3,19 @@ class BasketsController < ApplicationController
     @baskets = Basket.find_all_by_user_id(session[:user_id])
     current_basket = []
     @baskets.each do |basket|
-      current_basket << basket.foods
+      if (Time.now-basket.created_at > 54000)
+        current_basket << basket.foods
+      end
     end
   end
 
   def show
     @goal = Goal.usergoals(current_user)
     if Basket.find_all_by_user_id(session[:user_id]).count > 0
-      @baskets = Basket.find_all_by_user_id(session[:user_id])
-      @basket = @baskets.last.foods
-    # (@baskets.last.updated_at - Time.now), ADD THIS LATER
-    #Time.now - Basket.last.created_at
+        @baskets = Basket.find_all_by_user_id(session[:user_id])
+        if (Time.now-@baskets.last.created_at < 54000)
+          @basket = @baskets.last.foods
+        end
     else
       @basket
     end
