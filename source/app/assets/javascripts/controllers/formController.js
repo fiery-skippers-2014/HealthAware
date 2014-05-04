@@ -9,8 +9,8 @@ FormController.prototype = {
       'click', '.delete_goal', this.removeGoal)
     $(document).on(
       'click','#amount_custom', formView.makeCustomAmount.bind(this))
-    // $(document).on(
-    //   'click',"#clicked_new_goal",this.createNewGoal)
+    $(document).on(
+      'click',"#clicked_new_goal",this.createNewGoal)
     // $('#addgoals').on('click',this.newgoal)
   },
   // newgoal: function(){
@@ -33,6 +33,7 @@ FormController.prototype = {
     console.log(object)
     $.ajax({
       url: '/goals',
+      data:object,
       type: 'POST'
     })
     .success(function(json){
