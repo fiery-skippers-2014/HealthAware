@@ -40,15 +40,10 @@
   {{#objects}}
   	<div class="food_div">
 	    <li class="food" food-id={{foodId}}>
-        <a href="#">
-          {{objBrandName}} {{fields.item_name}} OR {{objName}}
-        </a>
+        <a href="#">{{objName}}</a>
   	    <ul class="nutrition-list">
-          <li><a href="#">Calories: {{fields.nf_calories}}</a></li>
-          <li><a href="#">Total Fat: {{fields.nf_total_fat}}</a></li>
-          <li>OR</li>
           {{#objFields}}
-            <li>{{fieldName}}: {{fieldValue}}</li>
+            <li><a href="#">{{fieldName}}: {{fieldValue}}</a></li>
           {{/objFields}}
         </ul>
       </li>
@@ -79,17 +74,13 @@
     <li class="food">
     <ul>
 
-      {{#with nf_protein}}
         <h4>Total Protein</h4>
         <li>Percentage of your target: {{nf_protein}}</li>
         <li>Percentage of FDA: {{nf_protein_FDA_recommendation}}</li>
-      {{/with}}
 
-      {{#with nf_total_fat}}
         <h4>Total Fat</h4>
         <li>Percentage of your target: {{nf_total_fat}}</li>
         <li>Percentage of FDA: {{nf_total_fat_FDA_recommendation}}</li>
-      {{/with}}
 
       <div class="bar">
         <div class="barandgrowth red_bar" style='max-width: 20%'>
