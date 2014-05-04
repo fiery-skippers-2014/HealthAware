@@ -41,7 +41,6 @@ Basket.prototype = {
     for (j=0; j < this.goals.length; j++){
       keys = Object.keys(this.goals[j])
       target = keys[0]
-      // fda = keys[2]
       this.progress[target] = 0
       // this.progress[fda] = 0
       //Inner Loop through each food ...
@@ -52,10 +51,9 @@ Basket.prototype = {
         }
       }
       // ... and calculate totals
-      debugger
-      this.progress[target] = this.progress[target]/this.goals[j][target]
-      // this.progress[fda] = this.progress[target]/this.goals[j][fda]
-      debugger
+      this.progress[target] = this.progress[target]
+      this.progress[target+ "_limit"] = this.goals[j].limit
+      this.progress[target+ " %"] = this.progress[target]/this.goals[j][target]
     }
   }
 }
