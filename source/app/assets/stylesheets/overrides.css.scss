@@ -60,20 +60,17 @@ body {
   margin: 0;
   padding: 0;
   font-size: 14px;
-  a {
-    color: $blue-link;
-    text-decoration: none;
-    line-height: inherit;
-    }
-  a:visited {
-    color: $blue-link;
-    }
+  // a {
+  //   color: $blue-link;
+  //   text-decoration: none;
+  //   line-height: inherit;
+  //   }
+  // a:visited {
+  //   color: $blue-link;
+  //   }
   p {
-    padding: 5px 35px;
+    padding: 5px 25px;
     font-size: 1em;
-    }
-  .testing {
-    background-color: purple;
     }
   }
 
@@ -89,43 +86,50 @@ ul {
 }
 
 //TOP BAR
+
 .top-bar {
-  padding-top: 15px;
-  height: 90px;
-  background-color: $main-background-color;
-  color: $black-color;
-  text-shadow: $grey-shadow;
-  .name {
+  min-height: 70px;
+  background-color: $dark-blue;
+  ul.title-area {
+    padding-bottom: 20px;
+    li.name {
+    // line-height: 140px;
     font-size: 2em;
     line-height: 45px;
     a {
       font-weight: normal;
-      color: $blue-link;
+      color: white;
       padding: 0 15px;
+      text-shadow: #000;
+      &:visited {}
       }
     }
-  .toggle-topbar.menu-icon {
-    color: $blue-link;
-    a {
-      color: $blue-link;
-      }
+  .expanded .title-area {
+    padding-bottom: 20px;
+    // padding-top: 0px;
+    background-color: inherit;
+    background-color:$dark-blue;
     }
   }
-
-.top-bar-section li:not(.has-form) {
-  a:not(.button) {
-    background-color: $main-background-color;
-    color: $blue-link;
-    text-shadow: $grey-shadow;
-    font-size: 0.9em;
-    }
-  a:not(.button):hover {
-    background-color: $main-background-color;
-    color: $blue-link-hover;
+  .top-bar-section {
+    padding-bottom: 20px;
+    ul ul.right li a {
+      background-color: $dark-blue;
+      }
+    li:not(.has-form) a:not(.button) {
+      font-size: 0.9em;
+      letter-spacing: 0.5px;
+      background-color: $dark-blue;
+      border-bottom: 1px solid $light-black; // $dark-grey
+      &:hover {
+        background-color: $light-black;
+        }
+      }
     }
   }
 
 #container {
+  padding-top: 10px;
   max-width:1200px;
   min-width:400px;
 }
@@ -439,13 +443,13 @@ ul {
   padding: 7px 7px;
 }
 
-#food {
-  // margin: 5px;
-  // padding: 5px;
-  // li {
+#item-list {
+  margin: 5px;
+  padding: 5px;
+  li {
     margin: 5px;
     padding: 5px 5px 5px 10px;
-    list-style-type: none;
+    // list-style-type: none;
     // margin: 15px 0 20px;
   	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
   	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -478,7 +482,7 @@ ul {
   	// height:401px;
   	// line-height:31px;
   	width:100%;
-  	text-decoration:none;
+  	// text-decoration:none;
   	text-align:left;
   	text-shadow:1px 1px 0px #ffffff;
     &:hover {
@@ -491,14 +495,15 @@ ul {
       position:relative;
       top:1px;
     }
-  //   ul li {
-  //     height: 100px;
-  //     text-decoration:square;
-  //   }
-  // }
+  }
 }
 
-#nutrition-list
+#nutrition-list li {
+  // height: 100px;
+  list-style-type: square;
+  text-decoration:square;
+  }
+// #nutrition-list
 
 ////PROGRESS BARS
 .progress-bar {
