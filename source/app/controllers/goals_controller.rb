@@ -2,7 +2,6 @@ class GoalsController < ApplicationController
 
   def new
     @goal = Goal.new
-
   end
 
   def create
@@ -21,6 +20,7 @@ class GoalsController < ApplicationController
         end
     end
     @goal.save!
+    redirect_to new_goal_path
   end
 
 end

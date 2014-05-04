@@ -10,7 +10,6 @@ Basket.prototype = {
   },
   saveFoodItemToDataBase: function(object){
     var self = this
-    debugger
     $.ajax({
       url: '/foods',
       data: object,
@@ -24,7 +23,6 @@ Basket.prototype = {
   },
   retrieveFoodsFromDataBase: function(){
     var self = this
-    debugger
     $.ajax({
       url: '/baskets/0',
       type: 'GET'
@@ -54,11 +52,9 @@ Basket.prototype = {
           this.progress[target] += (parseFloat(this.oldfoodarray[i][target]))
         }
       }
-      debugger
       // ... and calculate totals
       this.progress[target] = this.progress[target]/this.goals[j][target]
       this.progress[fda] = this.progress[target]/this.goals[j][fda]
-      debugger
     }
   }
 }
