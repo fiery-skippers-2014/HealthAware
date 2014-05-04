@@ -69,19 +69,20 @@
   <div class="food_div">
     <li class="food">
       <ul>
-
-        <h3>Hey <%=current_user.username%>!</h3>
-        <p>You account was created: <%="#{time_ago_in_words(current_user.created_at)} ago" %></p>
-
-        <% if current_user.goals.count > 0 %>
-          <% current_user.goals.each do |goal| %>
-          <li><b><%=goal.nutrient.name %></b> -  <%=goal.target%> <%=goal.unit%> <i> (maximum: <%=goal.limit%>)</i>
-          <%= link_to 'Remove', goal, :method => :delete, :confirm => 'Are you sure you want to remove this goal?'%></li>
-          <%end%>
-        <p>You last add goals <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %></p>
-        <%end%>
-
         <h4>Total Protein</h4>
+        <% if current_user %>
+          <% if current_user.goals.count > 0 %>
+            <h2> Hey <%=current_user.username%> ! </h2>
+            <p> You account was created: <%="#{time_ago_in_words(current_user.created_at)} ago" %> </p>
+
+            <% current_user.goals.each do |goal| %>
+            <li><b><%=goal.nutrient.name %></b> -  <%=goal.target%> <%=goal.unit%> <i> (maximum: <%=goal.limit%>)</i>
+            <%= link_to 'Remove', goal, :method => :delete, :confirm => 'Are you sure you want to remove this goal?'%></li>
+            <%end%>
+
+            <p>You last add goals <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %></p>
+          <%end%>
+        <%end%>
         <li>Percentage of your target: {{nf_protein}}</li>
         <li>Percentage of FDA: {{nf_protein_FDA_recommendation}}</li>
 
