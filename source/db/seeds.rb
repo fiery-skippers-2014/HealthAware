@@ -1,3 +1,4 @@
+
 Nutrient.create(name:"Protein", nf_name:"nf_protein", FDA_recommendation: 50, unit:"grams",FDA_limit:true)
 Nutrient.create(name:"Total Fat", nf_name:"nf_total_fat", FDA_recommendation: 70,unit:"grams",FDA_limit:true)
 Nutrient.create(name:"Total Carbohydrates", nf_name:"nf_total_carbohydrate", FDA_recommendation: 300,unit:"grams",FDA_limit:true)
@@ -12,3 +13,4 @@ Nutrient.create(name:"Calcium", nf_name:"nf_calcium_dv", FDA_recommendation: 60,
 Nutrient.create(name:"Fiber", nf_name:"nf_dietary_fiber", FDA_recommendation: 25,unit:"gram",FDA_limit:true)
 Nutrient.create(name:"Sodium", nf_name:"nf_sodium", FDA_recommendation: 2400,unit:"milligrams",FDA_limit:true)
 Nutrient.create(name:"Cholesterol", nf_name:"nf_cholesterol", FDA_recommendation: 300,unit:"milligrams",FDA_limit:true)
+
