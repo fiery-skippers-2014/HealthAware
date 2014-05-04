@@ -19,11 +19,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    p "$" * 50
-    p params
-    p "$" * 50
-        @goal.user_id = current_user.id
-
+    @goal.user_id = current_user.id
     redirect_to user_path(current_user)
   end
 

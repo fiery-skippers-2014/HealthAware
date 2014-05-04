@@ -14,7 +14,7 @@
             <label for="left-label" class="left inline">I want to have a:</label>
           </div>
           <div class="large-2 columns left">
-            <%= select :limit,:limit_id, options_for_select([["maximum"],["minimum"]],{:class => "large-1 columns"}) %>
+            <%= select :limit,:limit_id, options_for_select([["Maximum"],["Minimum"]],{:class => "large-1 columns"}) %>
           </div>
           <div class="large-2 columns left">
             <label for="left-label" class="center inline">Amount of: </label>
@@ -24,5 +24,8 @@
           </div>
         </div>
       </div>
-  <%= u.submit 'Submit' %>
+  <%= u.submit 'Track this', {:id => "clicked_new_goal"} %>
 <% end %>
+
+<button ><%= link_to "Take me to Homepage", root_path%></button>
+
