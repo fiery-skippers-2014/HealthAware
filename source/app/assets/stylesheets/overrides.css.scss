@@ -195,44 +195,45 @@ ul {
 // single pixel listing
 // http://css-tricks.com/style-a-list-with-one-pixel/
 #item-list {
+  padding: 5px;
   li {
     list-style-type: none;
     margin: 15px 0 20px;
-    padding: 0px 0px 0px 10px;
-    a {
-      background: $main-background-color;
-      color: #1F6DD9;
-      display: block;
-      padding: 0px 3px 3px 3px;
-      &:hover {
-        color: #84B8FF;
-        }
+    font-size: 1em;
+    background-color:white;
+    border: 1px solid $light-grey;
+    border-radius: 3px;
+    margin: 14px 0px 4px 0px;
+    padding: 10px;
+    &:hover {
+      background-color: $light-grey;
+      border: 1px solid $dark-grey;
       }
-    ul {
-      li {
-        font-size: 1em;
-        background: transparent url("http://css-tricks.com/examples/ULStyle/images/graypixel.png") repeat-x 0 8px;
-        margin: 4px 0 4px 5px;
-        padding: 0px 0px 0px 10px;
-        a {
-          font-size: 0.9em;
-          padding: 0px 0px 0px 3px;
-          }
-        ul {
-          margin-left: 1px;
-          font-size: 0.9em;
-          background: transparent url("http://css-tricks.com/examples/ULStyle/images/graypixel.png") repeat-y 15px 0;
-          margin-bottom: 10px;
-          li {
-            font-size: 0.9em;
-            margin-left: 16px;
-            padding-left: 10px;
-            }
-          }
-        }
+    a {
+      font-size: 1.1em;
+      padding: 3px;
       }
     }
   }
+
+  .nutrition-list {
+    font-size: 0.9em;
+    padding:1px;
+    border: 0px;
+    background-color:transparent;
+    border: 0px solid #000;
+    border-radius: 0;
+    // padding: 5px;
+    margin-left: 2px;
+    // margin-bottom: 10px;
+    li {
+      // margin: 4px 0px 4px 0px;
+      font-size: 0.9em;
+      // margin-left: 16px;
+      padding-left: 10px;
+      }
+    }
+
 
 //SIDEBAR
 .profile {
@@ -291,6 +292,42 @@ ul {
     }
   }
 
+#basket-list {
+  min-width:100px;
+  width: inherit;
+  // background-color: #c9e2fe;
+  ul {
+    li {
+      background-color: transparent;
+      text-transform:uppercase;
+      font-size: 0.9em;
+      // border: 1px blue solid;
+      border-bottom: 4px solid #295882;
+      &:last-child {
+        border: none;
+        border-bottom: none;
+        }
+      a {
+        background: $main-background-color;
+        color: #1F6DD9;
+        display: block;
+        padding: 0px 3px 3px 3px;
+
+        padding: 5px;
+        text-decoration: none;
+        color: #000000;
+        display: block;
+        &:hover {
+          font-weight: normal;
+          font-size: 1em;
+          letter-spacing: 0.5;
+          background: $blue-link-hover;
+          color: white;
+          }
+        }
+      }
+    }
+  }
 
 /// BUTTONS
 .button {
@@ -456,9 +493,6 @@ ul {
 }
 
 
-
-
-
 //// TEMPLATE LISTING
 #basket-list {
   min-width:100px;
@@ -540,3 +574,46 @@ ul {
 //   50% {opacity: .5;}
 //   100% {opacity: 0; width: 100%;}
 // }
+
+
+// single pixel listing
+// http://css-tricks.com/style-a-list-with-one-pixel/
+// #item-list {
+//   li {
+//     list-style-type: none;
+//     margin: 15px 0 20px;
+//     padding: 0px 0px 0px 10px;
+//     a {
+//       background: $main-background-color;
+//       color: #1F6DD9;
+//       display: block;
+//       padding: 0px 3px 3px 3px;
+//       &:hover {
+//         color: #84B8FF;
+//         }
+//       }
+//     ul {
+//       li {
+//         font-size: 1em;
+//         background: transparent url("http://css-tricks.com/examples/ULStyle/images/graypixel.png") repeat-x 0 8px;
+//         margin: 4px 0 4px 5px;
+//         padding: 0px 0px 0px 10px;
+//         a {
+//           font-size: 0.9em;
+//           padding: 0px 0px 0px 3px;
+//           }
+//         ul {
+//           margin-left: 1px;
+//           font-size: 0.9em;
+//           background: transparent url("http://css-tricks.com/examples/ULStyle/images/graypixel.png") repeat-y 15px 0;
+//           margin-bottom: 10px;
+//           li {
+//             font-size: 0.9em;
+//             margin-left: 16px;
+//             padding-left: 10px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
