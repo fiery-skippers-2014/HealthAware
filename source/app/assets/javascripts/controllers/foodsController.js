@@ -1,8 +1,8 @@
 // run in initialize.js
 function FoodController(model, Foodview, basket, basketView, Healthview){
-  this.model = model // hard-coded url request (so far)
-  this.view = Foodview // hash of elements important for food-template
-  this.basket = basket
+  this.model = model // contains uri for api search call and fetchFood() which creates, via ajax, a foodList event with json objects
+  this.view = Foodview // knows searched elements and has ability to create a view based on a handlebar template
+  this.basket = basket // a Basket model which knows a currently empty search, user's goals, and an empty progress object
   this.basketView = basketView
   this.healthView = Healthview
   this.allFoodResults = {}
@@ -17,7 +17,7 @@ FoodController.prototype = {
     var basketView = this.basketView
     var healthView = this.healthView
     // on foodsList event created within foodList model, create template with model's elements AKA foodView (because you are binding the function to foodView)
-    $(document).ready(basket.retrieveFoodsFromDataBase.bind(basket))
+    $(document).ready(basket.retrieveFoodsFromDataBase.bind(basket)) //
     $(document).on("oldList", this.printSavedBasket.bind(this))
     $(document).on("oldList", basket.calculateTotals.bind(basket))
     $(document).on("oldList", this.updateTotalsOnView.bind(this))

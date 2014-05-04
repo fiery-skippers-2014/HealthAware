@@ -10,6 +10,7 @@ Basket.prototype = {
   },
   saveFoodItemToDataBase: function(object){
     var self = this
+    debugger
     $.ajax({
       url: '/foods',
       data: object,
@@ -23,6 +24,7 @@ Basket.prototype = {
   },
   retrieveFoodsFromDataBase: function(){
     var self = this
+    debugger
     $.ajax({
       url: '/baskets/0',
       type: 'GET'

@@ -3,7 +3,7 @@
 
 
     <!-- SEARCH COLUMN -->
-    <div class="search large-8 medium-8 small-8 columns">
+    <div class="search large-8 medium-8 small-12 columns">
 
         <form id="search-form" class="search">
 
@@ -13,17 +13,17 @@
           <input type="submit" value="Click!" class="button">
         </form>
 <hr>
-      <div class="searched" class="testing">searched</div>
+      <div class="searched" class="testing"></div>
 
     </div>
 
 
 
     <!-- SIDEBAR COLUMN -->
-    <div class="profile large-4 medium-4 small-4 columns">
+    <div class="profile large-4 medium-4 small-12 columns">
 
       <div class="heading">Basket</div>
-      <div class="basket">basket stuff</div>
+      <div class="basket"></div>
 
       <div class="heading">Health Stats</div>
         <div class="health-stats">
@@ -86,11 +86,8 @@
   <div class="food_div">
     <div id="basket-list">
       <ul>
-        <li class="food" food-id={{API}}><b>{{fields.brand_name}}</b>: {{item_name}}
-          // <ul>
-          //   <li>Calories: {{nf_calories}}</li>
-          //   <li>Total Fat: {{nf_total_fat}}</li>
-          // </ul>
+        <li class="food" food-id={{API}}>
+          <a href=""><b>{{item_name}}</b></a>
         </li>
       </ul>
     </div>
