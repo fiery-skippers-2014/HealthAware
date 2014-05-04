@@ -11,7 +11,7 @@
           <label for="food-search">
             Please select a food: </label>
           <input type="text" id="food-search" name="food-choice" placeholder="Apple Pie">
-          <input type="submit" value="Click!" class="button">
+          <input type="submit" value="Click!" class="gradient-blue">
         </form>
 <hr>
       <div class="searched" class="testing"></div>
@@ -39,9 +39,8 @@
   <ul id="item-list">
   {{#objects}}
   	<div class="food_div">
-	    <li class="food" food-id={{foodId}}>
-        <a href="#">{{objName}}</a>
-  	    <ul class="nutrition-list">
+	    <li class="food" food-id={{foodId}}>{{objName}}
+  	    <ul id="nutrition-list">
           {{#objFields}}
             <li>{{fieldName}}: {{fieldValue}}</li>
           {{/objFields}}
