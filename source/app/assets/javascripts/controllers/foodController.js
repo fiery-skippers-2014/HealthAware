@@ -84,6 +84,6 @@ FoodController.prototype = {
     this.basket.savetheBasketToDataBase()
   },
   updateTotalsOnView: function(e){
-    this.healthView.updateHealthStatsOnView(this.basket.progress)
+    this.healthView.updateHealthStatsOnView(this.basket.progressArray)
   }
 }

@@ -8,15 +8,30 @@ FormController.prototype = {
     $('#amount_custom').on('click', formView.makeCustomAmount.bind(this))
     $('#clicked_new_goal').on('click', this.createNewGoal)
     $(document).on('click', '.delete_goal', this.removeGoal)
-
   },
-  createNewGoal: function(){
+  // newgoal: function(){
+  //   object =  $('#new_user').serialize()
+  //   $.ajax({
+  //     url:'/users'
+  //     data:object,
+  //     type:'POST'
+  //   })
+  //   .done(function(){
+  //     console.log("yay")
+  //     e.preventdefault
+  //   })
+  // },
+  createNewGoal: function(e){
+   object =  $('#new_goal').serialize()
+   console.log("to start")
+    console.log(object)
     $.ajax({
       url: '/goals',
       type: 'POST'
     })
     .done(function(json){
-      console.log("need to render new goal here")
+      console.log("got here")
+      $("#new_goal").html(json);
     })
   },
   removeGoal: function(){
