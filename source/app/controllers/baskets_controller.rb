@@ -9,8 +9,7 @@ class BasketsController < ApplicationController
 
   def show
     @goal = Goal.usergoals(current_user)
-
-    if Basket.find_all_by_user_id(session[:user_id])
+    if Basket.find_all_by_user_id(session[:user_id]).count > 0
       @baskets = Basket.find_all_by_user_id(session[:user_id])
       @basket = @baskets.last.foods
     # (@baskets.last.updated_at - Time.now), ADD THIS LATER

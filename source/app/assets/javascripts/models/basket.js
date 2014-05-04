@@ -38,7 +38,6 @@ Basket.prototype = {
   },
   calculateTotals: function(){
     //Loop through your goals
-      debugger
     for (j=0; j < this.goals.length; j++){
       keys = Object.keys(this.goals[j])
       target = keys[0]
@@ -53,8 +52,8 @@ Basket.prototype = {
         }
       }
       // ... and calculate totals
-      this.progress[target] = this.progress[target]/this.goals[j][target] * 100
-      this.progress[fda] = this.progress[target]/this.goals[j][fda] * 100
+      this.progress[target] = this.progress[target]/this.goals[j][target]
+      this.progress[fda] = this.progress[target]/this.goals[j][fda]
     }
   }
 }
