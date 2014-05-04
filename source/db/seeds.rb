@@ -2,7 +2,7 @@ Nutrient.create(name:"Protein", nf_name:"nf_protein", FDA_recommendation: 50, un
 Nutrient.create(name:"Total Fat", nf_name:"nf_total_fat", FDA_recommendation: 70,unit:"grams",FDA_limit:true)
 Nutrient.create(name:"Total Carbohydrates", nf_name:"nf_total_carbohydrate", FDA_recommendation: 300,unit:"grams",FDA_limit:true)
 Nutrient.create(name:"Saturated Fats", nf_name:"nf_saturated_fat", FDA_recommendation: 20,unit:"grams",FDA_limit:true)
-Nutrient.create(name:"Calories", nf_name:"nf_calories", FDA_recommendation: 2000,FDA_limit:true)
+Nutrient.create(name:"Calories", nf_name:"nf_calories",unit:"kcal" FDA_recommendation: 2000,FDA_limit:true)
 Nutrient.create(name:"Monounsaturated Fats", nf_name:"nf_monounsaturated_fat", FDA_recommendation: 45,unit:"grams",FDA_limit:true)
 Nutrient.create(name:"Trans Fats", nf_name:"nf_trans_fatty_acid", FDA_recommendation: 20,unit:"grams",FDA_limit:true)
 Nutrient.create(name:"Polyunsaturated Fats", nf_name:"nf_polyunsaturated_fat", FDA_recommendation: 20,unit:"grams",FDA_limit:true)

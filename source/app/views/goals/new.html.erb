@@ -1,50 +1,41 @@
-<<<<<<< HEAD
-<%= form_for @goal, remote: true do |u| %>
-    <%= u.label "What are you trying to track?" %>
-=======
+
 <div id="container" class="row large-4 medium-5 small-12 large-centered medium-centered small-centered">
 <div id="user-forms">
->>>>>>> 575e7468c1b81e500133f701ed2ab2ae3488abff
-
-    <%= form_for @goal do |u| %>
-    <%= u.label "What amount do You need per day" %>
-      <%= u.label "What are you trying to track?" %>
-    <%= u.select :nutrient_id, options_for_select([["Protein",1],["Total Fat",2],["Total Carbohydrates",3],["Saturated Fats", 4],
-["Calories",5],["Monounsaturated Fats",6], ["Trans Fats",7],["Polyunsaturated Fats",8], ["Sugars",9],["Iron",10], ["Calcium",11],["Fiber",12], ["Sodium",13],["Cholesterol",14]]) %>
-      <%= radio_button_tag(:amount, "FDA") %>
-      <%= label_tag(:amount_FDA, "Use FDA recommendation") %>
-      <%= radio_button_tag(:amount,"custom") %>
-      <%= label_tag(:amount_custom,"Use a custom amount") %>
-      <div class="row" id="custom_limit">
-        <div class="large-12 columns">
-          <div class="large-2 columns left">
-            <label for="left-label" class="left inline">I want to have a:</label>
-          </div>
-          <div class="large-2 columns left">
-            <%= select :limit,:limit_id, options_for_select([["Maximum"],["Minimum"]],{:class => "large-1 columns"}) %>
-          </div>
-          <div class="large-2 columns left">
-            <label for="left-label" class="center inline">Amount of: </label>
-          </div>
-          <div class="large-2 columns left">
-            <%= u.text_field :target %>
-          </div>
+  <%= form_for @goal do |u| %>
+  <%= u.label "What are you trying to track?" %>
+  <%= u.select :nutrient_id, options_for_select([["Protein",1],["Total Fat",2],["Total Carbohydrates",3],["Saturated Fats", 4],["Calories",5],["Monounsaturated Fats",6], ["Trans Fats",7],["Polyunsaturated Fats",8], ["Sugars",9],["Iron",10], ["Calcium",11],["Fiber",12], ["Sodium",13],["Cholesterol",14]]) %>
+    <%= radio_button_tag(:amount, "FDA") %>
+    <%= label_tag(:amount_FDA, "Use FDA recommendation") %>
+    <%= radio_button_tag(:amount,"custom") %>
+    <%= label_tag(:amount_custom,"Use a custom amount") %>
+    <div class="row" id="custom_limit">
+      <div class="large-12 columns">
+        <div class="large-2 columns left">
+          <label for="left-label" class="left inline">I want to have a:</label>
+        </div>
+        <div class="large-2 columns left">
+          <%= select :limit,:limit_id, options_for_select([["Maximum"],["Minimum"]],{:class => "large-1 columns"}) %>
+        </div>
+        <div class="large-2 columns left">
+          <label for="left-label" class="center inline">Amount of: </label>
+        </div>
+        <div class="large-2 columns left">
+          <%= u.text_field :target %>
         </div>
       </div>
-<<<<<<< HEAD
-  <%= u.submit 'Track this', {:id => "clicked_new_goal"} %>
+    </div>
+  <%= u.submit 'Track this', {id: "clicked_new_goal"}  %>
 <% end %>
+       <div id="addgoal"></div>
 
-<button ><%= link_to "Take me to Homepage", root_path%></button>
-<div id="addgoal"></div>
-=======
-      <center><%= u.submit 'Track this', {:id => 'clicked_new_goal', :class => 'button'} %></center>
-    <% end %>
-
-    <br>
     <center>
-      <%= link_to "Take me to Homepage", root_path, {:class => 'button', :style => 'color:#FFFFFF;'} %>
     </center>
+  <center>
+    <%= link_to "Take me to Homepage", root_path, {:class => 'button', :style => 'color:#FFFFFF;'} %>
+  </center>
+  <br>
+
+
   </div>
 </div>
->>>>>>> 575e7468c1b81e500133f701ed2ab2ae3488abff
+
