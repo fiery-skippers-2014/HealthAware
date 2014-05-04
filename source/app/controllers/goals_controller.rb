@@ -5,6 +5,7 @@ class GoalsController < ApplicationController
   end
 
   def create
+    p "$" * 50
     p params
     @goal = Goal.new
     @goal.nutrient_id = params[:goal][:nutrient_id]
@@ -25,7 +26,8 @@ class GoalsController < ApplicationController
     end
     @goal.save!
     @goal = Goal.new
-    render partial: 'goal', :locals => {:goal => @goal}
+    redirect_to new_goal_path
+    # render partial: 'goal', :locals => {:goal => @goal}
   end
 
   def destroy
