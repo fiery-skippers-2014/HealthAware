@@ -8,43 +8,19 @@
   <%= f.password_field :password %>
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
-    <%= fields_for @goal do |u| %>
-    <%= u.label "What are you trying to track?" %>
-      <% @x = [] %>
-      <% @y = [] %>
-      <% @z = [] %>
-      <% @nutrients.each_with_index do |nutrient| %>
-      <% @x << "#{nutrient.name } (FDA Recommendation: #{nutrient.FDA_recommendation})" %>
-      <% @y << nutrient.FDA_recommendation %>
-      <% @z << nutrient.FDA_limit %>
-      <% end %>
-      <%= u.select :nutrient_id, options_for_select(@x) %>
-        <%= radio_button_tag(:amount, "FDA") %>
-        <%= label_tag(:amount_FDA, "Use FDA recommendation") %>
-        <%= radio_button_tag(:amount,"custom") %>
-        <%= label_tag(:amount_custom,"Use a custom amount") %>
+
+  <%= render partial: 'goal_box', locals: {goal: @goal, nutrients: @nutrients} %>
+  <button class: "addgoal small">Add A Goal to track</button>
+    <div class="row">
+      <div class="large-8 centered">
+        <%= f.submit 'Submit', :class=> "button large" %>
+
+      </div>
+    </div>
 
 
-      <div class="row" id="custom_limit">
-        <div class="large-12 columns">
-          <div class="large-2 columns left">
-            <label for="left-label" class="left inline">I want to have a:</label>
-          </div>
-          <div class="large-2 columns left">
-            <%= select :limit,:limit_id, options_for_select([["maximum"],["minimum"]],{:class => "large-1 columns"}) %>
-          </div>
-          <div class="large-2 columns left">
-            <label for="left-label" class="center inline">Amount of: </label>
-          </div>
-          <div class="large-2 columns left">
-            <%= u.text_field :nutrient_id, :placeholder => "figure this out" %>
-          </div>
-        </div>
-      </div>
-      <% end %>
-      <div class="row">
-        <%= f.submit 'Submit' %>
-      </div>
-<% end %>
+  <% end %>
+
 </div>
+
 
