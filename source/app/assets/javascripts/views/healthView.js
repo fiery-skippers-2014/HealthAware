@@ -8,7 +8,6 @@ HealthView.prototype = {
     keys = Object.keys(progress)
     var source = $(this.healthTemplate).html()
     var template = Handlebars.compile(source)
-    debugger
     $(this.health).html(template(progress))
   }
 }

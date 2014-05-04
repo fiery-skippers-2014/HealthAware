@@ -11,12 +11,10 @@ FormController.prototype = {
   createNewGoal: function(){
     $.ajax({
       url: '/goals',
-      data: object,
       type: 'POST'
     })
     .done(function(json){
       console.log("need to render new goal here")
     })
-
   }
 }
