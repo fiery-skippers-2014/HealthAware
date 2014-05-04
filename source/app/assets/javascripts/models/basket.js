@@ -39,6 +39,7 @@ Basket.prototype = {
   },
   calculateTotals: function(){
     //Loop through your goals
+     this.progressArray = []
     for (j=0; j < this.goals.length; j++){
       this.progressObj = {}
       keys = Object.keys(this.goals[j])
@@ -55,6 +56,7 @@ Basket.prototype = {
       }
       // ... and calculate totals
       this.progressObj[target] = this.progressObj[target]
+      this.progressObj[target+ " unit"] = this.goals[j].unit
       this.progressObj[target+ "_limit"] = this.goals[j].limit
       this.progressObj[target+ " %"] = this.progressObj[target]/this.goals[j][target]
       this.progressArray.push(this.progressObj)
