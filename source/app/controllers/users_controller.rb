@@ -9,6 +9,9 @@ class UsersController < ApplicationController
   end
 
   def create
+    p "$" * 50
+    p params
+    p "$" * 50
     @user = User.new params[:user]
     @nutrients = Nutrient.all
 
