@@ -13,11 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    p "the user"
     @user ||= User.find(session[:user_id]) if session[:user_id]
-    p "the user"
-    p @user
-    @user
   end
 
 end
