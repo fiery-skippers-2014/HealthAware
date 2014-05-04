@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140504025219) do
+ActiveRecord::Schema.define(:version => 20140504185736) do
 
   create_table "basket_foods", :force => true do |t|
     t.integer "basket_id"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20140504025219) do
     t.string   "nf_total_fat"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
-    t.string   "nf_ingredient_statement"
+    t.text     "nf_ingredient_statement"
     t.string   "nf_water_grams"
     t.string   "nf_calories"
     t.string   "nf_saturated_fat"
