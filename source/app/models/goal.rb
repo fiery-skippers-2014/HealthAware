@@ -10,6 +10,7 @@ class Goal < ActiveRecord::Base
     current_user.goals.each do |goal|
       goals[goal.nutrient.nf_name] = goal.target
       goals["limit"] = goal.limit
+      goals["unit"] = goal.unit
       array_of_goals << goals
       goals = {}
     end
