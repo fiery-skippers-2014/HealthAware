@@ -36,7 +36,7 @@
 <!-- TEMPLATES -->
 <script id="food-template" type="text/x-handlebars-template">
 
-  <ul id="item-list"><li><ul>
+  <ul id="item-list">
   {{#objects}}
   	<div class="food_div">
 	    <li class="food" food-id={{foodId}}>
@@ -49,7 +49,7 @@
       </li>
 		</div>
   {{/objects}}
-  </ul></li></ul>
+  </ul>
 </script>
 
 
@@ -72,8 +72,7 @@
 
   <div class="food_div">
     <li class="food">
-    <ul>
-
+      <ul>
         <h4>Total Protein</h4>
         <li>Percentage of your target: {{nf_protein}}</li>
         <li>Percentage of FDA: {{nf_protein_FDA_recommendation}}</li>
@@ -82,24 +81,33 @@
         <li>Percentage of your target: {{nf_total_fat}}</li>
         <li>Percentage of FDA: {{nf_total_fat_FDA_recommendation}}</li>
 
-      <div class="bar">
-        <div class="barandgrowth red_bar" style='max-width: 20%'>
-          <div class="buffering"></div>
-        </div>
-      </div>
+        {{! foor all LIMIT stats }}
+        {{! * need: max_amount }}
+        {{! * need: desired_amount }}
+        {{! * need: percentage (current/desired) }}
 
-      <div class="bar">
-        <div class="barandgrowth green_bar" style="max-width: 100%">
-          <div class="buffering"></div>
+        {{! need: if percentage < 35% to give red bar }}
+        <div class="bar">
+          <div class="barandgrowth red_bar" style='max-width: 20%'>
+            <div class="buffering"></div>
+          </div>
         </div>
-      </div>
 
-      <div class="bar">
-        <div class="barandgrowth yellow_bar" style="max-width: 50%">
-          <div class="buffering"></div>
+        {{! need: if percentage > 85% to give green bar }}
+        <div class="bar">
+          <div class="barandgrowth green_bar" style="max-width: 100%">
+            <div class="buffering"></div>
+          </div>
         </div>
-      </div>
-    </ul>
+
+        {{! need: if percentage is not either, give yellow bar }}
+        <div class="bar">
+          <div class="barandgrowth yellow_bar" style="max-width: 50%">
+            <div class="buffering"></div>
+          </div>
+        </div>
+        {{! end LIMIT stats }}
+      </ul>
     </li>
   </div>
 </script>
