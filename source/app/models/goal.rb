@@ -11,10 +11,11 @@ class Goal < ActiveRecord::Base
       goals[goal.nutrient.nf_name] = goal.target
       goals[goal.nutrient.name] = goal.target
       goals["#{goal.nutrient.nf_name}_FDA_recommendation"] = goal.nutrient.FDA_recommendation
+      goals["limit"] = goal.limit
+      goals["FDA limit"] = goal.nutrient.FDA_limit
       array_of_goals << goals
       goals = {}
     end
     array_of_goals
   end
-
 end

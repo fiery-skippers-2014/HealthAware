@@ -40,6 +40,7 @@ FoodController.prototype = {
   prepareFoodListForView: function(e, json){
     goodFields = [];
     goalObjArray = this.basket.goals;
+    debugger
     for (i=0;i<goalObjArray.length;i++){
       goodFields.push(Object.keys(goalObjArray[i])[0]);
     }
@@ -85,7 +86,6 @@ FoodController.prototype = {
     this.basket.savetheBasketToDataBase()
   },
   updateTotalsOnView: function(e){
-    console.log(this.healthView)
     this.healthView.updateHealthStatsOnView(this.basket.progress)
   }
 }
