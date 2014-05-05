@@ -25,6 +25,7 @@ FoodController.prototype = {
     $(document).on("foodList", this.handleSearchResults.bind(this));
     $(document).on("foodList", this.createFoodList.bind(this))
     $(document).on('click', '.food_div', this.findFoodInSearchResults.bind(this))
+    $(document).on('click', '.delete_item', this.removeFoodFromDataBase)
   },
   searchFoods: function (event){
     event.preventDefault();
@@ -55,5 +56,17 @@ FoodController.prototype = {
   },
   updateTotalsOnView: function(e){
     this.healthView.updateHealthStatsOnView(this.basket.progressArray)
+  },
+  removeFoodFromDataBase: function(){
+     var self = this.id
+     debugger
+     $.ajax({
+      url: '/baskets/'+self.id,
+      type: 'DELETE'
+    })
+    .done(function(number){
+      debugger
+      $('div#'+number.goal).remove()
+    })
   }
 }
