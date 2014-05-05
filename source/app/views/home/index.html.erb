@@ -21,11 +21,18 @@
     <!-- SIDEBAR COLUMN -->
     <div class="profile large-4 medium-4 small-12 columns">
 
+  <h5>Hey <%=current_user.username%>!</h5>
+  <h6>You account was created: <%="#{time_ago_in_words(current_user.created_at)} ago" %></h6>
+  <% if current_user.goals.count > 0 %>
+    <h6>You last add goals
+    <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %>
+    </h6>
+  <% end %>
+      <div class="heading">Health Stats</div>
+        <div class="health-stats"></div>
       <div class="heading">Basket</div>
       <div class="basket"></div>
 
-      <div class="heading">Health Stats</div>
-        <div class="health-stats"></div>
       </div>
     </div>
   </div><!-- end of main row --><!-- end of container -->
@@ -36,15 +43,15 @@
 
   <ul id="item-list">
   {{#objects}}
-  	<div class="food_div">
-	    <li class="food" food-id={{foodId}}>{{objName}}
-  	    <ul id="nutrition-list">
+    <div class="food_div">
+      <li class="food" food-id={{foodId}}>{{objName}}
+        <ul id="nutrition-list">
           {{#objFields}}
             <li>{{fieldName}}: {{fieldValue}}</li>
           {{/objFields}}
         </ul>
       </li>
-		</div>
+    </div>
   {{/objects}}
   </ul>
 </script>
@@ -77,18 +84,9 @@
           Current: {{percentage}} %<br>
           Limit: {{limit}}<br>
         </div><br>
-
       {{/ourArray}}
     </li>
     <hr>
   </ul>
-
-  <h5>Hey <%=current_user.username%>!</h5>
-  <h6>You account was created: <%="#{time_ago_in_words(current_user.created_at)} ago" %></h6>
-  <% if current_user.goals.count > 0 %>
-    <h6>You last add goals
-    <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %>
-    </h6>
-  <% end %>
   </div>
 </script>
