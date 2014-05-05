@@ -12,8 +12,6 @@ class BasketsController < ApplicationController
 
 ###Method for Chart
 
-
-
 #Chart Method
 # timeline_array = []
 # #Each Basket
@@ -33,9 +31,6 @@ class BasketsController < ApplicationController
 #   timeline_array << day_hash
 # end
 
-
-
-
   def show
     @goal = Goal.usergoals(current_user)
     if Basket.find_all_by_user_id(session[:user_id]).count > 0
@@ -48,4 +43,11 @@ class BasketsController < ApplicationController
     end
       render json: {basket:@basket, goal:@goal}
   end
+
+  def destroy
+    p params
+    User.last.baskets.last.foods[0]
+  end
+
+
 end

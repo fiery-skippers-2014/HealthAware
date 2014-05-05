@@ -294,7 +294,8 @@ ul {
       text-transform: uppercase;
       padding: 5px 5px 0px 0px;
       margin-left: 0px;
-      margin-bottom: 2px;
+      // margin-bottom: -18px;
+      // display:block;
       }
     li {
       list-style-type: none;
@@ -302,49 +303,49 @@ ul {
       // padding-left: 5px;
       }
     .bar {
-      display: block;
-      height: 15px;
+      // display: block;
+      // height: 15px;
       // padding:2px;
       }
     }
   }
 
-#basket-list {
-  min-width:100px;
-  width: inherit;
-  // background-color: #c9e2fe;
-  ul {
-    li {
-      background-color: transparent;
-      text-transform:uppercase;
-      font-size: 0.9em;
-      // border: 1px blue solid;
-      border-bottom: 4px solid #295882;
-      &:last-child {
-        border: none;
-        border-bottom: none;
-        }
-      a {
-        background: $main-background-color;
-        color: #1F6DD9;
-        display: block;
-        padding: 0px 3px 3px 3px;
-
-        padding: 5px;
-        text-decoration: none;
-        color: #000000;
-        display: block;
-        &:hover {
-          font-weight: normal;
-          font-size: 1em;
-          letter-spacing: 0.5;
-          background: $blue-link-hover;
-          color: white;
-          }
-        }
-      }
-    }
-  }
+// #basket-list {
+//   min-width:100px;
+//   width: inherit;
+//   // background-color: #c9e2fe;
+//   ul {
+//     li {
+//       background-color: transparent;
+//       text-transform:uppercase;
+//       font-size: 0.9em;
+//       // border: 1px blue solid;
+//       border-bottom: 4px solid #295882;
+//       &:last-child {
+//         border: none;
+//         border-bottom: none;
+//         }
+//       a {
+//         background: $main-background-color;
+//         color: #1F6DD9;
+//         display: block;
+//         padding: 0px 3px 3px 3px;
+//
+//         padding: 5px;
+//         text-decoration: none;
+//         color: #000000;
+//         display: block;
+//         &:active {
+//           font-weight: normal;
+//           font-size: 1em;
+//           letter-spacing: 0.5;
+//           background: $blue-link-hover;
+//           color: white;
+//           }
+//         }
+//       }
+//     }
+//   }
 
 /// BUTTONS
 .button {
@@ -533,6 +534,13 @@ button.small {
 // #nutrition-list
 
 ////PROGRESS BARS
+.bar-background {
+  background-color: white;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 3px;
+}
+
 .progress-bar {
   background-color: white;
   height: 25px;
@@ -645,47 +653,121 @@ button.small {
 
 //// TEMPLATE LISTING
 #basket-list {
-  min-width:100px;
+  // min-width:100px;
   width: inherit;
   // background-color: #c9e2fe;
   ul {
     list-style-type: none;
-    margin: 0;
+    // margin-bottom: 0;
+    // margin: auto;
     padding: 0;
-    margin-left: -14px;
-    li {
-      background-color: transparent;
-      text-transform:uppercase;
-      font-size: 0.9em;
-      // border: 1px blue solid;
-      border-bottom: 4px solid #295882;
-      &:last-child {
-        border: none;
-        border-bottom: none;
-        }
-      a {
-        padding: 5px;
-        text-decoration: none;
-        color: #000000;
-        display: block;
+    // margin-left: -14px;
+    // li {
+    //   background-color: transparent;
+    //   text-transform:uppercase;
+    //   font-size: 0.7em;
+    //   // border: 1px blue solid;
+    //   border-bottom: 4px solid #295882;
+      // &:last-child {
+      //   border: none;
+      //   border-bottom: none;
+      //   }
+      // button {
+      //   border-radius: 2px;
+      //   padding: 5px;
+      //   text-decoration: none;
+      //   color: #000000;
+      //   display: block;
         // width: 200px;
         // -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
         // -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
         // -o-transition: font-size 0.3s ease, background-color 0.3s ease;
         // -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
         // transition: font-size 0.3s ease, background-color 0.3s ease;
-        &:hover {
-          font-weight: normal;
-          font-size: 1em;
-          letter-spacing: 0.5;
-          background: $blue-link-hover;
-          color: white;
-          }
+        // &:active {
+        //   font-weight: normal;
+        //   font-size: 1em;
+        //   letter-spacing: 0.5;
+        //   background: $light-red;
+        //   color: white;
+        //   }
+        // }
+      // }
+    // }
+  }
+}
+
+// ul {
+//   margin-bottom:;
+// }
+
+.health-track {
+  text-transform: uppercase;
+  font-size: 1em;
+  text-align:left;
+  font-weight:bold;
+}
+
+button.delete-me {
+  font-size: 1em;
+  padding: 3px 5px;
+  text-align:left;
+  border-radius: 3px;
+  background-color:transparent;
+  color:$light-black;
+  &:active {
+    color: white;
+    border-radius: 3px;
+    background-color: $light-red;
+    }
+  }
+
+.delete-me {
+  font-weight:bold;
+  padding: 3px 5px;
+  text-align:left;
+  &:hover {
+    color: white;
+    border-radius: 3px;
+    background-color: $light-red;
+    }
+  }
+
+.food {
+//   min-width:100px;
+//   width: inherit;
+  li {
+    background-color: transparent;
+    text-transform:uppercase;
+    font-size: 0.7em;
+    // border: 1px blue solid;
+    border-bottom: 4px solid #295882;
+    &:last-child {
+      border: none;
+      border-bottom: none;
+      }
+    button {
+      border-radius: 2px;
+      padding: 5px;
+      text-decoration: none;
+      color: #000000;
+      display: block;
+      // width: 200px;
+      -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+      transition: font-size 0.3s ease, background-color 0.3s ease;
+      &:active {
+        font-weight: normal;
+        font-size: 1em;
+        letter-spacing: 0.5;
+        background: $light-red;
+        color: white;
         }
       }
     }
   }
-
 
 
 // RESOURCES (might use?)

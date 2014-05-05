@@ -30,7 +30,15 @@
   <% end %>
       <div class="heading">Health Stats</div>
         <div class="health-stats"></div>
-      <div class="heading">Basket</div>
+      <div class="heading">Today's Basket
+      <% if current_user.baskets.any? %>
+        <h6><%=Time.now.strftime('%a %d %b')=%><br>
+         created <%="#{time_ago_in_words(current_user.baskets.last.created_at)} ago"%>
+          <br>
+        updated <%="#{time_ago_in_words(BasketFood.find_all_by_basket_id(current_user.baskets.last.id).last.updated_at)} ago"%>
+        </h6>
+    <% end %>
+      </div>
       <div class="basket"></div>
 
       </div>
@@ -62,8 +70,9 @@
   <div class="food_div">
     <div id="basket-list">
       <ul>
-        <li class="food" food-id={{API}}>
-          <a href=""><b>{{item_name}}</b></a>
+        <li class="food">
+          {{item_name}}
+          <button id={{id}} class="delete_food delete-me" style="float:right">X</button>
         </li>
       </ul>
     </div>
@@ -78,9 +87,13 @@
     <li class="food">
       {{#ourArray}}
         <div id={{id}}>
-          <h4>{{name}} <button id={{id}} class='delete_goal gradient-blue small'>Remove</button></h4>
+
+          <div class="health-track">
+            {{name}}<button id={{id}} class="delete_goal delete-me" style="float:right">X</button></div>
+
           Daily Goal: {{limit}} {{target}} {{unit}}<br>
           Current Total: {{total}} {{unit}}<br>
+         Current Total: {{total}} {{unit}}<br>
           Current: {{percentage}} %<br>
         </div><br>
       {{/ourArray}}

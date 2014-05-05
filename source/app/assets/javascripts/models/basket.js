@@ -24,6 +24,7 @@ Basket.prototype = {
   },
   retrieveFoodsFromDataBase: function(){
     var self = this
+    console.log(this)
     $.ajax({
       url: '/baskets/0',
       type: 'GET'
@@ -33,6 +34,7 @@ Basket.prototype = {
         self.oldfoodarray = data.basket
       }
       self.goals = data.goal
+      console.log("hi")
       new CustomEvent('oldList')
       $.event.trigger('oldList')
     })

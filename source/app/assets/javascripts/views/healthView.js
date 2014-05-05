@@ -46,6 +46,7 @@ HealthView.prototype = {
     var buffered = $(buffering)
     var ourDOM = $(barGrowth)
     if (limit == false){
+
       if (percentage <= 35){
         ourDOM.addClass("red_bar");
         ourDOM[0].style.maxWidth = percentage.toString() + "%";
