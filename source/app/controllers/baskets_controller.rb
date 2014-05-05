@@ -10,26 +10,7 @@ class BasketsController < ApplicationController
   end
 
 
-###Method for Chart
 
-#Chart Method
-# timeline_array = []
-# #Each Basket
-
-# last_weeks_basket = current_user.baskets[-7..-1]
-# last_weeks_basket.each_with_index do |basket, index|
-
-#   # For every goal
-#   day_hash[index] = basket.created_at
-#   current_user.goals.each do |goal|
-#     # Each food in basket
-#     basket.foods.each do |food|
-#       item_name = Nutrient.find_by_id(goal.nutrient_id).nf_name
-#       day_hash[item_name] += food[item_name].to_i
-#     end
-#   end
-#   timeline_array << day_hash
-# end
 
   def show
     @goal = Goal.usergoals(current_user)

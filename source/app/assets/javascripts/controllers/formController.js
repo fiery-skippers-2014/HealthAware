@@ -1,5 +1,6 @@
 function FormController(formView){
   this.formView = formView
+  this.lastweek = {}
 }
 
 FormController.prototype = {
@@ -11,7 +12,7 @@ FormController.prototype = {
       'click','#amount_custom', formView.makeCustomAmount.bind(this))
     $(document).on(
       'click',"#clicked_new_goal",this.createNewGoal)
-
+    $(document).ready(this.drawChart())
     // $('#addgoals').on('click',this.newgoal)
   },
   // newgoal: function(){
@@ -30,15 +31,12 @@ FormController.prototype = {
     console.log("wtf")
     e.preventDefault()
    object =  $('#new_goal').serialize()
-   console.log("to start")
-    console.log(object)
     $.ajax({
       url: '/goals',
       data:object,
       type: 'POST'
     })
     .success(function(json){
-      console.log("got here")
       $("#new_goal").html(json);
     })
   },
@@ -51,6 +49,48 @@ FormController.prototype = {
     })
     .done(function(number){
       $('div #'+number.goal).remove()
+    })
+  },
+  drawChart: function(){
+    $.ajax({
+      url: '/basket_foods/0',
+      type: 'GET'
+    })
+    .done(function(data){
+      $('#js_container').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Food Stats for Last Week'
+        },
+        subtitle: {
+            text: 'eat smarter'
+        },
+        xAxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yAxis: {
+            title: {
+                text: 'Temperature (°C)'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: true
+            }
+        },
+        series: [{
+            name: 'Tokyo',
+            data: [7.0, 6.9, 9.5, 14.5, 18.4, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+        }, {
+            name: 'London',
+            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+        }]
+      })
     })
   }
 }
