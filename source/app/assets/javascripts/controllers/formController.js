@@ -11,6 +11,7 @@ FormController.prototype = {
       'click','#amount_custom', formView.makeCustomAmount.bind(this))
     $(document).on(
       'click',"#clicked_new_goal",this.createNewGoal)
+
     // $('#addgoals').on('click',this.newgoal)
   },
   // newgoal: function(){

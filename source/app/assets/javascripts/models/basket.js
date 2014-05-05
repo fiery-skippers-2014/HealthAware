@@ -24,6 +24,7 @@ Basket.prototype = {
   },
   retrieveFoodsFromDataBase: function(){
     var self = this
+    console.log(this)
     $.ajax({
       url: '/baskets/0',
       type: 'GET'
@@ -33,6 +34,7 @@ Basket.prototype = {
         self.oldfoodarray = data.basket
       }
       self.goals = data.goal
+      console.log("hi")
       new CustomEvent('oldList')
       $.event.trigger('oldList')
     })
@@ -49,7 +51,6 @@ Basket.prototype = {
       // this.progress[fda] = 0
       //Inner Loop through each food ...
       for (i=0; i < this.oldfoodarray.length; i++){
-        console.log(this.oldfoodarray[i][target])
         if(this.oldfoodarray[i][target] !== ""){
           this.progressObj[target] += (parseFloat(this.oldfoodarray[i][target]))
         }
