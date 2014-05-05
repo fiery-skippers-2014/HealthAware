@@ -24,7 +24,11 @@ class GoalsController < ApplicationController
       @goal.limit = @goal.nutrient.FDA_limit
       @goal.unit = @goal.nutrient.unit
     else
-      @goal.target = params[:goal][:target]
+      if params[:goal][:target] == ""
+        @goal.target = @goal.nutrient.FDA_recommendation
+      else
+        @goal.target = params[:goal][:target]
+      end
       @goal.unit = @goal.nutrient.unit
         if params[:limit][:limit_id] == "minimum"
           @goal.limit = true
@@ -32,6 +36,7 @@ class GoalsController < ApplicationController
           @goal.limit = false
         end
     end
+    debugger
     @goal.save
     @goal = Goal.new
 
