@@ -30,7 +30,7 @@
   <% end %>
       <div class="heading">Health Stats</div>
         <div class="health-stats"></div>
-      <div class="heading">Basket
+      <div class="heading">Today's Basket
       <%if current_user.baskets.any? %>
         <h6><%=Time.now.strftime('%a %d %b')=%><br>
          created <%="#{time_ago_in_words(current_user.baskets.last.created_at)} ago"%>
