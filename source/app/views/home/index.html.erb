@@ -87,13 +87,13 @@
     <li class="food">
       {{#ourArray}}
         <div id={{id}}>
+
           <div class="health-track">
             {{name}}<button id={{id}} class="delete_goal delete-me" style="float:right">X</button></div>
 
-          Desired Target: &nbsp;&nbsp; {{target}} {{unit}}<br>
-          Curernt Total: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{total}} {{unit}}<br>
-          Current: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  {{percentage}}%<br>
-          Limit: {{limit}}<br>
+          Daily Goal: {{limit}} {{target}} {{unit}}<br>
+          Current Total: {{total}} {{unit}}<br>
+          Current: {{percentage}} %<br>
         </div><br>
       {{/ourArray}}
     </li>

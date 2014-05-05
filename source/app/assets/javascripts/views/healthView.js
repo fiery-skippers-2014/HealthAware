@@ -7,14 +7,19 @@ HealthView.prototype = {
   updateHealthStatsOnView: function(progress){
     var source = $(this.healthTemplate).html()
     // allObjects = {}
+    var minOrMax = "minimum";
     iteratively = []
     for(i=0;i<progress.length;i++){
       keys = Object.keys(progress[i])
+      if (progress[i][keys[2]] === true){
+        minOrMax = "maximum"
+      }
       ourObj = {
-          name: keys[i],
-          total: progress[i][keys[0]],
+          name: this.parseHealthViewName(keys[i]),
+
+          total: Math.round(progress[i][keys[0]]),
           unit: progress[i][keys[1]],
-          limit: progress[i][keys[2]].toString(),
+          limit: minOrMax,
           percentage: Math.round(progress[i][keys[3]] * 100),
           id: progress[i][keys[4]],
           target: progress[i][keys[5]],
@@ -36,10 +41,12 @@ HealthView.prototype = {
   createBar: function(decimal, limit){
     percentage = Math.round(decimal * 100)
 
-    var barBackground = $('<div class="bar-background"></div>')
-    var ourDOM = $('<div class="barandgrowth"></div>')
-    var buffered = $('<div class="buffering"></div>')
-    if (limit == true){
+    var barGrowth = '<div class="barandgrowth"></div>'
+    var buffering = '<div class="buffering"></div>'
+    var buffered = $(buffering)
+    var ourDOM = $(barGrowth)
+    if (limit == false){
+
       if (percentage <= 35){
         ourDOM.addClass("red_bar");
         ourDOM[0].style.maxWidth = percentage.toString() + "%";
@@ -68,7 +75,27 @@ HealthView.prototype = {
       }
     }
     ourDOM.append(buffered)
-    barBackground.append(ourDOM)
-    return ($(barBackground[0])[0]);
+
+    return ($(ourDOM[0])[0]);
+  },
+  parseHealthViewName: function(oldFieldName){
+    nfRemoved = oldFieldName.substr(2);
+    function makeRightCharUpper(match){
+      return match.toUpperCase();
+    };
+    capitalized = nfRemoved.replace(/_(\w)/g, makeRightCharUpper);
+    underscoreToSpaces = capitalized.replace(/_/g, " ");
+    trimmed = underscoreToSpaces.trim();
+    trimmedArray = trimmed.split(" ");
+    lastWord = trimmedArray.pop();
+    console.log("lastWord")
+    console.log(lastWord)
+    console.log("trimmedArray")
+    console.log(trimmedArray)
+    if (lastWord != "unit" && lastWord != "Limit" && lastWord != "Dv"){
+      trimmedArray.push(lastWord);
+    };
+    return trimmedArray.join(" ");
   }
+
 }
