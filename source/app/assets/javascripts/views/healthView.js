@@ -36,10 +36,9 @@ HealthView.prototype = {
   createBar: function(decimal, limit){
     percentage = Math.round(decimal * 100)
 
-    var barGrowth = '<div class="barandgrowth"></div>'
-    var buffering = '<div class="buffering"></div>'
-    var buffered = $(buffering)
-    var ourDOM = $(barGrowth)
+    var barBackground = $('<div class="bar-background"></div>')
+    var ourDOM = $('<div class="barandgrowth"></div>')
+    var buffered = $('<div class="buffering"></div>')
     if (limit == true){
       if (percentage <= 35){
         ourDOM.addClass("red_bar");
@@ -69,7 +68,7 @@ HealthView.prototype = {
       }
     }
     ourDOM.append(buffered)
-
-    return ($(ourDOM[0])[0]);
+    barBackground.append(ourDOM)
+    return ($(barBackground[0])[0]);
   }
 }
