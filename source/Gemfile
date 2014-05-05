@@ -27,4 +27,8 @@ group :test do
   gem 'faker'
 end
 
+group :coverage do
+  gem 'simplecov', :require => false
+end
+
 gem 'debugger'
