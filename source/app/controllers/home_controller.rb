@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     unless current_user
       redirect_to new_user_path
     end
-    # session[:user_id] = nil
+    flash[:notice] = nil
   end
 
   def show

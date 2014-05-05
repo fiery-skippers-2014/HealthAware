@@ -2,7 +2,17 @@ class Goal < ActiveRecord::Base
   belongs_to :user
   belongs_to :nutrient
   attr_accessible :target, :nutrient_id,:limit,:unit,:user_id
+  validates_uniqueness_of :nutrient_id, :scope => :user_id
 
+  def self.goal_count(current_user)
+    p "$" * 100
+    if current_user.goals.count >= 3
+      return false
+    else
+      return true
+    end
+    p "hi" * 30
+  end
 
   def self.usergoals(current_user)
     array_of_goals = []
