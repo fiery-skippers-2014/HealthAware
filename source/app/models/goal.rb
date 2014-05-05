@@ -20,6 +20,7 @@ class Goal < ActiveRecord::Base
       goals["limit"] = goal.limit
       goals["unit"] = goal.unit
       goals["id"] = goal.id
+      goals["name"] = goal.nutrient.name
       array_of_goals << goals
       goals = {}
     end

@@ -39,7 +39,7 @@ Basket.prototype = {
   },
   calculateTotals: function(){
     //Loop through your goals
-     this.progressArray = []
+    this.progressArray = []
     for (j=0; j < this.goals.length; j++){
       this.progressObj = {}
       keys = Object.keys(this.goals[j])
@@ -48,14 +48,14 @@ Basket.prototype = {
 
       // this.progress[fda] = 0
       //Inner Loop through each food ...
+      console.log("this old food")
       for (i=0; i < this.oldfoodarray.length; i++){
-        console.log(this.oldfoodarray[i][target])
         if(this.oldfoodarray[i][target] !== ""){
           this.progressObj[target] += (parseFloat(this.oldfoodarray[i][target]))
         }
       }
       // ... and calculate totals
-      this.progressObj[target] = this.progressObj[target]
+      // this.progressObj[target] = this.progressObj[target]
       this.progressObj[target+ " unit"] = this.goals[j].unit
       this.progressObj[target+ "_limit"] = this.goals[j].limit
       this.progressObj[target+ " %"] = this.progressObj[target]/this.goals[j][target]
