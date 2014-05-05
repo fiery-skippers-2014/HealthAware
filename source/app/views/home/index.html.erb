@@ -30,7 +30,15 @@
   <% end %>
       <div class="heading">Health Stats</div>
         <div class="health-stats"></div>
-      <div class="heading">Basket</div>
+      <div class="heading">Today's Basket
+      <%if current_user.baskets.any? %>
+        <h6><%=Time.now.strftime('%a %d %b')=%><br>
+         created <%="#{time_ago_in_words(current_user.baskets.last.created_at)} ago"%>
+          <br>
+        updated <%="#{time_ago_in_words(BasketFood.find_all_by_basket_id(current_user.baskets.last.id).last.updated_at)} ago"%>
+        </h6>
+      <% end %>
+      </div>
       <div class="basket"></div>
 
       </div>
