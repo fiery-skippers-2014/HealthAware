@@ -69,38 +69,26 @@
     <li class="food">
       <% if current_user %>
         <% if current_user.goals.count > 0 %>
-          <% current_user.goals.each do |goal| %>
-            <ul id='<%=goal.id%>'>
+          <ul><li>
 
-              <span><h4><%=goal.nutrient.name %></h4>
-              <button id='<%=goal.id%>' class='delete_goal gradient-blue'>Remove</button>
-              </span>
-              <li>
-                Goal: <%=goal.target%> <%=goal.unit %><i> (maximum: <%=goal.limit%>)</i></li>
-              <li>Nutrient ID: <%=goal.nutrient_id%></li>
+            ITERATIVELY starts here:::<br>
+            {{#ourArray}}
 
-              <div class="bar">
-                <div class="barandgrowth red_bar" style="max-width: 20%;">
-                  <div class="buffering"></div>
-                </div>
-              </div>
+              <h4>{{name}}</h4>
+              Goal: {{total}} {{unit}}<br>
+              Aim: {{percentage}}<br>
+              Limit? {{limit}}<br>
+              <br>
+              {{bar}}
+              <hr>
+            {{/ourArray}}
+            <br>ITERATIVELY ends here:::
 
-            </ul>
-          <%end%>
+          </li></ul>
         <%end%>
       <%end%>
 
-        {{! foor all LIMIT stats }}
-        {{! * need: max_amount }}
-        {{! * need: desired_amount }}
-        {{! * need: percentage (current/desired) }}
-
         {{! need: if percentage < 35% to give red bar }}
-        <div class="bar">
-          <div class="barandgrowth red_bar" style='max-width: 20%'>
-            <div class="buffering"></div>
-          </div>
-        </div>
 
         {{! need: if percentage > 85% to give green bar }}
         <div class="bar">

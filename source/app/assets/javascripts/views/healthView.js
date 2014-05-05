@@ -5,9 +5,70 @@ function HealthView(healthElements){
 
 HealthView.prototype = {
   updateHealthStatsOnView: function(progress){
-    keys = Object.keys(progress)
     var source = $(this.healthTemplate).html()
+    // allObjects = {}
+    iteratively = []
+    for(i=0;i<progress.length;i++){
+      keys = Object.keys(progress[i])
+      ourObj = {
+          name: keys[i],
+          total: progress[i][keys[0]],
+          unit: progress[i][keys[1]],
+          limit: progress[i][keys[2]],
+          percentage: progress[i][keys[3]],
+          bar: this.createBar(progress[i][keys[3]], progress[i][keys[2]]).outerHTML
+      };
+      // debugger
+      iteratively.push(ourObj);
+    }
+    debugger
+    // debugger
+
+    // allObjects["iteratively"] = iteratively;
+
+    allThings = { ourArray : iteratively }
+    debugger
     var template = Handlebars.compile(source)
-    $(this.health).html(template(progress))
+    $(this.health).html(template(allThings))
+  },
+  createBar: function(decimal, limit){
+
+    percentage = Math.round(decimal * 100)
+
+    var barGrowth = '<div class="barandgrowth"></div>'
+    var buffering = '<div class="buffering"></div>'
+    var buffered = $(buffering)
+    var ourDOM = $(barGrowth)
+
+    if (limit == true){
+      if (percentage <= 35){
+        ourDOM.addClass("red_bar");
+        ourDOM[0].style.maxWidth = percentage.toString() + "px";
+      }
+      else if (percentage >= 75){
+        ourDOM.addClass("green_bar");
+        ourDOM[0].style.maxWidth = percentage.toString() + "px";
+      }
+      else {
+        ourDOM.addClass("yellow_bar");
+        ourDOM[0].style.maxWidth = percentage.toString() + "px";
+      }
+    }
+    else {
+      if (percentage >= 35){
+        ourDOM.addClass("green_bar");
+        ourDOM[0].style.maxWidth = percentage.toString() + "px";
+      }
+      else if (percentage >= 75){
+        ourDOM.addClass("red_bar");
+        ourDOM[0].style.maxWidth = percentage.toString() + "px";
+      }
+      else{
+        ourDOM.addClass("yellow_bar");
+        ourDOM[0].style.maxWidth = percentage.toString() + "px";
+      }
+    }
+    ourDOM.append(buffered)
+    return ourDOM[0];
   }
 }
