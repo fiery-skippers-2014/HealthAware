@@ -9,7 +9,7 @@
           <label for="food-search">
             Please select a food: </label>
           <input type="text" id="food-search" name="food-choice" placeholder="Apple Pie">
-          <input type="submit" value="Click!" class="gradient-blue">
+          <input type="submit" value="Click!" class="gradient-blue large">
         </form>
 <hr>
       <div class="searched"></div>
@@ -66,53 +66,29 @@
 
 
 <script id="health-template" type="text/x-handlebars-template">
-
+  <div>
+  <ul>
     <li class="food">
-      <% if current_user %>
-        <% if current_user.goals.count > 0 %>
-          <ul><li>
+      {{#ourArray}}
+        <div id={{id}}>
+          <h4>{{name}} <button id={{id}} class='delete_goal gradient-blue small'>Remove</button></h4>
+          Desired Target: {{target}} {{unit}}<br>
+          Curernt Total: {{total}} {{unit}}<br>
+          Current: {{percentage}} %<br>
+          Limit: {{limit}}<br>
+        </div><br>
 
-            ITERATIVELY starts here:::<br>
-            {{#ourArray}}
-
-              <h4>{{name}}</h4>
-              Goal: {{total}} {{unit}}<br>
-              Aim: {{percentage}}<br>
-              Limit? {{limit}}<br>
-              <br>
-              {{bar}}
-              <hr>
-            {{/ourArray}}
-            <br>ITERATIVELY ends here:::
-
-          </li></ul>
-        <%end%>
-      <%end%>
-
-        {{! need: if percentage < 35% to give red bar }}
-
-        {{! need: if percentage > 85% to give green bar }}
-        <div class="bar">
-          <div class="barandgrowth green_bar" style="max-width: 100%">
-            <div class="buffering"></div>
-          </div>
-        </div>
-
-        {{! need: if percentage is not either, give yellow bar }}
-        <div class="bar">
-          <div class="barandgrowth yellow_bar" style="max-width: 50%">
-            <div class="buffering"></div>
-          </div>
-        </div>
-        {{! end LIMIT stats }}
+      {{/ourArray}}
     </li>
-
     <hr>
-    </h5>Hey <%=current_user.username%>!</h5>
-    <h6>You account was created: <%="#{time_ago_in_words(current_user.created_at)} ago" %></h6>
-<h6>You last add goals
-<% if current_user.goals.count > 0 %> %><%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %>
+  </ul>
+
+  <h5>Hey <%=current_user.username%>!</h5>
+  <h6>You account was created: <%="#{time_ago_in_words(current_user.created_at)} ago" %></h6>
+  <% if current_user.goals.count > 0 %>
+    <h6>You last add goals
+    <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %>
+    </h6>
   <% end %>
-</h6>
   </div>
 </script>

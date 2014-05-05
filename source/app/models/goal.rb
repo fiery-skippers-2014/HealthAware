@@ -5,13 +5,11 @@ class Goal < ActiveRecord::Base
   validates_uniqueness_of :nutrient_id, :scope => :user_id
 
   def self.goal_count(current_user)
-    p "$" * 100
     if current_user.goals.count >= 3
       return false
     else
       return true
     end
-    p "hi" * 30
   end
 
   def self.usergoals(current_user)
@@ -21,6 +19,7 @@ class Goal < ActiveRecord::Base
       goals[goal.nutrient.nf_name] = goal.target
       goals["limit"] = goal.limit
       goals["unit"] = goal.unit
+      goals["id"] = goal.id
       array_of_goals << goals
       goals = {}
     end
