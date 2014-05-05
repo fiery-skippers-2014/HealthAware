@@ -44,10 +44,6 @@ class BasketsController < ApplicationController
       render json: {basket:@basket, goal:@goal}
   end
 
-  def destroy
-    p params
-    User.last.baskets.last.foods[0]
-  end
 
 
 end

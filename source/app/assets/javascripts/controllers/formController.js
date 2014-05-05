@@ -50,7 +50,7 @@ FormController.prototype = {
       type: 'DELETE'
     })
     .done(function(number){
-      $('div#'+number.goal).remove()
+      $('div #'+number.goal).remove()
     })
   }
 }

@@ -35,7 +35,9 @@
         <h6><%=Time.now.strftime('%a %d %b')=%><br>
          created <%="#{time_ago_in_words(current_user.baskets.last.created_at)} ago"%>
           <br>
-        updated <%="#{time_ago_in_words(BasketFood.find_all_by_basket_id(current_user.baskets.last.id).last.updated_at)} ago"%>
+           <% if current_user.baskets.last.foods.any? %>
+            updated <%="#{time_ago_in_words(BasketFood.find_all_by_basket_id(current_user.baskets.last.id).last.updated_at)} ago"%>
+            <%end%>
         </h6>
     <% end %>
       </div>
@@ -67,10 +69,9 @@
 
 <script id="basket-template" type="text/x-handlebars-template">
   {{#oldfoodarray}}
-  <div class="food_div">
     <div id="basket-list">
       <ul>
-        <li class="food">
+        <li id={{id}} class="food">
           {{item_name}}
           <button id={{id}} class="delete_food delete-me" style="float:right">X</button>
         </li>
