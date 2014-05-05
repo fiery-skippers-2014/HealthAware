@@ -4,6 +4,7 @@ class CreateBasketFoods < ActiveRecord::Migration
       t.belongs_to :basket
       t.belongs_to :food
       t.integer :quantity, default: 1
+      t.timestamps
     end
   end
 end
