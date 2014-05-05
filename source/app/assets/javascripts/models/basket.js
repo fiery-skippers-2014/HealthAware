@@ -59,6 +59,8 @@ Basket.prototype = {
       this.progressObj[target+ " unit"] = this.goals[j].unit
       this.progressObj[target+ "_limit"] = this.goals[j].limit
       this.progressObj[target+ " %"] = this.progressObj[target]/this.goals[j][target]
+      this.progressObj[target+ " id"] = this.goals[j].id
+      this.progressObj[target+ " your_target"] = this.goals[j][target]
       this.progressArray.push(this.progressObj)
     }
   }

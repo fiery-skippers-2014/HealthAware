@@ -49,9 +49,7 @@ FormController.prototype = {
       type: 'DELETE'
     })
     .done(function(number){
-      console.log(number)
-      // debugger
-      $('ul'+'#'+number.goal+' ').remove()
+      $('div#'+number.goal).remove()
     })
   }
 }

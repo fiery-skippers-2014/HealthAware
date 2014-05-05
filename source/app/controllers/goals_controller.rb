@@ -42,7 +42,7 @@ class GoalsController < ApplicationController
     @goal = Goal.find(params[:id])
     @goal.destroy
     @goal.id
-    render json: {goal:@goal.id}
+    render json: {goal: @goal.id}
   end
 
 end
