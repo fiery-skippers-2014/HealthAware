@@ -23,7 +23,6 @@ class FoodsController < ApplicationController
       @basket = Basket.create(user_id: session[:user_id])
       BasketFood.create(basket_id: @basket.id, food_id: @food.id)
     end
-      debugger
     render json: @food
   end
 end

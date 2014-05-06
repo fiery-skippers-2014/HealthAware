@@ -31,9 +31,6 @@ FormController.prototype = {
     e.preventDefault()
     object =  $('#new_goal').serialize()
     console.log(object)
-=======
-   object =  $('#new_goal').serialize()
->>>>>>> 9093b6b01e2b0cbdc93b404e07b1ebe626c4064b
     $.ajax({
       url: '/goals',
       data:object,
