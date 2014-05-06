@@ -1,3 +1,6 @@
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
 
 <div id="container" class="row large-10 medium-11 small-12 large-centered medium-centered small-centered">
 
@@ -35,7 +38,9 @@
         <h6><%=Time.now.strftime('%a %d %b')=%><br>
          created <%="#{time_ago_in_words(current_user.baskets.last.created_at)} ago"%>
           <br>
-        updated <%="#{time_ago_in_words(BasketFood.find_all_by_basket_id(current_user.baskets.last.id).last.updated_at)} ago"%>
+           <% if current_user.baskets.last.foods.any? %>
+            updated <%="#{time_ago_in_words(BasketFood.find_all_by_basket_id(current_user.baskets.last.id).last.updated_at)} ago"%>
+            <%end%>
         </h6>
     <% end %>
       </div>
@@ -67,10 +72,9 @@
 
 <script id="basket-template" type="text/x-handlebars-template">
   {{#oldfoodarray}}
-  <div class="food_div">
     <div id="basket-list">
       <ul>
-        <li class="food">
+        <li id={{id}} class="food">
           {{item_name}}
           <button id={{id}} class="delete_food delete-me" style="float:right">X</button>
         </li>
@@ -79,14 +83,19 @@
   </div>
   {{/oldfoodarray}}
 </script>
-
+<div id="js_container0" style="min-width: 200px; height: 100%; margin: 0 auto"></div>
+<div id="js_container1" style="min-width: 200px; height: 100%; margin: 0 auto"></div>
+<div id="js_container2" style="min-width: 200px; height: 100%; margin: 0 auto"></div>
 
 <script id="health-template" type="text/x-handlebars-template">
+
+
   <div>
   <ul>
     <li class="food">
       {{#ourArray}}
-        <div id={{id}}>
+      <div class={{name}}></div>
+        <div id={{id}} >
 
           <div class="health-track">
             {{name}}<button id={{id}} class="delete_goal delete-me" style="float:right">X</button></div>

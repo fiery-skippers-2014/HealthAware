@@ -4,10 +4,4 @@ class Food < ActiveRecord::Base
   has_many :baskets, through: :basket_foods
 
   validates_uniqueness_of :API
-
-
-
-
-
-
 end

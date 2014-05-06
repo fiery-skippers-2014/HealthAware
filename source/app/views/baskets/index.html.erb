@@ -11,7 +11,7 @@
     <% basket.foods.each do |food|%>
       <li><%= food.item_name %></li>
         <% current_user.goals.each do |goal| %>
-         <li> <%= "#{goal.nutrient.nf_name}: #{food[goal.nurtient.nf_name]}" %></li>
+         <li> <%= "#{goal.nutrient.nf_name}: #{food[goal.nutrient.nf_name]}" %></li>
         <%end%>
       <%end%>
   </ul>

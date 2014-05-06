@@ -31,6 +31,7 @@ HealthView.prototype = {
     var template = Handlebars.compile(source)
     $(this.health).html(template(allThings))
     this.addBar(iteratively)
+    this.drawChart()
   },
   addBar: function(iteratively){
 
@@ -96,6 +97,94 @@ HealthView.prototype = {
       trimmedArray.push(lastWord);
     };
     return trimmedArray.join(" ");
-  }
+  },drawChart: function(){
+    $.ajax({
+      url: '/basket_foods/0',
+      type: 'GET'
+    })
+    .done(function(data){
+      $('div.'+data.series[0].name).highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Food Stats for Last Week'
+        },
+        subtitle: {
+            text: 'eat smarter'
+        },
+        xAxis: data.xAxis,
+        yAxis: {
+            title: {
+                text: 'Grams consumed'
+            },
+            min: 0
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: true
+            }
+        },
+        series: [data.series[0]]
+      })
+      $('div.'+data.series[1].name).highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Food Stats for Last Week'
+        },
+        subtitle: {
+            text: 'eat smarter'
+        },
+        xAxis: data.xAxis,
+        yAxis: {
+            title: {
+                text: 'Grams consumed'
+            },
+            min: 0
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: true
+            }
+        },
+        series: [data.series[1]]
+      })
+       $('div.'+data.series[2].name).highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Food Stats for Last Week'
+        },
+        subtitle: {
+            text: 'eat smarter'
+        },
+        xAxis: data.xAxis,
+        yAxis: {
+            title: {
+                text: 'Grams consumed'
+            },
+            min: 0
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: true
+            }
+        },
+        series: [data.series[2]]
+      })
+    })
+}
 
 }

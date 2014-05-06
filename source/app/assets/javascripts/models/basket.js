@@ -65,5 +65,6 @@ Basket.prototype = {
       this.progressObj[target+ " your_target"] = this.goals[j][target]
       this.progressArray.push(this.progressObj)
     }
+    debugger
   }
 }
