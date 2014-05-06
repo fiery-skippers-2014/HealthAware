@@ -41,7 +41,12 @@ class BasketFoodsController < ApplicationController
 
   def destroy
     @food_to_remove = BasketFood.find_by_basket_id_and_food_id(current_user.baskets.last.id, params[:id])
-    @food_to_remove.destroy
+    num_of_items = @food_to_remove.quantity
+    if num_of_items = 1
+      @food_to_remove.destroy
+    else
+      @food_to_remove.update_attribute(:quantity, num_of_items - 1)
+    end
     render json: @food_to_remove.food_id
   end
 end
