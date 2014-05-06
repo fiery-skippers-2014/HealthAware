@@ -108,9 +108,7 @@ HealthView.prototype = {
       type: 'GET'
     })
     .done(function(data){
-      debugger
       for(i=0; i < data.series.length; i++){
-        debugger
         if (data.series[i].limit === true){
           var color ='green'
           var text = 'your target'
@@ -119,7 +117,11 @@ HealthView.prototype = {
           var text = 'your limit'
         }
 
-
+        if(data.series[i].target > data.series[i].data.sort(function(a, b){return b-a})[0]){
+          var max = data.series[i].target * 1.01
+        } else {
+          var max = data.series[i].data.sort(function(a, b){return b-a})[0] * 1.10
+        }
 
         $('#js_container_'+data.series[i].id).highcharts({
           chart: {
@@ -137,7 +139,7 @@ HealthView.prototype = {
               text: data.series[i].unit + '  consumed'
             },
             min: 0,
-            max: data.series[i].target,
+            max: max,
             plotLines : [{
               value : data.series[i].target,
               color : color,
