@@ -3,10 +3,10 @@
   <div id="user-forms">
 
     <div class="all_baskets">
+        Hi <%=current_user.username%> !<br>
       <% current_user.goals.each do |goal| %>
-        Hi <%=current_user.username%> !
         <%=goal.nutrient.name %>
-        <%=goal.target%>
+        <%=goal.target%><br>
       <%end%>
 
       <p>
