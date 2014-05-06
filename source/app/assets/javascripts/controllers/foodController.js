@@ -64,7 +64,6 @@ FoodController.prototype = {
       type: 'DELETE'
     })
     .done(function(number){
-      debugger
       $('li#'+number).remove()
     })
   }

@@ -3,8 +3,6 @@ class GoalsController < ApplicationController
   def new
     @goal = Goal.new
     @errors = @errors
-    p ("HIIIIIIIIIIII")
-    p @errors
   end
 
   def create

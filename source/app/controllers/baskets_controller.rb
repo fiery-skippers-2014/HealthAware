@@ -9,22 +9,16 @@ class BasketsController < ApplicationController
     end
   end
 
-
-
-
   def show
     @goal = Goal.usergoals(current_user)
-    if Basket.find_all_by_user_id(session[:user_id]).count > 0
-        @baskets = Basket.find_all_by_user_id(session[:user_id])
-        if (Time.now-@baskets.last.created_at < 54000)
-          @basket = @baskets.last.foods
-        end
+    if Basket.find_all_by_user_id(session[:user_id]).any?
+      most_recent_basket = Basket.find_by_user_id(session[:user_id])
+      if Time.now- most_recent_basket.created_at < 86000
+        @basket = most_recent_basket.foods
+      end
     else
       @basket
     end
-      render json: {basket:@basket, goal:@goal}
+    render json: {basket:@basket, goal:@goal}
   end
-
-
-
 end
