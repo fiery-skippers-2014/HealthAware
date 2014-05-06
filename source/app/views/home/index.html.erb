@@ -75,13 +75,13 @@
 
       <li class="single-track_{{id}}">
         <div class="track-header">
-          {{name}}
+          {{name}}  <span id="failure-message">{{failure}}</span> <span id="success-message">{{success}}</span>
           <button id={{id}} class="delete_goal delete-me" style="float:right">X</button>
         </div>
         <ul>
           <li><b>Daily Goal</b>: {{limit}} {{target}} {{unit}}</li>
           <li><b>Current Total</b>: {{total}} {{unit}}</li>
-          <li><b>Current</b>: {{percentage}}%</li>
+          <li><b>Current</b>: {{percentage}}</li>
         </ul>
 
         <div id="bar_{{id}}" class="bar"></div>

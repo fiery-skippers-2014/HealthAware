@@ -295,6 +295,12 @@ button.delete_me {
             }
           }
         }
+        #failure-message {
+          color: red;
+        }
+        #success-message {
+          color: green;
+        }
         ul {
           margin-top:5px;
           padding-left:15px;

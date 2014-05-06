@@ -15,4 +15,4 @@ describe("queryMaker", function(){
 	it("should have the passed-in food type in the JSON", function() {
 		expect(returnObject.query).toEqual("steak");
 	});
-});
+}); 
