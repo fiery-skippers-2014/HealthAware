@@ -1,0 +1,19 @@
+<h5>Hey <%=current_user.username%>!</h5>
+
+<h6>You account was created: <%="#{time_ago_in_words(current_user.created_at)} ago" %></h6>
+
+<% if current_user.goals.count > 0 %>
+  <h6>You last add goals
+  <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %>
+  </h6>
+<% end %>
+
+<% if current_user.baskets.any? %>
+  <h6><%=Time.now.strftime('%a %d %b')=%><br>
+   created <%="#{time_ago_in_words(current_user.baskets.last.created_at)} ago"%>
+    <br>
+     <% if current_user.baskets.last.foods.any? %>
+      updated <%="#{time_ago_in_words(BasketFood.find_all_by_basket_id(current_user.baskets.last.id).last.updated_at)} ago"%>
+      <%end%>
+  </h6>
+<% end %>

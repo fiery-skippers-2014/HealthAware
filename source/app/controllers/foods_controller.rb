@@ -1,4 +1,5 @@
 class FoodsController < ApplicationController
+  
   def create
     params["fields"]["API"]=params["_id"]
     if Food.find_by_API(params["_id"])
