@@ -1,0 +1,28 @@
+<div class="large-6 medium-8 small-12 columns large-centered medium-centered small-centered footer">
+
+  <div class="large-6 medium-6 small-6 columns">
+    <h5><%=current_user.username%>!</h5>
+    <h6>Today is <%=Time.now.strftime('%a!')%><br><br>
+    <%=Time.now.strftime('%b %d, %Y')%></h6>
+    Your account was created <%="#{time_ago_in_words(current_user.created_at)} ago" =%>.
+  </div>
+
+
+  <div class="large-6 medium-6 small-6 columns">
+
+    <% if current_user.goals.count > 0 %>
+      <p>You last added goals
+      <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %></p>
+    <% end %>
+
+    <% if current_user.baskets.any? %>
+       <p>You last created a basket  <%="#{time_ago_in_words(current_user.baskets.last.created_at)} ago"%>.</p>
+
+      <% if current_user.baskets.last.foods.any? %>
+        <p>You last updated your basket <%="#{time_ago_in_words(BasketFood.find_all_by_basket_id(current_user.baskets.last.id).last.updated_at)} ago"%>.</p>
+      <%end%>
+
+    <% end %>
+
+  </div>
+</div>

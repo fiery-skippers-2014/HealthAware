@@ -33,52 +33,58 @@ HealthView.prototype = {
     this.addBar(iteratively)
     this.drawChart()
   },
+
+
   addBar: function(iteratively){
 
     for(i=0; i<iteratively.length; i++){
-      $('div #'+iteratively[i].id).append(iteratively[i].bar)
+      if (iteratively[i].limit == "maximum")
+        {$('div#bar_'+iteratively[i].id+'.bar').addClass('reach');}
+      else
+        {$('div#bar_'+iteratively[i].id+'.bar').addClass('limit');}
+      $('div#bar_'+iteratively[i].id).append(iteratively[i].bar)
     }
   },
+
+
   createBar: function(decimal, limit){
     percentage = Math.round(decimal * 100)
 
-    var barGrowth = '<div class="barandgrowth"></div>'
-    var buffering = '<div class="buffering"></div>'
-    var buffered = $(buffering)
-    var ourDOM = $(barGrowth)
+    var barBackground = $('')
+    var ourDOM = $('<div class="barandgrowth"></div>')
+    var buffering = $('<div class="buffering"></div>')
+
     if (limit == false){
 
       if (percentage <= 35){
         ourDOM.addClass("red_bar");
-        ourDOM[0].style.maxWidth = percentage.toString() + "%";
       }
       else if (percentage >= 75){
         ourDOM.addClass("green_bar");
-        ourDOM[0].style.maxWidth = percentage.toString() + "%";
       }
       else {
         ourDOM.addClass("yellow_bar");
-        ourDOM[0].style.maxWidth = percentage.toString() + "%";
       }
     }
     else {
       if (percentage <= 35){
         ourDOM.addClass("green_bar");
-        ourDOM[0].style.maxWidth = percentage.toString() + "%";
       }
       else if (percentage >= 75){
         ourDOM.addClass("red_bar");
-        ourDOM[0].style.maxWidth = percentage.toString() + "%";
       }
       else{
         ourDOM.addClass("yellow_bar");
-        ourDOM[0].style.maxWidth = percentage.toString() + "%";
+
       }
     }
-    ourDOM.append(buffered)
+    ourDOM[0].style.maxWidth = percentage.toString() + "%";
+    ourDOM.append(buffering)
 
     return ($(ourDOM[0])[0]);
   },
+
+
   parseHealthViewName: function(oldFieldName){
     nfRemoved = oldFieldName.substr(2);
     function makeRightCharUpper(match){
@@ -89,15 +95,13 @@ HealthView.prototype = {
     trimmed = underscoreToSpaces.trim();
     trimmedArray = trimmed.split(" ");
     lastWord = trimmedArray.pop();
-    console.log("lastWord")
-    console.log(lastWord)
-    console.log("trimmedArray")
-    console.log(trimmedArray)
     if (lastWord != "unit" && lastWord != "Limit" && lastWord != "Dv"){
       trimmedArray.push(lastWord);
     };
     return trimmedArray.join(" ");
   },
+
+
   drawChart: function(){
     $.ajax({
       url: '/basket_foods/0',
@@ -105,35 +109,34 @@ HealthView.prototype = {
     })
     .done(function(data){
       for(i=0; i < data.series.length; i++){
-      $('#js_container_'+data.series[i].id).highcharts({
-        chart: {
+        $('#js_container_'+data.series[i].id).highcharts({
+          chart: {
             type: 'line'
-        },
-        title: {
-            text: 'Food Stats for Last Week'
-        },
-        subtitle: {
+          },
+          title: {
+            text: data.series[i].name +' Stats for Last Week'
+          },
+          subtitle: {
             text: 'eat smarter'
-        },
-        xAxis: data.xAxis,
-        yAxis: {
+          },
+          xAxis: data.xAxis,
+          yAxis: {
             title: {
-                text: 'Grams consumed'
+              text: 'Grams consumed'
             },
             min: 0
-        },
-        plotOptions: {
+          },
+          plotOptions: {
             line: {
-                dataLabels: {
-                    enabled: true
-                },
-                enableMouseTracking: true
+              dataLabels: {
+                enabled: true
+              },
+              enableMouseTracking: true
             }
-        },
-        series: [data.series[i]]
+          },
+          series: [data.series[i]]
+        })
+      }
     })
-    }
-    })
-}
-
+  }
 }

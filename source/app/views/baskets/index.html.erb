@@ -1,20 +1,27 @@
-<div class="all_baskets">
-  <% current_user.goals.each do |goal| %>
-    Hi <%=current_user.username%> !
-    <%=goal.nutrient.name %>
-    <%=goal.target%>
-  <%end%>
+<div id="container" class="row large-4 medium-5 small-12 large-centered medium-centered small-centered">
 
-  <p><% @all_baskets.each do |basket| %>
-  <ul>
-    <%="#{time_ago_in_words(basket.created_at)} ago" %>
-    <% basket.foods.each do |food|%>
-      <li><%= food.item_name %></li>
-        <% current_user.goals.each do |goal| %>
-         <li> <%= "#{goal.nutrient.nf_name}: #{food[goal.nutrient.nf_name]}" %></li>
-        <%end%>
+  <div id="user-forms">
+
+    <div class="all_baskets">
+      <% current_user.goals.each do |goal| %>
+        Hi <%=current_user.username%> !
+        <%=goal.nutrient.name %>
+        <%=goal.target%>
       <%end%>
-  </ul>
-  <%end%>
-</p>
+
+      <p>
+        <% @all_baskets.each do |basket| %>
+        <ul>
+          <%="#{time_ago_in_words(basket.created_at)} ago" %>
+          <% basket.foods.each do |food|%>
+            <li><%= food.item_name %></li>
+              <% current_user.goals.each do |goal| %>
+               <li> <%= "#{goal.nutrient.nf_name}: #{food[goal.nutrient.nf_name]}" %></li>
+              <%end%>
+            <%end%>
+        </ul>
+        <%end%>
+      </p>
+    </div>
+  </div>
 </div>

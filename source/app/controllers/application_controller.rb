@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   helper_method :login_user
   helper_method :current_user
   helper_method :logout_user
+
   def login_user
     session[:user_id] = @user.id
   end
@@ -15,5 +16,4 @@ class ApplicationController < ActionController::Base
   def current_user
     @user ||= User.find(session[:user_id]) if session[:user_id]
   end
-
 end

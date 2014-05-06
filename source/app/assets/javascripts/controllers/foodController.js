@@ -1,8 +1,7 @@
-// run in initialize.js
 function FoodController(model, Foodview, basket, basketView, Healthview){
-  this.model = model // contains uri for api search call and fetchFood() which creates, via ajax, a foodList event with json objects
-  this.view = Foodview // knows searched elements and has ability to create a view based on a handlebar template
-  this.basket = basket // a Basket model which knows a currently empty search, user's goals, and an empty progress object
+  this.model = model
+  this.view = Foodview
+  this.basket = basket
   this.basketView = basketView
   this.healthView = Healthview
   this.allFoodResults = {}
@@ -16,8 +15,8 @@ FoodController.prototype = {
     var basket = this.basket
     var basketView = this.basketView
     var healthView = this.healthView
-    // on foodsList event created within foodList model, create template with model's elements AKA foodView (because you are binding the function to foodView)
-    $(document).ready(basket.retrieveFoodsFromDataBase.bind(basket)) //
+
+    $(document).ready(basket.retrieveFoodsFromDataBase.bind(basket))
     $(document).on("oldList", this.printSavedBasket.bind(this))
     $(document).on("oldList", basket.calculateTotals.bind(basket))
     $(document).on("oldList", this.updateTotalsOnView.bind(this))
@@ -27,18 +26,26 @@ FoodController.prototype = {
     $(document).on('click', '.food_div', this.findFoodInSearchResults.bind(this))
     $(document).on('click', '.delete_food', this.removeFoodFromDataBase)
   },
+
+
   searchFoods: function (event){
     event.preventDefault();
     newQuery = new queryMaker(event.target["food-choice"].value)
     queryData = newQuery.makeJson()
     this.fetchFood(queryData)
   },
+
+
   createFoodList: function(e, json){
     this.allFoodResults = json
   },
+
+
   handleSearchResults: function(e, json){
     FoodListView.prototype.prepareFoodListForView(e, json, this.basket.goals, this.view.foodTemplate);
   },
+
+
   findFoodInSearchResults: function(e){
     //Save to Database, make this nicer.....maybe a Basket Model
     food_id = e.currentTarget.getElementsByTagName('li')[0].getAttribute('food-id')
@@ -48,15 +55,20 @@ FoodController.prototype = {
       }
     }
   },
+
+
   printSavedBasket: function(e){
     this.basketView.drawOldBasket(this.basket)
   },
+
+
   saveBasketToDataBase: function(e){
     this.basket.savetheBasketToDataBase()
   },
-  updateTotalsOnView: function(e){
-    this.healthView.updateHealthStatsOnView(this.basket.progressArray)
+
+  updateTotalsOnView: function(e){  this.healthView.updateHealthStatsOnView(this.basket.progressArray)
   },
+
   removeFoodFromDataBase: function(){
      var self = this.id
      $.ajax({
@@ -64,7 +76,7 @@ FoodController.prototype = {
       type: 'DELETE'
     })
     .done(function(number){
-      $('li#'+number).remove()
+      $('li.basket-item_'+number).remove()
     })
   }
 }
