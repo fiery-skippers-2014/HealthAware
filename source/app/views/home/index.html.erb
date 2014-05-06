@@ -83,19 +83,13 @@
   </div>
   {{/oldfoodarray}}
 </script>
-<div id="js_container0" style="min-width: 200px; height: 100%; margin: 0 auto"></div>
-<div id="js_container1" style="min-width: 200px; height: 100%; margin: 0 auto"></div>
-<div id="js_container2" style="min-width: 200px; height: 100%; margin: 0 auto"></div>
 
 <script id="health-template" type="text/x-handlebars-template">
-
-
   <div>
   <ul>
     <li class="food">
       {{#ourArray}}
-      <div class={{name}}></div>
-        <div id={{id}} >
+        <div id={{id}}>
 
           <div class="health-track">
             {{name}}<button id={{id}} class="delete_goal delete-me" style="float:right">X</button></div>
@@ -103,7 +97,9 @@
           Daily Goal: {{limit}} {{target}} {{unit}}<br>
           Current Total: {{total}} {{unit}}<br>
           Current: {{percentage}} %<br>
-        </div><br>
+        <br>
+        <div id="js_container_{{id}}"></div><hr>
+        </div>
       {{/ourArray}}
     </li>
     <hr>
