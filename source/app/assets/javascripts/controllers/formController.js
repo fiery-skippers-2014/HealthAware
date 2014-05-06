@@ -12,8 +12,7 @@ FormController.prototype = {
       'click','#amount_custom', formView.makeCustomAmount.bind(this))
     $(document).on(
       'click',"#clicked_new_goal",this.createNewGoal)
-    $(document).ready(this.drawChart())
-    $(document).on("oldList", this.drawChart())
+    // $(document).ready(this.drawChart())
     // $('#addgoals').on('click',this.newgoal)
   },
   // newgoal: function(){
@@ -51,40 +50,96 @@ FormController.prototype = {
     .done(function(number){
       $('div #'+number.goal).remove()
     })
-  },
-  drawChart: function(){
-    $.ajax({
-      url: '/basket_foods/0',
-      type: 'GET'
-    })
-    .done(function(data){
-      $('#js_container').highcharts({
-        chart: {
-            type: 'line'
-        },
-        title: {
-            text: 'Food Stats for Last Week'
-        },
-        subtitle: {
-            text: 'eat smarter'
-        },
-        xAxis: data.xAxis,
-        yAxis: {
-            title: {
-                text: 'Grams consumed'
-            },
-            min: 0
-        },
-        plotOptions: {
-            line: {
-                dataLabels: {
-                    enabled: true
-                },
-                enableMouseTracking: true
-            }
-        },
-        series: data.series
-      })
-    })
   }
+  // drawChart: function(){
+  //   $.ajax({
+  //     url: '/basket_foods/0',
+  //     type: 'GET'
+  //   })
+  //   .done(function(data){
+  //     debugger
+  //     $('.Protein').append(
+  //     $('#js_container').highcharts({
+  //       chart: {
+  //           type: 'line'
+  //       },
+  //       title: {
+  //           text: 'Food Stats for Last Week'
+  //       },
+  //       subtitle: {
+  //           text: 'eat smarter'
+  //       },
+  //       xAxis: data.xAxis,
+  //       yAxis: {
+  //           title: {
+  //               text: 'Grams consumed'
+  //           },
+  //           min: 0
+  //       },
+  //       plotOptions: {
+  //           line: {
+  //               dataLabels: {
+  //                   enabled: true
+  //               },
+  //               enableMouseTracking: true
+  //           }
+  //       },
+  //       series: [data.series[0]]
+  //     }))
+  //     $('#js_container1').highcharts({
+  //       chart: {
+  //           type: 'line'
+  //       },
+  //       title: {
+  //           text: 'Food Stats for Last Week'
+  //       },
+  //       subtitle: {
+  //           text: 'eat smarter'
+  //       },
+  //       xAxis: data.xAxis,
+  //       yAxis: {
+  //           title: {
+  //               text: 'Grams consumed'
+  //           },
+  //           min: 0
+  //       },
+  //       plotOptions: {
+  //           line: {
+  //               dataLabels: {
+  //                   enabled: true
+  //               },
+  //               enableMouseTracking: true
+  //           }
+  //       },
+  //       series: [data.series[1]]
+  //     })
+  //      $('#js_container2').highcharts({
+  //       chart: {
+  //           type: 'line'
+  //       },
+  //       title: {
+  //           text: 'Food Stats for Last Week'
+  //       },
+  //       subtitle: {
+  //           text: 'eat smarter'
+  //       },
+  //       xAxis: data.xAxis,
+  //       yAxis: {
+  //           title: {
+  //               text: 'Grams consumed'
+  //           },
+  //           min: 0
+  //       },
+  //       plotOptions: {
+  //           line: {
+  //               dataLabels: {
+  //                   enabled: true
+  //               },
+  //               enableMouseTracking: true
+  //           }
+  //       },
+  //       series: [data.series[2]]
+  //     })
+  //   })
+
 }

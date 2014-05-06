@@ -1,7 +1,6 @@
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
-<div id="js_container" style="min-width: 200px; height: 100%; margin: 0 auto"></div>
 
 <div id="container" class="row large-10 medium-11 small-12 large-centered medium-centered small-centered">
 
@@ -84,14 +83,19 @@
   </div>
   {{/oldfoodarray}}
 </script>
-
+<div id="js_container0" style="min-width: 200px; height: 100%; margin: 0 auto"></div>
+<div id="js_container1" style="min-width: 200px; height: 100%; margin: 0 auto"></div>
+<div id="js_container2" style="min-width: 200px; height: 100%; margin: 0 auto"></div>
 
 <script id="health-template" type="text/x-handlebars-template">
+
+
   <div>
   <ul>
     <li class="food">
       {{#ourArray}}
-        <div id={{id}}>
+      <div class={{name}}></div>
+        <div id={{id}} >
 
           <div class="health-track">
             {{name}}<button id={{id}} class="delete_goal delete-me" style="float:right">X</button></div>
