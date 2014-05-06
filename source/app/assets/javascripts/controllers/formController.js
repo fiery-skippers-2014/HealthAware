@@ -27,10 +27,8 @@ FormController.prototype = {
   //   })
   // },
   createNewGoal: function(e){
-    console.log("wtf")
     e.preventDefault()
-   object =  $('#new_goal').serialize()
-   console.log("to start")
+    object =  $('#new_goal').serialize()
     console.log(object)
     $.ajax({
       url: '/goals',
@@ -38,12 +36,10 @@ FormController.prototype = {
       type: 'POST'
     })
     .success(function(json){
-      console.log("got here")
       $("#new_goal").html(json);
     })
   },
   removeGoal: function(){
-    console.log('hi')
     var self = this
      $.ajax({
       url: '/goals/'+self.id,
