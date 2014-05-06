@@ -6,7 +6,6 @@ class BasketFoodsController < ApplicationController
     xAxis = {categories: []}
     series = []
 
-
     last_weeks_basket = current_user.baskets[0..7]
     last_weeks_basket.each do |basket|
       xAxis[:categories].unshift(basket.created_at.strftime("%m/%d/%Y"))
@@ -45,5 +44,4 @@ class BasketFoodsController < ApplicationController
     @food_to_remove.destroy
     render json: @food_to_remove.food_id
   end
-
 end
