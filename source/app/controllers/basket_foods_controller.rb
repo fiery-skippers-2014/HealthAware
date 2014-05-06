@@ -34,7 +34,7 @@ class BasketFoodsController < ApplicationController
 
       # formatted_day_hash = Hash[new_keys.zip(values)]
       series << {name: goal.nutrient.name,
-        data: all_days_of_week
+        data: all_days_of_week, id: goal.id
       }
     end
     render json: {series: series, xAxis: xAxis}
