@@ -28,9 +28,8 @@ FormController.prototype = {
   //   })
   // },
   createNewGoal: function(e){
-    console.log("wtf")
     e.preventDefault()
-   object =  $('#new_goal').serialize()
+    object =  $('#new_goal').serialize()
     $.ajax({
       url: '/goals',
       data:object,
@@ -41,14 +40,13 @@ FormController.prototype = {
     })
   },
   removeGoal: function(){
-    console.log('hi')
     var self = this
-     $.ajax({
+    $.ajax({
       url: '/goals/'+self.id,
       type: 'DELETE'
     })
     .done(function(number){
-      $('div #'+number.goal).remove()
+      $('li.single-track_'+number.goal).remove()
     })
   }
   // drawChart: function(){

@@ -1,14 +1,19 @@
-<%= form_for @goal do |u| %>
-    <%= u.label "What are you trying to track?" %>
+<div id="container" class="row large-4 medium-5 small-12 large-centered medium-centered small-centered">
 
-    <%= u.select :nutrient_id, options_for_select([["Protein",1],["Carbs",2],["Fat",3]]) %>
-    <%= u.label "What amount do You need per day" %>
+  <div id="user-forms">
 
-    <%= radio_button_tag(:amount, "FDA") %>
-        <%= label_tag(:amount_FDA, "Use FDA recommendation") %>
-        <%= radio_button_tag(:amount,"custom") %>
-        <%= label_tag(:amount_custom,"Use a custom amount") %>
-        <div class="row" id="custom_limit">
+    <%= form_for @goal do |u| %>
+      <%= u.label "What are you trying to track?" %>
+
+      <%= u.select :nutrient_id, options_for_select([["Protein",1],["Carbs",2],["Fat",3]]) %>
+      <%= u.label "What amount do You need per day" %>
+
+      <%= radio_button_tag(:amount, "FDA") %>
+      <%= label_tag(:amount_FDA, "Use FDA recommendation") %>
+      <%= radio_button_tag(:amount,"custom") %>
+      <%= label_tag(:amount_custom,"Use a custom amount") %>
+
+      <div class="row" id="custom_limit">
         <div class="large-12 columns">
           <div class="large-2 columns left">
             <label for="left-label" class="left inline">I want to have a:</label>
@@ -24,10 +29,10 @@
           </div>
         </div>
       </div>
-  <%= u.submit 'Track this', {:id => "clicked_new_goal"} %>
+      <%= u.submit 'Track this', {:id => "clicked_new_goal", :class => "gradient-blue large"} %>
 <% end %>
 
-<button ><%= link_to "Take me to Homepage", root_path%></button>
+      <button><%= link_to "Take me to Homepage", root_path %></button>
 
-
-
+  </div>
+</div>
