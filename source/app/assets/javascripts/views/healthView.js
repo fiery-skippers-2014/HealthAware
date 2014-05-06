@@ -104,7 +104,6 @@ HealthView.prototype = {
       type: 'GET'
     })
     .done(function(data){
-       debugger
       for(i=0; i < data.series.length; i++){
       $('#js_container_'+data.series[i].id).highcharts({
         chart: {
@@ -134,60 +133,6 @@ HealthView.prototype = {
         series: [data.series[i]]
     })
     }
-    //   $('.goals_count')[1].highcharts({
-    //     chart: {
-    //         type: 'line'
-    //     },
-    //     title: {
-    //         text: 'Food Stats for Last Week'
-    //     },
-    //     subtitle: {
-    //         text: 'eat smarter'
-    //     },
-    //     xAxis: data.xAxis,
-    //     yAxis: {
-    //         title: {
-    //             text: 'Grams consumed'
-    //         },
-    //         min: 0
-    //     },
-    //     plotOptions: {
-    //         line: {
-    //             dataLabels: {
-    //                 enabled: true
-    //             },
-    //             enableMouseTracking: true
-    //         }
-    //     },
-    //     series: [data.series[1]]
-    //   }),
-    //   $('.goals_count')[2].highcharts({
-    //     chart: {
-    //         type: 'line'
-    //     },
-    //     title: {
-    //         text: 'Food Stats for Last Week'
-    //     },
-    //     subtitle: {
-    //         text: 'eat smarter'
-    //     },
-    //     xAxis: data.xAxis,
-    //     yAxis: {
-    //         title: {
-    //             text: 'Grams consumed'
-    //         },
-    //         min: 0
-    //     },
-    //     plotOptions: {
-    //         line: {
-    //             dataLabels: {
-    //                 enabled: true
-    //             },
-    //             enableMouseTracking: true
-    //         }
-    //     },
-    //     series: [data.series[2]]
-    //   })
     })
 }
 
