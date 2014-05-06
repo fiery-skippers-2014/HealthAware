@@ -108,7 +108,19 @@ HealthView.prototype = {
       type: 'GET'
     })
     .done(function(data){
+      debugger
       for(i=0; i < data.series.length; i++){
+        debugger
+        if (data.series[i].limit === true){
+          var color ='green'
+          var text = 'your target'
+        } else {
+          var color = 'red'
+          var text = 'your limit'
+        }
+
+
+
         $('#js_container_'+data.series[i].id).highcharts({
           chart: {
             type: 'line'
@@ -117,14 +129,24 @@ HealthView.prototype = {
             text: data.series[i].name +' Stats for Last Week'
           },
           subtitle: {
-            text: 'eat smarter'
+            text: data.series[i].badges
           },
           xAxis: data.xAxis,
           yAxis: {
             title: {
-              text: 'Grams consumed'
+              text: data.series[i].unit + '  consumed'
             },
-            min: 0
+            min: 0,
+            max: data.series[i].target,
+            plotLines : [{
+              value : data.series[i].target,
+              color : color,
+              dashStyle : 'shortdash',
+              width : 2,
+              label : {
+                text : text
+              }
+            }]
           },
           plotOptions: {
             line: {

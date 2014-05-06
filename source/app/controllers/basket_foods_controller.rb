@@ -6,7 +6,7 @@ class BasketFoodsController < ApplicationController
     xAxis = {categories: []}
     series = []
 
-    last_weeks_basket = current_user.baskets[0..7]
+    last_weeks_basket = current_user.baskets.reverse[0..7]
     last_weeks_basket.each do |basket|
       xAxis[:categories].unshift(basket.created_at.strftime("%m/%d/%Y"))
     end
@@ -25,16 +25,24 @@ class BasketFoodsController < ApplicationController
             today_hash[item_name] = food[item_name].to_i
           end
         end
-      # today_hash.keys.map { |key| Goal.find_by_nutrient_id(Nutrient.find_by_nf_name(key)).nutrient.name }
+
         day_values = today_hash.values[0]
         all_days_of_week.unshift(day_values)
       end
-      # new_keys = today_hash.keys.map { |key| Goal.find_by_nutrient_id(Nutrient.find_by_nf_name(key)).nutrient.name }
 
-      # formatted_day_hash = Hash[new_keys.zip(values)]
-      series << {name: goal.nutrient.name,
-        data: all_days_of_week, id: goal.id
-      }
+      # Create User Badges
+      if goal.limit == true
+        if all_days_of_week.min < goal.target
+          Badge.create(user_id: current_user.id, goal_id: goal.id)
+        end
+      elsif goal.limit == false
+        if all_days_of_week.min >= goal.target
+          Badge.create(user_id: current_user.id, goal_id: goal.id)
+        end
+      end
+
+      #Prepare for JSON
+      series << {name: goal.nutrient.name, data: all_days_of_week, id: goal.id, limit: goal.limit, unit: goal.unit, target: goal.target, badges: Badge.find_by_user_id_and_goal_id(current_user.id,goal.id)}
     end
     render json: {series: series, xAxis: xAxis}
   end
