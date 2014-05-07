@@ -1,5 +1,4 @@
 class GoalsController < ApplicationController
-
   def new
     @goal = Goal.new
     @errors = @errors
