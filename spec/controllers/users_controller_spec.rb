@@ -16,11 +16,7 @@ describe UsersController do
         }.to change {User.count}.by(1)
       end
 
-      it "should add a new user goal" do
-      expect {
-      post :create, :goal => new_goal,:user => user_attr
-      }.to change {Goal.count}.by(1)
-      end
+
     end
   end
 end

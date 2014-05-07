@@ -5,39 +5,18 @@ class GoalsController < ApplicationController
   end
 
   def create
-    p "$" * 50
-    p params
+
     @goal = Goal.new(nutrient_id: params[:goal][:nutrient_id], user_id: current_user.id)
-
-    @goal.user_id = current_user.id
-    if params[:amount] == "FDA"
-      @goal.target = @goal.nutrient.FDA_recommendation
-      @goal.limit = @goal.nutrient.FDA_limit
-      @goal.unit = @goal.nutrient.unit
-    else
-      if params[:goal][:target] == ""
-        @goal.target = @goal.nutrient.FDA_recommendation
-      else
-        @goal.target = params[:goal][:target]
-      end
-      @goal.unit = @goal.nutrient.unit
-
-      if params[:limit][:limit_id] == "Maximum"
-        @goal.limit = true
-      else
-        @goal.limit = false
-      end
-
-    end
+    params[:amount] == "FDA" ? @goal.set_FDA_amounts : add_custom_amounts(params)
     @goal.save
     @errors =  @goal.errors.full_messages.first
-
     @goal = Goal.new
 
-
-    p "%" * 50
     render "new", layout: false, errors: @errors
   end
+
+
+
 
   def destroy
     @goal = Goal.find(params[:id])
@@ -46,4 +25,18 @@ class GoalsController < ApplicationController
     render json: {goal: @goal.id}
   end
 
+end
+
+def add_custom_amounts(params)
+  if params[:goal][:target] == ""
+        @goal.target = @goal.nutrient.FDA_recommendation
+      else
+        @goal.target = params[:goal][:target]
+  end
+  @goal.unit = @goal.set_unit_amount
+      if params[:limit][:limit_id] == "Maximum"
+        @goal.limit = true
+      else
+        @goal.limit = false
+      end
 end
