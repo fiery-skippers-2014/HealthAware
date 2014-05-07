@@ -15,6 +15,7 @@
 //= require foundation
 //= require handlebars-v1.3.0
 //= require_tree .
+//= require_self
 $(function() {
   $(document).foundation();
 });

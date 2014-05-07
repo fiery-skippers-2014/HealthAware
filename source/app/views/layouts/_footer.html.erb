@@ -1,33 +1,35 @@
-<!-- <div class="large-6 medium-8 small-12 columns large-centered medium-centered small-centered footer">
+<!-- <nav class="navbar navbar-default navbar-bottom" role="navigation">
+  <div class="container">
 
-  <div class="large-6 medium-6 small-6 columns">
-    <% if current_user %>
-      <h5><%=current_user.username%>!</h5>
-      Your account was created <%="#{time_ago_in_words(current_user.created_at)} ago" =%>.
-    <% end %>
+      <div class="footer-peice small-6 medium-4 columns">
+        <h3><span class="footer-label-class">HealthAware</span></h3>
+        <div class="caption">
+          <p>
+            HealthAware is a one page javascript web application which utilizes the NutritionIX API to track a user's nutrition levels by meals.
+          </p>
+        </div>
+      </div>
+      <div class="footer-peice small-6 medium-4 columns">
+          <center>
+        <div class="btn-group-vertical">
+          <ul class="list-group">
+            <li class="list-group-item"><%= link_to "Github", "https://github.com/fiery-skippers-2014/HealthAware" %></li>
+            <li class="list-group-item"><%= link_to "Devbootcamp", "http://devbootcamp.com" %></li>
+            <li class="list-group-item"><%= link_to "Edit Profile", new_goal_path %></li>
+            <li class="list-group-item"><%= link_to "Logout", logout_path %></li>
+          </ul>
+        </div>
+          </center>
 
-    <h6>Today is <%=Time.now.strftime('%a!')%><br><br>
-    <%=Time.now.strftime('%b %d, %Y')%></h6>
+      </div>
+      <div class="footer-peice small-6 medium-4 columns">
+        <h3><span class="footer-label-class">Contact</span></h3>
+        <div class="caption">
+          <p>
+            This is a full stack web application developed by Greg Gerla, Darrell Sommerlatt, Alexandra Swart, Kelley Puckett and Jackson Behan.
+          </p>
+        </div>
+      </div>
+
   </div>
-
-
-  <div class="large-6 medium-6 small-6 columns">
-    <% if current_user %>
-      <% if current_user.goals.count > 0 %>
-        <p>You last added goals
-        <%="#{time_ago_in_words(current_user.goals.last.updated_at)} ago" %></p>
-      <% end %>
-
-      <% if current_user.baskets.any? %>
-         <p>You last created a basket  <%="#{time_ago_in_words(current_user.baskets.last.created_at)} ago"%>.</p>
-
-
-         <% if current_user.baskets.last.foods != nil && BasketFood.find_all_by_basket_id(current_user.baskets.last.id).last.updated_at) %>
-           <p>You last updated your basket <%="#{time_ago_in_words(BasketFood.find_all_by_basket_id(current_user.baskets.last.id).last.updated_at)} ago"%>.</p>
-         <%end%>
-       <% end %>
-    <% end %>
-  </div>
-
-
-</div> -->
+</nav> -->

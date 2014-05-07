@@ -41,7 +41,6 @@ HealthView.prototype = {
           target: progress[i][keys[5]],
           bar: this.createBar(progress[i][keys[3]], progress[i][keys[2]])
       };
-      debugger
       iteratively.push(ourObj);
     }
     allThings = { ourArray : iteratively }
@@ -49,8 +48,25 @@ HealthView.prototype = {
     $(this.health).html(template(allThings))
     this.addBar(iteratively)
     this.drawChart()
+    this.addActiveTab(iteratively)
+    $(document).foundation()
   },
 
+  addActiveTab: function(iteratively){
+
+    for(i=0; i<iteratively.length; i++){
+      if (i == 0) {
+        debugger
+        $('dd').addClass('active');
+        $('div.content').addClass('active');
+        }
+      if (i != 0) {
+        debugger
+        $('dd').removeClass('active');
+        $('div.content').removeClass('active');
+        }
+      }
+    },
 
   addBar: function(iteratively){
 
@@ -128,7 +144,11 @@ HealthView.prototype = {
       for(i=0; i < data.series.length; i++){
         $('#js_container_'+data.series[i].id).highcharts({
           chart: {
-            type: 'line'
+            type: 'line',
+            spacingTop: 3,
+            spacingRight: 0,
+            spacingBottom: 3,
+            spacingLeft: 0
           },
           title: {
             text: data.series[i].name +' Stats for Last Week'
@@ -153,6 +173,30 @@ HealthView.prototype = {
           },
           series: [data.series[i]]
         })
+        // $(window).resize(function() {
+        //   chart.setSize(
+        //     $(document).width()/2,
+        //     $(document).height()/2,
+        //     false
+        //   );
+        // });
+
+        // debugger
+        // var chart = $('#js_container_'+data.series[i].id).highcharts().setSize(300, 300, true);
+        // debugger
+        // $('.resizer').resizable({
+          // On resize, set the chart size to that of the
+          // resizer minus padding. If your chart has a lot of data or other
+          // content, the redrawing might be slow. In that case, we recommend
+          // that you use the 'stop' event instead of 'resize'.
+          // resize: function() {
+          //   chart.setSize(
+          //     this.offsetWidth - 20,
+          //     this.offsetHeight - 20,
+          //     false
+          //   );
+          // }
+        // });
       }
     })
   }
