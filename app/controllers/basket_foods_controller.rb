@@ -14,9 +14,10 @@ class BasketFoodsController < ApplicationController
     # For every goal
     current_user.goals.each do |goal|
       all_days_of_week = []
+      #Each day in the week
       last_weeks_basket.each_with_index do |basket, index|
         today_hash = {}
-        # Each food in basket
+        # Each food in today's basket
         basket.foods.each do |food|
           array_of_food = []
           item_name = Nutrient.find_by_id(goal.nutrient_id).nf_name
@@ -28,21 +29,24 @@ class BasketFoodsController < ApplicationController
         end
 
         day_values = today_hash.values[0]
-        all_days_of_week.unshift(day_values)
+
+        if day_values !=nil
+          all_days_of_week.unshift(day_values)
+        end
+
       end
 
-      average = 0
-      unless all_days_of_week.count > 6
-        average = all_days_of_week.inject(:+)/all_days_of_week.length
-      end
       # Create User Badges
-      if goal.limit == false
-        if average >= goal.target
-          Badge.create(user_id: current_user.id, nutrient_id:goal.nutrient.id, nutrient: goal.nutrient.name, target: average, limit: goal.limit, unit: goal.unit)
-        end
-      else
-        if average < goal.target
-          Badge.create(user_id: current_user.id, nutrient_id:goal.nutrient.id, nutrient: goal.nutrient.name, target: average, limit: goal.limit, unit: goal.unit)
+      if all_days_of_week.count >= 6
+        average = all_days_of_week.inject(:+)/all_days_of_week.length+1
+        if goal.limit
+          if average < goal.target
+            Badge.create(user_id: current_user.id, nutrient_id:goal.nutrient.id, nutrient: goal.nutrient.name, target: average, limit: goal.limit, unit: goal.unit)
+          end
+        else
+          if average >= goal.target
+            Badge.create(user_id: current_user.id, nutrient_id:goal.nutrient.id, nutrient: goal.nutrient.name, target: average, limit: goal.limit, unit: goal.unit)
+          end
         end
       end
 
@@ -53,7 +57,7 @@ class BasketFoodsController < ApplicationController
     # Send all badges back to JS
     weekly_badges = Badge.weekly_total(current_user.badges)
 
-    render json: {series: series, xAxis: xAxis, badges: weekly_badges}
+    render json: {series: series, xAxis: xAxis, badges: weekly_badges.reverse}
   end
 
   def destroy

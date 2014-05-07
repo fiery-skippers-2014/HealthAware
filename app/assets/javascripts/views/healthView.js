@@ -144,12 +144,6 @@ HealthView.prototype = {
     })
     .done(function(data){
 
-      // //Badges Bug Fix
-      // for(i=0; i < 14; i++){
-      //   $('.badges_'+i).removeClass("badge-exceed")
-      //   $('.badges_'+i).removeClass("badge-limit")
-      // }
-
       //Draw Limit Badges
       var source = $('#badge-template').html()
       var template = Handlebars.compile(source)
@@ -157,16 +151,6 @@ HealthView.prototype = {
 
 
       for(i=0; i < data.series.length; i++){
-        //Add Badges
-        if(data.series[i].badges !== null){
-          var goal = ':) Congratulations - Badge Earned! :)'
-        }
-        //   if(data.series[i].limit) {
-        //     $('.badges_'+data.series[i].id).addClass("badge-limit")
-        //   } else {
-        //     $('.badges_'+data.series[i].id).addClass("badge-exceed")
-        //   }
-        // }
 
         //Change Limits
         if (data.series[i].limit == false){
@@ -193,7 +177,7 @@ HealthView.prototype = {
             x: -20 //center
           },
           subtitle: {
-            text: goal,
+            text: "",
             x: -20
           },
           xAxis: data.xAxis,
