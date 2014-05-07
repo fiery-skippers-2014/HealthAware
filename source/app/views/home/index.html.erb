@@ -1,20 +1,14 @@
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
-<div id="container" class="row large-10 medium-11 small-12 large-centered medium-centered small-centered">
+<div id="container" class="row large-10 medium-12 small-12 large-centered medium-centered small-centered">
 
 
   <!-- MAIN COLUMN -->
   <div class="profile large-8 medium-8 small-12 columns">
 
-<!--     <div id="profile-stats">
-      <%= render partial: "profile_stats" %>
-    </div> -->
-
-    <h3 class="heading">Health Stats</h3>
+    <h3 class="page-header">Health Stats</h3>
       <div class="health-stats"></div>
-    <h3 class="heading">Today's Basket</h3>
-      <div class="basket"></div>
 
   </div>
 
@@ -23,17 +17,23 @@
   <div class="search large-4 medium-4 small-12 columns">
 
     <%= render partial: "food_search_form" %>
+
+    <h3 class="page-header">Today's Basket</h3>
+      <div class="basket"></div>
+
     <hr>
-    <div class="searched"></div>
+    <div class="searched"></div><hr>
+    <div class="all_badges"></div>
 
   </div>
 
-  <div class="all_badges"></div>
-
-  <%= render partial: 'supposed_footer' %>
-
 
 </div><!-- /#CONTAINER -->
+
+
+
+
+
 
 <!-- TEMPLATES -->
 <script id="food-template" type="text/x-handlebars-template">
@@ -42,7 +42,8 @@
 
     <div class="food_div">
       <li food-id={{foodId}}>
-        <button id={{id}} class="add_food">{{objName}}</button>
+        {{objName}}
+        <button id={{id}} class="add_food" style="float:right">Add</button>
           <ul id="nutrition-list">
             {{#objFields}}
               <li><b>{{fieldName}}</b>: {{fieldValue}}</li>
@@ -53,7 +54,6 @@
 
   {{/objects}}
 </ul>
-
 </script>
 
 
@@ -72,33 +72,51 @@
 
 
 <script id="health-template" type="text/x-handlebars-template">
-  <ul>
+  <dl class="tabs" style="padding:2px; width:100%" data-tab>
     {{#ourArray}}
-      <div class="row large-12 medium-12 small-12 columns">
-      <li class="single-track_{{id}}">
-        <div class="track-header">
-          {{name}}  <span id="failure-message">{{failure}}</span> <span id="success-message">{{success}}</span>
-          <button id={{id}} class="delete_goal delete-me" style="float:right">X</button>
-        </div>
-        <div class="large-6 medium-6 small-6 columns">
-        <ul>
-          <li><b>Daily Goal</b>: {{limit}} {{target}} {{unit}}</li>
-          <li><b>Current Total</b>: {{total}} {{unit}}</li>
-          <li><b>Current</b>: {{percentage}}</li>
-        </ul>
-        </div>
-          <div class="large-6 medium-6 small-6 columns">
-            <div class="badges_{{id}}"></div>
+      <dd><a href="#panel-{{id}}">{{name}}</a></dd>
+    {{/ourArray}}
+  </dl>
+
+  <ul class="item-list">
+    <!-- Tab panes -->
+    <div class="tabs-content large-12 medium-12 small-12 columns">
+
+      {{#ourArray}}
+
+      <div class="content" id="panel-{{id}}">
+
+        <div class="row large-12 medium-12 small-12 columns">
+          <li class="single-track_{{id}}">
+
+          <div class="track-header">
+            {{name}}  <span id="failure-message">{{failure}}</span> <span id="success-message">{{success}}</span>
+            <button id={{id}} class="delete_goal delete-me" style="float:right">X</button>
           </div>
 
-          <div class="large-12 medium-12 small-12 columns">
-              <div id="bar_{{id}}" class="bar"></div>
-              <div id="js_container_{{id}}"></div><br>
+          <div class="current-stats large-6 medium-6 small-6 columns">
+            <ul>
+              <li><b>Daily Goal</b>: {{limit}} {{target}} {{unit}}</li>
+              <li><b>Current Total</b>: {{total}} {{unit}}</li>
+              <li><b>Current</b>: {{percentage}}%</li>
+            </ul>
           </div>
-        </li>
+
+          <div class="badges large-6 medium-6 small-6 columns">
+            <div class="badges_{{id}}">badges go here</div>
+          </div>
+
+          <div class="scales large-12 medium-12 small-12 columns">
+            <div id="bar_{{id}}" class="bar"></div>
+            <div id="js_container_{{id}}" style="width: inherit"></div>
+          </div>
+        </div>
+
       </div>
-    {{/ourArray}}
+      {{/ourArray}}
+    </div>
   </ul>
+</div>
 </script>
 
 <script id="badge-template" type="text/x-handlebars-template">
@@ -119,6 +137,3 @@
   </div>
 
 </script>
-
-
-
