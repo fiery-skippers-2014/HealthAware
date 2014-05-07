@@ -9,12 +9,7 @@ class GoalsController < ApplicationController
     p "$" * 50
     p params
     @goal = Goal.new(nutrient_id: params[:goal][:nutrient_id], user_id: current_user.id)
-      unless @goal.valid?
-        @errors = @goal.errors.full_messages
-         flash[:notice] = "You added this nutrient already"
-      else
-        flash[:notice] = ""
-      end
+
     @goal.user_id = current_user.id
     if params[:amount] == "FDA"
       @goal.target = @goal.nutrient.FDA_recommendation
@@ -34,9 +29,13 @@ class GoalsController < ApplicationController
       end
     end
     @goal.save
+    @errors =  @goal.errors.full_messages.first
+
     @goal = Goal.new
 
-    render 'new', layout: false, errors: @errors
+
+    p "%" * 50
+    render "new", layout: false, errors: @errors
   end
 
   def destroy

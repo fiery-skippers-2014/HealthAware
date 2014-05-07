@@ -3,41 +3,44 @@
   <div id="user-forms">
 
     <% if current_user.goals.count < 3 %>
-
       <%= form_for @goal do |u| %>
-
-      <% if flash[:notice] %>
-        <div class="notice"><%= flash[:notice] %></div>
-      <% end %>
-
-      <div class="large-12 columns">You have created <%= current_user.goals.count %> of 3 Goals </div>
+      <h6>You have created <%= current_user.goals.count %> of 3 Goals</h6>
+      <hr / >
         <%= u.label "What are you trying to track?" %>
         <%= u.select :nutrient_id, options_for_select([["Protein (FDA recommended min: 50 grams)",1],["Total Fat (FDA recommended max: 70 grams)",2],["Total Carbohydrates (FDA recommended min: 300 grams)",3],["Saturated Fats (FDA recommended max: 20 grams)", 4],
           ["Calories (FDA recommended min: 2000 kcal)",5],["Monounsaturated Fats (FDA recommended min: 45 grams)",6], ["Trans Fats (FDA recommended max: 20 grams)",7],["Polyunsaturated Fats (FDA recommended min: 20 grams)",8], ["Sugars (FDA recommended max: 200 grams)",9],["Iron (FDA recommended min: 40 milligrams)",10], ["Calcium (FDA recommended min: 60 milligrams)",11],["Fiber (FDA recommended min: 25 grams)",12], ["Sodium (FDA recommended max: 2400 milligrams)",13],["Cholesterol (FDA recommended max: 300 milligrams)",14]]) %>
+            <div class="error"><h6 class="error"><%= @errors %></h6></div>
+
         <%= radio_button_tag(:amount, "FDA",checked = true)%>
         <%= label_tag(:amount_FDA, "Use FDA recommendation") %>
         <%= radio_button_tag(:amount,"custom") %>
         <%= label_tag(:amount_custom,"Use a custom amount") %>
+
         <div class="row" id="custom_limit">
           <div class="large-12 columns">
-            <div class="large-2 columns left">
-              <label for="left-label" class="left inline">I want to have a:</label>
+            <div class="large-12 columns left">
+              <label for="left-label" class="left inline">I want to have a daily:</label>
             </div>
-            <div class="large-2 columns left">
+            <div class="large-12 columns left">
               <%= select :limit,:limit_id, options_for_select([["Maximum"],["Minimum"]],{:class => "large-1 columns"}) %>
             </div>
-            <div class="large-2 columns left">
-              <label for="left-label" class="center inline">Amount of: </label>
+            <div class="large-12 columns left">
+              <label for="left-label" class="center inline">of: </label>
             </div>
-            <div class="large-2 columns left">
+            <div class="large-12 columns left">
               <%= u.text_field :target %>
             </div>
+
+
           </div>
         </div>
+
         <center><%= u.submit 'Track this', {:id => 'clicked_new_goal', :class => 'gradient-blue large'} %></center>
+
         <br>
         <center>
         <%= link_to "Take me to Homepage", root_path, {:class => 'gradient-blue large', :style => 'color:#FFFFFF;'} %>
+
         </center>
       <% end %>
 
@@ -45,6 +48,6 @@
       <%= render partial: "goal_limit_message" %>
     <% end %>
 
-      <div id="new_goal"></div>
   </div>
 </div>
+

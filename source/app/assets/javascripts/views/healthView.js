@@ -41,7 +41,6 @@ HealthView.prototype = {
           target: progress[i][keys[5]],
           bar: this.createBar(progress[i][keys[3]], progress[i][keys[2]])
       };
-      debugger
       iteratively.push(ourObj);
     }
     allThings = { ourArray : iteratively }
