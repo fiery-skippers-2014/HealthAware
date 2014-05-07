@@ -1,20 +1,14 @@
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
-<div id="container" class="row large-10 medium-11 small-12 large-centered medium-centered small-centered">
+<div id="container" class="row large-10 medium-12 small-12 large-centered medium-centered small-centered">
 
 
   <!-- MAIN COLUMN -->
   <div class="profile large-8 medium-8 small-12 columns">
 
-<!--     <div id="profile-stats">
-      <%= render partial: "profile_stats" %>
-    </div> -->
-
-    <h3 class="heading">Health Stats</h3>
+    <h3 class="page-header">Health Stats</h3>
       <div class="health-stats"></div>
-    <h3 class="heading">Today's Basket</h3>
-      <div class="basket"></div>
 
   </div>
 
@@ -23,13 +17,16 @@
   <div class="search large-4 medium-4 small-12 columns">
 
     <%= render partial: "food_search_form" %>
+
+    <h3 class="page-header">Today's Basket</h3>
+      <div class="basket"></div>
+
     <hr>
     <div class="searched"></div>
 
   </div>
 
 
-  <%= render partial: 'supposed_footer' %>
 
 
 
@@ -40,7 +37,8 @@
 
     <div class="food_div">
       <li food-id={{foodId}}>
-        <button id={{id}} class="add_food">{{objName}}</button>
+        {{objName}}
+        <button id={{id}} class="add_food" style="float:right">Add</button>
           <ul id="nutrition-list">
             {{#objFields}}
               <li><b>{{fieldName}}</b>: {{fieldValue}}</li>
@@ -51,7 +49,6 @@
 
   {{/objects}}
 </ul>
-
 </script>
 
 
@@ -70,26 +67,52 @@
 
 
 <script id="health-template" type="text/x-handlebars-template">
-  <ul>
+  <dl class="tabs" style="padding:2px; width:100%" data-tab>
+    <dd class="active"><a href="#welcome">HealthAware</a></dd>
     {{#ourArray}}
+      <dd><a href="#panel-{{id}}">{{name}}</a></dd>
+    {{/ourArray}}
+  </dl>
 
-      <li class="single-track_{{id}}">
+  <ul class="item-list">
+    <!-- Tab panes -->
+    <div class="tabs-content large-12 medium-12 small-12 columns">
+
+      <div class="content active" id="welcome">
+        <div class="container">
+          Awesome Welcome Page<br><br>
+        </div>
+      </div>
+      {{#ourArray}}
+      <div class="content" id="panel-{{id}}">
+
         <div class="track-header">
           {{name}}
           <button id={{id}} class="delete_goal delete-me" style="float:right">X</button>
         </div>
-        <ul>
-          <li><b>Daily Goal</b>: {{limit}} {{target}} {{unit}}</li>
-          <li><b>Current Total</b>: {{total}} {{unit}}</li>
-          <li><b>Current</b>: {{percentage}}%</li>
-        </ul>
 
-        <div id="bar_{{id}}" class="bar"></div>
-        <div id="js_container_{{id}}"></div><br>
-      </li>
+        <div class="current-stats large-6 medium-6 small-6 columns">
+          <ul>
+            <li><b>Daily Goal</b>: {{limit}} {{target}} {{unit}}</li>
+            <li><b>Current Total</b>: {{total}} {{unit}}</li>
+            <li><b>Current</b>: {{percentage}}%</li>
+          </ul>
+        </div>
 
-    {{/ourArray}}
+        <div class="badges large-6 medium-6 small-6 columns">
+          <div class="badges_{{id}}">badges go here</div>
+        </div>
+
+        <div class="scales large-12 medium-12 small-12 columns">
+          <div id="bar_{{id}}" class="bar"></div>
+          <div id="js_container_{{id}}" style="width: inherit"></div>
+        </div>
+
+      </div>
+      {{/ourArray}}
+    </div>
   </ul>
+</div>
 </script>
 
 
