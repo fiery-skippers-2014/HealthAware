@@ -17,12 +17,12 @@
   <div class="search large-4 medium-4 small-12 columns">
 
     <%= render partial: "food_search_form" %>
+    <hr>
+
+    <div class="searched"></div>
 
     <h3 class="page-header">Today's Basket</h3>
       <div class="basket"></div>
-
-    <hr>
-    <div class="searched"></div><hr>
 
     <h3 class="page-header">7 Day Streaks</h3>
     <div class="all_badges"></div>
@@ -119,18 +119,11 @@
 
 <script id="badge-template" type="text/x-handlebars-template">
   <div>
-    <h4> Maximums </h4>
-    {{#reach_badges}}
-      <li> {{name}} : {{target}} {{unit}} - Attained: {{time}} </li>
-    {{/reach_badges}}
+    {{#badges}}
+      <li>{{name}} : Weekly Average - {{target}} {{unit}}</li>
+      <br>
+      <br>
+      <li class="badge-limit" "badge-exceed"> </li>
+    {{/badges}}
   </div>
-
-
-  <div>
-    <h4> Minimums </h4>
-    {{#limit_badges}}
-      <li> {{name}} : {{target}} {{unit}} - Attained: {{time}} </li>
-    {{/limit_badges}}
-  </div>
-
 </script>

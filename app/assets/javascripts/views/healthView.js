@@ -143,6 +143,12 @@ HealthView.prototype = {
       type: 'GET'
     })
     .done(function(data){
+ 
+      // //Badges Bug Fix
+      // for(i=0; i < 14; i++){
+      //   $('.badges_'+i).removeClass("badge-exceed")
+      //   $('.badges_'+i).removeClass("badge-limit")
+      // }
 
       //Draw Limit Badges
       var source = $('#badge-template').html()
@@ -150,24 +156,17 @@ HealthView.prototype = {
       $('.all_badges').html(template(data))
 
 
-      //Badges Bug Fix
-      for(i=0; i < 14; i++){
-        $('.badges_'+i).removeClass("badge-exceed")
-        $('.badges_'+i).removeClass("badge-limit")
-      }
-
       for(i=0; i < data.series.length; i++){
         //Add Badges
         if(data.series[i].badges !== null){
-
-          var goal = 'Congratulations - 7 Day Streak!'
-
-          if(data.series[i].limit) {
-            $('.badges_'+data.series[i].id).addClass("badge-limit")
-          } else {
-            $('.badges_'+data.series[i].id).addClass("badge-exceed")
-          }
+          var goal = ':) Congratulations - Badge Earned! :)'
         }
+        //   if(data.series[i].limit) {
+        //     $('.badges_'+data.series[i].id).addClass("badge-limit")
+        //   } else {
+        //     $('.badges_'+data.series[i].id).addClass("badge-exceed")
+        //   }
+        // }
 
         //Change Limits
         if (data.series[i].limit == false){

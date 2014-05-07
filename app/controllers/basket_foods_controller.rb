@@ -10,7 +10,7 @@ class BasketFoodsController < ApplicationController
 
     last_weeks_basket = current_user.baskets.reverse[0..7]
     last_weeks_basket.each do |basket|
-      xAxis[:categories].unshift(basket.created_at.strftime("%m/%d/%Y"))
+      xAxis[:categories].unshift(basket.created_at.strftime("%m/%d"))
     end
     # For every goal
     current_user.goals.each do |goal|
@@ -32,42 +32,41 @@ class BasketFoodsController < ApplicationController
         all_days_of_week.unshift(day_values)
       end
 
+      average = 0
+      unless all_days_of_week.empty?      
+        average = all_days_of_week.inject(:+)/all_days_of_week.length
+      end
       # Create User Badges
       if goal.limit == false
-        if all_days_of_week.min >= goal.target
-          Badge.create(user_id: current_user.id, nutrient_id:goal.nutrient.id, nutrient: goal.nutrient.name, target: goal.target, limit: goal.limit, unit: goal.unit)
+        if average >= goal.target
+          Badge.create(user_id: current_user.id, nutrient_id:goal.nutrient.id, nutrient: goal.nutrient.name, target: average, limit: goal.limit, unit: goal.unit)
         end
       else
-        if all_days_of_week.max < goal.target
-          Badge.create(user_id: current_user.id, nutrient_id:goal.nutrient.id, nutrient: goal.nutrient.name, target: goal.target, limit: goal.limit, unit: goal.unit)
+        if average < goal.target
+          Badge.create(user_id: current_user.id, nutrient_id:goal.nutrient.id, nutrient: goal.nutrient.name, target: average, limit: goal.limit, unit: goal.unit)
         end
       end
 
       #Prepare for High Charts
-      series << {name: goal.nutrient.name, data: all_days_of_week, id: goal.id, limit: goal.limit, unit: goal.unit, target: goal.target, badges: Badge.find_by_user_id_and_nutrient(current_user.id,goal.nutrient.name)}
+      series << {name: goal.nutrient.name, data: all_days_of_week, id: goal.id, limit: goal.limit, unit: goal.unit, target: goal.target}
     end
 
     # Send all badges back to JS
-
     current_user.badges.each do |badge|
       new_badge = {}
       new_badge["name"] = badge.nutrient
       new_badge["target"] = badge.target
-      new_badge["time"] = badge.created_at.strftime('%b %d, %Y')
+      # new_badge["time"] = time_ago_in_words(badge.created_at)
       new_badge["unit"] = badge.unit
-      if badge.limit == true
-        limit_badges << new_badge
-      else
         reach_badges << new_badge
-      end
     end
 
-    render json: {series: series, xAxis: xAxis, limit_badges: limit_badges, reach_badges: reach_badges}
+    render json: {series: series, xAxis: xAxis, badges: reach_badges}
   end
 
   def destroy
     @food_to_remove = BasketFood.find_by_basket_id_and_food_id(current_user.baskets.last.id, params[:id])
     @food_to_remove.destroy
-    render json: @food_to_remove.food_id
+    render json: params[:id]
   end
 end

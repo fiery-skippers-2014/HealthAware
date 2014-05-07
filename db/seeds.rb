@@ -44,15 +44,8 @@ user.save
     today_basket.created_at =(Time.now - 86400*y).to_s
     today_basket.save!
     10.times do
-      @food = Food.all.sample
-      if BasketFood.find_by_food_id_and_basket_id(@food.id, today_basket.id) != nil
-        basketfood = BasketFood.find_by_food_id_and_basket_id(@food.id,today_basket.id)
-        basketfood.quantity += 1
-        basketfood.update_attributes(quantity: basketfood.quantity)
-        basketfood.save!
-      else
-        basketfood = BasketFood.create(basket_id: today_basket.id, food_id: @food.id)
-      end
+      food = Food.all.sample
+      BasketFood.create(basket_id: today_basket.id, food_id: food.id)
   end
 end
 
