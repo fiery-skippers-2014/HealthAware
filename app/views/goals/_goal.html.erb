@@ -1,12 +1,9 @@
 
 <div id="container" class="row large-4 medium-5 small-11 large-centered medium-centered small-centered">
 
-
-
     <% if current_user.goals.count < 3 %>
 
       <%= form_for @goal do |u| %>
-
 
       <h6>You have created <%= current_user.goals.count %> of 3 Goals</h6>
       <hr / >

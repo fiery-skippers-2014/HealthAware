@@ -188,16 +188,14 @@ HealthView.prototype = {
         $('#js_container_'+data.series[i].id).highcharts({
           chart: {
             type: 'line',
-            spacingTop: 3,
-            spacingRight: 0,
-            spacingBottom: 3,
-            spacingLeft: 0
           },
           title: {
-            text: data.series[i].name +' Stats for Last Week'
+            text: data.series[i].name +' Stats for Last Week',
+            x: -20 //center
           },
           subtitle: {
-            text: goal
+            text: goal,
+            x: -20
           },
           xAxis: data.xAxis,
           yAxis: {
@@ -215,6 +213,12 @@ HealthView.prototype = {
                 text : text
               }
             }]
+          },
+          legend: {
+              layout: 'vertical',
+              align: 'right',
+              verticalAlign: 'middle',
+              borderWidth: 0
           },
           plotOptions: {
             line: {
