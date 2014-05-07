@@ -98,7 +98,7 @@
             <ul>
               <li><b>Daily Goal</b>: {{limit}} {{target}} {{unit}}</li>
               <li><b>Current Total</b>: {{total}} {{unit}}</li>
-              <li><b>Current</b>: {{percentage}}%</li>
+              <li><b>Current</b>: {{percentage}}</li>
             </ul>
           </div>
 
@@ -120,9 +120,9 @@
 </script>
 
 <script id="badge-template" type="text/x-handlebars-template">
-
+  <h3>7 Day Streaks </h3>
   <div>
-    <h4>Reach Badges </h4>
+    <h4> Maximums </h4>
     {{#reach_badges}}
       <li> {{name}} : {{target}} {{unit}} - Attained: {{time}} </li>
     {{/reach_badges}}
@@ -130,7 +130,7 @@
 
 
   <div>
-    <h4> Limit Badges </h4>
+    <h4> Minimums </h4>
     {{#limit_badges}}
       <li> {{name}} : {{target}} {{unit}} - Attained: {{time}} </li>
     {{/limit_badges}}
