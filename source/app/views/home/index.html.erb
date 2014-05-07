@@ -28,8 +28,6 @@
 
 
 
-
-
 <!-- TEMPLATES -->
 <script id="food-template" type="text/x-handlebars-template">
 <ul id="item-list">
@@ -68,7 +66,6 @@
 
 <script id="health-template" type="text/x-handlebars-template">
   <dl class="tabs" style="padding:2px; width:100%" data-tab>
-    <dd class="active"><a href="#welcome">HealthAware</a></dd>
     {{#ourArray}}
       <dd><a href="#panel-{{id}}">{{name}}</a></dd>
     {{/ourArray}}
@@ -78,11 +75,6 @@
     <!-- Tab panes -->
     <div class="tabs-content large-12 medium-12 small-12 columns">
 
-      <div class="content active" id="welcome">
-        <div class="container">
-          Awesome Welcome Page<br><br>
-        </div>
-      </div>
       {{#ourArray}}
       <div class="content" id="panel-{{id}}">
 

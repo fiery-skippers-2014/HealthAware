@@ -41,7 +41,6 @@ HealthView.prototype = {
           target: progress[i][keys[5]],
           bar: this.createBar(progress[i][keys[3]], progress[i][keys[2]])
       };
-      debugger
       iteratively.push(ourObj);
     }
     allThings = { ourArray : iteratively }
@@ -49,7 +48,7 @@ HealthView.prototype = {
     $(this.health).html(template(allThings))
     this.addBar(iteratively)
     this.drawChart()
-
+    this.addActiveTab(iteratively)
     $(document).foundation()
   },
 
@@ -57,8 +56,14 @@ HealthView.prototype = {
 
     for(i=0; i<iteratively.length; i++){
       if (i == 0) {
-        $('li.tab').addClass('active');
-        $('div#tab-pane').addClass('active');
+        debugger
+        $('dd').addClass('active');
+        $('div.content').addClass('active');
+        }
+      if (i != 0) {
+        debugger
+        $('dd').removeClass('active');
+        $('div.content').removeClass('active');
         }
       }
     },
