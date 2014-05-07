@@ -31,10 +31,10 @@ HealthView.prototype = {
       var successMessage = ""
       if (percentage > 100){
         if (minOrMax == "minimum"){
-          successMessage = "Success!"
+          successMessage = "You reached your goal today!"
         }
         else {
-          failureMessage = "Too much! Try to eat healthier tomorrow!"
+          failureMessage = "You missed your goal today, Try to eat healthier tomorrow!"
         }
       };
 
@@ -151,7 +151,7 @@ HealthView.prototype = {
       type: 'GET'
     })
     .done(function(data){
- 
+
       // //Badges Bug Fix
       // for(i=0; i < 14; i++){
       //   $('.badges_'+i).removeClass("badge-exceed")
