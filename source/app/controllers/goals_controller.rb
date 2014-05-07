@@ -27,11 +27,13 @@ class GoalsController < ApplicationController
         @goal.target = params[:goal][:target]
       end
       @goal.unit = @goal.nutrient.unit
-      if params[:limit][:limit_id] == "minimum"
+
+      if params[:limit][:limit_id] == "Maximum"
         @goal.limit = true
       else
         @goal.limit = false
       end
+
     end
     @goal.save
     @goal = Goal.new

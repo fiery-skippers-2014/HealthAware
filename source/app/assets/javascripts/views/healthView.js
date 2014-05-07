@@ -1,3 +1,13 @@
+Handlebars.registerHelper("if", function(conditional, options) {
+  if (options.hash.desired === options.hash.type) {
+    options.fn(this);
+  } else {
+    options.inverse(this);
+  }
+});
+
+
+
 function HealthView(healthElements){
   this.healthTemplate = healthElements["healthTemplate"]
   this.health = healthElements["health"]
@@ -41,7 +51,6 @@ HealthView.prototype = {
           target: progress[i][keys[5]],
           bar: this.createBar(progress[i][keys[3]], progress[i][keys[2]])
       };
-      debugger
       iteratively.push(ourObj);
     }
     allThings = { ourArray : iteratively }
@@ -119,13 +128,48 @@ HealthView.prototype = {
   },
 
 
+
+
   drawChart: function(){
     $.ajax({
       url: '/basket_foods/0',
       type: 'GET'
     })
     .done(function(data){
+
+      //Draw Limit Badges
+      var source = $('#badge-template').html()
+      var template = Handlebars.compile(source)
+      $('.all_badges').html(template(data))
+
       for(i=0; i < data.series.length; i++){
+        //Add Badges
+        if(data.series[i].badges != null){
+          var goal = 'Congratulations - 7 Day Streak!'
+
+          if(data.series[i].limit) {
+            $('.badges_'+data.series[i].id).addClass("badge-limit")
+          } else {
+            $('.badges_'+data.series[i].id).addClass("badge-exceed")
+          }
+        }
+
+        //Change Limits
+        if (data.series[i].limit == false){
+          var color ='green'
+          var text = 'your target'
+        } else {
+          var color = 'red'
+          var text = 'your limit'
+        }
+
+        //Change Maximums
+        if(data.series[i].target > data.series[i].data.sort(function(a, b){return b-a})[0]){
+          var max = data.series[i].target * 1.01
+        } else {
+          var max = data.series[i].data.sort(function(a, b){return b-a})[0] * 1.10
+        }
+
         $('#js_container_'+data.series[i].id).highcharts({
           chart: {
             type: 'line'
@@ -134,14 +178,24 @@ HealthView.prototype = {
             text: data.series[i].name +' Stats for Last Week'
           },
           subtitle: {
-            text: 'eat smarter'
+            text: goal
           },
           xAxis: data.xAxis,
           yAxis: {
             title: {
-              text: 'Grams consumed'
+              text: data.series[i].unit + '  consumed'
             },
-            min: 0
+            min: 0,
+            max: max,
+            plotLines : [{
+              value : data.series[i].target,
+              color : color,
+              dashStyle : 'shortdash',
+              width : 2,
+              label : {
+                text : text
+              }
+            }]
           },
           plotOptions: {
             line: {
@@ -157,3 +211,6 @@ HealthView.prototype = {
     })
   }
 }
+
+
+

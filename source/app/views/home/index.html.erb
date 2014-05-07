@@ -28,10 +28,12 @@
 
   </div>
 
+  <div class="all_badges"></div>
 
   <%= render partial: 'supposed_footer' %>
 
 
+</div><!-- /#CONTAINER -->
 
 <!-- TEMPLATES -->
 <script id="food-template" type="text/x-handlebars-template">
@@ -72,25 +74,51 @@
 <script id="health-template" type="text/x-handlebars-template">
   <ul>
     {{#ourArray}}
-
+      <div class="row large-12 medium-12 small-12 columns">
       <li class="single-track_{{id}}">
         <div class="track-header">
           {{name}}  <span id="failure-message">{{failure}}</span> <span id="success-message">{{success}}</span>
           <button id={{id}} class="delete_goal delete-me" style="float:right">X</button>
         </div>
+        <div class="large-6 medium-6 small-6 columns">
         <ul>
           <li><b>Daily Goal</b>: {{limit}} {{target}} {{unit}}</li>
           <li><b>Current Total</b>: {{total}} {{unit}}</li>
           <li><b>Current</b>: {{percentage}}</li>
         </ul>
+        </div>
+          <div class="large-6 medium-6 small-6 columns">
+            <div class="badges_{{id}}"></div>
+          </div>
 
-        <div id="bar_{{id}}" class="bar"></div>
-        <div id="js_container_{{id}}"></div><br>
-      </li>
-
+          <div class="large-12 medium-12 small-12 columns">
+              <div id="bar_{{id}}" class="bar"></div>
+              <div id="js_container_{{id}}"></div><br>
+          </div>
+        </li>
+      </div>
     {{/ourArray}}
   </ul>
 </script>
 
+<script id="badge-template" type="text/x-handlebars-template">
 
-</div><!-- /#CONTAINER -->
+  <div>
+    <h4>Reach Badges </h4>
+    {{#reach_badges}}
+      <li> {{name}} : {{target}} {{unit}} - Attained: {{time}} </li>
+    {{/reach_badges}}
+  </div>
+
+
+  <div>
+    <h4> Limit Badges </h4>
+    {{#limit_badges}}
+      <li> {{name}} : {{target}} {{unit}} - Attained: {{time}} </li>
+    {{/limit_badges}}
+  </div>
+
+</script>
+
+
+
