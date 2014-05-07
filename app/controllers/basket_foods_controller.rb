@@ -32,10 +32,10 @@ class BasketFoodsController < ApplicationController
         all_days_of_week.unshift(day_values)
       end
 
+      average = 0
       unless all_days_of_week.empty?      
         average = all_days_of_week.inject(:+)/all_days_of_week.length
       end
-      average = 0
       # Create User Badges
       if goal.limit == false
         if average >= goal.target
