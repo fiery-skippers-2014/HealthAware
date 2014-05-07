@@ -20,11 +20,13 @@ FoodController.prototype = {
     $(document).on("oldList", this.printSavedBasket.bind(this))
     $(document).on("oldList", basket.calculateTotals.bind(basket))
     $(document).on("oldList", this.updateTotalsOnView.bind(this))
+    $(document).on('refreshBarOnDelete', basket.retrieveFoodsFromDataBase.bind(basket))
+    // $(document).on('refreshBarOnDelete', this.updateTotalsOnView.bind(this))
     $('#search-form').on('submit', this.searchFoods.bind(food))
     $(document).on("foodList", this.handleSearchResults.bind(this));
     $(document).on("foodList", this.createFoodList.bind(this))
     $(document).on('click', '.food_div', this.findFoodInSearchResults.bind(this))
-    $(document).on('click', '.delete_food', this.removeFoodFromDataBase)
+    $(document).on('click', '.delete_food', this.removeFoodFromDataBase.bind(basket))
   },
 
 
@@ -66,18 +68,22 @@ FoodController.prototype = {
     this.basket.savetheBasketToDataBase()
   },
 
-  updateTotalsOnView: function(e){  this.healthView.updateHealthStatsOnView(this.basket.progressArray)
+  updateTotalsOnView: function(e){ 
+    this.healthView.updateHealthStatsOnView(this.basket.progressArray)
   },
 
-  removeFoodFromDataBase: function(){
-     var self = this.id
+  removeFoodFromDataBase: function(e, basket){
+     idToDelete = e.target.id
+
      $.ajax({
-      url: '/basket_foods/'+self,
+      url: '/basket_foods/'+idToDelete,
       type: 'DELETE'
     })
     .done(function(number){
       $('li.basket-item_'+number).first().remove()
-
+      
+      new CustomEvent('refreshBarOnDelete')
+      $.event.trigger('refreshBarOnDelete')
       //Draw chart on delete?Maybe find better way than this?
       HealthView.prototype.drawChart();
     })
