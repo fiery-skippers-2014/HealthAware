@@ -5,8 +5,7 @@ class BasketFoodsController < ApplicationController
     #Each Basket
     xAxis = {categories: []}
     series = []
-    reach_badges = []
-    limit_badges = []
+    weekly_badges = []
 
     last_weeks_basket = current_user.baskets.reverse[0..7]
     last_weeks_basket.each do |basket|
@@ -33,7 +32,7 @@ class BasketFoodsController < ApplicationController
       end
 
       average = 0
-      unless all_days_of_week.empty?      
+      unless all_days_of_week.count > 6
         average = all_days_of_week.inject(:+)/all_days_of_week.length
       end
       # Create User Badges
@@ -52,16 +51,9 @@ class BasketFoodsController < ApplicationController
     end
 
     # Send all badges back to JS
-    current_user.badges.each do |badge|
-      new_badge = {}
-      new_badge["name"] = badge.nutrient
-      new_badge["target"] = badge.target
-      # new_badge["time"] = time_ago_in_words(badge.created_at)
-      new_badge["unit"] = badge.unit
-        reach_badges << new_badge
-    end
+    weekly_badges = Badge.weekly_total(current_user.badges)
 
-    render json: {series: series, xAxis: xAxis, badges: reach_badges}
+    render json: {series: series, xAxis: xAxis, badges: weekly_badges}
   end
 
   def destroy
