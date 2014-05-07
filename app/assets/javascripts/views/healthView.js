@@ -151,8 +151,7 @@ HealthView.prototype = {
       type: 'GET'
     })
     .done(function(data){
-      debugger
-
+ 
       // //Badges Bug Fix
       // for(i=0; i < 14; i++){
       //   $('.badges_'+i).removeClass("badge-exceed")

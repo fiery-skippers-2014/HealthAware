@@ -32,7 +32,10 @@ class BasketFoodsController < ApplicationController
         all_days_of_week.unshift(day_values)
       end
 
-      average = all_days_of_week.inject(:+)/all_days_of_week.length
+      unless all_days_of_week.empty?      
+        average = all_days_of_week.inject(:+)/all_days_of_week.length
+      end
+      average = 0
       # Create User Badges
       if goal.limit == false
         if average >= goal.target
@@ -65,10 +68,5 @@ class BasketFoodsController < ApplicationController
     @food_to_remove = BasketFood.find_by_basket_id_and_food_id(current_user.baskets.last.id, params[:id])
     @food_to_remove.destroy
     render json: params[:id]
-
-
-
-
-
   end
 end
