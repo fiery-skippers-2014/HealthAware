@@ -24,7 +24,7 @@
     <h3 class="page-header">Today's Basket</h3>
       <div class="basket"></div>
 
-    <h3 class="page-header">7 Day Streaks</h3>
+    <h3 class="page-header">Badges Achieved</h3>
     <div class="all_badges"></div>
 
   </div>
@@ -120,10 +120,19 @@
 <script id="badge-template" type="text/x-handlebars-template">
   <div>
     {{#badges}}
-      <li>{{name}} : Weekly Average - {{target}} {{unit}}</li>
-      <br>
-      <br>
-      <li class="badge-limit" "badge-exceed"> </li>
+    <div class="row">
+        <div class="large-12 medium-12 small-12 columns badges">
+          <div class="large-3 medium-3 small-3 columns">
+
+            <div class="badge-exceed"></div>
+          </div>
+          <div class="large-9 medium-9 small-9 columns">
+          <b>Weekly Average Badge</b><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;{{name}}<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;{{target}} {{unit}} consumed!
+          </div>
+        </div>
+    </div>
+
     {{/badges}}
-  </div>
 </script>
