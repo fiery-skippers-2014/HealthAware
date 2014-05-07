@@ -66,12 +66,10 @@ HealthView.prototype = {
 
     for(i=0; i<iteratively.length; i++){
       if (i == 0) {
-        debugger
         $('dd').addClass('active');
         $('div.content').addClass('active');
         }
       if (i != 0) {
-        debugger
         $('dd').removeClass('active');
         $('div.content').removeClass('active');
         }
@@ -159,9 +157,17 @@ HealthView.prototype = {
       var template = Handlebars.compile(source)
       $('.all_badges').html(template(data))
 
+
+      //Badges Bug Fix
+      for(i=0; i < 14; i++){
+        $('.badges_'+i).removeClass("badge-exceed")
+        $('.badges_'+i).removeClass("badge-limit")
+      }
+
       for(i=0; i < data.series.length; i++){
         //Add Badges
-        if(data.series[i].badges != null){
+        if(data.series[i].badges !== null){
+
           var goal = 'Congratulations - 7 Day Streak!'
 
           if(data.series[i].limit) {

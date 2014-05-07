@@ -35,20 +35,20 @@ class BasketFoodsController < ApplicationController
       # Create User Badges
       if goal.limit == false
         if all_days_of_week.min >= goal.target
-          Badge.create(user_id: current_user.id, nutrient: goal.nutrient.name, target: goal.target, limit: goal.limit, unit: goal.unit)
+          Badge.create(user_id: current_user.id, nutrient_id:goal.nutrient.id, nutrient: goal.nutrient.name, target: goal.target, limit: goal.limit, unit: goal.unit)
         end
       else
         if all_days_of_week.max < goal.target
-          Badge.create(user_id: current_user.id, nutrient: goal.nutrient.name, target: goal.target, limit: goal.limit, unit: goal.unit)
+          Badge.create(user_id: current_user.id, nutrient_id:goal.nutrient.id, nutrient: goal.nutrient.name, target: goal.target, limit: goal.limit, unit: goal.unit)
         end
       end
 
       #Prepare for High Charts
-      series << {name: goal.nutrient.name, data: all_days_of_week, id: goal.id, limit: goal.limit, unit: goal.unit, target: goal.target, badges: Badge.find_by_user_id(current_user.id)}
-
+      series << {name: goal.nutrient.name, data: all_days_of_week, id: goal.id, limit: goal.limit, unit: goal.unit, target: goal.target, badges: Badge.find_by_user_id_and_nutrient(current_user.id,goal.nutrient.name)}
     end
 
     # Send all badges back to JS
+
     current_user.badges.each do |badge|
       new_badge = {}
       new_badge["name"] = badge.nutrient
