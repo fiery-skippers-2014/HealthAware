@@ -76,7 +76,10 @@ FoodController.prototype = {
       type: 'DELETE'
     })
     .done(function(number){
-      $('li.basket-item_'+number).remove()
+      $('li.basket-item_'+number).first().remove()
+
+      //Draw chart on delete?Maybe find better way than this?
+      HealthView.prototype.drawChart();
     })
   }
 }

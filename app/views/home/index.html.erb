@@ -120,20 +120,13 @@
 </script>
 
 <script id="badge-template" type="text/x-handlebars-template">
-  <h3>7 Day Streaks </h3>
+  <h3>Achievement Badges</h3>
   <div>
-    <h4> Maximums </h4>
-    {{#reach_badges}}
-      <li> {{name}} : {{target}} {{unit}} - Attained: {{time}} </li>
-    {{/reach_badges}}
+    {{#badges}}
+      <li>{{name}} : Weekly Average - {{target}} {{unit}}</li>
+      <br>
+      <br>
+      <li class="badge-limit" "badge-exceed"> </li>
+    {{/badges}}
   </div>
-
-
-  <div>
-    <h4> Minimums </h4>
-    {{#limit_badges}}
-      <li> {{name}} : {{target}} {{unit}} - Attained: {{time}} </li>
-    {{/limit_badges}}
-  </div>
-
 </script>

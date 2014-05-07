@@ -22,6 +22,7 @@ Basket.prototype = {
       $.event.trigger('oldList')
     })
   },
+  //Can we combine these to functions. Top is getting food back, bottom sucks. Basket is already in the top.
   retrieveFoodsFromDataBase: function(){
     var self = this
     $.ajax({
