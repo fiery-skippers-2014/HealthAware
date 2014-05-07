@@ -1,3 +1,13 @@
+Handlebars.registerHelper("if", function(conditional, options) {
+  if (options.hash.desired === options.hash.type) {
+    options.fn(this);
+  } else {
+    options.inverse(this);
+  }
+});
+
+
+
 function HealthView(healthElements){
   this.healthTemplate = healthElements["healthTemplate"]
   this.health = healthElements["health"]
@@ -102,14 +112,38 @@ HealthView.prototype = {
   },
 
 
+
+
   drawChart: function(){
     $.ajax({
       url: '/basket_foods/0',
       type: 'GET'
     })
     .done(function(data){
+
+      //Draw Limit Badges
+      debugger
+
+      var source = $('#badge-template').html()
+      var template = Handlebars.compile(source)
+      $('.all_badges').html(template(data))
+
+
+
       for(i=0; i < data.series.length; i++){
-        if (data.series[i].limit === true){
+        //Add Badges
+        if(data.series[i].badges != null){
+          var goal = 'Congratulations - 7 Day Streak!'
+
+          if(data.series[i].limit) {
+            $('.badges_'+data.series[i].id).addClass("badge-limit")
+          } else {
+            $('.badges_'+data.series[i].id).addClass("badge-exceed")
+          }
+        }
+
+        //Change Limits
+        if (data.series[i].limit == false){
           var color ='green'
           var text = 'your target'
         } else {
@@ -117,6 +151,7 @@ HealthView.prototype = {
           var text = 'your limit'
         }
 
+        //Change Maximums
         if(data.series[i].target > data.series[i].data.sort(function(a, b){return b-a})[0]){
           var max = data.series[i].target * 1.01
         } else {
@@ -131,7 +166,7 @@ HealthView.prototype = {
             text: data.series[i].name +' Stats for Last Week'
           },
           subtitle: {
-            text: data.series[i].badges
+            text: goal
           },
           xAxis: data.xAxis,
           yAxis: {
@@ -164,3 +199,6 @@ HealthView.prototype = {
     })
   }
 }
+
+
+

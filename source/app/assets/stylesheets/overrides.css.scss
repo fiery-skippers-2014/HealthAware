@@ -149,6 +149,10 @@ button.delete_me {
     }
   }
 
+.big-chart {
+  width:100%;
+}
+
 /////////////////// TOP BAR /////////////
 
 .top-bar {
@@ -654,6 +658,25 @@ button.small {
     to { width: 99% }
 }
 
+.badge-exceed {
+//  background-image: url("../images/badge.svg");
+  content: url("https://d30y9cdsu7xlg0.cloudfront.net/png/8180-84.png?Expires=1399502004&Signature=RmJeeY6mY10lAzabUTTn7kz2Ow6jX5dxQ~lS372gHp7QAFi2BXyt74GQJKfckNBmdkp9uoACLo0GTvV8kwvZ7UlyGZ~WLVMg5SmiaThz~VLRXqndC4Cg8pOVtipkUV0Qy0cV42Fgh6fAHwwDZDuPnzA7yyH-4h-AsYqldJ4MwR8_&Key-Pair-Id=APKAI5ZVHAXN65CHVU2Q") ;
+  width: 100px;
+  height: 90px;
+  text-align:right;
+  background-color:yellow;
+
+}
+
+.badge-limit {
+    content:url(https://d30y9cdsu7xlg0.cloudfront.net/png/14223-84.png?Expires=1399502004&Signature=EBbScVsUcU45PlKkjMCNdqbHN3DkQoWDefF3ayYPdxSEmBFLgI6xroW1XhoKUdyDJnc-jZX9ssua1WKrSZSa1fybHTrGo-0~372tqbyYeR0gMmLekZyHBwGBQrljDlhbEuvHZYCdckXgJ6-AeRdRBUyc9bCkLbTCHd93WMzDCBI_&Key-Pair-Id=APKAI5ZVHAXN65CHVU2Q);
+//  background-image: url("../images/badge.svg");
+
+    width: 100px;
+    height: 90px;
+    background-color:white;
+
+}
 
 /////////////////// FOOTER /////////////
 
@@ -663,6 +686,7 @@ button.small {
   border-top: 1px solid $blue-link;
   color: $dark-grey;
 }
+
 
 /////////////////// RESOURCES /////////////
 

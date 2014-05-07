@@ -9,7 +9,6 @@ class FoodsController < ApplicationController
     end
     @food.save!
 
-    debugger
     if Basket.find_all_by_user_id(session[:user_id]).count > 0 && (Time.now-current_user.baskets.last.created_at < 80000)
       today_basket = current_user.baskets.last
       if BasketFood.find_by_food_id_and_basket_id(@food.id, today_basket.id) != nil

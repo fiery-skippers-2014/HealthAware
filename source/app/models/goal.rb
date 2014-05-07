@@ -1,7 +1,7 @@
 class Goal < ActiveRecord::Base
   belongs_to :user
   belongs_to :nutrient
-  has_many :badges
+
   attr_accessible :target, :nutrient_id,:limit,:unit,:user_id
   validates_uniqueness_of :nutrient_id, :scope => :user_id
 

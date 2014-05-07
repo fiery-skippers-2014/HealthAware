@@ -55,7 +55,7 @@ FormController.prototype = {
   //     type: 'GET'
   //   })
   //   .done(function(data){
-  //     debugger
+  //
   //     $('.Protein').append(
   //     $('#js_container').highcharts({
   //       chart: {
