@@ -102,9 +102,7 @@
             </ul>
           </div>
 
-          <div class="badges large-6 medium-6 small-6 columns">
-            <div class="badges_{{id}}">badges go here</div>
-          </div>
+
 
           <div class="scales large-12 medium-12 small-12 columns">
             <div id="bar_{{id}}" class="bar"></div>
@@ -120,13 +118,22 @@
 </script>
 
 <script id="badge-template" type="text/x-handlebars-template">
-  <h3>Achievement Badges</h3>
-  <div>
+  <h3 class="page-header">Achievement Badges  </li></h3>
+
+
     {{#badges}}
-      <li>{{name}} : Weekly Average - {{target}} {{unit}}</li>
-      <br>
-      <br>
-      <li class="badge-limit" "badge-exceed"> </li>
+    <div class="row">
+        <div class="large-12 medium-12 small-12 columns badges">
+          <div class="large-3 medium-3 small-3 columns">
+            <div class="badge-exceed"></div>
+          </div>
+          <div class="large-9 medium-9 small-9 columns">
+          Weekly Average Badge {{name}}
+          <br>
+          {{target}} {{unit}} consumed!
+          </div>
+        </div>
+    </div>
+
     {{/badges}}
-  </div>
 </script>
