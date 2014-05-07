@@ -6,10 +6,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new params[:user]
-    if @user.save!
+    if @user.save
       login_user
+      redirect_to new_goal_path
+
+    else
+      render 'users/new'
     end
-    redirect_to new_goal_path
   end
 
   def edit
