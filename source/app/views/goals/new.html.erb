@@ -14,7 +14,7 @@
         <%= u.label "What are you trying to track?" %>
         <%= u.select :nutrient_id, options_for_select([["Protein (FDA recommended min: 50 grams)",1],["Total Fat (FDA recommended max: 70 grams)",2],["Total Carbohydrates (FDA recommended min: 300 grams)",3],["Saturated Fats (FDA recommended max: 20 grams)", 4],
           ["Calories (FDA recommended min: 2000 kcal)",5],["Monounsaturated Fats (FDA recommended min: 45 grams)",6], ["Trans Fats (FDA recommended max: 20 grams)",7],["Polyunsaturated Fats (FDA recommended min: 20 grams)",8], ["Sugars (FDA recommended max: 200 grams)",9],["Iron (FDA recommended min: 40 milligrams)",10], ["Calcium (FDA recommended min: 60 milligrams)",11],["Fiber (FDA recommended min: 25 grams)",12], ["Sodium (FDA recommended max: 2400 milligrams)",13],["Cholesterol (FDA recommended max: 300 milligrams)",14]]) %>
-        <%= radio_button_tag(:amount, "FDA") %>
+        <%= radio_button_tag(:amount, "FDA",checked = true)%>
         <%= label_tag(:amount_FDA, "Use FDA recommendation") %>
         <%= radio_button_tag(:amount,"custom") %>
         <%= label_tag(:amount_custom,"Use a custom amount") %>

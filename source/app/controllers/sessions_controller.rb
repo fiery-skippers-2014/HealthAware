@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       if @user && @user.authenticate(params[:session][:password])
         login_user
       end
-    redirect_to user_path(@user)
+    redirect_to root_path
   end
 
   def destroy
