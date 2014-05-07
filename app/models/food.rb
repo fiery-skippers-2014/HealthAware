@@ -4,4 +4,20 @@ class Food < ActiveRecord::Base
   has_many :baskets, through: :basket_foods
 
   validates_uniqueness_of :API
+
+  def self.create_or_find_existing_food(fields, id)
+    if self.find_by_API(id)
+      self.find_by_API(id)
+    else
+      self.create(fields)
+    end
+  end
+
+  def self.create_or_find_existing_basket(user, current_user)
+    if Basket.find_all_by_user_id(user).count > 0 && (Time.now-current_user.baskets.last.created_at < 80000)
+      @basket = current_user.baskets.last
+    else
+      @basket = Basket.create(user_id: user)
+    end
+  end
 end
