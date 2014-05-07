@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140504185736) do
+ActiveRecord::Schema.define(:version => 20140506193446) do
+
+  create_table "badges", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "nutrient_id"
+    t.boolean  "limit"
+    t.string   "nutrient"
+    t.string   "unit"
+    t.integer  "target"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "basket_foods", :force => true do |t|
     t.integer  "basket_id"
