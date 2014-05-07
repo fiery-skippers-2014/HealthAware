@@ -17,6 +17,7 @@ Basket.prototype = {
       type: 'POST'
     })
     .done(function(json){
+    debugger
       self.oldfoodarray.push(json)
       new CustomEvent('oldList')
       $.event.trigger('oldList')

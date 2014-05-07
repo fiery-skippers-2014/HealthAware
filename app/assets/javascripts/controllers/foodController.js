@@ -76,7 +76,7 @@ FoodController.prototype = {
       type: 'DELETE'
     })
     .done(function(number){
-      $('li.basket-item_'+number).remove()
+      $('li.basket-item_'+number).first().remove()
     })
   }
 }
