@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def new
     @user = User.new
   end
@@ -9,7 +8,6 @@ class UsersController < ApplicationController
     if @user.save
       login_user
       redirect_to new_goal_path
-
     else
       render 'users/new'
     end

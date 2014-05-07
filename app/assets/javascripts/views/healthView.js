@@ -31,10 +31,10 @@ HealthView.prototype = {
       var successMessage = ""
       if (percentage > 100){
         if (minOrMax == "minimum"){
-          successMessage = "Success!"
+          successMessage = "You reached your goal today!"
         }
         else {
-          failureMessage = "Too much! Try to eat healthier tomorrow!"
+          failureMessage = "You missed your goal today, Try to eat healthier tomorrow!"
         }
       };
 
@@ -58,23 +58,15 @@ HealthView.prototype = {
     $(this.health).html(template(allThings))
     this.addBar(iteratively)
     this.drawChart()
-    this.addActiveTab(iteratively)
+    this.activateFirstTab(iteratively)
     $(document).foundation()
   },
 
-  addActiveTab: function(iteratively){
-
-    for(i=0; i<iteratively.length; i++){
-      if (i == 0) {
-        $('dd').addClass('active');
-        $('div.content').addClass('active');
-        }
-      if (i != 0) {
-        $('dd').removeClass('active');
-        $('div.content').removeClass('active');
-        }
-      }
-    },
+  activateFirstTab: function(iteratively){
+    var id = iteratively[0].id;
+    var tabAndPanel = 'dd[data-tabid='+id+'], #panel-'+id;
+    $(tabAndPanel).addClass('active');
+  },
 
   addBar: function(iteratively){
 
@@ -151,12 +143,6 @@ HealthView.prototype = {
       type: 'GET'
     })
     .done(function(data){
- 
-      // //Badges Bug Fix
-      // for(i=0; i < 14; i++){
-      //   $('.badges_'+i).removeClass("badge-exceed")
-      //   $('.badges_'+i).removeClass("badge-limit")
-      // }
 
       //Draw Limit Badges
       var source = $('#badge-template').html()
@@ -165,16 +151,6 @@ HealthView.prototype = {
 
 
       for(i=0; i < data.series.length; i++){
-        //Add Badges
-        if(data.series[i].badges !== null){
-          var goal = ':) Congratulations - Badge Earned! :)'
-        }
-        //   if(data.series[i].limit) {
-        //     $('.badges_'+data.series[i].id).addClass("badge-limit")
-        //   } else {
-        //     $('.badges_'+data.series[i].id).addClass("badge-exceed")
-        //   }
-        // }
 
         //Change Limits
         if (data.series[i].limit == false){
@@ -195,16 +171,14 @@ HealthView.prototype = {
         $('#js_container_'+data.series[i].id).highcharts({
           chart: {
             type: 'line',
-            spacingTop: 3,
-            spacingRight: 0,
-            spacingBottom: 3,
-            spacingLeft: 0
           },
           title: {
-            text: data.series[i].name +' Stats for Last Week'
+            text: data.series[i].name +' Stats for Last Week',
+            x: -20 //center
           },
           subtitle: {
-            text: goal
+            text: "",
+            x: -20
           },
           xAxis: data.xAxis,
           yAxis: {
@@ -222,6 +196,12 @@ HealthView.prototype = {
                 text : text
               }
             }]
+          },
+          legend: {
+              layout: 'vertical',
+              align: 'right',
+              verticalAlign: 'middle',
+              borderWidth: 0
           },
           plotOptions: {
             line: {

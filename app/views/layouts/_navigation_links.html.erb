@@ -1,9 +1,6 @@
 <%# add navigation links to this file %>
 <ul class="right">
   <% if current_user %>
-    <% if current_user.badges.any? %>
-      <li><%= current_user.badges.count %> Badge(s)</li>
-    <% end %>
     <li><%= link_to "Add more goals", new_goal_path %></li>
     <li><%= link_to "Sign Out", logout_path, :method => :delete %></li>
   <% else %>

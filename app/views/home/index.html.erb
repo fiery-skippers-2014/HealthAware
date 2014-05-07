@@ -17,16 +17,17 @@
   <div class="search large-4 medium-4 small-12 columns">
 
     <%= render partial: "food_search_form" %>
+    <hr>
+
+    <div class="searched"></div>
 
     <h3 class="page-header">Today's Basket</h3>
       <div class="basket"></div>
 
-    <hr>
-    <div class="searched"></div><hr>
+    <h3 class="page-header">Badges Achieved</h3>
     <div class="all_badges"></div>
 
   </div>
-
 
 </div><!-- /#CONTAINER -->
 
@@ -72,21 +73,22 @@
 
 
 <script id="health-template" type="text/x-handlebars-template">
+
+  <!-- Tabs -->
   <dl class="tabs" style="padding:2px; width:100%" data-tab>
     {{#ourArray}}
-      <dd><a href="#panel-{{id}}">{{name}}</a></dd>
+      <dd data-tabid="{{id}}"><a href="#panel-{{id}}">{{name}}</a></dd>
     {{/ourArray}}
   </dl>
 
-  <ul class="item-list">
+  <ul>
     <!-- Tab panes -->
     <div class="tabs-content large-12 medium-12 small-12 columns">
 
       {{#ourArray}}
-
       <div class="content" id="panel-{{id}}">
 
-        <div class="row large-12 medium-12 small-12 columns">
+        <div class="row large-12 medium-12 small-12 columns large-centered medium-centered small-centered">
           <li class="single-track_{{id}}">
 
           <div class="track-header">
@@ -94,7 +96,7 @@
             <button id={{id}} class="delete_goal delete-me" style="float:right">X</button>
           </div>
 
-          <div class="current-stats large-6 medium-6 small-6 columns">
+          <div class="current-stats large-12 medium-12 small-12 columns">
             <ul>
               <li><b>Daily Goal</b>: {{limit}} {{target}} {{unit}}</li>
               <li><b>Current Total</b>: {{total}} {{unit}}</li>
@@ -102,13 +104,9 @@
             </ul>
           </div>
 
-          <div class="badges large-6 medium-6 small-6 columns">
-            <div class="badges_{{id}}">badges go here</div>
-          </div>
-
           <div class="scales large-12 medium-12 small-12 columns">
             <div id="bar_{{id}}" class="bar"></div>
-            <div id="js_container_{{id}}" style="width: inherit"></div>
+            <div id="js_container_{{id}}"></div>
           </div>
         </div>
 
@@ -120,13 +118,21 @@
 </script>
 
 <script id="badge-template" type="text/x-handlebars-template">
-  <h3>Achievement Badges</h3>
   <div>
     {{#badges}}
-      <li>{{name}} : Weekly Average - {{target}} {{unit}}</li>
-      <br>
-      <br>
-      <li class="badge-limit" "badge-exceed"> </li>
+    <div class="row">
+        <div class="large-12 medium-12 small-12 columns badges">
+          <div class="large-3 medium-3 small-3 columns">
+
+            <div class="badge-exceed"></div>
+          </div>
+          <div class="large-9 medium-9 small-9 columns">
+          <b>Weekly Average</b><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;{{name}}<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;{{target}} {{unit}} consumed
+          </div>
+        </div>
+    </div>
+
     {{/badges}}
-  </div>
 </script>

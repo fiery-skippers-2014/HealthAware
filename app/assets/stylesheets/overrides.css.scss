@@ -84,11 +84,11 @@ $track-title-size: 1em;
 ////////////////////////////////////////
 
 body {
-  // min-height: 1000px;
+  min-height: 1000px;
   // height: 100%;
   margin: 0;
   // top: 0;
-  // bottom: 0;
+  bottom: 0;
   padding: 0;
   font-size: 14px;
   a {
@@ -241,15 +241,14 @@ button.delete_me {
     ul {
       padding-top: 15px;
       letter-spacing: 0.5px;
-      color: $light-blue-link;
+      color: white;
       background-color: $dark-blue;
       ul.right li a {
-        color: $light-blue-link;
+        color: white;
         background-color: $dark-blue;
         }
     }
     li:not(.has-form) a:not(.button) {
-      padding-top: 10px;
       font-size: 0.9em;
       letter-spacing: 0.5px;
       background-color: $dark-blue;
@@ -381,6 +380,7 @@ button.delete_me {
     top: auto; }
 
 .tabs-content {
+  float:left;
   *zoom: 1;
   margin-bottom: 1.33333rem; }
   .tabs-content:before, .tabs-content:after {
@@ -413,25 +413,6 @@ button.delete_me {
 
 
 //// HEALTH STATS ///
-// ul#item-list {
-//   li {
-//     ul {
-//       margin-top:5px;
-//       padding-left:15px;
-//       .tabs-content {
-//         // display:block;
-//
-//         li {
-//           padding-top: 1px;
-//           border-bottom:none;
-//           list-style-type:none;
-//           // list-style-type:square;
-//           }
-//         }
-//       }
-//     }
-//   }
-
 
 .health-stats {
   @include box_sizing;
@@ -439,134 +420,154 @@ button.delete_me {
   max-height: 40%;
   padding: 0px;
   ul {
-    li {
-      padding-top:5px;
-      list-style-type: none;
-      font-size: 0.8em;
-      padding-left: 5px;
-      border-bottom: 1px solid $light-grey;
-      &:last-child {
-        border: none;
-        border-bottom: none;
-        }
-      }
-      .track-header {
-        text-transform: uppercase;
-        font-size: 1em;
-        text-align: left;
-        font-weight: bold;
-        display:block;
-        button {
-          background-color: $main-background-color;
-          border-radius: 2px;
-          padding: 5px;
-          text-decoration: none;
-          color: #000000;
-          display: block;
-          -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-          -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-          -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-          -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-          transition: font-size 0.3s ease, background-color 0.3s ease;
-          &:hover {
-            @include delete-active
+    padding-left: 0px;
+    position: relative;
+    display:block;
+    width: 100%;
+    min-height: 100%;
+    .tabs-content {
+      float:left;
+      width: 100%;
+      padding-left: 0px;
+      padding-right: 0px;
+      li {
+        padding-top:5px;
+        list-style-type: none;
+        font-size: 0.8em;
+        padding-left: 5px;
+        border-bottom: 1px solid $light-grey;
+        &:last-child {
+          border: none;
+          border-bottom: none;
           }
-          &:active {
-            @include delete-active
+        }
+        .track-header {
+          text-transform: uppercase;
+          font-size: 1em;
+          text-align: left;
+          font-weight: bold;
+          display:block;
+          button {
+            background-color: $main-background-color;
+            border-radius: 2px;
+            padding: 5px;
+            text-decoration: none;
+            color: #000000;
+            display: block;
+            -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+            -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+            -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+            -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+            transition: font-size 0.3s ease, background-color 0.3s ease;
+            &:hover {
+              @include delete-active
+              }
+            &:active {
+              @include delete-active
+              }
+            }
+          }
+          #failure-message {
+            color: red;
+            }
+          #success-message {
+            color: green;
+            }
+          .current-stats {
+            min-height: 100%;
+            height: inherit;
+            display:block;
+            }
+          .badges {
+            position:inherit;
+            text-align: right;
+            display:block;
+            height:100%;
+            }
+          .scales {
+            display:block;
+            .highcharts-box {
+              min-width: 210px;
+              max-width: 100%;
+              height: 250px;
+              margin: 0 auto;
+              }
+            }
+          ul {
+            margin-top:5px;
+            padding-left:15px;
+            li {
+              padding-top: 1px;
+              border-bottom:none;
+              list-style-type:none;
+              // list-style-type:square;
+              }
+            }
+          .bar {
+            display: block;
+            height: 23px;
+            padding: 3px;
+            margin: 10px;
+            border-radius: 3px;
+            border: 1px solid $light-grey;
+            background-color:white;
+            position: relative;
+            .reach {
+              background: -webkit-linear-gradient(left, $very-light-red , $light-green); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(right, $very-light-red, $light-green); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(right, $very-light-red, $light-green); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to right, $very-light-red , $light-green); /* Standard syntax */
+              filter: alpha(opacity=60);
+              -moz-opacity: 0.6;
+              -khtml-opacity: 0.6;
+              // opacity: 0.6;
+              }
+            .limit {
+              background: -webkit-linear-gradient(left, $light-green , $very-light-red); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(right, $light-green, $very-light-red); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(right, $light-green, $very-light-red); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to right, $light-green , $very-light-red); /* Standard syntax */
+              filter: alpha(opacity=60);
+              -moz-opacity: 0.6;
+              -khtml-opacity: 0.6;
+              // opacity: 0.6;
+              }
+            .barandgrowth {
+              // opacity: none;
+              display: inline-block;
+              height: 15px;
+              position: absolute;
+              width: 0%;
+              background-color: #777;
+              -moz-border-radius: 3px;
+              -webkit-border-radius: 3px;
+              border-radius: 3px;
+              -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+              -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+              box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+              -webkit-animation: growth 2s 1 forwards;
+              -moz-animation: growth 2s 1 forwards;
+              -ms-animation: growth 2s 1 forwards;
+              animation: growth 2s 1 forwards;
+              }
+
+            // Progress Bar buffering
+            .buffering {
+              height: 15px;
+              width: 100%;
+              overflow: hidden;
+              background: url('http://www.cssdeck.com/uploads/media/items/7/7uo1osj.gif') repeat-x;
+              -moz-opacity: 0.25;
+              -khtml-opacity: 0.25;
+              opacity: 0.25;
+              -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+              filter: progid:DXImageTransform.Microsoft.Alpha(opacity=25);
+              filter: alpha(opacity=25);
+              }
             }
           }
         }
-        #failure-message {
-          color: red;
-        }
-        #success-message {
-          color: green;
-        }
-        .current-stats {
-          display:block;
-        }
-        .badges {
-          text-align: right;
-          display:block;
-        }
-        .scales {
-          display:block;
-        }
-        ul {
-          margin-top:5px;
-          padding-left:15px;
-          li {
-            padding-top: 1px;
-            border-bottom:none;
-            list-style-type:none;
-            // list-style-type:square;
-            }
-          }
-      .bar {
-        display: block;
-        height: 23px;
-        padding: 3px;
-        margin: 10px;
-        border-radius: 3px;
-        border: 1px solid $light-grey;
-        background-color:white;
-        position: relative;
-        .reach {
-        background: -webkit-linear-gradient(left, $very-light-red , $light-green); /* For Safari 5.1 to 6.0 */
-background: -o-linear-gradient(right, $very-light-red, $light-green); /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(right, $very-light-red, $light-green); /* For Firefox 3.6 to 15 */
-background: linear-gradient(to right, $very-light-red , $light-green); /* Standard syntax */
-        filter: alpha(opacity=60);
-        -moz-opacity: 0.6;
-        -khtml-opacity: 0.6;
-        // opacity: 0.6;
-          }
-        .limit {
-        background: -webkit-linear-gradient(left, $light-green , $very-light-red); /* For Safari 5.1 to 6.0 */
-background: -o-linear-gradient(right, $light-green, $very-light-red); /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(right, $light-green, $very-light-red); /* For Firefox 3.6 to 15 */
-background: linear-gradient(to right, $light-green , $very-light-red); /* Standard syntax */
-        filter: alpha(opacity=60);
-        -moz-opacity: 0.6;
-        -khtml-opacity: 0.6;
-        // opacity: 0.6;
-        }
-        .barandgrowth  {
-          // opacity: none;
-          display: inline-block;
-          height: 15px;
-          position: absolute;
-          width: 0%;
-          background-color: #777;
-          -moz-border-radius: 3px;
-          -webkit-border-radius: 3px;
-          border-radius: 3px;
-          -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
-          -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
-          box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
-          -webkit-animation: growth 2s 1 forwards;
-          -moz-animation: growth 2s 1 forwards;
-          -ms-animation: growth 2s 1 forwards;
-          animation: growth 2s 1 forwards;
-        }
-
-        // Progress Bar buffering
-        .buffering {
-            height: 15px;
-            width: 100%;
-            overflow: hidden;
-            background: url('http://www.cssdeck.com/uploads/media/items/7/7uo1osj.gif') repeat-x;
-            -moz-opacity: 0.25;
-            -khtml-opacity: 0.25;
-            opacity: 0.25;
-            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
-            filter: progid:DXImageTransform.Microsoft.Alpha(opacity=25);
-            filter: alpha(opacity=25);
-          }
-        }
       }
-    }
-
 
 /////////////////// SEARCH COLUMN /////////////
 .track-header {
@@ -708,7 +709,7 @@ background: linear-gradient(to right, $light-green , $very-light-red); /* Standa
   }
 
 .searched {
-  margin: 5px;
+  margin: 3px 5px 10px 5px;
   padding: 5px;
   ul {
     font-size:1em;
@@ -768,18 +769,18 @@ background: linear-gradient(to right, $light-green , $very-light-red); /* Standa
 	background:-moz-linear-gradient( center top, #15568f 5%, #19334c 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#15568f', endColorstr='#19334c');
 	background-color:#15568f;
-	-webkit-border-top-left-radius:8px;
-	-moz-border-radius-topleft:8px;
-	border-top-left-radius:8px;
-	-webkit-border-top-right-radius:8px;
-	-moz-border-radius-topright:8px;
-	border-top-right-radius:8px;
-	-webkit-border-bottom-right-radius:8px;
-	-moz-border-radius-bottomright:8px;
-	border-bottom-right-radius:8px;
-	-webkit-border-bottom-left-radius:8px;
-	-moz-border-radius-bottomleft:8px;
-	border-bottom-left-radius:8px;
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	border-top-left-radius:4px;
+	-webkit-border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	border-top-right-radius:4px;
+	-webkit-border-bottom-right-radius:4px;
+	-moz-border-radius-bottomright:4px;
+	border-bottom-right-radius:4px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	border-bottom-left-radius:4px;
 	text-indent:0;
 	border:1px solid #264c70;
 	display:inline-block;
@@ -918,17 +919,12 @@ button.small {
 
 .badge-exceed {
 //  background-image: url("../images/badge.svg");
-  content: url("https://d30y9cdsu7xlg0.cloudfront.net/png/8180-84.png?Expires=1399502004&Signature=RmJeeY6mY10lAzabUTTn7kz2Ow6jX5dxQ~lS372gHp7QAFi2BXyt74GQJKfckNBmdkp9uoACLo0GTvV8kwvZ7UlyGZ~WLVMg5SmiaThz~VLRXqndC4Cg8pOVtipkUV0Qy0cV42Fgh6fAHwwDZDuPnzA7yyH-4h-AsYqldJ4MwR8_&Key-Pair-Id=APKAI5ZVHAXN65CHVU2Q") ;
-  width: 100px;
-  height: 90px;
-}
-
-.badge-limit {
-    content:url(https://d30y9cdsu7xlg0.cloudfront.net/png/14223-84.png?Expires=1399502004&Signature=EBbScVsUcU45PlKkjMCNdqbHN3DkQoWDefF3ayYPdxSEmBFLgI6xroW1XhoKUdyDJnc-jZX9ssua1WKrSZSa1fybHTrGo-0~372tqbyYeR0gMmLekZyHBwGBQrljDlhbEuvHZYCdckXgJ6-AeRdRBUyc9bCkLbTCHd93WMzDCBI_&Key-Pair-Id=APKAI5ZVHAXN65CHVU2Q);
-//  background-image: url("../images/badge.svg");
-
-    width: 100px;
-    height: 90px;
+  //background-image:url('badge.jpg');
+  content: url(badge.jpg);
+  width: 50px;
+  height: 50px;
+  float:left;
+  display:inline
 }
 
 /////////////////// FOOTER /////////////
@@ -961,7 +957,15 @@ button.small {
     }
   }
 }
-
+.badge_tag{
+  float: left;
+  display:inline;
+}
+ .badges{
+  margin-top:15px;
+  margin-left:0px;
+  float:left;
+}
 nav.navbar .navbar-default .navbar-bottom.container {
   background-color: $dark-blue;
   color: white;
