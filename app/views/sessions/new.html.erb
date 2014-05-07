@@ -2,13 +2,19 @@
 
   <div id="user-forms">
 
-    <%= form_for :session, url: sessions_path do |f| %>
-      <%= f.label :username %>
-      <%= f.text_field :username %>
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-      <center><%= f.submit 'Login', :class => 'gradient-blue' %></center>
-    <% end %>
+     <%= form_for :session, url: sessions_path do |f| %>
+       <%= f.label :username %>
+       <%= f.text_field :username, :required => true %>
+       <% if @user.errors[:username].present? %>
+         <span class="error"><%= @user.errors.full_message(:username, @user.errors[:username].first) %></span>
+       <% end %>
+       <%= f.label :password %>
+       <%= f.password_field :password, :required => true %>
+       <% if @user.errors[:password].present? %>
+         <span class="error"> <%= @user.errors.full_message(:password, @user.errors[:password].first)  %> </span>
+       <% end %>
+        <center><%= f.submit 'Login', :class => 'gradient-blue' %></center>
+      <% end %>
 
   </div>
 </div>

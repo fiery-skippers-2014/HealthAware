@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140506193446) do
+ActiveRecord::Schema.define(:version => 20140507162936) do
 
   create_table "badges", :force => true do |t|
     t.integer  "user_id"
@@ -27,9 +27,8 @@ ActiveRecord::Schema.define(:version => 20140506193446) do
   create_table "basket_foods", :force => true do |t|
     t.integer  "basket_id"
     t.integer  "food_id"
-    t.integer  "quantity",   :default => 1
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "baskets", :force => true do |t|
