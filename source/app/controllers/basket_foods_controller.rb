@@ -14,7 +14,6 @@ class BasketFoodsController < ApplicationController
     end
     # For every goal
     current_user.goals.each do |goal|
-      debugger
       all_days_of_week = []
       last_weeks_basket.each_with_index do |basket, index|
         today_hash = {}

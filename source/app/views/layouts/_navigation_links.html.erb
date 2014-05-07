@@ -2,7 +2,6 @@
 <ul class="right">
   <% if current_user %>
     <li><%= link_to "Add more goals", new_goal_path %></li>
-    <li><%= link_to "My History", baskets_path %></li>
     <li><%= link_to "Sign Out", logout_path, :method => :delete %></li>
   <% else %>
     <li><%= link_to "Sign Up", new_user_path %></li>

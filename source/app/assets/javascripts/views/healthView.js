@@ -21,16 +21,32 @@ HealthView.prototype = {
     iteratively = []
     for(i=0;i<progress.length;i++){
       keys = Object.keys(progress[i])
+
       if (progress[i][keys[2]] === true){
         minOrMax = "maximum"
-      }
+      };
+      percentage = Math.round(progress[i][keys[3]] * 100)
+      displayPercentage = percentage.toString() + "%";
+      var failureMessage = ""
+      var successMessage = ""
+      if (percentage > 100){
+        if (minOrMax == "minimum"){
+          successMessage = "Success!"
+        }
+        else {
+          failureMessage = "Too much! Try to eat healthier tomorrow!"
+        }
+      };
+
       ourObj = {
           name: this.parseHealthViewName(keys[i]),
 
           total: Math.round(progress[i][keys[0]]),
           unit: progress[i][keys[1]],
           limit: minOrMax,
-          percentage: Math.round(progress[i][keys[3]] * 100),
+          percentage: displayPercentage,
+          failure: failureMessage,
+          success: successMessage,
           id: progress[i][keys[4]],
           target: progress[i][keys[5]],
           bar: this.createBar(progress[i][keys[3]], progress[i][keys[2]])
@@ -122,13 +138,9 @@ HealthView.prototype = {
     .done(function(data){
 
       //Draw Limit Badges
-      debugger
-
       var source = $('#badge-template').html()
       var template = Handlebars.compile(source)
       $('.all_badges').html(template(data))
-
-
 
       for(i=0; i < data.series.length; i++){
         //Add Badges

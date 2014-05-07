@@ -37,6 +37,7 @@ user = User.new(username:"test", email:"test@gmail.com")
 user.password = 'test'
 user.save
 
+
 #Create Baskets for Last 6 Days
   7.downto(0).each do |y|
     today_basket = user.baskets.new
@@ -52,8 +53,8 @@ user.save
       else
         basketfood = BasketFood.create(basket_id: today_basket.id, food_id: @food.id)
       end
-    end
   end
+end
 
 
 

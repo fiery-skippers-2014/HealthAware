@@ -2,17 +2,36 @@
 
   <div id="user-forms">
 
-    <%= form_for @user do |f| %>
+      <%= form_for @user do |f| %>
+
+
+
+
       <%= f.label :username %>
-      <%= f.text_field :username %>
+      <%= f.text_field :username, :required => true %>
+      <% if @user.errors[:username].present? %>
+      <span class="error"><%= @user.errors.full_message(:username, @user.errors[:username].first) %></span>
+      <% end %>
+      <br>
+
       <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.email_field :email %>
+      <% if @user.errors[:email].present? %>
+        <span class="error"><%= @user.errors.full_message(:email, @user.errors[:email].first) %> </span>
+      <% end %>
+      <br>
       <%= f.label :password %>
       <%= f.password_field :password %>
+      <% if @user.errors[:password].present? %>
+        <span class="error"> <%= @user.errors.full_message(:password, @user.errors[:password].first)  %> </span>
+      <% end %>
+      <br>
       <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation %>
+      <br>
       <center><%= f.submit 'Submit', :class => 'gradient-blue' %></center>
-      
+
+
     <% end %>
   </div>
 </div>

@@ -75,32 +75,26 @@
   <ul>
     {{#ourArray}}
       <div class="row large-12 medium-12 small-12 columns">
-        <li class="single-track_{{id}}">
-
-
-          <div class="track-header">
-            {{name}}
-            <button id={{id}} class="delete_goal delete-me" style="float:right;">X</button>
-          </div>
-
-          <div class="large-6 medium-6 small-6 columns">
-            <ul>
-              <li><b>Daily Goal</b>: {{limit}} {{target}} {{unit}}</li>
-              <li><b>Current Total</b>: {{total}} {{unit}}</li>
-              <li><b>Current</b>: {{percentage}}%</li>
-            </ul>
-          </div>
-
+      <li class="single-track_{{id}}">
+        <div class="track-header">
+          {{name}}  <span id="failure-message">{{failure}}</span> <span id="success-message">{{success}}</span>
+          <button id={{id}} class="delete_goal delete-me" style="float:right">X</button>
+        </div>
+        <div class="large-6 medium-6 small-6 columns">
+        <ul>
+          <li><b>Daily Goal</b>: {{limit}} {{target}} {{unit}}</li>
+          <li><b>Current Total</b>: {{total}} {{unit}}</li>
+          <li><b>Current</b>: {{percentage}}</li>
+        </ul>
+        </div>
           <div class="large-6 medium-6 small-6 columns">
             <div class="badges_{{id}}"></div>
           </div>
 
           <div class="large-12 medium-12 small-12 columns">
-            <div id="bar_{{id}}" class="bar"></div>
-            <div id="js_container_{{id}}" class="big-chart"></div><br>
+              <div id="bar_{{id}}" class="bar"></div>
+              <div id="js_container_{{id}}"></div><br>
           </div>
-
-
         </li>
       </div>
     {{/ourArray}}

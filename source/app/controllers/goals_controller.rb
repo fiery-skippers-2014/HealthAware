@@ -6,6 +6,8 @@ class GoalsController < ApplicationController
   end
 
   def create
+    p "$" * 50
+    p params
     @goal = Goal.new(nutrient_id: params[:goal][:nutrient_id], user_id: current_user.id)
       unless @goal.valid?
         @errors = @goal.errors.full_messages
