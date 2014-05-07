@@ -58,23 +58,15 @@ HealthView.prototype = {
     $(this.health).html(template(allThings))
     this.addBar(iteratively)
     this.drawChart()
-    this.addActiveTab(iteratively)
+    this.activateFirstTab(iteratively)
     $(document).foundation()
   },
 
-  addActiveTab: function(iteratively){
-
-    for(i=0; i<iteratively.length; i++){
-      if (i == 0) {
-        $('dd').addClass('active');
-        $('div.content').addClass('active');
-        }
-      if (i != 0) {
-        $('dd').removeClass('active');
-        $('div.content').removeClass('active');
-        }
-      }
-    },
+  activateFirstTab: function(iteratively){
+    var id = iteratively[0].id;
+    var tabAndPanel = 'dd[data-tabid='+id+'], #panel-'+id;
+    $(tabAndPanel).addClass('active');
+  },
 
   addBar: function(iteratively){
 

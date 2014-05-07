@@ -23,10 +23,11 @@
 
     <hr>
     <div class="searched"></div><hr>
+
+    <h3 class="page-header">7 Day Streaks</h3>
     <div class="all_badges"></div>
 
   </div>
-
 
 </div><!-- /#CONTAINER -->
 
@@ -72,9 +73,12 @@
 
 
 <script id="health-template" type="text/x-handlebars-template">
+
+
+  <!-- Tab LINKS -->
   <dl class="tabs" style="padding:2px; width:100%" data-tab>
     {{#ourArray}}
-      <dd><a href="#panel-{{id}}">{{name}}</a></dd>
+      <dd data-tabid="{{id}}"><a href="#panel-{{id}}">{{name}}</a></dd>
     {{/ourArray}}
   </dl>
 
@@ -108,7 +112,7 @@
 
           <div class="scales large-12 medium-12 small-12 columns">
             <div id="bar_{{id}}" class="bar"></div>
-            <div id="js_container_{{id}}" style="width: inherit"></div>
+            <div id="js_container_{{id}}" style="min-width: 310px; height: 400px; margin: 0 auto;"></div>
           </div>
         </div>
 
@@ -120,7 +124,6 @@
 </script>
 
 <script id="badge-template" type="text/x-handlebars-template">
-  <h3>7 Day Streaks </h3>
   <div>
     <h4> Maximums </h4>
     {{#reach_badges}}
