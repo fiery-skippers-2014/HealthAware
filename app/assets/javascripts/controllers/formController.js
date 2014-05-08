@@ -32,7 +32,17 @@ FormController.prototype = {
       type: 'DELETE'
     })
     .done(function(number){
-      $('li.single-track_'+number.goal).remove()
+      deleted_track_id = number.goal
+
+      if(number.other_goals[0] != null){
+        new_active_track_id = number.other_goals[0].id
+      }
+      $('li.single-track_'+deleted_track_id).remove()
+      $('dd[data-tabid='+deleted_track_id+']').remove()
+
+      var new_tabAndPanel = 'dd[data-tabid='+new_active_track_id+'], #panel-'+new_active_track_id;
+
+      $(new_tabAndPanel).addClass('active');
     })
   }
 }

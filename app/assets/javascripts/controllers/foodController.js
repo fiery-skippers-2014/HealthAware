@@ -7,7 +7,7 @@ function FoodController(options){
   this.allFoodResults = {}
 };
 
-FoodController.prototype = { 
+FoodController.prototype = {
   // run in controllers/applicationController.js
   bindFoodListeners: function(){
     var food = this.model
@@ -54,7 +54,6 @@ FoodController.prototype = {
       }
     }
   },
-
 
   printSavedBasket: function(e){
     this.basketView.drawOldBasket(this.basket)
