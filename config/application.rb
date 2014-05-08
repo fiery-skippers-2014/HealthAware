@@ -36,6 +36,8 @@ module HealthAware
     # For Foundation 5
     config.assets.precompile += %w( vendor/modernizr )
 
+    # For asset pipeline prep for Heroku
+    config.assets.initialize_on_precompile = false
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
