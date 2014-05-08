@@ -13,9 +13,7 @@ class FoodsController < ApplicationController
     else
       @basket = Basket.create(user_id: session[:user_id])
     end
-
     @basket.foods << @food
-    render json: @food
-    # Can we pass basket back here?! Check this out
+    render json: {basket:@basket.foods, goals:current_user.goals}
    end
 end

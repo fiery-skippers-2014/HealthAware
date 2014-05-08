@@ -14,6 +14,7 @@ FoodListView.prototype = {
     goodFields = [];
     // goalObjArray = this.basket.goals;
     goalObjArray = goals;
+    debugger
     for (i=0;i<goalObjArray.length;i++){
       goodFields.push(Object.keys(goalObjArray[i])[0]);
     }

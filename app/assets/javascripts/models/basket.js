@@ -16,8 +16,11 @@ Basket.prototype = {
       data: object,
       type: 'POST'
     })
-    .done(function(json){
-      self.oldfoodarray.push(json)
+    .done(function(data){
+      if(data.basket !== null){
+        self.oldfoodarray = data.basket
+      }
+      self.goals = data.goal
       new CustomEvent('oldList')
       $.event.trigger('oldList')
     })
@@ -41,26 +44,27 @@ Basket.prototype = {
   calculateTotals: function(){
     //Loop through your goals
     this.progressArray = []
+
     for (j=0; j < this.goals.length; j++){
       this.progressObj = {}
-      keys = Object.keys(this.goals[j])
-      target = keys[0]
-      this.progressObj[target] = 0
+      API_variables = Object.keys(this.goals[j])
+      API_food_name = API_variables[0]
 
-      // this.progress[fda] = 0
+
       //Inner Loop through each food ...
+      this.progressObj.current_amount = 0
       for (i=0; i < this.oldfoodarray.length; i++){
-        if(this.oldfoodarray[i][target] !== ""){
-          this.progressObj[target] += (parseFloat(this.oldfoodarray[i][target]))
+        if(this.oldfoodarray[i][API_food_name] !== ""){
+          this.progressObj.current_amount += (parseFloat(this.oldfoodarray[i][API_food_name]))
         }
       }
-      // ... and calculate totals
-      // this.progressObj[target] = this.progressObj[target]
-      this.progressObj[target+ " unit"] = this.goals[j].unit
-      this.progressObj[target+ "_limit"] = this.goals[j].limit
-      this.progressObj[target+ " %"] = this.progressObj[target]/this.goals[j][target]
-      this.progressObj[target+ " id"] = this.goals[j].id
-      this.progressObj[target+ " your_target"] = this.goals[j][target]
+      this.progressObj.name = this.goals[j].name
+      this.progressObj.id = this.goals[j].id
+      this.progressObj.unit = this.goals[j].unit
+      this.progressObj.limit = this.goals[j].limit
+      this.progressObj.target = this.goals[j][API_food_name]
+      this.progressObj.percent = Math.round( (this.progressObj.current_amount/this.progressObj.target) * 100)
+
       this.progressArray.push(this.progressObj)
     }
   }
