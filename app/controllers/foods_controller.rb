@@ -10,12 +10,13 @@ class FoodsController < ApplicationController
     @basket = Food.create_or_find_existing_basket(user_id, current_user)
 
     @basket.foods << @food
-    render json: {basket:@basket.foods, goals:current_user.goals}
-   end
+    render json: {food: @food}
+  end
 
-    def destroy
-        @food_to_remove = BasketFood.find_by_basket_id_and_food_id(current_user.baskets.last.id, params[:id])
-        @food_to_remove.destroy
-        render json: params[:id]
-    end
+  def destroy
+    @food_to_remove = BasketFood.find_by_basket_id_and_food_id(current_user.baskets.last.id, params[:id])
+    @food_to_remove.destroy
+    render json: params[:id]
+  end
+
 end

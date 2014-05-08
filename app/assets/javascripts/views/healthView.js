@@ -68,7 +68,6 @@ HealthView.prototype = {
 
   activateFirstTab: function(currentGoals){
     var id = currentGoals[0].id;
-
     var tabAndPanel = 'dd[data-tabid='+id+'], #panel-'+id;
     $(tabAndPanel).addClass('active');
   },
@@ -154,7 +153,7 @@ $('#js_container_'+data.series[i].id).highcharts({
     type: 'line',
   },
   title: {
-    text: data.series[i].name +' Stats for Last Week',
+    text: data.series[i].name +' Stats',
   x: -20 //center
 },
 subtitle: {
@@ -178,12 +177,12 @@ yAxis: {
     }
   }]
 },
-legend: {
-  layout: 'vertical',
-  align: 'right',
-  verticalAlign: 'middle',
-  borderWidth: 0
-},
+// legend: {
+//   layout: 'vertical',
+//   align: 'right',
+//   verticalAlign: 'middle',
+//   borderWidth: 0
+// },
 plotOptions: {
   line: {
     dataLabels: {

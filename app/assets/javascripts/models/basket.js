@@ -1,6 +1,6 @@
 function Basket(){
   this.oldfoodarray = []
-  this.goals
+  this.goals = []
   this.progressArray = []
   this.progressObj = {}
 }
@@ -17,10 +17,7 @@ Basket.prototype = {
       type: 'POST'
     })
     .done(function(data){
-      if(data.basket !== null){
-        self.oldfoodarray = data.basket
-      }
-      self.goals = data.goal
+      self.oldfoodarray.push(data.food)
       new CustomEvent('oldList')
       $.event.trigger('oldList')
     })
@@ -36,7 +33,9 @@ Basket.prototype = {
       if(data.basket !== null){
         self.oldfoodarray = data.basket
       }
-      self.goals = data.goal
+      if(data.goals !== null){
+        self.goals = data.goals
+      }
       new CustomEvent('oldList')
       $.event.trigger('oldList')
     })
