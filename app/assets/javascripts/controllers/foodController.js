@@ -75,7 +75,8 @@ FoodController.prototype = {
       type: 'DELETE'
     })
     .done(function(number){
-      $('li.basket-item_'+number).first().remove()
+      $('div.basket-item_'+number).first().remove()
+
       new CustomEvent('refreshBarOnDelete')
       $.event.trigger('refreshBarOnDelete')
       HealthView.prototype.drawChart();

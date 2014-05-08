@@ -1,5 +1,6 @@
-<div id="container" class="row large-4 medium-5 small-12 large-centered medium-centered small-centered">
+<div id="container" class="row large-4 medium-5 small-8 large-centered medium-centered small-centered">
 
+  <h3 class="page-header">Login</h3>
   <div id="user-forms">
 
      <%= form_for :session, url: sessions_path do |f| %>
@@ -13,7 +14,7 @@
        <% if @user.errors[:password].present? %>
          <span class="error"> <%= @user.errors.full_message(:password, @user.errors[:password].first)  %> </span>
        <% end %>
-        <center><%= f.submit 'Login', :class => 'gradient-blue' %></center>
+        <center><%= f.submit 'Login', {class: 'gradient-blue large'} %></center>
       <% end %>
 
   </div>

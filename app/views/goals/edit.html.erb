@@ -1,4 +1,4 @@
-<div id="container" class="row large-4 medium-5 small-11 large-centered medium-centered small-centered column">
+<div id="container" class="row large-4 medium-6 small-11 large-centered medium-centered small-centered">
 
   <div id="user-forms">
 
@@ -29,10 +29,10 @@
           </div>
         </div>
       </div>
-      <%= u.submit 'Track this', {:id => "clicked_new_goal", :class => "gradient-blue large"} %>
+    <%= u.submit 'Track this', {:id => "clicked_new_goal", :class => "gradient-blue"} %>
 <% end %>
 
-      <button><%= link_to "Take me to Homepage", root_path %></button>
+    <button><%= link_to "Take me to Homepage", root_path, :class => 'gradient-blue' %></button>
 
   </div>
 </div>
