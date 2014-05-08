@@ -2,17 +2,12 @@ class FoodsController < ApplicationController
 
   def create
     params["fields"]["API"]=params["_id"]
-    if Food.find_by_API(params["_id"])
-      @food = Food.find_by_API(params["_id"])
-    else
-      @food = Food.create(params["fields"])
-    end
+    api_food_id = params["_id"]
+    food_item_fields = params["fields"]
+    user_id = session[:user_id]
 
-    if Basket.find_all_by_user_id(session[:user_id]).count > 0 && (Time.now-current_user.baskets.last.created_at < 80000)
-      @basket = current_user.baskets.last
-    else
-      @basket = Basket.create(user_id: session[:user_id])
-    end
+    @food = Food.create_or_find_existing_food(food_item_fields, api_food_id)
+    @basket = Food.create_or_find_existing_basket(user_id, current_user)
 
     @basket.foods << @food
     render json: @food
