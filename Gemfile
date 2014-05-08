@@ -18,6 +18,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rails_layout' # foundation
   gem 'jasmine'
+  gem 'debugger'
 end
 
 group :test do
@@ -28,4 +29,3 @@ group :test do
   gem 'faker'
 end
 
-gem 'debugger'
