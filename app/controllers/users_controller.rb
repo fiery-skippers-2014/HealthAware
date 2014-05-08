@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new params[:user]
     if @user.save
-      login_user
+      login @user
       redirect_to new_goal_path
     else
       render 'users/new'

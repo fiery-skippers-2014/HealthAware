@@ -7,4 +7,8 @@ class User < ActiveRecord::Base
   has_many :nutrients, through: :goals
   has_many :badges
   validates_presence_of :username, :email, :password, :on => :create
+
+  def goals_as_json
+    self.goals.map &:as_json
+  end
 end

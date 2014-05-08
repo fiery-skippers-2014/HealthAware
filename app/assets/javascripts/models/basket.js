@@ -1,4 +1,4 @@
-function Basket(){
+HA.Basket = function() {
   this.oldfoodarray = []
   this.goals = []
   this.progressArray = []
@@ -6,39 +6,39 @@ function Basket(){
 }
 
 Basket.prototype = {
-	addFoodtoBasket: function(object){
+	addFoodtoBasket: function(object){`
     this.saveFoodItemToDataBase(object)
   },
+  // this is a bad name, save/create would be better. This also doesn't belong here, it belongs in a Food model.
   saveFoodItemToDataBase: function(object){
-    var self = this
     $.ajax({
-      url: '/foods',
+      url: '/foodos', //this should go to a baskets
       data: object,
       type: 'POST'
     })
     .done(function(data){
-      self.oldfoodarray.push(data.food)
-      new CustomEvent('oldList')
-      $.event.trigger('oldList')
-    })
+      this.oldfoodarray.push(data.food)
+      $(this).trigger('oldList:updated');
+    }.bind(this))
   },
   //Can we combine these to functions. Top is getting food back, bottom sucks. Basket is already in the top.
-  retrieveFoodsFromDataBase: function(){
+  retrieveFoodsFromDataBase: function(callback){
     var self = this
     $.ajax({
-      url: '/baskets/0',
+      url: '/baskets/0', // this should go to baskets#index
       type: 'GET'
     })
     .done(function(data){
+      // this logic is a bit confusing
       if(data.basket !== null){
         self.oldfoodarray = data.basket
       }
       if(data.goals !== null){
         self.goals = data.goals
       }
-      new CustomEvent('oldList')
-      $.event.trigger('oldList')
-    })
+      if(callback) { callback(); }
+      $(this).trigger('oldList:updated')
+    }.bind(this))
   },
   calculateTotals: function(){
     //Loop through your goals

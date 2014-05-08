@@ -1,10 +1,10 @@
-function FormController(formView){
-  this.formView = formView
-  this.lastweek = {}
-}
-
-FormController.prototype = {
-  bindFormListerns: function(){
+var FormController = (function(){
+  var controller = function(formView) {
+    this.formView = formView;
+    this.lastweek = {};
+    _bindFormListerns();
+  }
+  var _bindFormListerns = function(){
     var formView = this.formView
     $(document).on(
       'click', '.delete_goal', this.removeGoal)
@@ -13,6 +13,11 @@ FormController.prototype = {
     $(document).on(
       'click',"#clicked_new_goal",this.createNewGoal)
   },
+  return controller;
+}())
+
+FormController.prototype = {
+  // move those to private methods. This controller has no public api
   createNewGoal: function(e){
     e.preventDefault()
     object =  $('#new_goal').serialize()

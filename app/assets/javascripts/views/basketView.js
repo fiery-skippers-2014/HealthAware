@@ -4,6 +4,7 @@ function BasketView(basketElements){
 }
 
 BasketView.prototype = {
+  // keep your views consistent, they all expose a draw method.
   drawOldBasket: function(basket){
     basket.oldfoodarray.reverse()
     var source = $(this.basketTemplate).html()

@@ -20,6 +20,9 @@ class Goal < ActiveRecord::Base
     end
   end
 
+  def as_json
+    {:limit => self.limit}
+  end
   def self.usergoals(current_user)
     array_of_goals = []
     goals = {}

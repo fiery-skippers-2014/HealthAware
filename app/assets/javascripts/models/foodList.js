@@ -1,3 +1,4 @@
+// I like putting logic like this in a collection object.
 // run in FoodsController.js
 function FoodList(url){
   // grabs url from model in controller

@@ -1,4 +1,5 @@
 function HealthView(healthElements){
+  // move them into private methods.
   this.healthTemplate = healthElements["healthTemplate"]
   this.health = healthElements["health"]
 }

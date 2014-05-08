@@ -1,4 +1,5 @@
 function FoodListView(foodElements){
+  // put this on the prototype or as private methods.
   this.container = foodElements["container"]
   this.foodTemplate = foodElements["foodTemplate"]
 }
