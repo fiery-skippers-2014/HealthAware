@@ -29,4 +29,3 @@ group :test do
   gem 'faker'
 end
 
-gem 'ruby' '2.0.0'
