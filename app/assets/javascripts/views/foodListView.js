@@ -46,7 +46,7 @@ FoodListView.prototype = {
     return arrayOfObjects;
   },
 
-  prepareFoodListForView: function(e, json, goals, template){ 
+  prepareFoodListForView: function(e, json, goals, template){
     var nutrientsToTrack = this.getFieldsFromUserGoals(goals);
     var masterObjArray = this.makeHandlebarsObject(json, nutrientsToTrack);
     this.drawFoods({ objects : masterObjArray }, $(template));

@@ -45,7 +45,8 @@ user.save
     today_basket.save!
     10.times do
       food = Food.all.sample
-      BasketFood.create(basket_id: today_basket.id, food_id: food.id)
+      today_basket.foods << food
+      # BasketFood.create(basket_id: today_basket.id, food_id: food.id)
   end
 end
 

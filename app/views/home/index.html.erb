@@ -76,16 +76,15 @@
 
   <!-- Tabs -->
   <dl class="tabs" style="padding:2px; width:100%" data-tab>
-    {{#ourArray}}
+    {{#allGoals}}
       <dd data-tabid="{{id}}"><a href="#panel-{{id}}">{{name}}</a></dd>
-    {{/ourArray}}
+    {{/allGoals}}
   </dl>
 
   <ul>
     <!-- Tab panes -->
     <div class="tabs-content large-12 medium-12 small-12 columns">
-
-      {{#ourArray}}
+      {{#allGoals}}
       <div class="content" id="panel-{{id}}">
 
         <div class="row large-12 medium-12 small-12 columns large-centered medium-centered small-centered">
@@ -111,7 +110,7 @@
         </div>
 
       </div>
-      {{/ourArray}}
+      {{/allGoals}}
     </div>
   </ul>
 </div>
