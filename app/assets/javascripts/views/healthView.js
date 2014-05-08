@@ -1,13 +1,3 @@
-Handlebars.registerHelper("if", function(conditional, options) {
-  if (options.hash.desired === options.hash.type) {
-    options.fn(this);
-  } else {
-    options.inverse(this);
-  }
-});
-
-
-
 function HealthView(healthElements){
   this.healthTemplate = healthElements["healthTemplate"]
   this.health = healthElements["health"]
@@ -113,10 +103,6 @@ HealthView.prototype = {
     }
   },
 
-
-
-
-
   drawChart: function(){
     $.ajax({
       url: '/users/chart',
@@ -142,10 +128,16 @@ if (data.series[i].limit == false){
 }
 
 //Change Maximums
-if(data.series[i].target > data.series[i].data.sort(function(a, b){return b-a})[0]){
-  var max = data.series[i].target * 1.01
-} else {
-  var max = data.series[i].data.sort(function(a, b){return b-a})[0] * 1.10
+var target = data.series[i].target
+max_value = 0
+for(j=0; j < data.series[i].data.length; j++){
+  if(max_value < data.series[i].data[j]){
+    max = data.series[i].data[j] * 1.01
+  }
+}
+
+if(target > max){
+  max = target * 1.01
 }
 
 $('#js_container_'+data.series[i].id).highcharts({
@@ -193,30 +185,6 @@ plotOptions: {
 },
 series: [data.series[i]]
 })
-// $(window).resize(function() {
-//   chart.setSize(
-//     $(document).width()/2,
-//     $(document).height()/2,
-//     false
-//   );
-// });
-
-// debugger
-// var chart = $('#js_container_'+data.series[i].id).highcharts().setSize(300, 300, true);
-// debugger
-// $('.resizer').resizable({
-// On resize, set the chart size to that of the
-// resizer minus padding. If your chart has a lot of data or other
-// content, the redrawing might be slow. In that case, we recommend
-  // that you use the 'stop' event instead of 'resize'.
-  // resize: function() {
-    //   chart.setSize(
-    //     this.offsetWidth - 20,
-    //     this.offsetHeight - 20,
-    //     false
-    //   );
-  // }
-// });
 }
 })
 }

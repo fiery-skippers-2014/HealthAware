@@ -15,7 +15,7 @@ class Chart
       current_user.goals.each do |goal|
       all_days_of_week = []
       #Each day in the week
-      last_weeks_basket.each_with_index do |basket, index|
+      last_weeks_basket.each do |basket|
         today_hash = {}
         # Each food in today's basket
         basket.foods.each do |food|
