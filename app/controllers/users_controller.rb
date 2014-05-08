@@ -23,9 +23,9 @@ class UsersController < ApplicationController
     redirect_to user_path(current_user)
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
+  # def show
+  #   @user = User.find(params[:id])
+  # end
 
   def chart
     xAxis =  Chart.create_xAxis(current_user)
