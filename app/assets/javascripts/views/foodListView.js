@@ -10,43 +10,53 @@ FoodListView.prototype = {
     var template = Handlebars.compile(source)
     $('.searched').html(template(json))
   },
-  prepareFoodListForView: function(e, json, goals, template){  //!!!!move this to foodListView!!!!
-    goodFields = [];
-    // goalObjArray = this.basket.goals;
-    goalObjArray = goals;
-    debugger
-    for (i=0;i<goalObjArray.length;i++){
-      goodFields.push(Object.keys(goalObjArray[i])[0]);
-    }
-    var ourMasterObject = {};
-    var masterObjArray = [];
 
-    for (h=0;h<json.hits.length;h++){    //gives us each returned object
-      var fieldValueArray = [];
-      for (i=0;i<goodFields.length;i++){
-        currentGoodField = goodFields[i];
-        newObjLit = {
-          fieldName : this.parseFieldName(currentGoodField),
-          fieldValue : json.hits[h].fields[goodFields[i]]
-        }
-        fieldValueArray.push(newObjLit)
-        // ourObject[goodFields[i]] = json.hits[h].fields[goodFields[i]]
+  getFieldsFromUserGoals: function(userGoals){
+    var fieldsArray = [];
+    for (i=0;i<userGoals.length;i++){
+      fieldsArray.push(Object.keys(userGoals[i])[0]);
+    };
+    return fieldsArray;
+  },
+
+  grabValuesFromFoodItem: function(json, nutrientsToTrack){
+    var fieldValueArray = [];
+    for (i=0;i<nutrientsToTrack.length;i++){
+      newObjLit = {
+        fieldName : this.parseFieldName(nutrientsToTrack[i]),
+        fieldValue : json.hits[h].fields[nutrientsToTrack[i]]
       }
-      var ourEachObject = {};
-      ourEachObject.foodId = json.hits[h]._id;
-      ourEachObject.objName = json.hits[h].fields.item_name;
-      ourEachObject.objBrandName = json.hits[h].fields.brand_name;
-      ourEachObject.objFields = fieldValueArray;
-      masterObjArray.push(ourEachObject);
-    }
-    console.log({objects:masterObjArray});
+      fieldValueArray.push(newObjLit)
+    };
+    return fieldValueArray;
+  },
+
+  makeHandlebarsObject: function(json, nutrientsToTrack){
+    var arrayOfObjects = [];
+    for (h=0;h<json.hits.length;h++){
+      var nutrientNamesAndValuesPerFood = this.grabValuesFromFoodItem(json, nutrientsToTrack);
+      var ourEachObject = {
+        "foodId"      : json.hits[h]._id,
+        "objName"     : json.hits[h].fields.item_name,
+        "objBrandName": json.hits[h].fields.brand_name,
+        "objFields"   : nutrientNamesAndValuesPerFood
+      };
+      arrayOfObjects.push(ourEachObject);
+    };
+    return arrayOfObjects;
+  },
+
+  prepareFoodListForView: function(e, json, goals, template){
+    var nutrientsToTrack = this.getFieldsFromUserGoals(goals);
+    var masterObjArray = this.makeHandlebarsObject(json, nutrientsToTrack);
     this.drawFoods({ objects : masterObjArray }, $(template));
   },
+
   parseFieldName: function(oldFieldName){
-    nfRemoved = oldFieldName.substr(2);
-    function makeRightCharUpper(match){
+    var makeRightCharUpper = function(match){
       return match.toUpperCase();
     };
+    nfRemoved = oldFieldName.substr(2);
     capitalized = nfRemoved.replace(/_(\w)/g, makeRightCharUpper);
     underscoreToSpaces = capitalized.replace(/_/g, " ");
     return underscoreToSpaces.trim();
