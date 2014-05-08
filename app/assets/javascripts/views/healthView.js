@@ -132,13 +132,12 @@ HealthView.prototype = {
 
         //Change Maximums
         var target = data.series[i].target
-        max_value = 0
+        max = 0
         for(j=0; j < data.series[i].data.length; j++){
-          if(max_value < data.series[i].data[j]){
+          if(max < data.series[i].data[j]){
             max = data.series[i].data[j] * 1.01
           }
         }
-
         if(target > max){
           max = target * 1.01
         }
