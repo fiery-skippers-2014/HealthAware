@@ -70,7 +70,6 @@ FoodController.prototype = {
 
   removeFoodFromDataBase: function(e, basket){
      idToDelete = e.target.id
-
      $.ajax({
       url: '/foods/'+idToDelete,
       type: 'DELETE'
@@ -80,7 +79,6 @@ FoodController.prototype = {
 
       new CustomEvent('refreshBarOnDelete')
       $.event.trigger('refreshBarOnDelete')
-      //Draw chart on delete?Maybe find better way than this?
       HealthView.prototype.drawChart();
     })
   }
