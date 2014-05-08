@@ -33,7 +33,6 @@ class UsersController < ApplicationController
     xAxis = {categories: []}
     series = []
     weekly_badges = []
-    debugger
 
     last_weeks_basket = current_user.baskets.reverse[0..7]
     last_weeks_basket.each do |basket|
