@@ -1,11 +1,11 @@
-describe("FoodController", function (){
+describe("BasketsController", function (){
 
 	var myModel = "Hello, world!";
 	var myView = "Hi, yourself!";
 	var myHealthview = "Healthy!";
 
 	it("should initialize with an options hash", function(){
-		f = new FoodController({
+		f = new BasketsController({
 			"model" : myModel,
 			"Foodview" : myView,
 			"Healthview" : myHealthview
@@ -16,5 +16,5 @@ describe("FoodController", function (){
 		expect(f.healthView).toEqual("Healthy!");
   });
 
-  
+
  });

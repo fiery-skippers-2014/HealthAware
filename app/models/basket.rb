@@ -13,4 +13,12 @@ class Basket < ActiveRecord::Base
     end
   end
 
+  def self.create_or_find_existing_basket(current_user)
+    if Basket.find_all_by_user_id(current_user.id).count > 0 && (Time.now-current_user.baskets.last.created_at < 80000)
+      basket = current_user.baskets.last
+    else
+      basket = Basket.create(user_id: current_user.id)
+    end
+  end
+
 end
