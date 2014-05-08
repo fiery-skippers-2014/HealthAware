@@ -25,7 +25,7 @@
       <div class="basket"></div>
 
     <h3 class="page-header">Badges Achieved</h3>
-    <div class="all_badges"></div>
+      <div class="all_badges"></div>
 
   </div>
 
@@ -37,41 +37,6 @@
 
 
 <!-- TEMPLATES -->
-<script id="food-template" type="text/x-handlebars-template">
-<ul id="item-list">
-  {{#objects}}
-
-    <div class="food_div">
-      <li food-id={{foodId}}>
-        {{objName}}
-        <button id={{id}} class="add_food" style="float:right">Add</button>
-          <ul id="nutrition-list">
-            {{#objFields}}
-              <li><b>{{fieldName}}</b>: {{fieldValue}}</li>
-            {{/objFields}}
-          </ul>
-      </li>
-    </div>
-
-  {{/objects}}
-</ul>
-</script>
-
-
-<script id="basket-template" type="text/x-handlebars-template">
-  <ul>
-    {{#oldfoodarray}}
-
-      <li class="basket-item_{{id}}">
-        {{item_name}}
-        <button id={{id}} class="delete_food delete-me" style="float:right">X</button>
-      </li>
-
-    {{/oldfoodarray}}
-  </ul>
-</script>
-
-
 <script id="health-template" type="text/x-handlebars-template">
 
   <!-- Tabs -->
@@ -92,7 +57,7 @@
 
           <div class="track-header">
             {{name}}  <span id="failure-message">{{failure}}</span> <span id="success-message">{{success}}</span>
-            <button id={{id}} class="delete_goal delete-me" style="float:right">X</button>
+            <button id={{id}} class="delete_goal delete-me" style="float:right"></button>
           </div>
 
           <div class="current-stats large-12 medium-12 small-12 columns">
@@ -116,22 +81,58 @@
 </div>
 </script>
 
-<script id="badge-template" type="text/x-handlebars-template">
-  <div>
-    {{#badges}}
-    <div class="row">
-        <div class="large-12 medium-12 small-12 columns badges">
-          <div class="large-3 medium-3 small-3 columns">
 
-            <div class="badge-exceed"></div>
-          </div>
-          <div class="large-9 medium-9 small-9 columns">
-          <b>Weekly Average</b><br>
-          &nbsp;&nbsp;&nbsp;&nbsp;{{name}}<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;{{target}} {{unit}} consumed
-          </div>
-        </div>
+<script id="food-template" type="text/x-handlebars-template">
+<ul id="item-list">
+  {{#objects}}
+
+    <div class="food_div">
+      <li food-id={{foodId}}>
+        {{objName}}
+        <button id={{id}} class="add_food" style="float:right"></button>
+          <ul id="nutrition-list">
+            {{#objFields}}
+              <li><b>{{fieldName}}</b>: {{fieldValue}}</li>
+            {{/objFields}}
+          </ul>
+      </li>
     </div>
 
-    {{/badges}}
+  {{/objects}}
+</ul>
+</script>
+
+
+<script id="basket-template" type="text/x-handlebars-template">
+  <ul>
+    {{#oldfoodarray}}
+
+      <li class="saved-item basket-item_{{id}}" style="clear:both;">
+        <span class="large-9 medium-8 small-8 columns basket-name" >
+          {{item_name}}
+        </span>
+        <span class="large-1 medium-1 small-1 columns basket-button">
+          <button id={{id}} class="delete_food delete-me" style="float:right"></button>
+        </span>
+      </li>
+
+    {{/oldfoodarray}}
+  </ul>
+</script>
+
+<script id="badge-template" type="text/x-handlebars-template">
+  {{#badges}}
+  <div class="badges">
+    <div class="row large-centered medium-centered small-centered ">
+      <div class="large-2 medium-2 small-2 columns">
+        <div class="badge-exceed"></div>
+      </div>
+      <div class="large-8 medium-6 small-6 columns">
+        <b>Weekly Average</b><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;{{name}}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;{{target}} {{unit}} consumed
+      </div>
+    </div>
+  </div>
+  {{/badges}}
 </script>
