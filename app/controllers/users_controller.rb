@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new params[:user]
     if @user.save
-      login_user
+      login @user
       redirect_to new_goal_path
     else
       render 'users/new'
@@ -22,10 +22,6 @@ class UsersController < ApplicationController
     @goal.user_id = current_user.id
     redirect_to user_path(current_user)
   end
-
-  # def show
-  #   @user = User.find(params[:id])
-  # end
 
   def chart
     xAxis =  Chart.create_xAxis(current_user)

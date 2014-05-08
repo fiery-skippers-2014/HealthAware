@@ -1,6 +1,6 @@
-function HealthView(healthElements){
-  this.healthTemplate = healthElements["healthTemplate"]
-  this.health = healthElements["health"]
+function HealthView(){
+   this.health=  ".health-stats",
+   this.healthTemplate = "#health-template"
 }
 
 HealthView.prototype = {
@@ -45,21 +45,23 @@ HealthView.prototype = {
       currentGoals.push(singleGoal);
     }
 
+
+
     var allThings = { allGoals: currentGoals }
     var template=Handlebars.compile(source)
-
     $(this.health).html(template(allThings))
-    this.addBar(currentGoals)
     this.activateFirstTab(currentGoals)
-    this.drawChart()
+
+    this.addBar(currentGoals)
+    this.draw()
     $(document).foundation()
   },
 
 
   activateFirstTab: function(currentGoals){
-    var id = currentGoals[0].id;
-    var tabAndPanel = 'dd[data-tabid='+id+'], #panel-'+id;
-    $(tabAndPanel).addClass('active');
+      var id = currentGoals[0].id;
+      var tabAndPanel = 'dd[data-tabid='+id+'], #panel-'+id;
+      $(tabAndPanel).addClass('active');
   },
 
 
@@ -106,7 +108,7 @@ HealthView.prototype = {
   },
 
 
-  drawChart: function(){
+  draw: function(){
     $.ajax({
       url: '/users/chart',
       type: 'GET'
@@ -164,19 +166,13 @@ HealthView.prototype = {
             plotLines : [{
               value : data.series[i].target,
               color : color,
-              dashStyle : 'shortdash',
+              dashStyle : 'shortdot',
               width : 2,
               label : {
                 text : text
               }
             }]
           },
-          // legend: {
-          //   layout: 'vertical',
-          //   align: 'right',
-          //   verticalAlign: 'middle',
-          //   borderWidth: 0
-          // },
           plotOptions: {
             line: {
               dataLabels: {

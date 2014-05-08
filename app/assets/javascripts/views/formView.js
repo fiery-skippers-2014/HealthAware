@@ -1,6 +1,6 @@
-function FormView(formElements){
-    this.customLimit = formElements["customLimit"]
-    this.amountLimit = formElements["amountCustom"]
+function FormView(){
+  this.customLimit =  "#custom_limit",
+  this.user_form = "#user-forms"
 }
 
 FormView.prototype = {

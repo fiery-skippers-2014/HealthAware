@@ -10,45 +10,40 @@ Basket.prototype = {
     this.saveFoodItemToDataBase(object)
   },
   saveFoodItemToDataBase: function(object){
-    var self = this
     $.ajax({
       url: '/foods',
       data: object,
       type: 'POST'
     })
     .done(function(data){
-      self.oldfoodarray.push(data.food)
-      new CustomEvent('oldList')
-      $.event.trigger('oldList')
-    })
+      this.oldfoodarray.unshift(data.food)
+      $(this).trigger('update_basket')
+    }.bind(this))
   },
-  //Can we combine these to functions. Top is getting food back, bottom sucks. Basket is already in the top.
+
   retrieveFoodsFromDataBase: function(){
-    var self = this
     $.ajax({
-      url: '/baskets/0',
+      url: '/baskets',
       type: 'GET'
     })
     .done(function(data){
       if(data.basket !== null){
-        self.oldfoodarray = data.basket
+        this.oldfoodarray = data.basket.reverse()
       }
       if(data.goals !== null){
-        self.goals = data.goals
+        this.goals = data.goals
       }
-      new CustomEvent('oldList')
-      $.event.trigger('oldList')
-    })
+      $(this).trigger('update_basket')
+    }.bind(this))
   },
+
   calculateTotals: function(){
     //Loop through your goals
     this.progressArray = []
-
     for (j=0; j < this.goals.length; j++){
       this.progressObj = {}
       API_variables = Object.keys(this.goals[j])
       API_food_name = API_variables[0]
-
 
       //Inner Loop through each food ...
       this.progressObj.current_amount = 0
@@ -63,7 +58,6 @@ Basket.prototype = {
       this.progressObj.limit = this.goals[j].limit
       this.progressObj.target = this.goals[j][API_food_name]
       this.progressObj.percent = Math.round( (this.progressObj.current_amount/this.progressObj.target) * 100)
-
       this.progressArray.push(this.progressObj)
     }
   }
