@@ -5,7 +5,7 @@ gem 'foundation-rails' # foundation
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'pg'
 gem 'jquery-rails'
-gem 'thin'
+gem 'unicorn'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
