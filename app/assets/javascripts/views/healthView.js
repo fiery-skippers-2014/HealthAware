@@ -19,6 +19,7 @@ HealthView.prototype = {
     // allObjects = {}
     var minOrMax = "minimum";
     iteratively = []
+
     for(i=0;i<progress.length;i++){
       keys = Object.keys(progress[i])
 
