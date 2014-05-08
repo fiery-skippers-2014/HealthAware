@@ -73,7 +73,7 @@ FoodController.prototype = {
      idToDelete = e.target.id
 
      $.ajax({
-      url: '/basket_foods/'+idToDelete,
+      url: '/foods/'+idToDelete,
       type: 'DELETE'
     })
     .done(function(number){

@@ -115,26 +115,12 @@ HealthView.prototype = {
   },
 
 
-  // parseHealthViewName: function(oldFieldName){
-  //   nfRemoved = oldFieldName.substr(2);
-  //   function makeRightCharUpper(match){
-  //     return match.toUpperCase();
-  //   };
-  //   capitalized = nfRemoved.replace(/_(\w)/g, makeRightCharUpper);
-  //   underscoreToSpaces = capitalized.replace(/_/g, " ");
-  //   trimmed = underscoreToSpaces.trim();
-  //   trimmedArray = trimmed.split(" ");
-  //   lastWord = trimmedArray.pop();
-  //   if (lastWord != "unit" && lastWord != "Limit" && lastWord != "Dv"){
-  //     trimmedArray.push(lastWord);
-  //   };
-  //   return trimmedArray.join(" ");
-  // },
+
 
 
   drawChart: function(){
     $.ajax({
-      url: '/basket_foods/0',
+      url: '/users/chart',
       type: 'GET'
     })
     .done(function(data){
