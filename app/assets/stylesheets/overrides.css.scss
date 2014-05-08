@@ -27,28 +27,6 @@ $dark-grey-shadow: 0.5px 0.5px #d9d9d9;
 $main-text-family: Helvetica, Verdana, Arial, sans-serif;
 $light-black: #2D2D2D;
 $track-title-size: 1em;
-@mixin pre-delete {
-  background-color: $main-background-color;
-  border-radius: 2px;
-  padding: 5px;
-  text-decoration: none;
-  color: #000000;
-  display: block;
-  // width: 200px;
-  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-  transition: font-size 0.3s ease, background-color 0.3s ease;
-}
-
-@mixin delete-active {
-  font-weight: normal;
-  font-size: 0.9em;
-  letter-spacing: 0.5;
-  background: $light-red;
-  color: white;
-}
 
 @mixin box_sizing {
   margin: 5px;
@@ -82,12 +60,22 @@ $track-title-size: 1em;
   }
 
 ////////////////////////////////////////
+html, body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body main {
+  min-height: 720px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
 
 body {
-  min-height: 1000px;
-  // height: 100%;
+  min-height: 100%;
+  min-width: 100%;
   margin: 0;
-  // top: 0;
   bottom: 0;
   padding: 0;
   font-size: 14px;
@@ -151,9 +139,7 @@ span.error, small.error {
   margin-bottom:0;
 }
 .row {
-  // width: 1000px;
   max-width: 100%;
-  // min-width: 768px;
   margin: 0 auto;
 }
 
@@ -170,39 +156,7 @@ h4 {
   font-size:1.7em;
   padding-left: 10px;
   border-bottom: 1.5px solid $blue-link;
-  margin-bottom: -8px;
-  }
-
-
-//// buttons
-button, .button {
-  margin-bottom: 0px;
-}
-
-button.delete_me {
-  font-size: 1em;
-  padding: 3px 5px;
-  text-align:left;
-  border-radius: 3px;
-  background-color:transparent;
-  color: $light-black;
-  &:active {
-    color: white;
-    border-radius: 3px;
-    background-color: $light-red;
-    }
-  }
-
-
-.delete-me {
-  font-weight:bold;
-  padding: 1px 5px;
-  text-align: left;
-  &:hover {
-    color: white;
-    border-radius: 3px;
-    background-color: $light-red;
-    }
+  // margin-bottom: -8px;
   }
 
 .big-chart {
@@ -210,7 +164,6 @@ button.delete_me {
 }
 
 /////////////////// TOP BAR /////////////
-
 .top-bar {
   min-height: 70px;
   background-color: $dark-blue;
@@ -220,11 +173,13 @@ button.delete_me {
     line-height: 140px;
     font-size: 2em;
     line-height: 45px;
+    padding-left: 15px;
     padding-top:10px;
+    text-shadow: #000;
     a {
       font-weight: normal;
       color: white;
-      padding: 10px 15px 10px 15px;
+      padding: 10px 15px 10px 1px;
       text-shadow: #000;
       &:visited {}
       }
@@ -239,20 +194,26 @@ button.delete_me {
   .top-bar-section {
     padding-bottom: 20px;
     ul {
-      padding-top: 15px;
+      padding-top: 0px;
       letter-spacing: 0.5px;
       color: white;
       background-color: $dark-blue;
       ul.right li a {
+        padding-top: 12px;
+        padding-bottom: 10px;
         color: white;
+        text-shadow: $light-black;
         background-color: $dark-blue;
+        border-bottom: 2px solid $light-black;
+        &:hover {
+          background-color: $light-black;
+          }
         }
     }
     li:not(.has-form) a:not(.button) {
       font-size: 0.9em;
       letter-spacing: 0.5px;
       background-color: $dark-blue;
-      // border-bottom: 1px solid $light-black; // $dark-grey
       &:hover {
         background-color: $dark-blue;
         }
@@ -296,7 +257,6 @@ button.delete_me {
 
 
 /////////////////// MAIN COLUMN /////////////
-
 .profile {
   margin-top: 10px;
   height: 100%;
@@ -312,7 +272,6 @@ button.delete_me {
 #profile-stats {
   margin-top: 10px;
   margin-bottom: 10px;
-  // box-shadow: $box-shadow;
   height: 100%;
   position:relative;
   h6 {
@@ -324,7 +283,6 @@ button.delete_me {
 
 
 ////////// TAB BARS /////
-
 .tabs {
   *zoom: 1;
   width: 100%;
@@ -413,12 +371,12 @@ button.delete_me {
 
 
 //// HEALTH STATS ///
-
 .health-stats {
   @include box_sizing;
   display: block;
   max-height: 40%;
   padding: 0px;
+  margin-top: -11px;
   ul {
     padding-left: 0px;
     position: relative;
@@ -443,27 +401,22 @@ button.delete_me {
         }
         .track-header {
           text-transform: uppercase;
-          font-size: 1em;
+          font-size: 1.2em;
           text-align: left;
           font-weight: bold;
           display:block;
           button {
-            background-color: $main-background-color;
-            border-radius: 2px;
-            padding: 5px;
-            text-decoration: none;
-            color: #000000;
             display: block;
-            -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-            -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-            -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-            -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-            transition: font-size 0.3s ease, background-color 0.3s ease;
+            background-color: transparent;
+            background-image: url(delete.png);
+            background-size: cover;
+            width: 25px;
+            height: 25px;
             &:hover {
-              @include delete-active
+              background-image: url(delete-hover.png);
               }
             &:active {
-              @include delete-active
+              background-image: url(delete-hover.png);
               }
             }
           }
@@ -477,12 +430,6 @@ button.delete_me {
             min-height: 100%;
             height: inherit;
             display:block;
-            }
-          .badges {
-            position:inherit;
-            text-align: right;
-            display:block;
-            height:100%;
             }
           .scales {
             display:block;
@@ -500,13 +447,11 @@ button.delete_me {
               padding-top: 1px;
               border-bottom:none;
               list-style-type:none;
-              // list-style-type:square;
               }
             }
           .bar {
             display: block;
-            height: 23px;
-            padding: 3px;
+            height: 17px;
             margin: 10px;
             border-radius: 3px;
             border: 1px solid $light-grey;
@@ -530,10 +475,8 @@ button.delete_me {
               filter: alpha(opacity=60);
               -moz-opacity: 0.6;
               -khtml-opacity: 0.6;
-              // opacity: 0.6;
               }
             .barandgrowth {
-              // opacity: none;
               display: inline-block;
               height: 15px;
               position: absolute;
@@ -570,89 +513,6 @@ button.delete_me {
       }
 
 /////////////////// SEARCH COLUMN /////////////
-.track-header {
-  text-transform: uppercase;
-  font-size: 1em;
-  text-align: left;
-  button {
-    background-color: $main-background-color;
-    border-radius: 2px;
-    padding: 5px;
-    text-decoration: none;
-    color: #000000;
-    display: block;
-    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-    transition: font-size 0.3s ease, background-color 0.3s ease;
-    &:hover {
-      @include delete-active
-    }
-    &:active {
-      @include delete-active
-      }
-    }
-  }
-  ul {
-    margin-top:5px;
-    padding-left:15px;
-    li {
-      padding-top: 1px;
-      border-bottom:none;
-      list-style-type:none;
-      // list-style-type:square;
-      }
-    }
-
-
-/// TODAYS BASKET ///
-.basket {
-  @include box_sizing;
-  text-transform: uppercase;
-  margin-top: 10px;
-  font-size: 1em;
-  display: block;
-  font-weight: bold;
-  ul {
-    list-style-type: none;
-    margin-bottom:1px;
-    // margin-bottom: 0;
-    // margin: auto;
-    padding: 0;
-    li {
-      width: inherit;
-      background-color: $main-background-color;
-      // background-color: transparent;
-      text-transform: uppercase;
-      font-size: 0.9em;
-      // border: 1px blue solid;
-      border-bottom: 1px solid $light-grey;
-      &:last-child {
-        border: none;
-        border-bottom: none;
-        }
-      button {
-        background-color: $main-background-color;
-        border-radius: 2px;
-        padding: 1px 5px;
-        text-decoration: none;
-        color: #000000;
-        display: block;
-        // width: 200px;
-        -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-        -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-        -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-        -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-        transition: font-size 0.3s ease, background-color 0.3s ease;
-        &:active {
-          @include delete-active
-          }
-        }
-      }
-    }
-  }
-
 ////// SEARCH FORM //
 .search {
   margin-top: 10px;
@@ -681,57 +541,38 @@ button.delete_me {
   }
 
 /////// SEARCH RESULTS //
-.track-header {
-  text-transform: uppercase;
-  font-size: 1em;
-  text-align: left;
-  font-weight: bold;
-  display:block;
-  button {
-    background-color: $main-background-color;
-    border-radius: 2px;
-    padding: 5px;
-    text-decoration: none;
-    color: #000000;
-    display: block;
-    -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-    -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-    transition: font-size 0.3s ease, background-color 0.3s ease;
-    &:hover {
-      @include delete-active
-    }
-    &:active {
-      @include delete-active
-      }
-    }
-  }
-
 .searched {
-  margin: 3px 5px 10px 5px;
+  margin: 0px 5px 10px 5px;
   padding: 5px;
   ul {
     font-size:1em;
     font-weight:normal;
-    padding-left: 10px;
     list-style-type: none;
     margin-bottom:10px;
     li {
       font-size: 1em;
       button {
-        height:auto;
-        box-shadow: $box-shadow;
-        border: 0px;
-        -moz-border-radius: 3px;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-        background-color: $blue-link;
-        font-size: 1em;
-        padding: 9px;
-        color: white;
-        text-shadow: $light-black;
+        display: block;
+        background-image: url(add-before.png);
+        background-size: cover;
+        width: 35px;
+        height: 35px;
+        background-color: transparent;
+        margin-top: -5px;
+        margin-bottom: 0px;
+        padding: 0px 1px 1px 1px;
+        position:relative;
+        line-height:normal;
+        text-align:center;
         margin-bottom:0px;
+        &:hover {
+          background-image: url(add.png);
+          padding: 0px 0.5px 0.5px 0.5px;
+        }
+        &:active {
+          background-image: url(add.png);
+          padding: 0px 0.5px 0.5px 0.5px;
+        }
         li {
           font-size: 0.9em;
           }
@@ -740,8 +581,134 @@ button.delete_me {
     }
   }
 
+/// TODAYS BASKET ///
+.basket {
+  @include box_sizing;
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-size: 1em;
+  display: block;
+  font-weight: bold;
+  background-color: $main-background-color;
+  ul {
+    width:100%;
+    .saved-item {
+      clear:both;
+      display: block;
+      padding: 3px;
+      width: inherit;
+      background-color: $main-background-color;
+      text-transform: uppercase;
+      font-size: 0.8em;
+      li.columns {
+      // position:relative;
+      // &:last-child {
+      //   border: none;
+      //   border-bottom: none;
+      //   }
+      span {
+        padding-left: 0px;
+        padding-right: 0px;
+        position:inherit;
+        background-color: $main-background-color;
+        border-bottom: 1px solid $light-grey;
+        .basket-name {
+          margin: 0px;
+          padding: 0px;
+          display:block;
+        }
+        .basket-button {
+          margin: 0px;
+          padding: 0px;
+          display:block;
+          background-color: $main-background-color;
+        }
+      }
+      button {
+        display: block;
+        background-color: $main-background-color;
+        background-image: url(delete.png);
+        background-size: cover;
+        width: 25px;
+        height: 25px;
+        padding: 0.5px 0.5px;
+        margin-bottom: 0px;
+        position:relative;
+        line-height:normal;
+        text-align:center;
+        &:hover {
+          background-image: url(delete-hover.png);
+          background-color: $main-background-color;
+          padding: 0.2px;
+          }
+        &:active {
+          background-image: url(delete-hover.png);
+          background-color: $main-background-color;
+          padding: 0.2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.all_badges {
+  margin-top: 15px;
+  .badges {
+    padding-left: 15px;
+    padding-bottom: 5px;
+    position:inherit;
+    text-align: left;
+    display:block;
+  }
+}
 
 /////////////////// BUTTONS /////////////
+button, .button {
+  background-color: $main-background-color;
+  &:hover {
+    background-color: inherit;
+  }
+  &:active {
+    background-color: inherit;
+  }
+}
+
+//// buttons
+button, .button {
+  margin-bottom: 0px;
+}
+
+button.delete_me {
+  content: url(delete.png);
+  font-size: 1em;
+  padding: 3px 5px;
+  text-align:left;
+  border-radius: 3px;
+  background-image: url(delete.png);
+  background-size: cover;
+  &:active {
+    background-image: url(delete-hover.png);
+    }
+  }
+
+.delete-me {
+  padding-bottom: em-calc(10px);
+  background-image: url(delete.png);
+  background-size: cover;
+  font-weight: bold;
+  padding: 1px 5px;
+  text-align: left;
+  width: 25px;
+  height: 25px;
+  &:hover {
+    background-image: url(delete-hover.png);
+    }
+  &:active {
+    background-image: url(delete-hover.png);
+    }
+  }
+
 .centered-button {
   display: inline-block;
   text-align: center;
@@ -762,6 +729,9 @@ button.delete_me {
   }
 
 .gradient-blue {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
 	-moz-box-shadow:inset 0px 1px 0px 0px #aac6e0;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #aac6e0;
 	box-shadow:inset 0px 1px 0px 0px #aac6e0;
@@ -794,25 +764,32 @@ button.delete_me {
   &:active {
     position:relative;
     top:1px;
+    color:white
     }
   &:hover {
     background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #19334c), color-stop(1, #15568f) );
     background:-moz-linear-gradient( center top, #19334c 5%, #15568f 100% );
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#19334c', endColorstr='#15568f');
     background-color:#19334c;
+    color:white;
     }
   }
 
   .large {
-    font-size:15px;
+    font-size: 1em;
+    // font-size:15px;
     // height:33px;
     min-height:33px;
     height: 100%;
-    max-height: 150px;
+    max-width: 200px;
     // line-height:33px;
     min-width:74px;
     width: 100%;
     max-width: 130px;
+  }
+
+  .search-button {
+
   }
 
 button.small {
@@ -899,22 +876,22 @@ button.small {
 // http://cssdeck.com/labs/animated-progress-bar
 @-webkit-keyframes growth {
     from { }
-    to { width: 99% }
+    to { width: 100% }
 }
 
 @-moz-keyframes growth {
     from { }
-    to { width: 99% }
+    to { width: 100% }
 }
 
 @-ms-keyframes growth {
     from { }
-    to { width: 99% }
+    to { width: 100% }
 }
 
 @keyframes growth {
     from { }
-    to { width: 99% }
+    to { width: 100% }
 }
 
 .badge-exceed {
@@ -928,7 +905,6 @@ button.small {
 }
 
 /////////////////// FOOTER /////////////
-
 .custom-label-class {
   padding: 7px 16px 9px;
   font-size:1.5em;
@@ -961,11 +937,7 @@ button.small {
   float: left;
   display:inline;
 }
- .badges{
-  margin-top:15px;
-  margin-left:0px;
-  float:left;
-}
+
 nav.navbar .navbar-default .navbar-bottom.container {
   background-color: $dark-blue;
   color: white;
@@ -994,7 +966,6 @@ nav {
 
 
 /////////////////// RESOURCES /////////////
-
 //SHINE ANIMATION
 //
 // .pulse span {
