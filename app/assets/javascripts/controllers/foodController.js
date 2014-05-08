@@ -1,9 +1,9 @@
-function FoodController(model, Foodview, basket, basketView, Healthview){
-  this.model = model
-  this.view = Foodview
-  this.basket = basket
-  this.basketView = basketView
-  this.healthView = Healthview
+function FoodController(options){
+  this.model = options["model"]
+  this.view = options["Foodview"]
+  this.basket = options["basket"]
+  this.basketView = options["basketView"]
+  this.healthView = options["Healthview"]
   this.allFoodResults = {}
 };
 

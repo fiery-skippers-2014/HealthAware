@@ -29,7 +29,13 @@ $(document).ready(function(){
   var basketView = new BasketView(BasketElements)
   var FoodView = new FoodListView(FoodElements)
   var healthView = new HealthView(HealthElements)
-  var foodController = new FoodController(food, FoodView, basket, basketView, healthView)
+  var foodController = new FoodController({
+    "model"     : food,
+    "Foodview"  : FoodView,
+    "basket"    : basket,
+    "basketView": basketView,
+    "Healthview": healthView
+  })
   var formView = new FormView(FormElements)
   var formController = new FormController(formView)
 
