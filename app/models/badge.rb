@@ -17,4 +17,19 @@ class Badge < ActiveRecord::Base
     end
     weekly_badges
  	end
+
+  def self.create_week_badge(current_user, goal, all_days_of_week)
+    if all_days_of_week.count >= 6
+      average = all_days_of_week.inject(:+)/all_days_of_week.length+1
+      if goal.limit
+        if average < goal.target
+          Badge.create(user_id: current_user.id, nutrient_id:goal.nutrient.id, nutrient: goal.nutrient.name, target: average, limit: goal.limit, unit: goal.unit)
+        end
+      else
+        if average >= goal.target
+          Badge.create(user_id: current_user.id, nutrient_id:goal.nutrient.id, nutrient: goal.nutrient.name, target: average, limit: goal.limit, unit: goal.unit)
+        end
+      end
+    end
+  end
 end
